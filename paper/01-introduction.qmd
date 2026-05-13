@@ -1,0 +1,96 @@
+---
+title: "1 — Introduction"
+---
+
+Typhoid fever, caused by *Salmonella enterica* serovar Typhi, remains a
+persistent public health challenge in low- and middle-income countries,
+where inadequate water, sanitation, and hygiene (WASH) infrastructure
+facilitates fecal–oral transmission [@who2023typhoid]. Globally, the
+disease causes an estimated 9.2 million cases and 133,000 deaths annually,
+with the highest incidence concentrated in South and Southeast Asia
+[@gbd2023]. Despite the availability of an effective typhoid conjugate
+vaccine (TCV), seasonal outbreaks continue to burden healthcare systems
+in endemic settings, disproportionately affecting children under 15 years
+and socioeconomically marginalized communities [@mogasale2016; @antillon2025].
+
+Nepal is a landlocked Himalayan country with diverse ecological zones,
+ranging from the flood-prone Terai plains to high-altitude mountain
+regions vulnerable to landslides. In this setting, seasonal monsoons,
+rapid urbanization, and socioeconomic inequalities contribute to recurring
+typhoid outbreaks that strain limited health resources and especially
+affect children under 15 years (60–70% of cases) and marginalized
+communities in low-income districts [@mohp2023; @karkey2018]. Nepal
+records approximately 80,000–100,000 clinically diagnosed typhoid cases
+annually through its Health Management Information System (HMIS), with
+incidence rates as high as 351 per 100,000 in urban Kathmandu
+[@coalition2024]. Climate change is intensifying these pressures: Nepal
+is warming at approximately 0.056 °C per year — nearly twice the global
+average — and is experiencing more frequent and severe monsoon floods
+[@ipcc2022; @mofe2021]. Flooding disrupts WASH systems by contaminating
+drinking water sources and breaching sanitation infrastructure, creating
+environmental conditions conducive to *Salmonella* Typhi persistence and
+transmission [@levy2023; @bhandari2022].
+
+While the epidemiology of typhoid in Nepal has been documented through
+hospital-based surveillance and vaccine effectiveness studies
+[@karkey2018; @shakya2019], the influence of climate-induced extreme
+events on spatiotemporal disease patterns at the district level remains
+poorly characterized. Prior studies have primarily focused on urban
+settings or national-level estimates, with limited integration of
+high-resolution climate data, flood records, or subnational heterogeneity
+[@bhatt2019; @pitzer2025]. Traditional statistical approaches, including
+autoregressive models and generalized linear models, struggle to capture
+the nonlinear and lagged relationships between climate variability and
+disease incidence that are characteristic of monsoon-driven epidemiology
+[@choi2023; @hess2020].
+
+Advances in machine learning (ML) offer new opportunities to address
+these limitations. Tree-based ensemble methods such as Random Forest and
+XGBoost, as well as recurrent neural networks such as LSTM, can
+simultaneously model nonlinear interactions, lagged predictor effects,
+and spatiotemporal heterogeneity in a way that conventional regression
+approaches cannot [@choi2023; @dixon2023]. However, very few studies have
+applied ML to typhoid forecasting in Himalayan or flood-prone settings,
+and none have combined HMIS district-level surveillance with
+satellite-derived climate metrics and disaster event records to generate
+forward-looking predictions for Nepal [@go2025; @ogunleye2023].
+
+## Objectives
+
+This study addresses these gaps by examining the spatiotemporal
+relationship between climate-induced flooding and typhoid fever incidence
+across all 77 districts of Nepal from 2015 to 2023. The specific
+objectives are:
+
+1. To describe the spatiotemporal distribution of typhoid cases and flood
+   events across ecological zones.
+2. To quantify associations between typhoid incidence and
+   hydro-meteorological variables, including lagged flood effects.
+3. To develop and compare ML predictive models (Random Forest, XGBoost,
+   LSTM, and an ensemble).
+4. To generate scenario-based projections of typhoid burden under the
+   SSP2-4.5 and SSP5-8.5 climate pathways through 2050.
+
+## Research question
+
+> To what extent do climate-induced flood events, together with
+> precipitation anomalies and relative humidity, influence the
+> spatiotemporal patterns of typhoid fever incidence across Nepal?
+
+This question is especially pressing given that Nepal's TCV rollout and
+ongoing WASH investments may be undermined by climate-exacerbated floods,
+which could amplify national cases by 25–40% by 2050 under high-emissions
+scenarios [@mofe2021; @ipcc2022]. The Terai lowlands — home to over 50%
+of Nepal's population and disproportionately affected by both flooding
+and poverty — face the greatest structural deficits in safe water access
+and improved sanitation, making them the highest-priority area for
+evidence-based climate-health intervention [@adb2024; @nmics2019]. The
+findings contribute to Nepal's National Adaptation Plan (2021–2050) and
+WHO's typhoid control strategy by providing district-level,
+climate-informed risk estimates that can be operationalized within
+existing digital health platforms such as DHIS2.
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

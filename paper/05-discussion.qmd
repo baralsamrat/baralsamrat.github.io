@@ -1,0 +1,210 @@
+---
+title: "5 — Discussion"
+---
+
+## 5.1 — Interpretation of climate–typhoid relationships
+
+This study provides robust evidence that climate-induced extreme events —
+particularly floods — play a significant and quantifiable role in shaping
+typhoid fever dynamics in Nepal. Flood incidence exhibited a consistent
+positive association with typhoid morbidity (r = 0.334 nationally;
+r ≈ 0.41 in Terai districts), accounting for approximately **18% of
+explained variance**. These findings reinforce the classification of
+typhoid as a climate-sensitive waterborne disease whose transmission is
+strongly modulated by hydro-meteorological disruptions rather than by
+gradual mean climate trends alone [@levy2023].
+
+The dominance of flood exposure over mean temperature or rainfall as a
+predictor highlights the importance of **extreme events as acute disease
+amplifiers**. Floods disrupt WASH systems by breaching latrines,
+contaminating shallow groundwater, and overwhelming drainage
+infrastructure — particularly in the densely populated Terai, where open
+defecation rates remain high and tube wells are shallow [@nmics2019;
+@baker2025]. The observed one-month lag between flood occurrence and peak
+typhoid incidence is biologically plausible and aligns with both the
+*Salmonella* Typhi incubation period and the delayed pathway from
+environmental contamination to clinical presentation. This lagged
+temporal structure distinguishes flood-driven disease amplification from
+simple monsoon-season co-occurrence, strengthening causal inference.
+
+Climatic modifiers further conditioned this relationship. High monsoon
+rainfall (> 300 mm / month) amplified typhoid risk by accelerating fecal
+runoff into surface water sources, while elevated relative humidity
+(> 80%) likely extended bacterial survival in aquatic environments,
+consistent with prior evidence [@brubacher2020; @levy2023]. Temperature
+exerted a secondary but synergistic role in lowland Terai districts,
+where warmer conditions may enhance bacterial replication rates
+[@trajer2022]. Together, these findings demonstrate that typhoid risk in
+Nepal is governed by **compound climate stresses** in which flood events
+act as acute transmission triggers while background climate conditions
+modulate baseline transmission efficiency. Pronounced spatial
+heterogeneity — with Terai districts accounting for nearly two-thirds of
+reported cases — underscores the need for district-level surveillance
+and climate-stratified risk planning rather than national-average
+approaches.
+
+## 5.2 — Predictive performance and methodological contribution
+
+**XGBoost outperformed Random Forest and LSTM individually (R² = 0.52)**,
+explaining over half of district-month typhoid variance using climate and
+flood inputs alone. XGBoost's superior performance reflects its capacity
+to identify threshold behaviors — for example, the point at which monthly
+flood counts exceed a critical value and typhoid risk increases
+disproportionately — that linear models and standard regression
+approaches cannot represent [@chen2016xgboost; @choi2023]. The
+**ensemble model's improvement to R² = 0.55** confirms that combining
+algorithms with complementary architectures (tree-based, gradient
+boosting, sequential recurrent) reduces variance in predictions and
+improves generalization to new observations [@dixon2023].
+
+Compared with earlier Nepal-focused studies relying on ARIMA or simple
+generalized linear models, the ML framework provided a meaningful
+improvement in predictive accuracy and captured the interaction between
+flood frequency, lagged precipitation, and monsoon seasonality that those
+approaches cannot model jointly. Methodologically, this study contributes
+a reproducible hybrid climate–health framework — integrating passive
+HMIS surveillance, DRR disaster records, and reanalysis climate grids —
+that can be adapted to other climate-sensitive enteric diseases (cholera,
+shigellosis) or applied in comparable LMIC settings with similar data
+infrastructure.
+
+## 5.3 — Implications for public health, early warning, and governance
+
+The attribution of approximately 18% of typhoid variance to flood-related
+processes carries a direct policy implication: **disease control
+strategies that focus solely on vaccination or clinical management are
+insufficient** without parallel investment in climate-resilient WASH
+infrastructure and early warning capacity. Flood-prone Terai districts —
+already carrying two-thirds of national burden while facing the greatest
+structural vulnerabilities and highest poverty rates — represent the
+highest-priority zones for anticipatory public health action
+[@adb2024; @nmics2019].
+
+### Operationalisation in DHIS2
+
+The predictive models presented here could be operationalized within
+Nepal's existing digital health infrastructure. Integration with the
+**District Health Information Software 2 (DHIS2)** platform would allow
+real-time risk estimation based on incoming flood alerts and climate
+forecast data, enabling automated pre-monsoon trigger mechanisms for
+targeted interventions such as:
+
+- Emergency chlorination of contaminated water sources.
+- Distribution of water purification materials.
+- Mobile health camp deployment.
+- District-level hygiene communication.
+
+For this integration to be effective, institutional coordination between
+the **Department of Hydrology and Meteorology (DHM)**, the **Ministry of
+Health and Population (MoHP)**, and the **National Disaster Risk
+Reduction and Management Authority (NDRRMA)** is essential. Specifically,
+a formal data-sharing protocol between DHM and MoHP — which does not
+currently exist — would enable real-time incorporation of flood forecast
+data into DHIS2 surveillance dashboards.
+
+### Governance and capacity challenges
+
+Practical implementation of climate-health early warning systems in Nepal
+faces several governance and capacity challenges that must be
+acknowledged:
+
+- **Limited district capacity.** District-level health offices in the
+  Terai often have limited technical capacity to interpret climate risk
+  outputs; operationalization of any early warning tool would therefore
+  require dedicated training and decision-support materials for district
+  health officers.
+- **Data quality variability.** Data quality in rural HMIS remains
+  inconsistent, with some districts reporting only 60–70% of expected
+  monthly records, creating gaps that can reduce model accuracy in the
+  communities most at risk.
+- **Federalism transition.** Political and administrative
+  decentralization since 2017 has created ambiguity about health
+  emergency coordination responsibilities between federal, provincial,
+  and local governments — a governance gap that climate-health early
+  warning systems must navigate explicitly.
+
+### Implications for TCV strategy
+
+While 85% national TCV coverage has reduced burden in some districts,
+climate-driven transmission risk persists where coverage is lowest —
+notably in **Karnali Province (< 70% coverage)**, which also faces
+increasing flood exposure [@coalition2024]. Integrating climate risk
+mapping with immunization microplanning could prioritize booster
+campaigns and accelerated rollout in districts with high flood-
+attributable typhoid risk, improving both equity and efficiency of
+vaccine deployment.
+
+Projected increases of 25–40% in typhoid burden under mid-century climate
+scenarios highlight the **health co-benefits of climate adaptation
+investment** more broadly: flood-resilient WASH infrastructure, improved
+urban drainage, and safe water access function simultaneously as disaster
+risk reduction and long-term infectious disease prevention measures
+[@ipcc2022; @mofe2021].
+
+Typhoid incidence may also serve as a useful **indicator of climate-
+related vulnerability** in water and sanitation systems — reflecting how
+effectively communities are protected from flood-driven contamination
+events. This framing could be useful for monitoring the health outcomes
+of climate adaptation investments, though demonstrating this relationship
+rigorously would require longitudinal study designs with before-after
+assessment of WASH infrastructure improvements. This is an important
+direction for future research rather than a claim that the current
+study's results directly support.
+
+## 5.4 — Limitations and future research directions
+
+This study has several limitations:
+
+- **Ecological design.** The study relies on aggregated district-level
+  data, precluding individual-level causal inference and potentially
+  obscuring within-district heterogeneity in exposure and access.
+- **Surveillance capture fraction.** HMIS typhoid data are based on
+  clinical diagnosis rather than laboratory confirmation, introducing
+  potential misclassification; the surveillance capture fraction is
+  estimated at approximately **36%**, meaning the true burden and its
+  climate sensitivity may differ from observed patterns.
+- **Flood event detail.** Flood data were coded as frequency counts,
+  without information on event severity, duration, or spatial extent.
+  More granular flood characterization (e.g. inundation depth, affected
+  population) would likely strengthen the climate–disease attribution.
+- **Climate input resolution.** ERA5-Land and CHIRPS grids, while
+  state-of-the-art, may under-represent micro-climates and complex
+  Himalayan terrain at the district level.
+- **Short training window.** Nine years of monthly observations
+  (108 time steps nationally) is short for LSTM training; a longer panel
+  would likely improve sequential model performance.
+- **Projection stability assumption.** The 2050 projections assume
+  stationarity of the climate–disease relationship, holding WASH
+  infrastructure, TCV coverage, urbanization, and pathogen
+  characteristics constant — assumptions unlikely to hold over a 25-year
+  horizon.
+
+::: {.callout-note title="Note"}
+The original draft of this section continues with further limitations
+and a future-work list. Re-paste the remaining content into this file
+once available; the structure here is already in place to receive it.
+:::
+
+### Future research directions
+
+1. **Pathogen surveillance integration.** Coupling HMIS clinical records
+   with environmental wastewater surveillance and laboratory-confirmed
+   serotyping would refine both burden estimates and climate-attributable
+   variance.
+2. **District-specific lag tuning.** Re-fitting per-zone models with
+   region-specific lag structures to capture differential transmission
+   dynamics across Terai, mid-hill, and Himalayan zones.
+3. **Operational DHIS2 pilot.** Packaging the trained ensemble as an API
+   consumed by Nepal's DHIS2 deployment, with weekly risk-tier alerts
+   pushed to district health officers in two pilot Terai districts as a
+   proof-of-concept for national scale-up.
+4. **WASH adaptation evaluation.** Longitudinal before-after designs
+   measuring typhoid incidence in districts that receive flood-resilient
+   WASH investments under Nepal's Country Partnership Strategy
+   (2025–2029) — testing whether climate-resilient infrastructure
+   produces the predicted health co-benefits.
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

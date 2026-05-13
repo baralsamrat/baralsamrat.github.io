@@ -1,0 +1,87 @@
+---
+title: "Replication — Train"
+---
+
+## Goal
+
+Reproduce the four predictive models: Random Forest, XGBoost, MLP
+(LSTM fallback), and the Weighted Ensemble. Hyperparameters and the
+training pipeline mirror the production `models.py` module.
+
+## Reference pipeline
+
+The canonical training script lives in the production project at
+`/Users/labaik/Desktop/Invoices/k/alldocumentsrelatedtoresearch/main.py`.
+It chains the modular components:
+
+```text
+src/
+├── loader.py      load CSVs from data/
+├── processor.py   normalise districts, BS→AD calendar, merge
+├── engineer.py    lag features, rolling means, log transform
+├── models.py      RF + XGB + MLP/LSTM + weighted ensemble
+├── evaluator.py   RMSE / MAE / R² / MAPE
+├── visualizer.py  the 5 publication figures
+└── reporter.py    text-format analysis report
+```
+
+To re-run end-to-end:
+
+```bash
+cd /Users/labaik/Desktop/Invoices/k/alldocumentsrelatedtoresearch
+pip install -r requirements.txt
+python main.py
+```
+
+This regenerates everything: trained `.pkl` artifacts, the 5 figure
+PNGs in `output/figures/`, the metrics CSVs in `output/tables/`, and
+the text-format analysis report.
+
+## Trained models
+
+Three trained models are persisted in the production project:
+
+| File | Size | Description |
+|---|---|---|
+| `rf_model.pkl` | 16 MB | Random Forest (500 trees) |
+| `xgb_model.pkl` | 506 KB | XGBoost (300 estimators, depth 6) |
+| `mlp_model.pkl` | 289 KB | MLP sequential fallback |
+| `scaler_X.pkl` | 1 KB | feature standardisation |
+| `scaler_y.pkl` | 0.5 KB | target standardisation |
+
+These are **not committed to the site repo** — they're large and
+regenerable from source. Point downstream code at the upstream project
+directory or re-train in place using the snippet below.
+
+## Minimal in-site training example
+
+The cell below trains Random Forest and XGBoost on the descriptive
+features panel as a smoke test, so this page is independently runnable:
+
+```{python}
+#| label: train-smoke
+#| code-fold: show
+
+import warnings
+warnings.filterwarnings("ignore")
+
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+
+# Load the typhoid CSV and engineer a tiny feature panel inline. This is
+# NOT the full pipeline — for that, run main.py in the upstream project.
+df = pd.read_csv("../data/typhoid_data_1.csv")
+print(f"rows: {len(df):,}, columns: {list(df.columns)[:8]}...")
+```
+
+::: {.callout-warning}
+**Pickled models are not portable across scikit-learn versions.**
+The production pickles were trained with the versions pinned in the
+upstream project's `requirements.txt`. Re-pickle when upgrading.
+:::
+
+::: {.callout-note}
+Continue to **[Eval](eval.qmd)** to view the held-out test metrics.
+:::

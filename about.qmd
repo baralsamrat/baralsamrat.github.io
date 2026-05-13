@@ -1,0 +1,32 @@
+---
+title: "About this site"
+---
+
+## What this is
+
+A living research document for the prediction model project. The paper text,
+methodology, experiments, and replication code all live in one place. The
+site is regenerated from source every time you push to GitHub — no manual
+copying between Word, slides, and a code repo.
+
+## How it's built
+
+- **[Quarto](https://quarto.org)** turns `.qmd` files (Markdown + executable
+  code) into a website and a PDF from the same source.
+- **Python** code cells run on build via the `jupyter` engine.
+- **GitHub Pages** hosts the rendered site. Pushing to `main` triggers a
+  GitHub Action that builds and deploys.
+
+## How to edit
+
+1. Edit the relevant `.qmd` file in any text editor.
+2. Locally: `make preview` opens a live-reloading browser tab.
+3. When happy: `git commit && git push`. The Action publishes in ~2 minutes.
+
+See the [README](https://github.com/baralsamrat/baralsamrat.github.io#readme) for the
+full workflow.
+
+## License
+
+MIT License
+Copyright (c) 2026 Samrat Baral

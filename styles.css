@@ -1,0 +1,398 @@
+/* styles.css — site-wide theme overrides for the Cosmo/Darkly Bootstrap base.
+ * Scope: regular HTML pages (paper chapters, notebook, replication).
+ * Presentation slides have their own presentation.css. */
+
+/* ─── Shared palette (mirrors presentation.css for visual continuity) ─── */
+:root {
+  --max-content-width: 70ch;
+  --bg-paper:    #fbf9f4;
+  --ink:         #1a1f2e;
+  --ink-soft:    #4a5066;
+  --ink-mute:    #8c8e98;
+  --serif:       "EB Garamond", "Charter", "Georgia", serif;
+  --sans:        "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --mono:        "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  --accent:      #7a1f2b;
+  --accent-soft: rgba(122, 31, 43, 0.08);
+  --accent-gold: #a87a3d;
+  --accent-glow: rgba(168, 122, 61, 0.18);
+  --rule:        #d8d2c4;
+  --rule-soft:   #ece6d8;
+  --highlight:   #fdf3d8;
+}
+
+/* Lazy-load Google Fonts on the HTML pages too, so the serif citations match. */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+main.content {
+  max-width: var(--max-content-width);
+}
+
+/* Tighter line-spacing on tables. */
+table {
+  font-size: 0.94rem;
+}
+
+/* Slightly larger inline code so it visually separates from prose. */
+p code, li code {
+  font-size: 0.92em;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* Pull-quotes / callouts read as document chrome, not as paragraphs. */
+.callout {
+  border-radius: 6px;
+}
+
+/* Hide the dollar-sign prompt the default bootstrap monospace block adds
+   in front of bash code — it confuses copy-paste. */
+.sourceCode.bash::before {
+  content: none !important;
+}
+
+/* ─── In-text citation refinement ────────────────────────────────────── */
+
+/* Quarto renders `[@key]` as `<a href="#ref-key" class="citation">…</a>`.
+ * Subtle accent + hover, so citations stand apart from regular links. */
+a.citation {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(122, 31, 43, 0.4);
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+
+a.citation:hover {
+  background: var(--accent-soft);
+  border-bottom-color: var(--accent);
+}
+
+/* Quarto's hover-tooltip for citations (`citations-hover: true` in _quarto.yml) */
+.csl-bib-body .hanging-indent,
+.csl-bib-body div {
+  break-inside: avoid;
+}
+
+/* ─── References section — chapter-end bibliography ──────────────────── */
+
+#refs,
+.references,
+div.csl-bib-body {
+  font-family: var(--serif);
+  font-size: 0.92em;
+  line-height: 1.55;
+  margin-top: 0.6em;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.2em;
+}
+
+#refs .csl-entry,
+.references .csl-entry,
+div.csl-bib-body > div {
+  padding-left: 2em;
+  text-indent: -2em;
+  margin: 0 0 0.7em 0;
+  color: #1a1f2e;
+  scroll-margin-top: 80px;       /* leaves room for sticky navbars when jumping */
+  transition: background 0.4s ease, border-left-color 0.4s ease;
+  border-left: 3px solid transparent;
+  padding-top: 0.15em;
+  padding-bottom: 0.15em;
+}
+
+#refs .csl-entry a,
+.references .csl-entry a {
+  color: var(--accent);
+  word-break: break-word;
+  border-bottom: none;
+}
+
+#refs .csl-entry a:hover,
+.references .csl-entry a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Click-to-highlight effect (`:target`) ──────────────────────────── */
+
+/* When a citation link is clicked, the browser jumps to #ref-<key> on
+ * the same page. The :target pseudo-class lets us flash the entry. */
+#refs .csl-entry:target,
+.references .csl-entry:target,
+div.csl-bib-body > div:target {
+  background: var(--accent-glow);
+  border-left-color: var(--accent-gold);
+  padding-left: calc(2em + 0.7em);
+  margin-left: -0.7em;
+  animation: ref-pulse 1.6s ease-out;
+}
+
+@keyframes ref-pulse {
+  0%   { background: var(--accent-glow); }
+  60%  { background: var(--accent-glow); }
+  100% { background: transparent; }
+}
+
+/* ─── References heading — quiet academic style ──────────────────────── */
+
+h2#references,
+h2[id="references"],
+section[id="references"] > h2,
+h2:has(+ #refs),
+h2:has(+ .references) {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #1a1f2e;
+  letter-spacing: -0.01em;
+  margin-top: 2.4em;
+  margin-bottom: 0.8em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ─── Hover-popup styling — Quarto's citation tooltip ────────────────── */
+
+.quarto-citation-popup,
+.tippy-box {
+  font-family: var(--serif) !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  background: #1a1f2e !important;
+  color: #fbf9f4 !important;
+  border-radius: 4px !important;
+  max-width: 420px !important;
+}
+
+.tippy-box[data-theme~='quarto'] {
+  background-color: #1a1f2e;
+  color: #fbf9f4;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+ * Navbar — refined academic / Nobel-laureate aesthetic.
+ * Type-driven, restrained, paper-toned. Strong but quiet hierarchy.
+ *
+ * Structure: layout rules apply in both modes. Color rules are split
+ * into LIGHT and DARK sections, each setting Bootstrap's own
+ * `--bs-navbar-*` CSS variables at the navbar root so descendants
+ * inherit correct contrast regardless of which `.navbar-light` or
+ * `.navbar-dark` utility class Bootstrap may apply.
+ * ═══════════════════════════════════════════════════════════════════════ */
+
+/* ─── Layout (theme-agnostic) ──────────────────────────────────────── */
+.navbar {
+  border-bottom: 1px solid var(--rule);
+  box-shadow: none !important;
+  padding: 1.1em 0 !important;
+  min-height: 0;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.navbar.fixed-top {
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+}
+
+.navbar > .container,
+.navbar > .container-fluid {
+  align-items: baseline;
+  max-width: 1240px;
+}
+
+/* ─── LIGHT MODE colors ────────────────────────────────────────────── */
+.navbar,
+.navbar.navbar-light,
+html:not([data-bs-theme="dark"]) .navbar,
+[data-bs-theme="light"] .navbar {
+  background: rgba(251, 249, 244, 0.96) !important;
+  background-color: rgba(251, 249, 244, 0.96) !important;
+  border-bottom-color: var(--rule);
+
+  --bs-navbar-color: #1a1f2e;            /* full ink — strongly visible */
+  --bs-navbar-hover-color: #7a1f2b;      /* oxblood */
+  --bs-navbar-active-color: #1a1f2e;
+  --bs-navbar-brand-color: #1a1f2e;
+  --bs-navbar-brand-hover-color: #7a1f2b;
+  --bs-navbar-disabled-color: #8c8e98;
+  --bs-navbar-toggler-border-color: var(--rule);
+}
+
+/* ─── DARK MODE colors ─────────────────────────────────────────────── */
+[data-bs-theme="dark"] .navbar,
+[data-bs-theme="dark"] .navbar.navbar-dark,
+[data-bs-theme="dark"] .navbar.navbar-light {
+  background: rgba(14, 34, 51, 0.96) !important;
+  background-color: rgba(14, 34, 51, 0.96) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+
+  --bs-navbar-color: #fbf9f4;            /* cream — strongly visible on navy */
+  --bs-navbar-hover-color: #a87a3d;      /* gold accent */
+  --bs-navbar-active-color: #ffffff;
+  --bs-navbar-brand-color: #fbf9f4;
+  --bs-navbar-brand-hover-color: #a87a3d;
+  --bs-navbar-disabled-color: rgba(251, 249, 244, 0.45);
+  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ─── Brand: author / project name in italic serif ─────────────────── */
+.navbar-brand,
+.navbar-title {
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  font-size: 1.32rem !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.012em;
+  color: var(--bs-navbar-brand-color) !important;
+  line-height: 1;
+  padding: 0 !important;
+  margin: 0 1.4em 0 0 !important;
+  border-bottom: none !important;
+  transition: color 0.18s ease;
+}
+
+.navbar-brand:hover,
+.navbar-title:hover {
+  color: var(--bs-navbar-brand-hover-color) !important;
+}
+
+/* Hide the navbar logo icon if any — text-only is cleaner */
+.navbar-brand .navbar-logo {
+  display: none;
+}
+
+/* ─── Nav links: small caps with letter-spacing ────────────────────── */
+.navbar-nav {
+  align-items: center;
+  gap: 0;
+}
+
+.navbar-nav .nav-item {
+  margin: 0;
+}
+
+.navbar-nav .nav-link {
+  font-family: var(--sans) !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.13em !important;
+  text-transform: uppercase;
+  color: var(--bs-navbar-color) !important;
+  margin: 0 0.15em;
+  padding: 0.45em 0.7em !important;
+  position: relative;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  transition: color 0.18s ease;
+  opacity: 1 !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.7em;
+  right: 0.7em;
+  bottom: 0.15em;
+  height: 1px;
+  background: var(--bs-navbar-hover-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.22s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--bs-navbar-hover-color) !important;
+  background: transparent !important;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after,
+.navbar-nav .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--bs-navbar-active-color) !important;
+}
+
+.navbar-nav .nav-link.active::after {
+  background: var(--accent-gold);
+  transform: scaleX(1);
+}
+
+[data-bs-theme="dark"] .navbar-nav .nav-link.active::after {
+  background: var(--accent-gold);
+}
+
+/* ─── Right-side icons (GitHub, dark-mode toggle, search) ──────────── */
+.quarto-navbar-tools,
+.navbar .navbar-nav.ms-auto {
+  margin-left: auto;
+}
+
+.quarto-navbar-tools .quarto-navigation-tool {
+  color: var(--bs-navbar-color) !important;
+  font-size: 0.95rem !important;
+  padding: 0.3em 0.5em !important;
+  transition: color 0.18s ease;
+  opacity: 1 !important;
+}
+
+.quarto-navbar-tools .quarto-navigation-tool:hover {
+  color: var(--bs-navbar-hover-color) !important;
+  background: transparent !important;
+}
+
+/* ─── Search input — quieter, more typographic ─────────────────────── */
+.navbar .aa-DetachedSearchButton,
+.navbar .aa-Input {
+  border-color: var(--rule);
+  background: transparent;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--bs-navbar-color);
+}
+
+[data-bs-theme="dark"] .navbar .aa-DetachedSearchButton {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ─── Mobile collapse: keep type elegant on smaller screens ────────── */
+.navbar-toggler {
+  border-color: var(--bs-navbar-toggler-border-color);
+  color: var(--bs-navbar-color);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+/* ─── Page footer — quiet, typographic ─── */
+.nav-footer,
+.page-footer {
+  background: var(--bg-paper) !important;
+  border-top: 1px solid var(--rule) !important;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--ink-mute);
+  padding: 1.2em 0 !important;
+  margin-top: 4em;
+}
+
+.nav-footer a,
+.page-footer a {
+  color: var(--ink-soft);
+  border-bottom: none;
+}
+
+.nav-footer a:hover,
+.page-footer a:hover {
+  color: var(--accent);
+}

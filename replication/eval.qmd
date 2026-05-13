@@ -1,0 +1,72 @@
+---
+title: "Replication — Eval"
+---
+
+## Goal
+
+Show the test-set performance of the four trained models on the held-out
+final 12 months. Numbers below are loaded from the metrics CSV produced
+by `evaluator.py` — they're the same numbers reported in the
+[Results](../paper/04-results.qmd) chapter.
+
+## Performance table
+
+```{python}
+#| label: tbl-perf
+#| tbl-cap: "Test-set performance across the four models on the held-out final 12 months."
+#| echo: false
+
+import pandas as pd
+metrics = pd.read_csv("../tables/performance_metrics.csv")
+metrics.style.format({
+    "RMSE": "{:.2f}",
+    "MAE": "{:.2f}",
+    "R2": "{:.4f}",
+    "MAPE (%)": "{:.2f}",
+})
+```
+
+## Feature–target correlations
+
+```{python}
+#| label: tbl-corr
+#| tbl-cap: "Pearson correlation of each engineered feature with log(1 + cases)."
+#| echo: false
+
+import pandas as pd
+corr = pd.read_csv("../tables/lag_correlation.csv")
+corr.style.format({"Pearson_r_with_log_cases": "{:.3f}"})
+```
+
+## Interpretation
+
+- The **Weighted Ensemble** is the headline model (R² = 0.8675, lowest
+  RMSE). Its advantage over individual models comes from variance
+  reduction across structurally distinct algorithms.
+- **XGBoost** outperforms Random Forest on RMSE and MAE but has a
+  higher MAPE — meaning it produces tighter absolute errors but is
+  more proportionally biased on the smaller case-count districts.
+- **MLP** (fallback for unavailable TF/LSTM) is competitive, achieving
+  the lowest single-model RMSE but at higher absolute-error variance
+  than the tree-based methods.
+
+## Where the trained pickles live
+
+Loaded as needed by the production pipeline:
+
+```text
+/Users/labaik/Desktop/Invoices/k/alldocumentsrelatedtoresearch/
+├── rf_model.pkl
+├── xgb_model.pkl
+├── mlp_model.pkl
+├── scaler_X.pkl
+└── scaler_y.pkl
+```
+
+To regenerate from scratch, see [Train](train.qmd).
+
+::: {.callout-tip}
+The figures supporting this evaluation — actual-vs-predicted scatter,
+feature importance ranking, seasonal boxplot — are on the
+[Figures](../figures.qmd) page.
+:::

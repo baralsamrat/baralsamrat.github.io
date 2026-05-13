@@ -1,0 +1,74 @@
+project:
+  type: website
+  output-dir: _site
+
+execute:
+  freeze: auto
+
+website:
+  title: "Typhoid Prediction in Nepal"
+  description: "Predictive Modeling of Typhoid Incidence in Nepal Under Extreme Climate Change Scenarios Using Machine Learning."
+  reader-mode: true
+  navbar:
+    background: light
+    left:
+      - href: index.qmd
+        text: Home
+      - href: notebook.qmd
+        text: Notebook
+      - href: presentation.qmd
+        text: Presentation
+      - href: paper/01-introduction.qmd
+        text: Paper
+      - href: replication/data.qmd
+        text: Replication
+      - href: figures.qmd
+        text: Figures
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/baralsamrat/baralsamrat.github.io
+  sidebar:
+    - title: "Contents"
+      style: floating
+      collapse-level: 2
+      contents:
+        - section: "Paper"
+          contents:
+            - paper/01-introduction.qmd
+            - paper/02-literature-review.qmd
+            - paper/03-methodology.qmd
+            - paper/04-results.qmd
+            - paper/05-discussion.qmd
+        - section: "Replication"
+          contents:
+            - replication/data.qmd
+            - replication/train.qmd
+            - replication/eval.qmd
+  page-footer:
+    left: "© 2026 Samrat Baral — Built with [Quarto](https://quarto.org)."
+    right:
+      - icon: github
+        href: https://github.com/baralsamrat/baralsamrat.github.io
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-tools: true
+    code-link: true
+    fig-width: 8
+    fig-height: 5
+    smooth-scroll: true
+    highlight-style: github
+    citations-hover: true
+    crossrefs-hover: true
+
+bibliography: refs.bib
+csl: https://www.zotero.org/styles/apa

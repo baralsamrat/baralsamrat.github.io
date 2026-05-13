@@ -1,0 +1,95 @@
+---
+title: "Replication — Data"
+---
+
+## Goal
+
+Load the three raw source datasets exactly as the production pipeline
+does, harmonise them into a single monthly district-level panel, and
+engineer the lag + rolling features used by every downstream model.
+
+By the end of this page you should have a `df` DataFrame with the
+features listed in [Method](../paper/03-methodology.qmd) and a deterministic
+train/test split keyed on date.
+
+## Source datasets
+
+Three CSVs live in `data/` alongside this site (small enough to commit):
+
+| File | Rows | Description |
+|---|---|---|
+| `data/typhoid_data_1.csv` | ~7,500 | district-month case counts (2015–2023) |
+| `data/typhoid_data_2.csv` | small | aggregated secondary source |
+| `data/climate_data.csv` | ~7,500 | ERA5-Land + CHIRPS climate variables |
+| `data/flood_data.csv` | hundreds | historical flood event records |
+
+For the full upstream pipeline (`loader.py`, `processor.py`,
+`engineer.py` etc.) point at the production project directory:
+`/Users/labaik/Desktop/Invoices/k/alldocumentsrelatedtoresearch/`.
+
+## Load + peek
+
+```{python}
+#| label: load-typhoid
+#| code-fold: show
+
+import pandas as pd
+
+typhoid = pd.read_csv("../data/typhoid_data_1.csv")
+print(f"rows: {len(typhoid):,}   cols: {typhoid.shape[1]}")
+typhoid.head()
+```
+
+```{python}
+#| label: load-climate
+#| code-fold: show
+
+climate = pd.read_csv("../data/climate_data.csv")
+print(f"rows: {len(climate):,}   cols: {climate.shape[1]}")
+climate.head()
+```
+
+```{python}
+#| label: load-flood
+#| code-fold: show
+
+flood = pd.read_csv("../data/flood_data.csv")
+print(f"rows: {len(flood):,}   cols: {flood.shape[1]}")
+flood.head()
+```
+
+## Pre-computed descriptive statistics
+
+For reference, the descriptive statistics that appear in
+[Methodology](../paper/03-methodology.qmd) were computed after the full
+merge + feature engineering pipeline:
+
+```{python}
+#| label: tbl-desc
+#| tbl-cap: "Descriptive statistics of the engineered feature panel."
+#| echo: false
+
+import pandas as pd
+desc = pd.read_csv("../tables/descriptive_statistics.csv", index_col=0)
+desc.round(2)
+```
+
+## Feature engineering note
+
+The `engineer.py` module in the production project constructs:
+
+- One-month lags: `precip_lag1`, `temp_mean_lag1`, `humidity_lag1`,
+  `flood_lag1`, `cases_lag1`
+- Three-month rolling means: `precip_roll3`, `temp_roll3`
+- Cyclical month encodings: `month_sin`, `month_cos`
+- Monsoon indicator: `monsoon` (1 if month ∈ {6,7,8,9})
+- Log-transformed target: `log_cases = log(1 + cases)`
+
+To regenerate the engineered panel from this site, copy the production
+modules into a `src/` directory at the site root and call
+`FeatureEngineer().create_features(merged)`. See
+`main.py` in the upstream project for the exact orchestration.
+
+::: {.callout-note}
+Continue to **[Train](train.qmd)** to fit the three predictive models.
+:::

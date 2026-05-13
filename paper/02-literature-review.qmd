@@ -1,0 +1,169 @@
+---
+title: "2 — Literature Review"
+---
+
+## 2.1 — Typhoid transmission pathways and environmental determinants
+
+Typhoid fever is transmitted primarily via the fecal–oral route, with
+waterborne and foodborne pathways predominating in endemic settings
+[@who2023typhoid; @adugyamfi2025]. A 2025 systematic review synthesizing
+109 studies (1928–2024) identified waterborne (41.3%), foodborne (44%),
+and sanitation-related (31.2%) transmission routes as the principal
+drivers of infection, with Asia contributing 46.8% of global evidence
+[@adugyamfi2025]. Antimicrobial resistance (AMR) among *Salmonella* Typhi
+isolates, estimated at 50–70% in high-burden settings, and chronic
+carriage rates of approximately 10% further sustain endemicity in
+communities with inadequate WASH infrastructure [@andrews2019; @who2024].
+
+Environmental contamination driven by flooding plays a critical
+amplifying role. Wastewater surveillance in urban Indonesia detected
+*S.* Typhi positivity in 13% of river samples at flood interfaces
+(OR = 12.68, *p* = .007), highlighting that contamination risk is linked
+more to disrupted sanitation than to rainfall quantity alone
+[@baker2025]. In Nepal, monsoon-season peaks are well documented: HMIS
+records show 51,967 cases in Shrawan 2078 concentrated in Terai districts
+such as Rautahat (1,711 cases per monsoon month), where 25% open
+defecation rates and recurrent flooding converge with chronic WASH
+deficits [@nmics2019; @mohp2023]. WHO estimates that unsafe WASH
+contributes to 1.4 million deaths annually, with 73.9% attributed to
+diarrheal diseases [@who2025wash]. Nepal's residual typhoid burden —
+estimated at 80,000–100,000 cases per year despite 85% national TCV
+coverage — underscores the need for climate-sensitive surveillance that
+goes beyond vaccination alone [@coalition2024].
+
+## 2.2 — Impacts of temperature, rainfall, and humidity on waterborne diseases
+
+Climate variables modulate typhoid and other waterborne diseases (WBDs)
+by altering pathogen viability, environmental persistence, and
+dissemination pathways, with effects that are nonlinear and
+context-dependent [@levy2023; @carlton2015]. Temperature increases of
+1 °C are associated with 5–10% elevated *Salmonella* risk through
+enhanced virulence and accelerated bacterial replication, with thresholds
+above 25 °C linked to amplified typhoid and cholera transmission across
+Southeast Asian settings [@trajer2022; @kim2023]. Relative humidity in
+the range of 80–95% prolongs *S.* Typhi survival in water bodies and on
+environmental surfaces, and European studies have identified high
+streamflow (50% of cases) and heavy rainfall events (19–22%) as primary
+drivers of waterborne disease outbreaks [@brubacher2020; @levy2023].
+
+Rainfall demonstrates a dual, context-dependent effect on typhoid risk.
+Extreme precipitation events exceeding 50 mm per day have been shown to
+precede approximately 71% of waterborne disease outbreaks in multiple
+settings by mobilizing fecal contaminants into water supplies, accounting
+for 24% of documented waterborne incidents in the United States
+[@carlton2015]. However, the direction of effect varies by baseline
+aridity: in humid Vietnam, higher rainfall was associated with *lower*
+typhoid incidence (β = −0.0010, *p* < .001), suggesting dilution effects,
+while in arid Chad the association was positive (β = 0.0037, *p* < .001),
+reflecting contaminant concentration under low-flow conditions
+[@haque2025]. In Nepal, extreme monsoon precipitation events — such as
+the 499.85 mm recorded in Sunsari District in July 2016, which coincided
+with 116 flood events nationally — preceded 15–20% increases in typhoid
+incidence in affected districts [@mohp2023; @bhandari2022]. Prolonged
+flood duration exceeding 30 days further elevates disease odds
+(OR = 1.15–1.25) in Belt and Road Initiative nations [@li2025]. Climate
+projections forecast an additional 250,000 waterborne disease deaths
+globally by 2050 under business-as-usual emissions, with India
+attributing 70% of typhoid outbreak variance to extreme rainfall events
+— a pattern that mirrors the dynamics observed in Nepal's Terai region
+[@who2023typhoid; @indiahealthfund2025].
+
+## 2.3 — Climate change scenarios and extreme weather events in Nepal
+
+Nepal is among the most climate-vulnerable countries in the world,
+warming at 0.056 °C per year — twice the global average — with monsoon
+precipitation intensifying by 20–30% since 1990 under CMIP6 projections
+[@ipcc2022; @mofe2021]. Under SSP2-4.5 and SSP5-8.5 scenarios, mean
+temperatures are projected to rise by 1.2–4.2 °C by the 2080s, with
+corresponding 120% increases in extreme precipitation events between
+2071 and 2100, expanding Bagmati Basin flood extents by 342–359 km²
+[@shrestha2025]. Central Himalayan floods are projected to intensify by
+40% under SSP2-4.5 and 79% under SSP5-8.5 by 2060–2099, driven primarily
+by increased rainfall–runoff [@potutan2025]. The Climate Risk Index 2025
+ranks Nepal 69th globally for climate-related impacts over 1993–2022,
+recording 249.7 annual deaths and 5,667 fatalities from floods and
+landslides between 2012 and 2024, at a cumulative cost of NPR 49 billion
+[@germanwatch2025; @npdrr2025].
+
+Recent extreme events illustrate the trajectory. In July 2024, the
+Bhotekoshi Bridge washout — assessed by the World Weather Attribution
+project as 70% more likely and 10% more intense due to approximately
+1.3 °C of accumulated warming, coupled with deforestation and rapid
+urbanization — displaced communities and overwhelmed local health
+infrastructure [@wwa2024; @jha2024]. Glacial lake outburst floods (GLOFs)
+are projected to threaten over 200,000 people in Nepal by mid-century
+[@undrr2025]. Nepal's Country Partnership Strategy (2025–2029) explicitly
+prioritizes flood-resilient infrastructure, recognizing that the health
+co-benefits of climate adaptation — including reductions in waterborne
+disease — are achievable when WASH investments are designed with flood
+risk in mind [@adb2025; @mofe2021].
+
+## 2.4 — Machine learning in infectious disease prediction
+
+Machine learning has demonstrably improved infectious disease forecasting
+by enabling integration of multimodal data while outperforming
+traditional statistical models in nonlinear and high-dimensional settings
+[@choi2023]. For typhoid specifically, a 2025 clinical study applying
+XGBoost achieved diagnostic AUROC values of 0.9998 (treatment success)
+and 0.9834 (diagnosis), with SHAP analysis identifying disease severity
+and biochemical markers as dominant predictive features
+[@ssemuyiga2025]. Hybrid approaches combining RF, XGBoost, and
+multilayer perceptrons with lagged climate and demographic features have
+achieved 77% forecasting accuracy for zoonotic diseases with similar
+data structures [@dixon2023; @morin2025].
+
+Climate-integrated ML approaches are increasingly applied to seasonal
+disease prediction in tropical settings. RF, support vector machine, and
+*k*-nearest neighbor models forecast Philippine typhoid and
+hand-foot-mouth disease with AUROC exceeding 0.85 using morbidity and
+environmental inputs [@go2025]. LSTM networks, designed to capture
+temporal dependencies across sequences, have shown promise for
+climate-sensitive disease time-series where lagged predictor effects are
+important [@go2025; @hess2020]. Within Nepal specifically, ANN and
+XGBoost models integrated with HMIS-like surveillance data have achieved
+approximately 60% accuracy for combined malaria and typhoid prediction
+[@ogunleye2023]. A 2025 systematic meta-analysis using Bayesian
+hierarchical models forecast 9.2 million annual typhoid cases globally,
+projecting 20–30% declines following TCV rollout under Gavi-supported
+scenarios, and underscoring the need to incorporate environmental drivers
+beyond vaccination in future prediction frameworks [@gbd2023]. Despite
+these advances, **no published study has combined Nepal's HMIS
+district-level surveillance, DRR-portal flood records, and ERA5-CHIRPS
+climate grids into an integrated ML predictive model** — the specific
+methodological gap this study addresses.
+
+## 2.5 — Identified gaps and justification
+
+Three interconnected gaps limit the utility of current typhoid prediction
+models for climate-vulnerable Nepal:
+
+1. **Inadequate handling of flood lag and humidity thresholds.**
+   Predominant SEIR and ARIMA frameworks emphasize vaccination and AMR
+   dynamics but inadequately account for flood lag effects (1–2 months
+   post-event) and humidity thresholds above 90% relative humidity that
+   sustain *S.* Typhi viability, leading to underestimation of
+   monsoon-driven case surges by 15–20% [@bhandari2022; @levy2023].
+2. **Lack of subnational resolution.** National-level surveillance
+   aggregates obscure the Terai hotspots (e.g. Rautahat: 1,711 cases per
+   monsoon month) and the ecological gradients between Terai, Hill, and
+   Mountain zones that are critical for targeting interventions, with
+   fewer than 20% of models stratifying by WASH access [@pitzer2025;
+   @gbd2023].
+3. **Limited multimodal forecasting.** While ML diagnostic models
+   achieve excellent AUC scores, they rarely forecast epidemic dynamics
+   multimodally or incorporate Nepal's 1,248 documented flood events in
+   conjunction with ERA5-CHIRPS climate metrics [@semiu2025; @go2025].
+
+This study addresses these gaps by developing a hybrid GLMM and ML
+framework that integrates HMIS surveillance (1.2 million cases over nine
+years), DRR flood records, and ERA5-Land / CHIRPS climate grids for
+district-stratified, lagged attributions. By estimating flood-driven
+variance (~18%) and generating scenario-based projections through 2050,
+the study supports Nepal's National Adaptation Plan (2021–2050) and WHO
+typhoid control targets, while providing scalable, replicable insights
+for comparable LMICs in South Asia.
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

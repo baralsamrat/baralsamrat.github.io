@@ -1,0 +1,90 @@
+---
+title: "Typhoid Prediction in Nepal"
+subtitle: "Predictive Modeling of Typhoid Incidence in Nepal Under Extreme Climate Change Scenarios Using Machine Learning"
+author:
+  - name: Kritika Baral
+    orcid: 0009-0007-1517-1063
+    affiliations:
+      - name: Kathmandu University
+        department: Department of Health Informatics
+        city: Dhulikhel
+        country: Nepal
+date: today
+abstract: |
+  Typhoid fever remains a significant public health challenge in Nepal, where
+  monsoon-driven flooding and climate variability increasingly disrupt water,
+  sanitation, and hygiene (WASH) systems. This study examined the
+  spatiotemporal relationship between typhoid incidence and climate-induced
+  extreme events across Nepal's 77 districts from 2015 to 2023 by integrating
+  district-level outpatient surveillance data from the Health Management
+  Information System (HMIS) with flood occurrence records and gridded climate
+  variables, including precipitation, temperature, and relative humidity.
+  Descriptive and correlation analyses, including lagged assessments, were
+  conducted, followed by machine learning modeling using Random Forest (RF),
+  XGBoost, and Long Short-Term Memory (LSTM) algorithms. An ensemble model
+  combining all three algorithms was also evaluated. Typhoid incidence
+  exhibited strong seasonality, with 70–80% of cases occurring during monsoon
+  months (June–September) and showed a positive association with flood
+  frequency (r = 0.334), which strengthened when floods preceded cases by one
+  month (r = 0.412). Among the evaluated models, XGBoost achieved the best
+  individual predictive performance (R² = 0.52), while the ensemble model
+  achieved the highest overall accuracy (R² = 0.55). Flood-related features
+  accounted for approximately 18% of explained variance. Projections under
+  a medium-emissions scenario (SSP2-4.5) indicate a potential 25% increase
+  in national typhoid burden by 2050, with disproportionate impacts in
+  flood-prone Terai districts. These findings identify typhoid fever in
+  Nepal as a climate-sensitive disease and highlight the importance of
+  integrating climate indicators into disease surveillance and early
+  warning systems to support climate-resilient public health planning.
+keywords:
+  - Typhoid fever
+  - Climate change
+  - Flooding
+  - Machine learning
+  - Extreme climate events
+  - Nepal
+  - Disease prediction
+  - Public health surveillance
+---
+
+## Highlights
+
+- **Problem.** Climate-driven year-on-year variability in typhoid incidence
+  across Nepal's 77 districts is poorly characterised by existing
+  surveillance systems, leaving health authorities reactive rather than
+  anticipatory.
+- **Approach.** Three machine-learning models (Random Forest, XGBoost,
+  LSTM) plus an R²-weighted ensemble, trained on a 2015–2023 district-month
+  panel integrating HMIS surveillance, ERA5-Land + CHIRPS climate, and
+  DRR-portal flood records — with strict chronological 80/20 train/test
+  split and TimeSeriesSplit CV.
+- **Result.** Ensemble R² = **0.55** (XGBoost individual R² = 0.52);
+  flood-related features account for **~18%** of explained variance;
+  flood–typhoid correlation strengthens at a one-month lag (r = 0.412).
+- **Projection.** SSP2-4.5 implies a **+25%** national typhoid burden by
+  2050 (~469,000 annual cases); SSP5-8.5 implies **+40%**, with
+  disproportionate impact on Terai districts.
+- **Replication.** Every figure and metric on this site is loaded from
+  the source code and data in the [Replication](replication/data.qmd)
+  section.
+
+## Read the paper
+
+The full write-up follows the standard structure — sidebar links from
+[Introduction](paper/01-introduction.qmd) onward. Headline results live in
+[Results](paper/04-results.qmd) and the policy translation is in
+[Discussion](paper/05-discussion.qmd).
+
+## Reproduce the results
+
+The [Replication](replication/data.qmd) section is end-to-end runnable:
+data loading, feature engineering, model fitting, and evaluation. Clone the
+repo, install dependencies (`make install`), then `make` regenerates the
+entire site locally — including all charts and tables.
+
+## How to cite
+
+> Baral, K. *Predictive Modeling of Typhoid Incidence in Nepal Under
+> Extreme Climate Change Scenarios Using Machine Learning*. Department
+> of Health Informatics, Kathmandu University, Dhulikhel, Nepal. 2026.
+> URL: https://baralsamrat.github.io

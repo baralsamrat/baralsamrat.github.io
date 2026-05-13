@@ -1,0 +1,44 @@
+<!-- presentation-controls.html
+     Floating Exit + Download controls injected into every slide page via
+     Quarto's `include-after-body`. Hidden in print/PDF mode. -->
+
+<div class="presentation-controls" id="presentation-controls">
+
+  <a href="index.html" class="ctrl-btn ctrl-exit" title="Back to research site">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+         stroke-linejoin="round" aria-hidden="true">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    <span>Exit</span>
+  </a>
+
+  <div class="ctrl-divider" aria-hidden="true"></div>
+
+  <a href="presentation.html?print-pdf" target="_blank" rel="noopener"
+     class="ctrl-btn ctrl-download"
+     title="Opens print view in a new tab — use your browser's print dialog (Cmd/Ctrl + P) → Save as PDF">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+         stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+      <polyline points="7 10 12 15 17 10"></polyline>
+      <line x1="12" y1="15" x2="12" y2="3"></line>
+    </svg>
+    <span>PDF</span>
+  </a>
+
+  <a href="presentation.pptx" class="ctrl-btn ctrl-download"
+     title="Download as PowerPoint (.pptx)">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+         stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+      <polyline points="7 10 12 15 17 10"></polyline>
+      <line x1="12" y1="15" x2="12" y2="3"></line>
+    </svg>
+    <span>PPTX</span>
+  </a>
+
+</div>
