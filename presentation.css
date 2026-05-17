@@ -1,0 +1,897 @@
+/* presentation.css — scholarly typography for the Nepal typhoid presentation.
+ * Aesthetic: restrained, paper-like, type-driven. Color used sparingly.
+ * Inspired by: Royal Society lectures, Nature article opening spreads,
+ * Edward Tufte's slide vernacular, MIT Media Lab presentations.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Palette: warm paper + ink-blue + oxblood accent */
+  --bg-paper: #fbf9f4;
+  --bg-dark:  #0e2233;
+  --ink:      #1a1f2e;
+  --ink-soft: #4a5066;
+  --ink-mute: #8c8e98;
+  --rule:     #d8d2c4;
+  --rule-soft:#ece6d8;
+  --accent:   #7a1f2b;       /* oxblood — for emphasis, links, key numbers */
+  --accent-gold: #a87a3d;    /* used very sparingly */
+  --highlight: #fdf3d8;
+
+  /* Typography */
+  --serif:    "EB Garamond", "Charter", "Georgia", serif;
+  --sans:     "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --mono:     "JetBrains Mono", "SF Mono", "Menlo", monospace;
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────── */
+
+.reveal {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+.reveal .slides {
+  text-align: center;
+}
+
+.reveal .slides section {
+  background: var(--bg-paper);
+  padding: 1.2em 1.6em;
+}
+
+/* ─── Headings — serif, italic, restrained ───────────────────────────── */
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin-top: 0;
+}
+
+.reveal h2 {
+  font-size: 1.4em;
+  font-style: italic;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.25em;
+  margin-bottom: 0.7em;
+  letter-spacing: -0.015em;
+}
+
+.reveal h3 {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-top: 0.8em;
+  margin-bottom: 0.3em;
+}
+
+/* ─── Body type ──────────────────────────────────────────────────────── */
+
+.reveal p {
+  font-family: var(--sans);
+  font-size: 0.78em;
+  line-height: 1.45;
+  margin: 0.4em 0;
+  color: var(--ink);
+}
+
+.reveal ul,
+.reveal ol {
+  font-size: 0.78em;
+  line-height: 1.5;
+  margin: 0.3em 0 0.6em 0;
+  padding-left: 1.1em;
+}
+
+.reveal ul li,
+.reveal ol li {
+  margin: 0.15em 0;
+}
+
+.reveal ul li::marker {
+  color: var(--ink-mute);
+}
+
+.reveal strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.reveal em {
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* ─── Links ──────────────────────────────────────────────────────────── */
+
+.reveal a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(122, 31, 43, 0.25);
+  transition: border-color 0.15s ease;
+}
+
+.reveal a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* Download badge on title slide */
+.reveal a.btn,
+.reveal .btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.62em;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  border: 1px solid currentColor;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* ─── Tables — academic-publication style ────────────────────────────── */
+
+.reveal table {
+  font-family: var(--sans);
+  font-size: 0.62em;
+  border-collapse: collapse;
+  margin: 0.5em auto;
+  background: transparent;
+}
+
+.reveal table thead tr {
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.reveal table tbody tr:last-child {
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.reveal table th {
+  font-weight: 600;
+  font-size: 0.95em;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--ink);
+  padding: 0.4em 0.8em;
+  text-align: left;
+}
+
+.reveal table th[align="right"] { text-align: right; }
+.reveal table th[align="center"] { text-align: center; }
+
+.reveal table td {
+  padding: 0.35em 0.8em;
+  border: none;
+  color: var(--ink);
+}
+
+.reveal table tbody tr:nth-child(even) {
+  background: rgba(216, 210, 196, 0.18);
+}
+
+/* Highlight winning rows / cells (use **bold** in markdown) */
+.reveal table strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ─── Code & math ────────────────────────────────────────────────────── */
+
+.reveal pre {
+  font-family: var(--mono);
+  font-size: 0.55em;
+  background: var(--rule-soft);
+  border-left: 3px solid var(--accent);
+  padding: 0.8em 1em;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.reveal code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: var(--accent);
+  background: transparent;
+  padding: 0 0.1em;
+}
+
+.reveal .MathJax {
+  color: var(--ink) !important;
+}
+
+.reveal mjx-container {
+  font-size: 0.95em !important;
+}
+
+/* ─── Callout boxes — quiet, scholarly ───────────────────────────────── */
+
+.reveal .callout {
+  border: none;
+  border-left: 3px solid var(--accent);
+  background: rgba(122, 31, 43, 0.04);
+  padding: 0.6em 0.9em;
+  margin: 0.5em 0;
+  font-size: 0.9em;
+  border-radius: 0;
+}
+
+.reveal .callout-title {
+  display: none;
+}
+
+.reveal .callout-note {
+  border-left-color: var(--accent-gold);
+  background: rgba(168, 122, 61, 0.05);
+}
+
+.reveal .callout-warning {
+  border-left-color: var(--accent);
+  background: rgba(122, 31, 43, 0.05);
+}
+
+.reveal .callout-tip {
+  border-left-color: var(--accent-gold);
+  background: rgba(168, 122, 61, 0.06);
+}
+
+.reveal .callout > div {
+  font-size: 0.95em;
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* ─── Blockquotes — pull quotes ──────────────────────────────────────── */
+
+.reveal blockquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05em;
+  line-height: 1.4;
+  color: var(--ink);
+  border: none;
+  border-left: 2px solid var(--accent);
+  padding: 0.4em 0 0.4em 1em;
+  margin: 0.8em 0;
+  background: transparent;
+  box-shadow: none;
+  quotes: none;
+}
+
+.reveal blockquote::before,
+.reveal blockquote::after { content: none; }
+
+/* ─── Title slide ────────────────────────────────────────────────────── */
+
+.reveal section.title-slide,
+.reveal section[data-state="title"] {
+  background: var(--bg-paper);
+}
+
+.reveal .title-slide h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.6em;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0.5em 0 0.15em 0;
+  border-bottom: none;
+}
+
+.reveal .title-slide .subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.0em;
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+.reveal .title-slide .quarto-title-author-name {
+  font-family: var(--sans);
+  font-size: 0.65em;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.reveal .title-slide .quarto-title-author-affiliation {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.65em;
+  color: var(--ink-soft);
+  margin-top: 0.2em;
+}
+
+.reveal .title-slide .date {
+  font-family: var(--sans);
+  font-size: 0.55em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-top: 1.5em;
+}
+
+/* ─── Section dividers (dark) ────────────────────────────────────────── */
+
+.reveal section.section-divider,
+.reveal section[data-background-color="#0e2233"],
+.reveal section[data-background-color="#1a2530"] {
+  background: var(--bg-dark) !important;
+}
+
+.reveal section.section-divider h1,
+.reveal section.section-divider h2,
+.reveal section.section-divider h3,
+.reveal section[data-background-color="#0e2233"] h1,
+.reveal section[data-background-color="#0e2233"] h2,
+.reveal section[data-background-color="#0e2233"] h3 {
+  color: var(--bg-paper);
+  border-bottom: none;
+}
+
+/* Hide the empty <h2> that Quarto generates from `## {.section-divider ...}`. */
+.reveal section.section-divider > h2:empty {
+  display: none;
+}
+
+/* Pandoc wraps content inside fenced divs in <p>; without this, the global
+ * `.reveal p { color: var(--ink); }` rule makes dark text invisible on the
+ * dark navy background. Force paragraphs inside dividers to inherit the
+ * parent div's font + color rather than the page default. */
+.reveal section.section-divider p {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  text-align: inherit;
+  margin: 0;
+}
+
+/* Footer + slide number must stay legible on the dark dividers too. */
+.reveal section.section-divider ~ .footer,
+.reveal section.section-divider .footer {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.reveal section.section-divider .roman {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  display: block;
+}
+
+.reveal section.section-divider .section-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 3em;
+  font-weight: 400;
+  color: var(--bg-paper);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.reveal section.section-divider .section-rule {
+  width: 60px;
+  height: 1px;
+  background: var(--accent-gold);
+  margin: 1.5em auto;
+}
+
+.reveal section.section-divider .section-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 60%;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* ─── Hero stat callouts ─────────────────────────────────────────────── */
+
+.reveal .hero-stat {
+  text-align: center;
+  margin: 0.4em 0;
+}
+
+.reveal .hero-stat .num {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 4em;
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -0.03em;
+  display: block;
+}
+
+.reveal .hero-stat .label {
+  font-family: var(--sans);
+  font-size: 0.55em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.4em;
+  display: block;
+}
+
+/* Smaller inline stat grid for "headline numbers" rows */
+.reveal .stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.6em 1.2em;
+  margin: 1em 0;
+  text-align: center;
+  align-items: start;
+}
+
+.reveal .stat-grid > * {
+  min-width: 0;       /* lets the grid track shrink rather than overflowing */
+}
+
+.reveal .stat-grid .num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 2.2em;
+  line-height: 1;
+  color: var(--accent);
+  display: block;
+}
+
+.reveal .stat-grid .label {
+  font-family: var(--sans);
+  font-size: 0.52em;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-top: 0.55em;
+  display: block;
+  line-height: 1.35;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Citation footer for slides with multiple inline sources — keeps stat-grid
+ * labels short while preserving the APA paper trail. */
+.reveal .sources {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.55em;
+  color: var(--ink-mute);
+  text-align: center;
+  margin-top: 1em;
+  padding-top: 0.4em;
+  border-top: 1px solid var(--rule-soft);
+  letter-spacing: 0;
+}
+
+.reveal .sources a.citation {
+  color: var(--ink-mute);
+  border-bottom: 1px dotted rgba(140, 142, 152, 0.5);
+  white-space: nowrap;
+}
+
+.reveal .sources a.citation:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ─── Footer & slide number — muted ──────────────────────────────────── */
+
+.reveal .footer {
+  font-family: var(--sans);
+  font-size: 0.45em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+
+.reveal .slide-number {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-mute);
+  background: transparent;
+  padding: 0.4em 0.6em;
+}
+
+.reveal .progress {
+  height: 2px;
+  color: var(--accent);
+}
+
+/* ─── Images — let them breathe ──────────────────────────────────────── */
+
+.reveal img {
+  margin: 0.3em auto;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.reveal .figure-caption,
+.reveal .tiny {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.6em;
+  color: var(--ink-mute);
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 0.4em;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── Columns — tighter gutters ──────────────────────────────────────── */
+
+.reveal .columns {
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.reveal .column h3 {
+  margin-top: 0;
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* ─── Subtle decorative rules ────────────────────────────────────────── */
+
+.reveal hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0.8em 0;
+}
+
+/* ─── Tighten reveal's default spacing ───────────────────────────────── */
+
+.reveal section > *:first-child {
+  margin-top: 0;
+}
+
+.reveal section > *:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── References slide — academic two-column hanging-indent layout ────── */
+
+.reveal section.refs-slide,
+.reveal section:has(#refs) {
+  font-size: 0.95em;
+}
+
+.reveal #refs,
+.reveal .references {
+  column-count: 2;
+  column-gap: 1.6em;
+  column-rule: 1px solid var(--rule-soft);
+  font-family: var(--serif);
+  font-size: 0.42em;
+  line-height: 1.45;
+  text-align: left;
+  margin-top: 0;
+  max-height: 78vh;
+  overflow-y: auto;
+}
+
+.reveal #refs > div,
+.reveal .references > div,
+.reveal .csl-entry {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  padding-left: 1.4em;
+  text-indent: -1.4em;
+  margin: 0 0 0.5em 0;
+  color: var(--ink);
+}
+
+.reveal #refs .csl-entry a,
+.reveal .references .csl-entry a {
+  color: var(--accent);
+  border-bottom: none;
+  word-break: break-all;
+}
+
+/* Custom scrollbar for the references column when it overflows */
+.reveal #refs::-webkit-scrollbar {
+  width: 6px;
+}
+
+.reveal #refs::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 3px;
+}
+
+/* In-text citations rendered by APA CSL — tighter spacing in body */
+.reveal .citation {
+  white-space: nowrap;
+}
+
+/* ─── Floating controls — Exit + PDF + PPTX downloads ────────────────── */
+
+.presentation-controls {
+  position: fixed;
+  top: 1.4em;
+  right: 1.4em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  z-index: 1000;
+  font-family: var(--sans);
+  opacity: 0.55;
+  transition: opacity 0.25s ease;
+}
+
+.presentation-controls:hover {
+  opacity: 1;
+}
+
+.presentation-controls .ctrl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.5em 0.85em;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: rgba(251, 249, 244, 0.92);
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  box-shadow: 0 1px 3px rgba(14, 34, 51, 0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.presentation-controls .ctrl-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: #fff;
+}
+
+.presentation-controls .ctrl-btn svg {
+  flex-shrink: 0;
+  stroke-width: 1.8;
+}
+
+.presentation-controls .ctrl-exit {
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.presentation-controls .ctrl-divider {
+  width: 1px;
+  height: 14px;
+  background: var(--rule);
+  margin: 0 0.25em;
+}
+
+/* Hide controls in print-to-PDF mode so they don't appear in the export. */
+@media print,
+       print-pdf {
+  .presentation-controls { display: none !important; }
+}
+
+body.print-pdf .presentation-controls { display: none !important; }
+
+/* ─── Print / PDF tweaks ─────────────────────────────────────────────── */
+
+@media print {
+  .reveal section {
+    page-break-after: always;
+  }
+}
+
+/* ─── Limitations slide — Royal Society pamphlet aesthetic ──────────── */
+/* A two-column scholarly layout: italic serif column titles, Roman
+ * numeral markers in oxblood, italic serif tag (1–3 word framing of the
+ * limitation), then a sans-serif one-line elaboration. Designed for the
+ * "presenting in front of the Nobel committee" register — restraint,
+ * typography over decoration, breathing room over density. */
+
+.reveal .limit-col-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05em;
+  font-weight: 500;
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.28em;
+  margin: 0 0 0.85em 0;
+  letter-spacing: 0.005em;
+  text-align: left;
+}
+
+.reveal .lim-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each row is a single <p> with a hanging indent. The Roman numeral sits in
+ * a 2.1em left margin; the rest of the line wraps flush with the body text.
+ * This is render-stable across Pandoc's <p>-wrapping behaviour, unlike a
+ * CSS-grid approach that depends on the exact child element structure. */
+.reveal .lim-list p,
+.reveal .lim-row {
+  padding-left: 2.1em;
+  text-indent: -2.1em;
+  margin: 0 0 0.55em 0;
+  font-family: var(--sans);
+  font-size: 0.72em;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--ink);
+}
+
+.reveal .lim-num {
+  display: inline-block;
+  width: 1.5em;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.18em;
+  color: var(--accent);
+  text-align: right;
+  margin-right: 0.55em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.reveal .lim-tag {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.12em;
+  color: var(--ink);
+  margin-right: 0.4em;
+  letter-spacing: -0.005em;
+}
+
+.reveal .lim-aphorism {
+  border-top: 1px solid var(--rule);
+  margin: 1.1em auto 0 auto;
+  padding-top: 0.65em;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.78em;
+  color: var(--ink-soft);
+  text-align: center;
+  max-width: 78%;
+  line-height: 1.45;
+}
+
+/* ─── FIX: center slide content (prevent right-shift / right-side cutoff) ── */
+/* Reveal sometimes inherits asymmetric padding or block flow that pushes
+ * content toward the right edge — this block forces every slide's content
+ * to be horizontally centered within the slide frame and prevents long
+ * images / columns / stat-grids from spilling past the right viewport edge. */
+
+.reveal .slides {
+  text-align: center;
+}
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2em 2em !important;          /* symmetric L/R padding */
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  left: 0 !important;                      /* override stray inline left offsets */
+  right: 0 !important;
+}
+
+/* Children of section default to full slide width so their own text-align /
+ * grid centering takes effect against a centered container, not a left-or-
+ * right-shifted one. */
+.reveal .slides > section > *,
+.reveal .slides > section > section > * {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CRITICAL: bullet lists, paragraphs, and tables must stay LEFT-aligned —
+ * the section-level `text-align: center` would otherwise center-justify
+ * every line of every bullet, producing a ragged, overlapping mess on
+ * any text-dense slide (e.g. Limitations, Future work, Governance). */
+.reveal .slides > section ul,
+.reveal .slides > section ol,
+.reveal .slides > section p,
+.reveal .slides > section table,
+.reveal .slides > section blockquote,
+.reveal .slides > section .columns p,
+.reveal .slides > section .column ul,
+.reveal .slides > section .column ol,
+.reveal .slides > section .column p {
+  text-align: left;
+}
+
+/* List items still left-aligned even inside a center-aligned column. */
+.reveal .slides > section li,
+.reveal .slides > section .column li {
+  text-align: left;
+}
+
+/* Images, tables, and figures never extend past the slide frame. */
+.reveal img,
+.reveal table,
+.reveal figure {
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Two-column layouts: keep gutter symmetric and prevent either column from
+ * pushing the row off-center. */
+.reveal .columns {
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+}
+
+.reveal .columns > .column {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Stat grids: explicit centering so the row sits in the middle of the slide
+ * even when there are 2 or 3 cells instead of 4. */
+.reveal .stat-grid {
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Floating controls (top-right corner buttons) must never overlap slide
+ * content — push them above content and shrink slightly so they don't
+ * encroach on the right margin of the slide. */
+.presentation-controls {
+  pointer-events: auto;
+}
+.reveal .slides > section { padding-right: 2em !important; }
+

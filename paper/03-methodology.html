@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3 — Methodology – Typhoid Prediction in Nepal</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Typhoid Prediction in Nepal</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebook.html"> 
+<span class="menu-text">Notebook</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../presentation.html"> 
+<span class="menu-text">Presentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../paper/01-introduction.html" aria-current="page"> 
+<span class="menu-text">Paper</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../replication/data.html"> 
+<span class="menu-text">Replication</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../figures.html"> 
+<span class="menu-text">Figures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/baralsamrat/baralsamrat.github.io"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper/01-introduction.html">Paper</a></li><li class="breadcrumb-item"><a href="../paper/03-methodology.html">3 — Methodology</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper/01-introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1 — Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper/02-literature-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2 — Literature Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper/03-methodology.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">3 — Methodology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper/04-results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4 — Results</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper/05-discussion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5 — Discussion</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Replication</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../replication/data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Replication — Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../replication/train.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Replication — Train</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../replication/eval.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Replication — Eval</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-method" id="toc-sec-method" class="nav-link active" data-scroll-target="#sec-method">3.1 — Research design and analytical framework</a></li>
+  <li><a href="#study-area-and-temporal-scope" id="toc-study-area-and-temporal-scope" class="nav-link" data-scroll-target="#study-area-and-temporal-scope">3.2 — Study area and temporal scope</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">3.3 — Data sources</a>
+  <ul class="collapse">
+  <li><a href="#typhoid-incidence-data" id="toc-typhoid-incidence-data" class="nav-link" data-scroll-target="#typhoid-incidence-data">Typhoid incidence data</a></li>
+  <li><a href="#climate-variables" id="toc-climate-variables" class="nav-link" data-scroll-target="#climate-variables">Climate variables</a></li>
+  <li><a href="#extreme-climate-event-indicator" id="toc-extreme-climate-event-indicator" class="nav-link" data-scroll-target="#extreme-climate-event-indicator">Extreme climate event indicator</a></li>
+  </ul></li>
+  <li><a href="#data-pre-processing-and-feature-engineering" id="toc-data-pre-processing-and-feature-engineering" class="nav-link" data-scroll-target="#data-pre-processing-and-feature-engineering">3.4 — Data pre-processing and feature engineering</a></li>
+  <li><a href="#machine-learning-models-and-model-selection-rationale" id="toc-machine-learning-models-and-model-selection-rationale" class="nav-link" data-scroll-target="#machine-learning-models-and-model-selection-rationale">3.5 — Machine learning models and model selection rationale</a>
+  <ul class="collapse">
+  <li><a href="#random-forest-rf" id="toc-random-forest-rf" class="nav-link" data-scroll-target="#random-forest-rf">Random Forest (RF)</a></li>
+  <li><a href="#xgboost-extreme-gradient-boosting" id="toc-xgboost-extreme-gradient-boosting" class="nav-link" data-scroll-target="#xgboost-extreme-gradient-boosting">XGBoost (Extreme Gradient Boosting)</a></li>
+  <li><a href="#long-short-term-memory-lstm" id="toc-long-short-term-memory-lstm" class="nav-link" data-scroll-target="#long-short-term-memory-lstm">Long Short-Term Memory (LSTM)</a></li>
+  </ul></li>
+  <li><a href="#model-training-validation-tuning-and-ensemble-construction" id="toc-model-training-validation-tuning-and-ensemble-construction" class="nav-link" data-scroll-target="#model-training-validation-tuning-and-ensemble-construction">3.6 — Model training, validation, tuning, and ensemble construction</a>
+  <ul class="collapse">
+  <li><a href="#ensemble-construction" id="toc-ensemble-construction" class="nav-link" data-scroll-target="#ensemble-construction">Ensemble construction</a></li>
+  </ul></li>
+  <li><a href="#performance-evaluation-metrics" id="toc-performance-evaluation-metrics" class="nav-link" data-scroll-target="#performance-evaluation-metrics">3.7 — Performance evaluation metrics</a></li>
+  <li><a href="#climate-change-scenario-analysis-and-uncertainty" id="toc-climate-change-scenario-analysis-and-uncertainty" class="nav-link" data-scroll-target="#climate-change-scenario-analysis-and-uncertainty">3.8 — Climate change scenario analysis and uncertainty</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper/01-introduction.html">Paper</a></li><li class="breadcrumb-item"><a href="../paper/03-methodology.html">3 — Methodology</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">3 — Methodology</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-method" class="level2">
+<h2 class="anchored" data-anchor-id="sec-method">3.1 — Research design and analytical framework</h2>
+<p>This study employed a retrospective ecological research design to examine the spatiotemporal relationship between climate variability, extreme flood events, and typhoid fever incidence across Nepal. An ecological approach was appropriate given the study’s reliance on aggregated secondary data and its objective of identifying population-level climate–health patterns rather than individual-level risk factors. The analytical framework integrated descriptive epidemiology, inferential generalized linear mixed models (GLMMs), and ML-based prediction to capture both explanatory and predictive dimensions of climate-sensitive disease dynamics. The GLMM component estimated fixed-effect climate–disease associations while accounting for unobserved district-level heterogeneity through random effects. ML models were applied as a complementary predictive layer designed to capture the nonlinear threshold effects and interaction terms that parametric models cannot easily prespecify.</p>
+</section>
+<section id="study-area-and-temporal-scope" class="level2">
+<h2 class="anchored" data-anchor-id="study-area-and-temporal-scope">3.2 — Study area and temporal scope</h2>
+<p>The study covered all 77 administrative districts of Nepal, spanning three major physiographic zones:</p>
+<ul>
+<li><strong>Terai plains</strong> — elevation &lt; 300 m, flood-prone, subtropical monsoon climate, high population density (~450 persons/km²), reliance on tube wells and open water sources particularly susceptible to flood-driven contamination.</li>
+<li><strong>Mid-hill region</strong> — intermediate elevation and rainfall, moderate exposure.</li>
+<li><strong>Himalayan mountain belt</strong> — high altitude, lower disease incidence but vulnerable to landslides and glacial lake outburst floods.</li>
+</ul>
+<p>The temporal scope extended from January 2015 to December 2023, capturing nine complete years of typhoid surveillance and climate observations, including multiple extreme monsoon seasons, the 2016 flood peak, and the post-TCV introduction period. Monthly aggregation was used to reflect disease transmission cycles while maintaining sufficient temporal resolution for lag analysis.</p>
+</section>
+<section id="data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources">3.3 — Data sources</h2>
+<section id="typhoid-incidence-data" class="level3">
+<h3 class="anchored" data-anchor-id="typhoid-incidence-data">Typhoid incidence data</h3>
+<p>Typhoid fever incidence data were obtained from Nepal’s HMIS, which records outpatient morbidity reported by public health facilities nationwide. The dataset comprised monthly counts of clinically diagnosed enteric fever cases aggregated at the district level. Although HMIS data are syndromic and may underreport laboratory-confirmed cases relative to true burden, they provide the most comprehensive and continuous national surveillance coverage available for Nepal <span class="citation" data-cites="mohp2023">(<a href="#ref-mohp2023" role="doc-biblioref">Ministry of Health and Population, Government of Nepal, 2023</a>)</span>. Two HMIS datasets were merged to cover the full study period; national and provincial aggregate records were excluded to maintain district-level consistency.</p>
+</section>
+<section id="climate-variables" class="level3">
+<h3 class="anchored" data-anchor-id="climate-variables">Climate variables</h3>
+<p>Monthly precipitation estimates were obtained from the Climate Hazards Group InfraRed Precipitation with Station data (CHIRPS) <span class="citation" data-cites="funk2015">(<a href="#ref-funk2015" role="doc-biblioref">Funk et al., 2015</a>)</span>, which has been validated for complex Himalayan terrain. Air temperature and relative humidity were sourced from the ERA5-Land reanalysis dataset <span class="citation" data-cites="munoz2021">(<a href="#ref-munoz2021" role="doc-biblioref">Muñoz-Sabater et al., 2021</a>)</span>, selected for its high spatial resolution and established use in climate–health research. District-level climate values were generated by spatially averaging grid cells intersecting each district boundary.</p>
+</section>
+<section id="extreme-climate-event-indicator" class="level3">
+<h3 class="anchored" data-anchor-id="extreme-climate-event-indicator">Extreme climate event indicator</h3>
+<p>Flood occurrence data were obtained from Nepal’s Disaster Risk Reduction (DRR) portal, recorded by district and date, and aggregated to monthly counts. Floods were treated as count-based indicators reflecting hydro-meteorological shocks capable of disrupting WASH infrastructure and contaminating water supplies. Although event severity and spatial extent were not consistently recorded, flood frequency has been validated as a robust proxy for extreme exposure at the district population level <span class="citation" data-cites="bhandari2022">(<a href="#ref-bhandari2022" role="doc-biblioref">Bhandari et al., 2022</a>)</span>.</p>
+</section>
+</section>
+<section id="data-pre-processing-and-feature-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="data-pre-processing-and-feature-engineering">3.4 — Data pre-processing and feature engineering</h2>
+<p>All datasets were harmonized into a district–month panel using consistent temporal formats. Nepali calendar dates in HMIS records were converted to Gregorian equivalents using standardized month mappings, and district names were standardized against Nepal’s official administrative boundary list to ensure accurate merges across all three datasets.</p>
+<p>Missing values were limited to less than 10% of observations overall and were handled using conservative imputation methods. Climate variables with short consecutive gaps (≤ 2 months) were linearly interpolated. Missing typhoid counts were imputed using district-specific seasonal averages calculated from non-missing years within the same calendar month. Extreme outliers — specifically, national or provincial aggregate entries erroneously recorded at the district level — were identified by their anomalously high case counts and excluded prior to analysis.</p>
+<p>Feature engineering focused on capturing biologically and environmentally plausible transmission dynamics. Lagged predictor variables of one and two months were generated for flood occurrence and all climate variables. The lag range of 0–2 months was selected based on two complementary lines of evidence:</p>
+<ol type="1">
+<li>The reported incubation period of <em>Salmonella</em> Typhi, which ranges from 6 to 30 days, implying that environmental exposures in one calendar month should primarily manifest clinically in the following month.</li>
+<li>Exploratory correlation analysis at the <strong>district-month level</strong> (n = 6,162), which confirmed that one-month-lagged climate features carry the strongest signal: lagged precipitation r = 0.313, lagged humidity r = 0.180, lagged flood frequency r = 0.122, and the autoregressive <code>cases_lag1</code> term r = 0.731. The autoregressive dominance reflects persistent endemic foci in high-burden districts, while the lagged climate signal is biologically aligned with the <em>S.</em> Typhi incubation period plus a clinical-reporting delay.</li>
+</ol>
+<p>No lags beyond two months were retained, as correlations fell below conventional significance at three months and beyond. Additional features include a binary monsoon season indicator (June–September = 1) and an ecological zone classification (Terai, Hill, Mountain). Typhoid case counts were log-transformed to reduce right skewness and stabilize variance prior to modeling.</p>
+</section>
+<section id="machine-learning-models-and-model-selection-rationale" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-models-and-model-selection-rationale">3.5 — Machine learning models and model selection rationale</h2>
+<p>Three ML algorithms were employed, selected for their complementary strengths and suitability for the structure of the dataset — a medium-sized district-month panel with temporal dependence, right-skewed outcomes, and categorical features. These algorithms were chosen in preference to purely time-series approaches (e.g.&nbsp;ARIMA, SARIMA) because the research objective was to incorporate exogenous climate and flood predictors alongside temporal patterns, which ARIMA extensions handle poorly with many predictors and nonlinear effects <span class="citation" data-cites="choi2023 dixon2023">(<a href="#ref-choi2023" role="doc-biblioref">Choi et al., 2023</a>; <a href="#ref-dixon2023" role="doc-biblioref">Dixon et al., 2023</a>)</span>.</p>
+<section id="random-forest-rf" class="level3">
+<h3 class="anchored" data-anchor-id="random-forest-rf">Random Forest (RF)</h3>
+<p>Used as the baseline ensemble method. RF is robust to overfitting with moderate sample sizes, handles mixed predictor types without scaling, and provides permutation-based variable importance rankings that are useful for epidemiological interpretation <span class="citation" data-cites="breiman2001">(<a href="#ref-breiman2001" role="doc-biblioref">Breiman, 2001</a>)</span>.</p>
+</section>
+<section id="xgboost-extreme-gradient-boosting" class="level3">
+<h3 class="anchored" data-anchor-id="xgboost-extreme-gradient-boosting">XGBoost (Extreme Gradient Boosting)</h3>
+<p>Selected for its demonstrated superiority with structured tabular data, its built-in L1/L2 regularization, and its capacity to learn nonlinear threshold effects and interaction terms that are intrinsic to climate–health systems <span class="citation" data-cites="chen2016xgboost">(<a href="#ref-chen2016xgboost" role="doc-biblioref">Chen &amp; Guestrin, 2016</a>)</span>. The XGBoost objective is</p>
+<p><span id="eq-xgb"><span class="math display">\[
+\mathcal{L}^{(t)} = \sum_{i=1}^{N}\ell\!\left(y_i,\hat{y}_i^{(t-1)} + f_t(\mathbf{x}_i)\right)
+   + \Omega(f_t),
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(\Omega(f) = \gamma T + \tfrac{1}{2}\lambda\lVert w\rVert^2\)</span> is the regularisation penalty over leaf weights <span class="math inline">\(w\)</span> and tree size <span class="math inline">\(T\)</span>.</p>
+</section>
+<section id="long-short-term-memory-lstm" class="level3">
+<h3 class="anchored" data-anchor-id="long-short-term-memory-lstm">Long Short-Term Memory (LSTM)</h3>
+<p>Included to capture sequential temporal dependencies in the monthly time series — particularly the lagged effect of flood events, which tree-based methods treat as independent observations <span class="citation" data-cites="hochreiter1997">(<a href="#ref-hochreiter1997" role="doc-biblioref">Hochreiter &amp; Schmidhuber, 1997</a>)</span>. LSTM was treated as an exploratory model given the relatively short available sequence length (9 years × 12 months = 108 time steps at national level).</p>
+</section>
+</section>
+<section id="model-training-validation-tuning-and-ensemble-construction" class="level2">
+<h2 class="anchored" data-anchor-id="model-training-validation-tuning-and-ensemble-construction">3.6 — Model training, validation, tuning, and ensemble construction</h2>
+<p>The dataset was first divided <strong>chronologically</strong> into a training subset (the earliest 80% of observations) and a held-out test subset (the most recent 20%), strictly preserving temporal order to prevent any form of data leakage from future time points into model training. This chronological split is essential for time-series evaluation: random splits would allow the model to observe data from 2022 when predicting 2018, which artificially inflates apparent performance.</p>
+<p>Within the training subset only, <code>TimeSeriesSplit</code> cross-validation with <em>k</em> = 5 folds was applied for hyperparameter tuning. In each fold, training observations were drawn from earlier time points and validation observations from later time points within the training window, maintaining temporal ordering throughout. Grid search was used to identify optimal hyperparameters by minimizing validation-set RMSE. Final model performance was then assessed exclusively on the held-out test set, which the model never encountered during training or tuning.</p>
+<p>For machine learning models, all continuous predictor features were standardized (zero mean, unit standard deviation) prior to training. Early stopping was applied during LSTM training to prevent overfitting on the limited sequence length. XGBoost regularization parameters (<code>reg_lambda</code>, <code>reg_alpha</code>) were tuned via grid search. Model stability was assessed through sensitivity checks across monsoon (June–September) and non-monsoon subperiods.</p>
+<section id="ensemble-construction" class="level3">
+<h3 class="anchored" data-anchor-id="ensemble-construction">Ensemble construction</h3>
+<p>An ensemble model was constructed by combining the predictions of all three algorithms using weighted averaging. Weights were assigned <strong>a priori</strong> (not tuned on the test set) to up-weight XGBoost relative to the other learners, on the basis of its consistently lower RMSE on similar epidemiological count-data panels:</p>
+<ul>
+<li>RF weight: <strong>0.25</strong></li>
+<li>XGBoost weight: <strong>0.50</strong></li>
+<li>LSTM / MLP weight: <strong>0.25</strong></li>
+</ul>
+<p>The ensemble prediction for each observation is then</p>
+<p><span class="math display">\[
+\hat{Y}_{\text{ens}} = 0.25 \,\hat{Y}_{\text{RF}}
+                     + 0.50 \,\hat{Y}_{\text{XGB}}
+                     + 0.25 \,\hat{Y}_{\text{LSTM/MLP}}.
+\]</span></p>
+<p>This <em>a priori</em> weighting prevents test-set leakage that would otherwise arise from R²-tuned weights, while still preserving the complementary strengths of each algorithm. Ensemble performance was evaluated on the same held-out test set as the individual models. The exact weights are implemented in <a href="https://github.com/baralsamrat/baralsamrat.github.io/blob/main/code/src/models.py"><code>code/src/models.py:weighted_ensemble</code></a>.</p>
+</section>
+</section>
+<section id="performance-evaluation-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="performance-evaluation-metrics">3.7 — Performance evaluation metrics</h2>
+<p>Model performance was evaluated using four regression metrics appropriate for continuous case-count outcomes:</p>
+<ul>
+<li><strong>RMSE</strong> (Root Mean Squared Error) and <strong>MAE</strong> (Mean Absolute Error) for absolute error magnitude.</li>
+<li><strong>R²</strong> (coefficient of determination) for the proportion of variance explained.</li>
+<li><strong>MAPE</strong> (Mean Absolute Percentage Error) for proportional accuracy interpretable by public health practitioners.</li>
+</ul>
+<p>Bootstrapped 95% confidence intervals (<em>n</em> = 1,000 resamples) were generated to assess metric stability across the test set.</p>
+</section>
+<section id="climate-change-scenario-analysis-and-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="climate-change-scenario-analysis-and-uncertainty">3.8 — Climate change scenario analysis and uncertainty</h2>
+<p>To assess future typhoid risk, scenario-based projections were generated under the SSP2-4.5 (moderate emissions) and SSP5-8.5 (high emissions) climate pathways. Historical climate inputs (precipitation, temperature, flood frequency) were perturbed in accordance with CMIP6 regional projections for Nepal by 2050 relative to the 1995–2014 baseline <span class="citation" data-cites="shrestha2025 ipcc2022">(<a href="#ref-ipcc2022" role="doc-biblioref">Intergovernmental Panel on Climate Change, 2022</a>; <a href="#ref-shrestha2025" role="doc-biblioref">Shrestha et al., 2025</a>)</span>. Specifically:</p>
+<div id="tbl-perturbations" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-perturbations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Climate perturbation envelope applied for 2050 projections
+</figcaption>
+<div aria-describedby="tbl-perturbations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Δ Precipitation</th>
+<th>Δ Temperature</th>
+<th>Δ Flood frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SSP2-4.5 (2050)</td>
+<td>+15%</td>
+<td>+1.0 °C</td>
+<td>+20%</td>
+</tr>
+<tr class="even">
+<td>SSP5-8.5 (2050)</td>
+<td>+30%</td>
+<td>+1.5 °C</td>
+<td>+40%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Monte Carlo simulation (<em>n</em> = 1,000 random draws) was used to propagate uncertainty in climate inputs through the trained XGBoost model, generating a distribution of projected typhoid incidence from which the median and 95% uncertainty interval were extracted.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Projection caveats.</strong> These projections carry several important caveats:</p>
+<ol type="1">
+<li>They are scenario-based and assume that the historical statistical relationship between climate variables and typhoid incidence remains stable through 2050, without accounting for potential changes in WASH infrastructure quality, TCV coverage, population density, or pathogen characteristics.</li>
+<li>The projection model is trained on nine years of observations; longer training periods would improve projection robustness.</li>
+<li>The uncertainty intervals reflect variability in climate inputs only, not model parameter uncertainty.</li>
+</ol>
+<p>The projections should therefore be interpreted as <strong>indicative estimates of the direction and relative magnitude of climate-driven risk changes</strong>, rather than as precise forecasts.</p>
+</div>
+</div>
+</section>
+<section id="references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bhandari2022" class="csl-entry" role="listitem">
+Bhandari, D., Bhusal, C. L., Subedi, M., &amp; Bhatta, B. (2022). Association between flood events and typhoid fever incidence in <span>N</span>epal: A time-series analysis. <em>BMC Infectious Diseases</em>, <em>22</em>(1), 481. <a href="https://doi.org/10.1186/s12879-022-07350-7">https://doi.org/10.1186/s12879-022-07350-7</a>
+</div>
+<div id="ref-breiman2001" class="csl-entry" role="listitem">
+Breiman, L. (2001). Random forests. <em>Machine Learning</em>, <em>45</em>(1), 5–32. <a href="https://doi.org/10.1023/A:1010933404324">https://doi.org/10.1023/A:1010933404324</a>
+</div>
+<div id="ref-chen2016xgboost" class="csl-entry" role="listitem">
+Chen, T., &amp; Guestrin, C. (2016). <span>XGBoost</span>: A scalable tree boosting system. <em>Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>, 785–794. <a href="https://doi.org/10.1145/2939672.2939785">https://doi.org/10.1145/2939672.2939785</a>
+</div>
+<div id="ref-choi2023" class="csl-entry" role="listitem">
+Choi, J., Cho, Y., &amp; Shim, E. (2023). Machine learning approaches for infectious disease forecasting: A systematic review. <em>Journal of Infection</em>, <em>86</em>(2), 127–141.
+</div>
+<div id="ref-dixon2023" class="csl-entry" role="listitem">
+Dixon, M. A. S., Ahlers, L. R. H., Lipp, E. K., &amp; Ryan, S. J. (2023). Machine learning approaches to forecast zoonotic infectious disease outbreaks. <em>Epidemiology &amp; Infection</em>, <em>151</em>, e23. <a href="https://doi.org/10.1017/S0950268823000018">https://doi.org/10.1017/S0950268823000018</a>
+</div>
+<div id="ref-funk2015" class="csl-entry" role="listitem">
+Funk, C., Peterson, P., Landsfeld, M., Pedreros, D., Verdin, J., Shukla, S., Husak, G., Rowland, J., Harrison, L., Hoell, A., &amp; Michaelsen, J. (2015). The climate hazards infrared precipitation with stations—a new environmental record for monitoring extremes. <em>Scientific Data</em>, <em>2</em>, 150066. <a href="https://doi.org/10.1038/sdata.2015.66">https://doi.org/10.1038/sdata.2015.66</a>
+</div>
+<div id="ref-hochreiter1997" class="csl-entry" role="listitem">
+Hochreiter, S., &amp; Schmidhuber, J. (1997). Long short-term memory. <em>Neural Computation</em>, <em>9</em>(8), 1735–1780. <a href="https://doi.org/10.1162/neco.1997.9.8.1735">https://doi.org/10.1162/neco.1997.9.8.1735</a>
+</div>
+<div id="ref-ipcc2022" class="csl-entry" role="listitem">
+Intergovernmental Panel on Climate Change. (2022). <em>Climate change 2022: Impacts, adaptation, and vulnerability. <span>C</span>ontribution of <span>W</span>orking <span>G</span>roup <span>II</span> to the <span>S</span>ixth <span>A</span>ssessment <span>R</span>eport</em>. Cambridge University Press. <a href="https://doi.org/10.1017/9781009325844">https://doi.org/10.1017/9781009325844</a>
+</div>
+<div id="ref-mohp2023" class="csl-entry" role="listitem">
+Ministry of Health and Population, Government of Nepal. (2023). <em>Annual report of the department of health services 2022/23</em>. Government of Nepal.
+</div>
+<div id="ref-munoz2021" class="csl-entry" role="listitem">
+Muñoz-Sabater, J., Dutra, E., Agustí-Panareda, A., Albergel, C., Arduini, G., Balsamo, G., &amp; Thépaut, J.-N. (2021). <span>ERA5</span>-<span>L</span>and: A state-of-the-art global reanalysis dataset for land applications. <em>Earth System Science Data</em>, <em>13</em>(9), 4349–4383. <a href="https://doi.org/10.5194/essd-13-4349-2021">https://doi.org/10.5194/essd-13-4349-2021</a>
+</div>
+<div id="ref-shrestha2025" class="csl-entry" role="listitem">
+Shrestha, M. L., Randhawa, A., &amp; Chalise, P. (2025). Projected changes in flood extent and precipitation extremes in <span>B</span>agmati <span>B</span>asin under <span>CMIP6</span> scenarios. <em>Journal of Hydrology: Regional Studies</em>, <em>58</em>, 101734.
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "3 — Methodology"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.1 — Research design and analytical framework {#sec-method}</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This study employed a retrospective ecological research design to examine</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>the spatiotemporal relationship between climate variability, extreme</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>flood events, and typhoid fever incidence across Nepal. An ecological</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>approach was appropriate given the study's reliance on aggregated</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>secondary data and its objective of identifying population-level</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>climate–health patterns rather than individual-level risk factors. The</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>analytical framework integrated descriptive epidemiology, inferential</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>generalized linear mixed models (GLMMs), and ML-based prediction to</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>capture both explanatory and predictive dimensions of climate-sensitive</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>disease dynamics. The GLMM component estimated fixed-effect</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>climate–disease associations while accounting for unobserved</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>district-level heterogeneity through random effects. ML models were</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>applied as a complementary predictive layer designed to capture the</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>nonlinear threshold effects and interaction terms that parametric models</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>cannot easily prespecify.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.2 — Study area and temporal scope</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>The study covered all 77 administrative districts of Nepal, spanning</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>three major physiographic zones:</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Terai plains** — elevation &lt; 300 m, flood-prone, subtropical monsoon</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  climate, high population density (~450 persons/km²), reliance on tube</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  wells and open water sources particularly susceptible to flood-driven</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  contamination.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Mid-hill region** — intermediate elevation and rainfall, moderate</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  exposure.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Himalayan mountain belt** — high altitude, lower disease incidence</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  but vulnerable to landslides and glacial lake outburst floods.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>The temporal scope extended from January 2015 to December 2023, capturing</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>nine complete years of typhoid surveillance and climate observations,</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>including multiple extreme monsoon seasons, the 2016 flood peak, and the</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>post-TCV introduction period. Monthly aggregation was used to reflect</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>disease transmission cycles while maintaining sufficient temporal</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>resolution for lag analysis.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.3 — Data sources</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### Typhoid incidence data</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>Typhoid fever incidence data were obtained from Nepal's HMIS, which</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>records outpatient morbidity reported by public health facilities</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>nationwide. The dataset comprised monthly counts of clinically diagnosed</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>enteric fever cases aggregated at the district level. Although HMIS data</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>are syndromic and may underreport laboratory-confirmed cases relative to</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>true burden, they provide the most comprehensive and continuous national</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>surveillance coverage available for Nepal <span class="co">[</span><span class="ot">@mohp2023</span><span class="co">]</span>. Two HMIS datasets</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>were merged to cover the full study period; national and provincial</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>aggregate records were excluded to maintain district-level consistency.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">### Climate variables</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>Monthly precipitation estimates were obtained from the Climate Hazards</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>Group InfraRed Precipitation with Station data (CHIRPS) <span class="co">[</span><span class="ot">@funk2015</span><span class="co">]</span>,</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>which has been validated for complex Himalayan terrain. Air temperature</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>and relative humidity were sourced from the ERA5-Land reanalysis dataset</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@munoz2021</span><span class="co">]</span>, selected for its high spatial resolution and established</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>use in climate–health research. District-level climate values were</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>generated by spatially averaging grid cells intersecting each district</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>boundary.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="fu">### Extreme climate event indicator</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>Flood occurrence data were obtained from Nepal's Disaster Risk Reduction</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>(DRR) portal, recorded by district and date, and aggregated to monthly</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>counts. Floods were treated as count-based indicators reflecting</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>hydro-meteorological shocks capable of disrupting WASH infrastructure and</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>contaminating water supplies. Although event severity and spatial extent</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>were not consistently recorded, flood frequency has been validated as a</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>robust proxy for extreme exposure at the district population level</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@bhandari2022</span><span class="co">]</span>.</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.4 — Data pre-processing and feature engineering</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>All datasets were harmonized into a district–month panel using consistent</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>temporal formats. Nepali calendar dates in HMIS records were converted</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>to Gregorian equivalents using standardized month mappings, and district</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>names were standardized against Nepal's official administrative boundary</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>list to ensure accurate merges across all three datasets.</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>Missing values were limited to less than 10% of observations overall and</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>were handled using conservative imputation methods. Climate variables</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>with short consecutive gaps (≤ 2 months) were linearly interpolated.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>Missing typhoid counts were imputed using district-specific seasonal</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>averages calculated from non-missing years within the same calendar</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>month. Extreme outliers — specifically, national or provincial aggregate</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>entries erroneously recorded at the district level — were identified by</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>their anomalously high case counts and excluded prior to analysis.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>Feature engineering focused on capturing biologically and environmentally</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>plausible transmission dynamics. Lagged predictor variables of one and</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>two months were generated for flood occurrence and all climate variables.</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>The lag range of 0–2 months was selected based on two complementary lines</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>of evidence:</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The reported incubation period of *Salmonella* Typhi, which ranges</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>   from 6 to 30 days, implying that environmental exposures in one</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>   calendar month should primarily manifest clinically in the following</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>   month.</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Exploratory correlation analysis at the **district-month level**</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>   (n = 6,162), which confirmed that one-month-lagged climate features</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>   carry the strongest signal: lagged precipitation r = 0.313, lagged</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>   humidity r = 0.180, lagged flood frequency r = 0.122, and the</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>   autoregressive <span class="in">`cases_lag1`</span> term r = 0.731. The autoregressive</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>   dominance reflects persistent endemic foci in high-burden districts,</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>   while the lagged climate signal is biologically aligned with the</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>   *S.* Typhi incubation period plus a clinical-reporting delay.</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>No lags beyond two months were retained, as correlations fell below</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>conventional significance at three months and beyond. Additional features</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>include a binary monsoon season indicator (June–September = 1) and an</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>ecological zone classification (Terai, Hill, Mountain). Typhoid case</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>counts were log-transformed to reduce right skewness and stabilize</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>variance prior to modeling.</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.5 — Machine learning models and model selection rationale</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>Three ML algorithms were employed, selected for their complementary</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>strengths and suitability for the structure of the dataset — a</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>medium-sized district-month panel with temporal dependence, right-skewed</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>outcomes, and categorical features. These algorithms were chosen in</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>preference to purely time-series approaches (e.g. ARIMA, SARIMA) because</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>the research objective was to incorporate exogenous climate and flood</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>predictors alongside temporal patterns, which ARIMA extensions handle</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>poorly with many predictors and nonlinear effects <span class="co">[</span><span class="ot">@choi2023; @dixon2023</span><span class="co">]</span>.</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="fu">### Random Forest (RF)</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>Used as the baseline ensemble method. RF is robust to overfitting with</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>moderate sample sizes, handles mixed predictor types without scaling, and</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>provides permutation-based variable importance rankings that are useful</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>for epidemiological interpretation <span class="co">[</span><span class="ot">@breiman2001</span><span class="co">]</span>.</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="fu">### XGBoost (Extreme Gradient Boosting)</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>Selected for its demonstrated superiority with structured tabular data,</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>its built-in L1/L2 regularization, and its capacity to learn nonlinear</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>threshold effects and interaction terms that are intrinsic to</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>climate–health systems <span class="co">[</span><span class="ot">@chen2016xgboost</span><span class="co">]</span>. The XGBoost objective is</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>\mathcal{L}^{(t)} = \sum_{i=1}^{N}\ell<span class="sc">\!</span>\left(y_i,\hat{y}_i^{(t-1)} + f_t(\mathbf{x}_i)\right)</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">   + </span>\Omega(f_t),</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>$$ {#eq-xgb}</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>where $\Omega(f) = \gamma T + \tfrac{1}{2}\lambda\lVert w\rVert^2$ is the</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>regularisation penalty over leaf weights $w$ and tree size $T$.</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="fu">### Long Short-Term Memory (LSTM)</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>Included to capture sequential temporal dependencies in the monthly time</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>series — particularly the lagged effect of flood events, which tree-based</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>methods treat as independent observations <span class="co">[</span><span class="ot">@hochreiter1997</span><span class="co">]</span>. LSTM was</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>treated as an exploratory model given the relatively short available</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>sequence length (9 years × 12 months = 108 time steps at national level).</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.6 — Model training, validation, tuning, and ensemble construction</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>The dataset was first divided **chronologically** into a training subset</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>(the earliest 80% of observations) and a held-out test subset (the most</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>recent 20%), strictly preserving temporal order to prevent any form of</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>data leakage from future time points into model training. This</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>chronological split is essential for time-series evaluation: random</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>splits would allow the model to observe data from 2022 when predicting</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>2018, which artificially inflates apparent performance.</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>Within the training subset only, <span class="in">`TimeSeriesSplit`</span> cross-validation with</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>*k* = 5 folds was applied for hyperparameter tuning. In each fold,</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>training observations were drawn from earlier time points and validation</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>observations from later time points within the training window,</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>maintaining temporal ordering throughout. Grid search was used to</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>identify optimal hyperparameters by minimizing validation-set RMSE. Final</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>model performance was then assessed exclusively on the held-out test set,</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>which the model never encountered during training or tuning.</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>For machine learning models, all continuous predictor features were</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>standardized (zero mean, unit standard deviation) prior to training.</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>Early stopping was applied during LSTM training to prevent overfitting on</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>the limited sequence length. XGBoost regularization parameters</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>(<span class="in">`reg_lambda`</span>, <span class="in">`reg_alpha`</span>) were tuned via grid search. Model stability</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>was assessed through sensitivity checks across monsoon (June–September)</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>and non-monsoon subperiods.</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ensemble construction</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>An ensemble model was constructed by combining the predictions of all</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>three algorithms using weighted averaging. Weights were assigned</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>**a priori** (not tuned on the test set) to up-weight XGBoost relative</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>to the other learners, on the basis of its consistently lower RMSE on</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>similar epidemiological count-data panels:</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>RF weight: **0.25**</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>XGBoost weight: **0.50**</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>LSTM / MLP weight: **0.25**</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>The ensemble prediction for each observation is then</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>\hat{Y}_{\text{ens}} = 0.25 \,\hat{Y}_{\text{RF}}</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">                     + </span>0.50 \,\hat{Y}_{\text{XGB}}</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">                     + </span>0.25 \,\hat{Y}_{\text{LSTM/MLP}}.</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>This *a priori* weighting prevents test-set leakage that would otherwise</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>arise from R²-tuned weights, while still preserving the complementary</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>strengths of each algorithm. Ensemble performance was evaluated on the</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>same held-out test set as the individual models. The exact weights are</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>implemented in</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`code/src/models.py:weighted_ensemble`</span><span class="co">](https://github.com/baralsamrat/baralsamrat.github.io/blob/main/code/src/models.py)</span>.</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.7 — Performance evaluation metrics</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>Model performance was evaluated using four regression metrics appropriate</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>for continuous case-count outcomes:</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**RMSE** (Root Mean Squared Error) and **MAE** (Mean Absolute Error)</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>  for absolute error magnitude.</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**R²** (coefficient of determination) for the proportion of variance</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>  explained.</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**MAPE** (Mean Absolute Percentage Error) for proportional accuracy</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>  interpretable by public health practitioners.</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>Bootstrapped 95% confidence intervals (*n* = 1,000 resamples) were</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>generated to assess metric stability across the test set.</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.8 — Climate change scenario analysis and uncertainty</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>To assess future typhoid risk, scenario-based projections were generated</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>under the SSP2-4.5 (moderate emissions) and SSP5-8.5 (high emissions)</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>climate pathways. Historical climate inputs (precipitation, temperature,</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>flood frequency) were perturbed in accordance with CMIP6 regional</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>projections for Nepal by 2050 relative to the 1995–2014 baseline</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@shrestha2025; @ipcc2022</span><span class="co">]</span>. Specifically:</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>| Scenario | Δ Precipitation | Δ Temperature | Δ Flood frequency |</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>|---|---|---|---|</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>| SSP2-4.5 (2050) | +15% | +1.0 °C | +20% |</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>| SSP5-8.5 (2050) | +30% | +1.5 °C | +40% |</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>: Climate perturbation envelope applied for 2050 projections {#tbl-perturbations}</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>Monte Carlo simulation (*n* = 1,000 random draws) was used to propagate</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>uncertainty in climate inputs through the trained XGBoost model,</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>generating a distribution of projected typhoid incidence from which the</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>median and 95% uncertainty interval were extracted.</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>**Projection caveats.** These projections carry several important caveats:</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>They are scenario-based and assume that the historical statistical</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>   relationship between climate variables and typhoid incidence remains</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>   stable through 2050, without accounting for potential changes in WASH</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>   infrastructure quality, TCV coverage, population density, or pathogen</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>   characteristics.</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The projection model is trained on nine years of observations; longer</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>   training periods would improve projection robustness.</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>The uncertainty intervals reflect variability in climate inputs only,</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>   not model parameter uncertainty.</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>The projections should therefore be interpreted as **indicative estimates</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>of the direction and relative magnitude of climate-driven risk changes**,</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>rather than as precise forecasts.</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Samrat Baral — Built with <a href="https://quarto.org">Quarto</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/baralsamrat/baralsamrat.github.io">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

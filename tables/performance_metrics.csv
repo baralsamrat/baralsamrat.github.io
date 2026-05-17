@@ -1,0 +1,5 @@
+Model,RMSE (cases),MAE (cases),R²,MAPE (%)
+Random Forest,131.43,72.10,0.8563,41.48
+XGBoost,129.07,69.50,0.8614,44.64
+MLP,128.07,71.45,0.8635,43.50
+Weighted Ensemble,126.20,68.07,0.8675,41.01

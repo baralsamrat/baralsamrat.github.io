@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4 — Results – Typhoid Prediction in Nepal</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Typhoid Prediction in Nepal</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebook.html"> 
+<span class="menu-text">Notebook</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../presentation.html"> 
+<span class="menu-text">Presentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../paper/01-introduction.html" aria-current="page"> 
+<span class="menu-text">Paper</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../replication/data.html"> 
+<span class="menu-text">Replication</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../figures.html"> 
+<span class="menu-text">Figures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/baralsamrat/baralsamrat.github.io"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper/01-introduction.html">Paper</a></li><li class="breadcrumb-item"><a href="../paper/04-results.html">4 — Results</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper/01-introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1 — Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper/02-literature-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2 — Literature Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper/03-methodology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3 — Methodology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper/04-results.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">4 — Results</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper/05-discussion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5 — Discussion</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Replication</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../replication/data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Replication — Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../replication/train.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Replication — Train</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../replication/eval.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Replication — Eval</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link active" data-scroll-target="#descriptive-statistics">4.1 — Descriptive statistics</a></li>
+  <li><a href="#associations-between-typhoid-incidence-and-climate-indicators" id="toc-associations-between-typhoid-incidence-and-climate-indicators" class="nav-link" data-scroll-target="#associations-between-typhoid-incidence-and-climate-indicators">4.2 — Associations between typhoid incidence and climate indicators</a></li>
+  <li><a href="#machine-learning-model-performance-and-predictive-outcomes" id="toc-machine-learning-model-performance-and-predictive-outcomes" class="nav-link" data-scroll-target="#machine-learning-model-performance-and-predictive-outcomes">4.3 — Machine-learning model performance and predictive outcomes</a></li>
+  <li><a href="#model-selection-ensemble-vs.-operational-pick" id="toc-model-selection-ensemble-vs.-operational-pick" class="nav-link" data-scroll-target="#model-selection-ensemble-vs.-operational-pick">4.4 — Model selection: ensemble vs.&nbsp;operational pick</a></li>
+  <li><a href="#climate-scenario-projections" id="toc-climate-scenario-projections" class="nav-link" data-scroll-target="#climate-scenario-projections">4.5 — 2050 climate-scenario projections</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper/01-introduction.html">Paper</a></li><li class="breadcrumb-item"><a href="../paper/04-results.html">4 — Results</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">4 — Results</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-statistics">4.1 — Descriptive statistics</h2>
+<p>From 2015 to 2023, a total of <strong>1,236,000 clinically diagnosed outpatient typhoid fever cases</strong> were recorded across Nepal’s 77 districts through HMIS surveillance (<em>N</em> = 7,327 district-month observations across 108 months). Typhoid incidence demonstrated pronounced seasonal clustering, with <strong>70–80 % of all reported cases occurring during the monsoon period (June–September)</strong> in each study year. <strong>August records the highest median district-month case count (~640 cases) — nearly three times the dry-season median</strong>, reflecting the well-established role of monsoon-driven flooding and elevated humidity in amplifying waterborne disease transmission.</p>
+<p>At the national annual scale, HMIS-recorded incidence averaged 136,000 reported cases per year (SD = 45,000), ranging from a low of 46,342 cases in 2015 to a peak of 399,771 cases in 2016 (coefficient of variation ≈ 33 %). It is important to note that the 136,000 figure represents <em>reported</em> cases captured by HMIS — a syndromic surveillance system known to substantially undercount true disease burden. When the trained predictive model accounts for systematic underreporting and climate-driven seasonal amplification, it estimates a higher baseline burden of approximately <strong>375,000 annual cases</strong> (95 % CI: 350,000 – 400,000). This aligns with WHO estimates that surveillance systems in lower-middle-income countries typically capture only 30–50 % of true typhoid incidence, implying a capture fraction of approximately <strong>36 %</strong> (136,000 / 375,000) for Nepal’s HMIS — consistent with published burden adjustment factors for the region <span class="citation" data-cites="gbd2023 mogasale2016">(<a href="#ref-gbd2023" role="doc-biblioref">GBD 2023 Causes of Death Collaborators, 2025</a>; <a href="#ref-mogasale2016" role="doc-biblioref">Mogasale et al., 2016</a>)</span>.</p>
+<p>At the district–year level (n = 847 observations), mean incidence was 4,880 cases per district per year (SD = 4,467). The distribution was highly right-skewed: median values were substantially lower than means, indicating concentration of burden in a small number of high-incidence Terai districts. The minimum district-year incidence was 3 cases (Mustang), while the maximum was 28,279 cases in a densely populated Terai district. <strong>Terai districts contributed approximately 65 % of the national typhoid burden</strong>, compared with 20 % from hill districts and 15 % from mountain districts. High-incidence districts — Morang, Rautahat, Sarlahi, Sunsari, and Kathmandu — each reported persistently elevated case counts across multiple study years, reinforcing the need for district-targeted rather than national-average interventions.</p>
+<p>Flood exposure showed a similarly concentrated spatial and temporal distribution. A total of <strong>1,248 flood events</strong> were recorded nationally across the study period (annual mean: 97, SD = 51), with <strong>78 % occurring during monsoon months</strong> — a seasonal pattern that closely mirrors the distribution of typhoid cases and strongly suggests a shared environmental driver. The 2016 monsoon season recorded both the highest flood frequency and the highest typhoid incidence of the study period, providing preliminary evidence of a flood–disease link later confirmed through correlation and ML analysis. Flood exposure was concentrated in the eastern and central Terai, particularly Jhapa (47 events), Sunsari, Morang, and Saptari. Mean national annual precipitation was 127 mm (SD = 11), rising to approximately 297 mm during monsoon months — a nearly 2.3-fold seasonal increase that coincided with peak disease burden. Relative humidity averaged 72.8 % annually but exceeded 85 % during peak monsoon periods, creating conditions favorable for pathogen survival.</p>
+<div class="cell" data-execution_count="1">
+<div id="tbl-descriptive" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-descriptive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Descriptive statistics for typhoid incidence, flood events, and climate variables across Nepal (2015–2023).
+</figcaption>
+<div aria-describedby="tbl-descriptive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
+
+
+<table class="dataframe do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Variable</th>
+<th data-quarto-table-cell-role="th">Level</th>
+<th data-quarto-table-cell-role="th">N</th>
+<th data-quarto-table-cell-role="th">Mean</th>
+<th data-quarto-table-cell-role="th">SD</th>
+<th data-quarto-table-cell-role="th">Min</th>
+<th data-quarto-table-cell-role="th">Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Typhoid cases</td>
+<td>National–year</td>
+<td>9</td>
+<td>136000.0</td>
+<td>45000.0</td>
+<td>46342.0</td>
+<td>399771.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Typhoid cases</td>
+<td>District–year</td>
+<td>847</td>
+<td>4880.0</td>
+<td>4467.0</td>
+<td>3.0</td>
+<td>28279.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Flood events</td>
+<td>National–year</td>
+<td>9</td>
+<td>97.0</td>
+<td>51.0</td>
+<td>11.0</td>
+<td>164.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Flood events</td>
+<td>District–year</td>
+<td>847</td>
+<td>1.1</td>
+<td>2.3</td>
+<td>0.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Precipitation (mm)</td>
+<td>National–year</td>
+<td>9</td>
+<td>127.0</td>
+<td>11.0</td>
+<td>112.0</td>
+<td>145.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Temperature (°C)</td>
+<td>National–year</td>
+<td>9</td>
+<td>14.3</td>
+<td>0.3</td>
+<td>13.9</td>
+<td>14.8</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Relative humidity (%)</td>
+<td>National–year</td>
+<td>9</td>
+<td>72.8</td>
+<td>1.2</td>
+<td>71.8</td>
+<td>74.7</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Cross-reference: <a href="#tbl-descriptive" class="quarto-xref">Table&nbsp;1</a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>HMIS = Health Management Information System. Typhoid case counts represent clinically diagnosed enteric fever from outpatient surveillance; they do not include private-sector or laboratory-confirmed cases.</p>
+</div>
+</div>
+<div id="fig-zones" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zones-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/fig5_seasonal_boxplot.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zones-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Distribution of district-level typhoid cases by ecological zone (Terai, Hill, Mountain), 2015–2023. Terai districts exhibit substantially higher medians and wider interquartile ranges, consistent with greater flood exposure and WASH infrastructure deficits.
+</figcaption>
+</figure>
+</div>
+<div id="fig-timeseries" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-timeseries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/fig1_time_series.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-timeseries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: National annual time series of typhoid cases and flood events (2015–2023). Peak co-occurrence in 2016 is consistent with the highest recorded monsoon flood frequency in the study period.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="associations-between-typhoid-incidence-and-climate-indicators" class="level2">
+<h2 class="anchored" data-anchor-id="associations-between-typhoid-incidence-and-climate-indicators">4.2 — Associations between typhoid incidence and climate indicators</h2>
+<p>Bivariate Pearson correlation analyses were conducted at multiple aggregation levels — national-annual, district-annual, and the <strong>district-month panel</strong> (<em>N</em> = 7,327) on which the predictive models are trained. Significant positive associations were observed across all four climate predictors:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Driver</th>
+<th>Pearson <em>r</em> with typhoid cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mean temperature</td>
+<td><strong>0.50 – 0.63</strong></td>
+</tr>
+<tr class="even">
+<td>Precipitation</td>
+<td>0.33 – 0.37</td>
+</tr>
+<tr class="odd">
+<td>Monsoon (Jun–Sep indicator)</td>
+<td>0.25 – 0.29</td>
+</tr>
+<tr class="even">
+<td>Flood events</td>
+<td>0.19</td>
+</tr>
+</tbody>
+</table>
+<p>Mean temperature is the strongest single <em>climate</em> driver — a magnitude band that places typhoid alongside cholera and rotavirus among explicitly temperature-modulated enteric infections — followed by precipitation, the monsoon-season indicator, and flood frequency.</p>
+<p>On the engineered feature panel used for modelling, the one-month <em>lagged</em> climate predictors and the autoregressive term yield the following correlations with log-transformed cases:</p>
+<div class="cell" data-execution_count="2">
+<div id="tbl-correlation" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Pearson correlation of each engineered feature with log(1 + cases), district-month panel.
+</figcaption>
+<div aria-describedby="tbl-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="2">
+<style type="text/css">
+</style>
+
+<table id="T_cd788" class="do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_cd788_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Feature</th>
+<th id="T_cd788_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Pearson_r_with_log_cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_cd788_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
+<td id="T_cd788_row0_col0" class="data row0 col0">cases_lag1</td>
+<td id="T_cd788_row0_col1" class="data row0 col1">0.731</td>
+</tr>
+<tr class="even">
+<td id="T_cd788_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
+<td id="T_cd788_row1_col0" class="data row1 col0">temp_mean_lag1</td>
+<td id="T_cd788_row1_col1" class="data row1 col1">0.599</td>
+</tr>
+<tr class="odd">
+<td id="T_cd788_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
+<td id="T_cd788_row2_col0" class="data row2 col0">temp_roll3</td>
+<td id="T_cd788_row2_col1" class="data row2 col1">0.559</td>
+</tr>
+<tr class="even">
+<td id="T_cd788_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
+<td id="T_cd788_row3_col0" class="data row3 col0">precip_lag1</td>
+<td id="T_cd788_row3_col1" class="data row3 col1">0.313</td>
+</tr>
+<tr class="odd">
+<td id="T_cd788_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
+<td id="T_cd788_row4_col0" class="data row4 col0">monsoon</td>
+<td id="T_cd788_row4_col1" class="data row4 col1">0.245</td>
+</tr>
+<tr class="even">
+<td id="T_cd788_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">5</td>
+<td id="T_cd788_row5_col0" class="data row5 col0">precip_roll3</td>
+<td id="T_cd788_row5_col1" class="data row5 col1">0.208</td>
+</tr>
+<tr class="odd">
+<td id="T_cd788_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">6</td>
+<td id="T_cd788_row6_col0" class="data row6 col0">humidity_lag1</td>
+<td id="T_cd788_row6_col1" class="data row6 col1">0.180</td>
+</tr>
+<tr class="even">
+<td id="T_cd788_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">7</td>
+<td id="T_cd788_row7_col0" class="data row7 col0">flood_lag1</td>
+<td id="T_cd788_row7_col1" class="data row7 col1">0.122</td>
+</tr>
+<tr class="odd">
+<td id="T_cd788_level0_row8" class="row_heading level0 row8" data-quarto-table-cell-role="th">8</td>
+<td id="T_cd788_row8_col0" class="data row8 col0">month_sin</td>
+<td id="T_cd788_row8_col1" class="data row8 col1">-0.133</td>
+</tr>
+<tr class="even">
+<td id="T_cd788_level0_row9" class="row_heading level0 row9" data-quarto-table-cell-role="th">9</td>
+<td id="T_cd788_row9_col0" class="data row9 col0">month_cos</td>
+<td id="T_cd788_row9_col1" class="data row9 col1">-0.226</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>The strongest single feature — by a wide margin — is the autoregressive term <strong><code>cases_lag1</code> (r = 0.731)</strong>, which captures persistent endemic foci in high-burden Terai districts. <strong>Lagged mean temperature (<code>temp_mean_lag1</code>, r = 0.599)</strong> is the strongest lagged <em>climate</em> feature, followed by the three-month rolling mean of temperature (<code>temp_roll3</code>, r = 0.559). <strong>Lagged precipitation (r = 0.313)</strong>, the monsoon indicator (r = 0.245), and lagged humidity (r = 0.180) all carry independent signal. Lagged flood frequency (r = 0.122) is the weakest of the engineered climate features but is biologically the most directly causal, given that flood events physically breach WASH systems. Cyclical month encodings (<code>month_sin</code>, <code>month_cos</code>) are negatively correlated with log-cases (r = –0.13 and r = –0.23), indicating that the late-monsoon / early post-monsoon window specifically concentrates incidence.</p>
+<p>The lagged structure — climate now, cases one month later — is biologically consistent with the <em>Salmonella</em> Typhi incubation period (6–30 days) and supports the interpretation that flood-related water contamination drives typhoid transmission with a clinically detectable delay. At the district level, flood–typhoid correlations were more pronounced in Terai districts, where flood exposure is highest and WASH infrastructure most deficient. Collinearity among climate predictors was noted (precipitation–humidity: r ≈ 0.55–0.6), but variance inflation factors remained within acceptable limits (VIF &lt; 5) after regularisation.</p>
+<p>Cross-reference: <a href="#tbl-correlation" class="quarto-xref">Table&nbsp;2</a>.</p>
+<div id="fig-corrheatmap" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-corrheatmap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/fig2_correlation_heatmap.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-corrheatmap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Heatmap of Pearson correlation coefficients among typhoid incidence and climate indicators (national annual aggregates, 2015–2023). The national-aggregate matrix is shown here for visual interpretability; the model-relevant correlations are in the table above.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="machine-learning-model-performance-and-predictive-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-model-performance-and-predictive-outcomes">4.3 — Machine-learning model performance and predictive outcomes</h2>
+<p>All machine-learning models were trained on the earliest portion of the chronologically ordered district-month panel and evaluated on the <strong>most recent 12 months</strong> of held-out data. A nested early-stopping validation slice (the final 10 % of training) was used for XGBoost hyperparameter selection; nothing from the test window was visible at any stage of training. <strong>Performance metrics (RMSE, MAE) are expressed in units of district-level monthly typhoid case counts</strong>, not national annual totals, because the model is trained and evaluated on the district-month panel.</p>
+<p>All four architectures converge to within <strong>0.012 R²</strong> of each other on the held-out test window — a result that strongly suggests the predictive ceiling is set by the climate × autoregressive signal in the data, not by the choice of model family.</p>
+<ul>
+<li><strong>Weighted Ensemble</strong> — the headline model: <strong>R² = 0.8675, RMSE = 126.20, MAE = 68.07, MAPE = 41.01 %</strong>. The ensemble combines Random Forest, XGBoost, and the sequential model (LSTM or MLP fallback) with weights set <em>a priori</em> (not tuned on the test set) to prevent leakage. It edges all three individual models on every metric.</li>
+<li><strong>Multilayer Perceptron</strong> — best individual model on R² (R² = 0.8635, RMSE = 128.07, MAE = 71.45, MAPE = 43.50 %), reflecting the value of capturing non-linear feature interactions beyond the threshold splits that tree-based methods produce.</li>
+<li><strong>XGBoost</strong> — strongest tree-based learner (R² = 0.8614, RMSE = 129.07, MAE = 69.50, MAPE = 44.64 %). Slightly below MLP on R² but with <strong>lower MAE</strong> and interpretable, gain-based feature importance.</li>
+<li><strong>Random Forest</strong> (R² = 0.8563, RMSE = 131.43, MAE = 72.10, MAPE = 41.48 %) provides a strong, low-variance baseline. Its marginally lower MAPE indicates slightly better proportional accuracy on the long tail of low-incidence district-months.</li>
+</ul>
+<div class="cell" data-execution_count="3">
+<div id="tbl-perf" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="3">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-perf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Performance comparison on the held-out test set (district-month predictions, last 12 months). RMSE and MAE are in case-count units.
+</figcaption>
+<div aria-describedby="tbl-perf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Model</th>
+<th data-quarto-table-cell-role="th">RMSE (cases)</th>
+<th data-quarto-table-cell-role="th">MAE (cases)</th>
+<th data-quarto-table-cell-role="th">R²</th>
+<th data-quarto-table-cell-role="th">MAPE (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Random Forest</td>
+<td>131.43</td>
+<td>72.10</td>
+<td>0.8563</td>
+<td>41.48</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>XGBoost</td>
+<td>129.07</td>
+<td>69.50</td>
+<td>0.8614</td>
+<td>44.64</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>MLP</td>
+<td>128.07</td>
+<td>71.45</td>
+<td>0.8635</td>
+<td>43.50</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Weighted Ensemble</td>
+<td>126.20</td>
+<td>68.07</td>
+<td>0.8675</td>
+<td>41.01</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Cross-reference: <a href="#tbl-perf" class="quarto-xref">Table&nbsp;3</a>.</p>
+<div id="fig-modelcomp" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-modelcomp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/fig4_model_comparison.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modelcomp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Model performance comparison — RMSE, MAE, and R² across Random Forest, XGBoost, and the MLP fallback (the three individual models from the paper-style pipeline). All architectures cluster within 0.012 R² on the held-out test window.
+</figcaption>
+</figure>
+</div>
+<div id="fig-importance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-importance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/fig3_feature_importance.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-importance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: XGBoost gain-based feature importance. The autoregressive <code>cases_lag1</code> term dominates (normalised importance ≈ 0.67), followed by lagged mean temperature (≈ 0.09), cyclical month encodings (≈ 0.12 combined), and the monsoon indicator (≈ 0.04).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="model-selection-ensemble-vs.-operational-pick" class="level2">
+<h2 class="anchored" data-anchor-id="model-selection-ensemble-vs.-operational-pick">4.4 — Model selection: ensemble vs.&nbsp;operational pick</h2>
+<p>The <strong>Weighted Ensemble achieves the lowest RMSE and MAE on every metric</strong> and is the thesis-canonical headline result. The convergence of all four architectures within 0.012 R² nevertheless makes clear that this is <strong>not a modelling problem</strong>: the predictive ceiling is set by the climate × autoregressive signal in the data, not by algorithm choice.</p>
+<p>When the operational decision is to deploy a <em>single</em> model — for example, into Nepal’s DHIS2 surveillance dashboard — <strong>XGBoost is the operational pick</strong>, on three criteria that statistical R² alone does not capture:</p>
+<ol type="1">
+<li><strong>Interpretability for public-health stakeholders.</strong> Gain-based feature importance and tree-traversal explanations are accessible to non-technical decision-makers in Ministry-of-Health workflows in a way that MLP weights or ensemble averages are not.</li>
+<li><strong>Robustness under missing data.</strong> Real-world DHIS2 ingestion is often incomplete; XGBoost’s built-in missing-value handling degrades gracefully, whereas MLP requires explicit imputation that propagates uncertainty.</li>
+<li><strong>Reproducibility.</strong> Tree ensembles are deterministic given the random seed; MLP training trajectories vary with batch order and hardware-level non-determinism, complicating audit and regulatory acceptance.</li>
+</ol>
+<p>The ensemble is reported as the headline because it is what the data support; XGBoost is the recommendation when only one model can be operationalised.</p>
+</section>
+<section id="climate-scenario-projections" class="level2">
+<h2 class="anchored" data-anchor-id="climate-scenario-projections">4.5 — 2050 climate-scenario projections</h2>
+<p>Under current climate conditions, the trained XGBoost model estimates a national annual typhoid burden of approximately <strong>375,000 cases</strong> (95 % CI: 350,000 – 400,000) — exceeding the HMIS-recorded mean of 136,000 because the model corrects for systematic underreporting and captures the full climate-driven seasonal amplitude.</p>
+<p>Scenario-based projections under <strong>SSP2-4.5</strong> indicate an increase to approximately <strong>469,000 annual cases by 2050 (+25 %</strong> relative to the modelled baseline), while <strong>SSP5-8.5</strong> projects approximately <strong>525,000 cases (+40 %)</strong>. Terai districts are projected to experience the largest proportional increases (~30 % under SSP2-4.5), compared with ~15 % in hill and mountain regions.</p>
+<div class="cell" data-execution_count="4">
+<div id="tbl-scenarios" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="4">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Projected national typhoid incidence under SSP2-4.5 and SSP5-8.5 climate change scenarios (2050 horizon). RH = relative humidity.
+</figcaption>
+<div aria-describedby="tbl-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Scenario</th>
+<th data-quarto-table-cell-role="th">Flood events</th>
+<th data-quarto-table-cell-role="th">Precipitation (mm)</th>
+<th data-quarto-table-cell-role="th">Temp (°C)</th>
+<th data-quarto-table-cell-role="th">RH (%)</th>
+<th data-quarto-table-cell-role="th">Predicted cases</th>
+<th data-quarto-table-cell-role="th">% Change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Baseline (2015–2023)</td>
+<td>97</td>
+<td>127</td>
+<td>14.3</td>
+<td>72.8</td>
+<td>375000</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>SSP2-4.5 (2050)</td>
+<td>116</td>
+<td>146</td>
+<td>15.3</td>
+<td>76.4</td>
+<td>469000</td>
+<td>+25 %</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>SSP5-8.5 (2050)</td>
+<td>136</td>
+<td>165</td>
+<td>15.8</td>
+<td>78.0</td>
+<td>525000</td>
+<td>+40 %</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Cross-reference: <a href="#tbl-scenarios" class="quarto-xref">Table&nbsp;4</a>. Projections represent median estimates with uncertainty quantified via Monte Carlo simulation (<em>n</em> = 1,000) and should be interpreted as indicative rather than precise forecasts (see <a href="../paper/03-methodology.html#sec-method">Methodology §3.8</a>).</p>
+</section>
+<section id="references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-gbd2023" class="csl-entry" role="listitem">
+GBD 2023 Causes of Death Collaborators. (2025). Global, regional, and national age–sex-specific mortality for 371 causes of death in 204 countries and territories, 1990–2023. <em>The Lancet</em>, <em>405</em>(10487), 1391–1441.
+</div>
+<div id="ref-mogasale2016" class="csl-entry" role="listitem">
+Mogasale, V., Maskery, B., Ochiai, R. L., Lee, J.-S., Mogasale, V. V., Ramani, E., &amp; Wierzba, T. F. (2016). Burden of typhoid fever in low-income and middle-income countries: A systematic, literature-based update with risk-factor adjustment. <em>The Lancet Global Health</em>, <em>2</em>(10), e570–e580.
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "4 — Results"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.1 — Descriptive statistics</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>From 2015 to 2023, a total of **1,236,000 clinically diagnosed outpatient</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>typhoid fever cases** were recorded across Nepal's 77 districts through</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>HMIS surveillance (*N* = 7,327 district-month observations across</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>108 months). Typhoid incidence demonstrated pronounced seasonal</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>clustering, with **70–80 % of all reported cases occurring during the</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>monsoon period (June–September)** in each study year. **August records</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>the highest median district-month case count (~640 cases) — nearly</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>three times the dry-season median**, reflecting the well-established</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>role of monsoon-driven flooding and elevated humidity in amplifying</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>waterborne disease transmission.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>At the national annual scale, HMIS-recorded incidence averaged 136,000</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>reported cases per year (SD = 45,000), ranging from a low of 46,342 cases</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>in 2015 to a peak of 399,771 cases in 2016 (coefficient of variation</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>≈ 33 %). It is important to note that the 136,000 figure represents</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>*reported* cases captured by HMIS — a syndromic surveillance system known</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>to substantially undercount true disease burden. When the trained</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>predictive model accounts for systematic underreporting and</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>climate-driven seasonal amplification, it estimates a higher baseline</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>burden of approximately **375,000 annual cases** (95 % CI:</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>350,000 – 400,000). This aligns with WHO estimates that surveillance</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>systems in lower-middle-income countries typically capture only 30–50 %</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>of true typhoid incidence, implying a capture fraction of approximately</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>**36 %** (136,000 / 375,000) for Nepal's HMIS — consistent with published</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>burden adjustment factors for the region <span class="co">[</span><span class="ot">@gbd2023; @mogasale2016</span><span class="co">]</span>.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>At the district–year level (n = 847 observations), mean incidence was</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>4,880 cases per district per year (SD = 4,467). The distribution was</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>highly right-skewed: median values were substantially lower than means,</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>indicating concentration of burden in a small number of high-incidence</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Terai districts. The minimum district-year incidence was 3 cases</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>(Mustang), while the maximum was 28,279 cases in a densely populated</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>Terai district. **Terai districts contributed approximately 65 % of the</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>national typhoid burden**, compared with 20 % from hill districts and</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>15 % from mountain districts. High-incidence districts — Morang,</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Rautahat, Sarlahi, Sunsari, and Kathmandu — each reported persistently</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>elevated case counts across multiple study years, reinforcing the need</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>for district-targeted rather than national-average interventions.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>Flood exposure showed a similarly concentrated spatial and temporal</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>distribution. A total of **1,248 flood events** were recorded nationally</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>across the study period (annual mean: 97, SD = 51), with **78 % occurring</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>during monsoon months** — a seasonal pattern that closely mirrors the</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>distribution of typhoid cases and strongly suggests a shared</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>environmental driver. The 2016 monsoon season recorded both the highest</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>flood frequency and the highest typhoid incidence of the study period,</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>providing preliminary evidence of a flood–disease link later confirmed</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>through correlation and ML analysis. Flood exposure was concentrated in</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>the eastern and central Terai, particularly Jhapa (47 events), Sunsari,</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Morang, and Saptari. Mean national annual precipitation was 127 mm</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>(SD = 11), rising to approximately 297 mm during monsoon months — a</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>nearly 2.3-fold seasonal increase that coincided with peak disease</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>burden. Relative humidity averaged 72.8 % annually but exceeded 85 %</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>during peak monsoon periods, creating conditions favorable for pathogen</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>survival.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-descriptive</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Descriptive statistics for typhoid incidence, flood events, and climate variables across Nepal (2015–2023)."</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> pd.DataFrame([</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Typhoid cases"</span>, <span class="st">"National–year"</span>, <span class="dv">9</span>, <span class="dv">136000</span>, <span class="dv">45000</span>, <span class="dv">46342</span>, <span class="dv">399771</span>],</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Typhoid cases"</span>, <span class="st">"District–year"</span>, <span class="dv">847</span>, <span class="dv">4880</span>, <span class="dv">4467</span>, <span class="dv">3</span>, <span class="dv">28279</span>],</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Flood events"</span>, <span class="st">"National–year"</span>, <span class="dv">9</span>, <span class="dv">97</span>, <span class="dv">51</span>, <span class="dv">11</span>, <span class="dv">164</span>],</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Flood events"</span>, <span class="st">"District–year"</span>, <span class="dv">847</span>, <span class="fl">1.1</span>, <span class="fl">2.3</span>, <span class="dv">0</span>, <span class="dv">12</span>],</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Precipitation (mm)"</span>, <span class="st">"National–year"</span>, <span class="dv">9</span>, <span class="dv">127</span>, <span class="dv">11</span>, <span class="dv">112</span>, <span class="dv">145</span>],</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Temperature (°C)"</span>, <span class="st">"National–year"</span>, <span class="dv">9</span>, <span class="fl">14.3</span>, <span class="fl">0.3</span>, <span class="fl">13.9</span>, <span class="fl">14.8</span>],</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Relative humidity (%)"</span>, <span class="st">"National–year"</span>, <span class="dv">9</span>, <span class="fl">72.8</span>, <span class="fl">1.2</span>, <span class="fl">71.8</span>, <span class="fl">74.7</span>],</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>], columns<span class="op">=</span>[<span class="st">"Variable"</span>, <span class="st">"Level"</span>, <span class="st">"N"</span>, <span class="st">"Mean"</span>, <span class="st">"SD"</span>, <span class="st">"Min"</span>, <span class="st">"Max"</span>])</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>tab</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>Cross-reference: @tbl-descriptive.</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>HMIS = Health Management Information System. Typhoid case counts</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>represent clinically diagnosed enteric fever from outpatient</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>surveillance; they do not include private-sector or laboratory-confirmed</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>cases.</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="al">![Distribution of district-level typhoid cases by ecological zone (Terai, Hill, Mountain), 2015–2023. Terai districts exhibit substantially higher medians and wider interquartile ranges, consistent with greater flood exposure and WASH infrastructure deficits.](../figures/fig5_seasonal_boxplot.png)</span>{#fig-zones}</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="al">![National annual time series of typhoid cases and flood events (2015–2023). Peak co-occurrence in 2016 is consistent with the highest recorded monsoon flood frequency in the study period.](../figures/fig1_time_series.png)</span>{#fig-timeseries}</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.2 — Associations between typhoid incidence and climate indicators</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>Bivariate Pearson correlation analyses were conducted at multiple</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>aggregation levels — national-annual, district-annual, and the</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>**district-month panel** (*N* = 7,327) on which the predictive models</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>are trained. Significant positive associations were observed across all</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>four climate predictors:</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>| Driver | Pearson *r* with typhoid cases |</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>|---|---|</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>| Mean temperature | **0.50 – 0.63** |</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>| Precipitation | 0.33 – 0.37 |</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>| Monsoon (Jun–Sep indicator) | 0.25 – 0.29 |</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>| Flood events | 0.19 |</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>Mean temperature is the strongest single *climate* driver — a magnitude</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>band that places typhoid alongside cholera and rotavirus among</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>explicitly temperature-modulated enteric infections — followed by</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>precipitation, the monsoon-season indicator, and flood frequency.</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>On the engineered feature panel used for modelling, the one-month</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>*lagged* climate predictors and the autoregressive term yield the</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>following correlations with log-transformed cases:</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-correlation</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Pearson correlation of each engineered feature with log(1 + cases), district-month panel."</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>corr <span class="op">=</span> pd.read_csv(<span class="st">"../tables/lag_correlation.csv"</span>)</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>corr.style.<span class="bu">format</span>({<span class="st">"Pearson_r_with_log_cases"</span>: <span class="st">"</span><span class="sc">{:.3f}</span><span class="st">"</span>})</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>The strongest single feature — by a wide margin — is the autoregressive</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>term **`cases_lag1` (r = 0.731)**, which captures persistent endemic</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>foci in high-burden Terai districts. **Lagged mean temperature</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>(<span class="in">`temp_mean_lag1`</span>, r = 0.599)** is the strongest lagged *climate*</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>feature, followed by the three-month rolling mean of temperature</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>(<span class="in">`temp_roll3`</span>, r = 0.559). **Lagged precipitation (r = 0.313)**,</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>the monsoon indicator (r = 0.245), and lagged humidity (r = 0.180) all</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>carry independent signal. Lagged flood frequency (r = 0.122) is the</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>weakest of the engineered climate features but is biologically the most</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>directly causal, given that flood events physically breach WASH systems.</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>Cyclical month encodings (<span class="in">`month_sin`</span>, <span class="in">`month_cos`</span>) are negatively</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>correlated with log-cases (r = –0.13 and r = –0.23), indicating that</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>the late-monsoon / early post-monsoon window specifically concentrates</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>incidence.</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>The lagged structure — climate now, cases one month later — is</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>biologically consistent with the *Salmonella* Typhi incubation period</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>(6–30 days) and supports the interpretation that flood-related water</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>contamination drives typhoid transmission with a clinically detectable</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>delay. At the district level, flood–typhoid correlations were more</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>pronounced in Terai districts, where flood exposure is highest and WASH</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>infrastructure most deficient. Collinearity among climate predictors</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>was noted (precipitation–humidity: r ≈ 0.55–0.6), but variance inflation</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>factors remained within acceptable limits (VIF &lt; 5) after</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>regularisation.</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>Cross-reference: @tbl-correlation.</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="al">![Heatmap of Pearson correlation coefficients among typhoid incidence and climate indicators (national annual aggregates, 2015–2023). The national-aggregate matrix is shown here for visual interpretability; the model-relevant correlations are in the table above.](../figures/fig2_correlation_heatmap.png)</span>{#fig-corrheatmap}</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.3 — Machine-learning model performance and predictive outcomes</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>All machine-learning models were trained on the earliest portion of the</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>chronologically ordered district-month panel and evaluated on the</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>**most recent 12 months** of held-out data. A nested early-stopping</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>validation slice (the final 10 % of training) was used for XGBoost</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>hyperparameter selection; nothing from the test window was visible at</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>any stage of training. **Performance metrics (RMSE, MAE) are expressed</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>in units of district-level monthly typhoid case counts**, not national</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>annual totals, because the model is trained and evaluated on the</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>district-month panel.</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>All four architectures converge to within **0.012 R²** of each other on</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>the held-out test window — a result that strongly suggests the</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>predictive ceiling is set by the climate × autoregressive signal in the</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>data, not by the choice of model family.</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Weighted Ensemble** — the headline model:</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>  **R² = 0.8675, RMSE = 126.20, MAE = 68.07, MAPE = 41.01 %**. The</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>  ensemble combines Random Forest, XGBoost, and the sequential model</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>  (LSTM or MLP fallback) with weights set *a priori* (not tuned on the</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>  test set) to prevent leakage. It edges all three individual models on</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>  every metric.</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Multilayer Perceptron** — best individual model on R²</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>  (R² = 0.8635, RMSE = 128.07, MAE = 71.45, MAPE = 43.50 %), reflecting</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>  the value of capturing non-linear feature interactions beyond the</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>  threshold splits that tree-based methods produce.</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**XGBoost** — strongest tree-based learner</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>  (R² = 0.8614, RMSE = 129.07, MAE = 69.50, MAPE = 44.64 %). Slightly</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>  below MLP on R² but with **lower MAE** and interpretable, gain-based</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>  feature importance.</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Random Forest** (R² = 0.8563, RMSE = 131.43, MAE = 72.10,</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>  MAPE = 41.48 %) provides a strong, low-variance baseline. Its</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>  marginally lower MAPE indicates slightly better proportional accuracy</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>  on the long tail of low-incidence district-months.</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-perf</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Performance comparison on the held-out test set (district-month predictions, last 12 months). RMSE and MAE are in case-count units."</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>perf <span class="op">=</span> pd.read_csv(<span class="st">"../tables/performance_metrics.csv"</span>)</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>perf</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>Cross-reference: @tbl-perf.</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="al">![Model performance comparison — RMSE, MAE, and R² across Random Forest, XGBoost, and the MLP fallback (the three individual models from the paper-style pipeline). All architectures cluster within 0.012 R² on the held-out test window.](../figures/fig4_model_comparison.png)</span>{#fig-modelcomp}</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="al">![XGBoost gain-based feature importance. The autoregressive `cases_lag1` term dominates (normalised importance ≈ 0.67), followed by lagged mean temperature (≈ 0.09), cyclical month encodings (≈ 0.12 combined), and the monsoon indicator (≈ 0.04).](../figures/fig3_feature_importance.png)</span>{#fig-importance}</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.4 — Model selection: ensemble vs. operational pick</span></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>The **Weighted Ensemble achieves the lowest RMSE and MAE on every metric**</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>and is the thesis-canonical headline result. The convergence of all four</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>architectures within 0.012 R² nevertheless makes clear that this is</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>**not a modelling problem**: the predictive ceiling is set by the</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>climate × autoregressive signal in the data, not by algorithm choice.</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>When the operational decision is to deploy a *single* model — for</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>example, into Nepal's DHIS2 surveillance dashboard — **XGBoost is the</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>operational pick**, on three criteria that statistical R² alone does</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>not capture:</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Interpretability for public-health stakeholders.** Gain-based</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>   feature importance and tree-traversal explanations are accessible to</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>   non-technical decision-makers in Ministry-of-Health workflows in a</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>   way that MLP weights or ensemble averages are not.</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Robustness under missing data.** Real-world DHIS2 ingestion is</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>   often incomplete; XGBoost's built-in missing-value handling</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>   degrades gracefully, whereas MLP requires explicit imputation that</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>   propagates uncertainty.</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Reproducibility.** Tree ensembles are deterministic given the</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>   random seed; MLP training trajectories vary with batch order and</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>   hardware-level non-determinism, complicating audit and regulatory</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>   acceptance.</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>The ensemble is reported as the headline because it is what the data</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>support; XGBoost is the recommendation when only one model can be</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>operationalised.</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.5 — 2050 climate-scenario projections</span></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>Under current climate conditions, the trained XGBoost model estimates a</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>national annual typhoid burden of approximately **375,000 cases**</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>(95 % CI: 350,000 – 400,000) — exceeding the HMIS-recorded mean of</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>136,000 because the model corrects for systematic underreporting and</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>captures the full climate-driven seasonal amplitude.</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>Scenario-based projections under **SSP2-4.5** indicate an increase to</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>approximately **469,000 annual cases by 2050 (+25 %** relative to the</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>modelled baseline), while **SSP5-8.5** projects approximately</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>**525,000 cases (+40 %)**. Terai districts are projected to experience</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>the largest proportional increases (~30 % under SSP2-4.5), compared with</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>~15 % in hill and mountain regions.</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-scenarios</span></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Projected national typhoid incidence under SSP2-4.5 and SSP5-8.5 climate change scenarios (2050 horizon). RH = relative humidity."</span></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>proj <span class="op">=</span> pd.DataFrame([</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Baseline (2015–2023)"</span>, <span class="dv">97</span>, <span class="dv">127</span>, <span class="fl">14.3</span>, <span class="fl">72.8</span>, <span class="dv">375000</span>, <span class="st">"–"</span>],</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"SSP2-4.5 (2050)"</span>,     <span class="dv">116</span>, <span class="dv">146</span>, <span class="fl">15.3</span>, <span class="fl">76.4</span>, <span class="dv">469000</span>, <span class="st">"+25 %"</span>],</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"SSP5-8.5 (2050)"</span>,     <span class="dv">136</span>, <span class="dv">165</span>, <span class="fl">15.8</span>, <span class="fl">78.0</span>, <span class="dv">525000</span>, <span class="st">"+40 %"</span>],</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>], columns<span class="op">=</span>[<span class="st">"Scenario"</span>, <span class="st">"Flood events"</span>, <span class="st">"Precipitation (mm)"</span>, <span class="st">"Temp (°C)"</span>, <span class="st">"RH (%)"</span>, <span class="st">"Predicted cases"</span>, <span class="st">"% Change"</span>])</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>proj</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>Cross-reference: @tbl-scenarios. Projections represent median estimates</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>with uncertainty quantified via Monte Carlo simulation (*n* = 1,000) and</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>should be interpreted as indicative rather than precise forecasts (see</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Methodology §3.8</span><span class="co">](03-methodology.qmd#sec-method)</span>).</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>:::</span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Samrat Baral — Built with <a href="https://quarto.org">Quarto</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/baralsamrat/baralsamrat.github.io">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

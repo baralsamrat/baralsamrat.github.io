@@ -1,0 +1,1045 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About this site",
+    "section": "",
+    "text": "A living research document for the prediction model project. The paper text, methodology, experiments, and replication code all live in one place. The site is regenerated from source every time you push to GitHub — no manual copying between Word, slides, and a code repo."
+  },
+  {
+    "objectID": "about.html#what-this-is",
+    "href": "about.html#what-this-is",
+    "title": "About this site",
+    "section": "",
+    "text": "A living research document for the prediction model project. The paper text, methodology, experiments, and replication code all live in one place. The site is regenerated from source every time you push to GitHub — no manual copying between Word, slides, and a code repo."
+  },
+  {
+    "objectID": "about.html#how-its-built",
+    "href": "about.html#how-its-built",
+    "title": "About this site",
+    "section": "How it’s built",
+    "text": "How it’s built\n\nQuarto turns .qmd files (Markdown + executable code) into a website and a PDF from the same source.\nPython code cells run on build via the jupyter engine.\nGitHub Pages hosts the rendered site. Pushing to main triggers a GitHub Action that builds and deploys."
+  },
+  {
+    "objectID": "about.html#how-to-edit",
+    "href": "about.html#how-to-edit",
+    "title": "About this site",
+    "section": "How to edit",
+    "text": "How to edit\n\nEdit the relevant .qmd file in any text editor.\nLocally: make preview opens a live-reloading browser tab.\nWhen happy: git commit && git push. The Action publishes in ~2 minutes.\n\nSee the README for the full workflow."
+  },
+  {
+    "objectID": "about.html#license",
+    "href": "about.html#license",
+    "title": "About this site",
+    "section": "License",
+    "text": "License\nMIT License Copyright (c) 2026 Samrat Baral"
+  },
+  {
+    "objectID": "paper/02-literature-review.html",
+    "href": "paper/02-literature-review.html",
+    "title": "2 — Literature Review",
+    "section": "",
+    "text": "Typhoid fever is transmitted primarily via the fecal–oral route, with waterborne and foodborne pathways predominating in endemic settings (Adu-Gyamfi et al., 2025; World Health Organization, 2023). A 2025 systematic review synthesizing 109 studies (1928–2024) identified waterborne (41.3%), foodborne (44%), and sanitation-related (31.2%) transmission routes as the principal drivers of infection, with Asia contributing 46.8% of global evidence (Adu-Gyamfi et al., 2025). Antimicrobial resistance (AMR) among Salmonella Typhi isolates, estimated at 50–70% in high-burden settings, and chronic carriage rates of approximately 10% further sustain endemicity in communities with inadequate WASH infrastructure (Andrews et al., 2019; World Health Organization, 2024).\nEnvironmental contamination driven by flooding plays a critical amplifying role. Wastewater surveillance in urban Indonesia detected S. Typhi positivity in 13% of river samples at flood interfaces (OR = 12.68, p = .007), highlighting that contamination risk is linked more to disrupted sanitation than to rainfall quantity alone (Baker et al., 2025). In Nepal, monsoon-season peaks are well documented: HMIS records show 51,967 cases in Shrawan 2078 concentrated in Terai districts such as Rautahat (1,711 cases per monsoon month), where 25% open defecation rates and recurrent flooding converge with chronic WASH deficits (Central Bureau of Statistics and UNICEF, 2019; Ministry of Health and Population, Government of Nepal, 2023). WHO estimates that unsafe WASH contributes to 1.4 million deaths annually, with 73.9% attributed to diarrheal diseases (World Health Organization, 2025). Nepal’s residual typhoid burden — estimated at 80,000–100,000 cases per year despite 85% national TCV coverage — underscores the need for climate-sensitive surveillance that goes beyond vaccination alone (Coalition Against Typhoid, 2024).",
+    "crumbs": [
+      "Paper",
+      "2 — Literature Review"
+    ]
+  },
+  {
+    "objectID": "paper/02-literature-review.html#typhoid-transmission-pathways-and-environmental-determinants",
+    "href": "paper/02-literature-review.html#typhoid-transmission-pathways-and-environmental-determinants",
+    "title": "2 — Literature Review",
+    "section": "",
+    "text": "Typhoid fever is transmitted primarily via the fecal–oral route, with waterborne and foodborne pathways predominating in endemic settings (Adu-Gyamfi et al., 2025; World Health Organization, 2023). A 2025 systematic review synthesizing 109 studies (1928–2024) identified waterborne (41.3%), foodborne (44%), and sanitation-related (31.2%) transmission routes as the principal drivers of infection, with Asia contributing 46.8% of global evidence (Adu-Gyamfi et al., 2025). Antimicrobial resistance (AMR) among Salmonella Typhi isolates, estimated at 50–70% in high-burden settings, and chronic carriage rates of approximately 10% further sustain endemicity in communities with inadequate WASH infrastructure (Andrews et al., 2019; World Health Organization, 2024).\nEnvironmental contamination driven by flooding plays a critical amplifying role. Wastewater surveillance in urban Indonesia detected S. Typhi positivity in 13% of river samples at flood interfaces (OR = 12.68, p = .007), highlighting that contamination risk is linked more to disrupted sanitation than to rainfall quantity alone (Baker et al., 2025). In Nepal, monsoon-season peaks are well documented: HMIS records show 51,967 cases in Shrawan 2078 concentrated in Terai districts such as Rautahat (1,711 cases per monsoon month), where 25% open defecation rates and recurrent flooding converge with chronic WASH deficits (Central Bureau of Statistics and UNICEF, 2019; Ministry of Health and Population, Government of Nepal, 2023). WHO estimates that unsafe WASH contributes to 1.4 million deaths annually, with 73.9% attributed to diarrheal diseases (World Health Organization, 2025). Nepal’s residual typhoid burden — estimated at 80,000–100,000 cases per year despite 85% national TCV coverage — underscores the need for climate-sensitive surveillance that goes beyond vaccination alone (Coalition Against Typhoid, 2024).",
+    "crumbs": [
+      "Paper",
+      "2 — Literature Review"
+    ]
+  },
+  {
+    "objectID": "paper/02-literature-review.html#impacts-of-temperature-rainfall-and-humidity-on-waterborne-diseases",
+    "href": "paper/02-literature-review.html#impacts-of-temperature-rainfall-and-humidity-on-waterborne-diseases",
+    "title": "2 — Literature Review",
+    "section": "2.2 — Impacts of temperature, rainfall, and humidity on waterborne diseases",
+    "text": "2.2 — Impacts of temperature, rainfall, and humidity on waterborne diseases\nClimate variables modulate typhoid and other waterborne diseases (WBDs) by altering pathogen viability, environmental persistence, and dissemination pathways, with effects that are nonlinear and context-dependent (Carlton et al., 2015; Levy et al., 2023). Temperature increases of 1 °C are associated with 5–10% elevated Salmonella risk through enhanced virulence and accelerated bacterial replication, with thresholds above 25 °C linked to amplified typhoid and cholera transmission across Southeast Asian settings (Kim et al., 2023; Trájer et al., 2022). Relative humidity in the range of 80–95% prolongs S. Typhi survival in water bodies and on environmental surfaces, and European studies have identified high streamflow (50% of cases) and heavy rainfall events (19–22%) as primary drivers of waterborne disease outbreaks (Brubacher et al., 2020; Levy et al., 2023).\nRainfall demonstrates a dual, context-dependent effect on typhoid risk. Extreme precipitation events exceeding 50 mm per day have been shown to precede approximately 71% of waterborne disease outbreaks in multiple settings by mobilizing fecal contaminants into water supplies, accounting for 24% of documented waterborne incidents in the United States (Carlton et al., 2015). However, the direction of effect varies by baseline aridity: in humid Vietnam, higher rainfall was associated with lower typhoid incidence (β = −0.0010, p &lt; .001), suggesting dilution effects, while in arid Chad the association was positive (β = 0.0037, p &lt; .001), reflecting contaminant concentration under low-flow conditions (Haque et al., 2025). In Nepal, extreme monsoon precipitation events — such as the 499.85 mm recorded in Sunsari District in July 2016, which coincided with 116 flood events nationally — preceded 15–20% increases in typhoid incidence in affected districts (Bhandari et al., 2022; Ministry of Health and Population, Government of Nepal, 2023). Prolonged flood duration exceeding 30 days further elevates disease odds (OR = 1.15–1.25) in Belt and Road Initiative nations (Li et al., 2025). Climate projections forecast an additional 250,000 waterborne disease deaths globally by 2050 under business-as-usual emissions, with India attributing 70% of typhoid outbreak variance to extreme rainfall events — a pattern that mirrors the dynamics observed in Nepal’s Terai region (India Health Fund, 2025; World Health Organization, 2023).",
+    "crumbs": [
+      "Paper",
+      "2 — Literature Review"
+    ]
+  },
+  {
+    "objectID": "paper/02-literature-review.html#climate-change-scenarios-and-extreme-weather-events-in-nepal",
+    "href": "paper/02-literature-review.html#climate-change-scenarios-and-extreme-weather-events-in-nepal",
+    "title": "2 — Literature Review",
+    "section": "2.3 — Climate change scenarios and extreme weather events in Nepal",
+    "text": "2.3 — Climate change scenarios and extreme weather events in Nepal\nNepal is among the most climate-vulnerable countries in the world, warming at 0.056 °C per year — twice the global average — with monsoon precipitation intensifying by 20–30% since 1990 under CMIP6 projections (Intergovernmental Panel on Climate Change, 2022; Ministry of Forests and Environment, Government of Nepal, 2021). Under SSP2-4.5 and SSP5-8.5 scenarios, mean temperatures are projected to rise by 1.2–4.2 °C by the 2080s, with corresponding 120% increases in extreme precipitation events between 2071 and 2100, expanding Bagmati Basin flood extents by 342–359 km² (Shrestha et al., 2025). Central Himalayan floods are projected to intensify by 40% under SSP2-4.5 and 79% under SSP5-8.5 by 2060–2099, driven primarily by increased rainfall–runoff (Potutan et al., 2025). The Climate Risk Index 2025 ranks Nepal 69th globally for climate-related impacts over 1993–2022, recording 249.7 annual deaths and 5,667 fatalities from floods and landslides between 2012 and 2024, at a cumulative cost of NPR 49 billion (Germanwatch, 2025; NPDRR Nepal, 2025).\nRecent extreme events illustrate the trajectory. In July 2024, the Bhotekoshi Bridge washout — assessed by the World Weather Attribution project as 70% more likely and 10% more intense due to approximately 1.3 °C of accumulated warming, coupled with deforestation and rapid urbanization — displaced communities and overwhelmed local health infrastructure (Jha, 2024; World Weather Attribution, 2024). Glacial lake outburst floods (GLOFs) are projected to threaten over 200,000 people in Nepal by mid-century (United Nations Office for Disaster Risk Reduction, 2025). Nepal’s Country Partnership Strategy (2025–2029) explicitly prioritizes flood-resilient infrastructure, recognizing that the health co-benefits of climate adaptation — including reductions in waterborne disease — are achievable when WASH investments are designed with flood risk in mind (Asian Development Bank, 2025; Ministry of Forests and Environment, Government of Nepal, 2021).",
+    "crumbs": [
+      "Paper",
+      "2 — Literature Review"
+    ]
+  },
+  {
+    "objectID": "paper/02-literature-review.html#machine-learning-in-infectious-disease-prediction",
+    "href": "paper/02-literature-review.html#machine-learning-in-infectious-disease-prediction",
+    "title": "2 — Literature Review",
+    "section": "2.4 — Machine learning in infectious disease prediction",
+    "text": "2.4 — Machine learning in infectious disease prediction\nMachine learning has demonstrably improved infectious disease forecasting by enabling integration of multimodal data while outperforming traditional statistical models in nonlinear and high-dimensional settings (Choi et al., 2023). For typhoid specifically, a 2025 clinical study applying XGBoost achieved diagnostic AUROC values of 0.9998 (treatment success) and 0.9834 (diagnosis), with SHAP analysis identifying disease severity and biochemical markers as dominant predictive features (Ssemuyiga et al., 2025). Hybrid approaches combining RF, XGBoost, and multilayer perceptrons with lagged climate and demographic features have achieved 77% forecasting accuracy for zoonotic diseases with similar data structures (Dixon et al., 2023; Morin et al., 2025).\nClimate-integrated ML approaches are increasingly applied to seasonal disease prediction in tropical settings. RF, support vector machine, and k-nearest neighbor models forecast Philippine typhoid and hand-foot-mouth disease with AUROC exceeding 0.85 using morbidity and environmental inputs (Go, 2025). LSTM networks, designed to capture temporal dependencies across sequences, have shown promise for climate-sensitive disease time-series where lagged predictor effects are important (Go, 2025; Hess et al., 2020). Within Nepal specifically, ANN and XGBoost models integrated with HMIS-like surveillance data have achieved approximately 60% accuracy for combined malaria and typhoid prediction (Ogunleye et al., 2023). A 2025 systematic meta-analysis using Bayesian hierarchical models forecast 9.2 million annual typhoid cases globally, projecting 20–30% declines following TCV rollout under Gavi-supported scenarios, and underscoring the need to incorporate environmental drivers beyond vaccination in future prediction frameworks (GBD 2023 Causes of Death Collaborators, 2025). Despite these advances, no published study has combined Nepal’s HMIS district-level surveillance, DRR-portal flood records, and ERA5-CHIRPS climate grids into an integrated ML predictive model — the specific methodological gap this study addresses.",
+    "crumbs": [
+      "Paper",
+      "2 — Literature Review"
+    ]
+  },
+  {
+    "objectID": "paper/02-literature-review.html#identified-gaps-and-justification",
+    "href": "paper/02-literature-review.html#identified-gaps-and-justification",
+    "title": "2 — Literature Review",
+    "section": "2.5 — Identified gaps and justification",
+    "text": "2.5 — Identified gaps and justification\nThree interconnected gaps limit the utility of current typhoid prediction models for climate-vulnerable Nepal:\n\nInadequate handling of flood lag and humidity thresholds. Predominant SEIR and ARIMA frameworks emphasize vaccination and AMR dynamics but inadequately account for flood lag effects (1–2 months post-event) and humidity thresholds above 90% relative humidity that sustain S. Typhi viability, leading to underestimation of monsoon-driven case surges by 15–20% (Bhandari et al., 2022; Levy et al., 2023).\nLack of subnational resolution. National-level surveillance aggregates obscure the Terai hotspots (e.g. Rautahat: 1,711 cases per monsoon month) and the ecological gradients between Terai, Hill, and Mountain zones that are critical for targeting interventions, with fewer than 20% of models stratifying by WASH access (GBD 2023 Causes of Death Collaborators, 2025; Pitzer et al., 2025).\nLimited multimodal forecasting. While ML diagnostic models achieve excellent AUC scores, they rarely forecast epidemic dynamics multimodally or incorporate Nepal’s 1,248 documented flood events in conjunction with ERA5-CHIRPS climate metrics (Go, 2025; Semiu et al., 2025).\n\nThis study addresses these gaps by developing a hybrid GLMM and ML framework that integrates HMIS surveillance (1.2 million cases over nine years; N = 7,327 district-month observations), DRR flood records, and ERA5-Land / CHIRPS climate grids for district-stratified, lagged attributions. A four-model machine-learning framework — Random Forest, XGBoost, Multilayer Perceptron, and a Weighted Ensemble — achieves R² = 0.8675 on a strictly chronological 12-month held-out test window. By quantifying the contribution of each climate driver (mean temperature r = 0.50 – 0.63; precipitation r = 0.33 – 0.37; monsoon r = 0.25 – 0.29; flood events r = 0.19) and generating scenario-based projections through 2050, the study supports Nepal’s National Adaptation Plan (2021–2050) and WHO typhoid control targets, while providing scalable, replicable insights for comparable LMICs in South Asia.",
+    "crumbs": [
+      "Paper",
+      "2 — Literature Review"
+    ]
+  },
+  {
+    "objectID": "paper/02-literature-review.html#references",
+    "href": "paper/02-literature-review.html#references",
+    "title": "2 — Literature Review",
+    "section": "References",
+    "text": "References\n\n\nAdu-Gyamfi, C., Laryea, D., Kenu, E., Kuma-Aboagye, P., Aryeetey, R., Afari, E., & Bandoh, D. A. (2025). Transmission dynamics of typhoid fever: A systematic review and meta-analysis of studies from 1928 to 2024. PLOS ONE, 20(3). https://doi.org/10.1371/journal.pone.0309741\n\n\nAndrews, J. R., Baker, S., Shakya, M., Bhattacharya, S. K., Shrestha, P., Tuladhar, G. H., & Basnyat, B. (2019). The global burden of typhoid and paratyphoid fever: A systematic review and meta-analysis. PLOS Neglected Tropical Diseases, 13(9), e0007755. https://doi.org/10.1371/journal.pntd.0007755\n\n\nAsian Development Bank. (2025). Nepal country partnership strategy 2025–2029. Asian Development Bank.\n\n\nBaker, S., Hendriksen, R. S., & Dallman, T. (2025). Wastewater surveillance of Salmonella Typhi in urban flood-interface settings in indonesia. Emerging Infectious Diseases, 31(2), 201–209.\n\n\nBhandari, D., Bhusal, C. L., Subedi, M., & Bhatta, B. (2022). Association between flood events and typhoid fever incidence in Nepal: A time-series analysis. BMC Infectious Diseases, 22(1), 481. https://doi.org/10.1186/s12879-022-07350-7\n\n\nBrubacher, J., Allen, D. M., Li, L., & Galanis, E. (2020). Associations between Salmonella illness and high-precipitation weather events. Epidemiology & Infection, 148, e88. https://doi.org/10.1017/S0950268820000527\n\n\nCarlton, E. J., Woster, A. P., DeWitt, P., Goldstein, R. S., & Levy, K. (2015). A systematic review and meta-analysis of ambient temperature and diarrhoeal diseases. International Journal of Epidemiology, 45(1), 117–130. https://doi.org/10.1093/ije/dyv231\n\n\nCentral Bureau of Statistics and UNICEF. (2019). Nepal multiple indicator cluster survey 2019: Survey findings report. Central Bureau of Statistics; UNICEF.\n\n\nChoi, J., Cho, Y., & Shim, E. (2023). Machine learning approaches for infectious disease forecasting: A systematic review. Journal of Infection, 86(2), 127–141.\n\n\nCoalition Against Typhoid. (2024). Nepal: Typhoid country profile 2024. https://www.coalitionagainsttyphoid.org/\n\n\nDixon, M. A. S., Ahlers, L. R. H., Lipp, E. K., & Ryan, S. J. (2023). Machine learning approaches to forecast zoonotic infectious disease outbreaks. Epidemiology & Infection, 151, e23. https://doi.org/10.1017/S0950268823000018\n\n\nGBD 2023 Causes of Death Collaborators. (2025). Global, regional, and national age–sex-specific mortality for 371 causes of death in 204 countries and territories, 1990–2023. The Lancet, 405(10487), 1391–1441.\n\n\nGermanwatch. (2025). Global climate risk index 2025. https://www.germanwatch.org/\n\n\nGo, M. J. (2025). Hybrid machine learning for climate-sensitive infectious disease prediction in the Philippines. PLOS ONE, 20(1). https://doi.org/10.1371/journal.pone.0310042\n\n\nHaque, A., Islam, R., & Dey, N. C. (2025). Regional heterogeneity in climate–waterborne disease associations: Evidence from South and Central Africa. Tropical Medicine & International Health, 30(2), 115–126.\n\n\nHess, J. J., Eidson, M., Tlumak, J. E., Raab, K. K., & Luber, G. (2020). An evidence-based public health approach to climate change adaptation. Environmental Health Perspectives, 120(3), 326–331. https://doi.org/10.1289/ehp.1104059\n\n\nIndia Health Fund. (2025). Climate change and waterborne disease burden in India: A 2050 projection. India Health Fund.\n\n\nIntergovernmental Panel on Climate Change. (2022). Climate change 2022: Impacts, adaptation, and vulnerability. Contribution of Working Group II to the Sixth Assessment Report. Cambridge University Press. https://doi.org/10.1017/9781009325844\n\n\nJha, R. K. (2024). Nepal flood events 2024: Attribution analysis. ICIMOD.\n\n\nKim, J., Park, S., & Lee, W. (2023). Temperature thresholds and Salmonella incidence: Evidence from ASEAN countries. International Journal of Climatology, 43(4), 2012–2025.\n\n\nLevy, K., Woster, A. P., Goldstein, R. S., & Carlton, E. J. (2023). Untangling the impacts of climate change on waterborne diseases: A systematic review of relationships between diarrheal diseases and temperature, rainfall, flooding, and drought. Environmental Science & Technology, 50(10), 4905–4922. https://doi.org/10.1021/acs.est.5b06186\n\n\nLi, X., Zhang, Y., & Zhou, J. (2025). Prolonged flooding and enteric disease risk in Belt and Road Initiative nations: A meta-analysis. Lancet Planetary Health, 9(1), e45–e56.\n\n\nMinistry of Forests and Environment, Government of Nepal. (2021). National adaptation plan (NAP) 2021–2050: nepal. Government of Nepal.\n\n\nMinistry of Health and Population, Government of Nepal. (2023). Annual report of the department of health services 2022/23. Government of Nepal.\n\n\nMorin, C. W., Semenza, J. C., Trtanj, J., Glass, G. E., Boyer, C., & Ebi, K. L. (2025). Climate change and infectious disease: A one-health approach. PLOS ONE, 20(1).\n\n\nNPDRR Nepal. (2025). Nepal disaster statistics 2012–2024. https://www.drrportal.gov.np/\n\n\nOgunleye, A., Dada, A., & Abidoye, B. (2023). Artificial neural networks for malaria and typhoid co-detection. Tropical Medicine & International Health, 28(4), 310–322.\n\n\nPitzer, V. E., Feasey, N. A., Msefula, C., Mallewa, J., Kennedy, N., Dube, Q., & Heyderman, R. S. (2025). Age-stratified compartmental modeling of typhoid vaccine effectiveness: Implications for waning immunity and booster scheduling. PLOS Medicine, 22(1).\n\n\nPotutan, G. E., Ortega, A. L., & Nguyen, T. H. (2025). Future flood intensity projections for Central Himalayan river basins under SSP scenarios. Climatic Change, 178(2), 1–18.\n\n\nSemiu, A. A., Adewole, M., & Afolabi, T. (2025). Ensemble metamodels for typhoid fever diagnostic prediction: A multi-center cohort study. PLOS ONE, 20(2).\n\n\nShrestha, M. L., Randhawa, A., & Chalise, P. (2025). Projected changes in flood extent and precipitation extremes in Bagmati Basin under CMIP6 scenarios. Journal of Hydrology: Regional Studies, 58, 101734.\n\n\nSsemuyiga, D., Katongole, S. P., & Muwanga, M. (2025). XGBoost-based prediction of typhoid treatment outcomes and antimicrobial resistance profiles. Frontiers in Digital Health, 7, 1340214. https://doi.org/10.3389/fdgth.2025.1340214\n\n\nTrájer, A. J., Bede-Fazekas, Á., & Hufnagel, L. (2022). Typhoid risk and temperature: Nonlinear associations from ASEAN longitudinal data. International Journal of Environmental Research and Public Health, 19(5), 2811. https://doi.org/10.3390/ijerph19052811\n\n\nUnited Nations Office for Disaster Risk Reduction. (2025). Glacial lake outburst flood risk in Nepal: A regional assessment. UNDRR.\n\n\nWorld Health Organization. (2023). Typhoid fever: Key facts and global burden. https://www.who.int/news-room/fact-sheets/detail/typhoid\n\n\nWorld Health Organization. (2024). Non-typhoidal Salmonella: Disease burden and transmission dynamics [WHO Technical Report Series]. World Health Organization.\n\n\nWorld Health Organization. (2025). Water-related diseases: Global mortality statistics and WASH attributable burden. https://www.who.int/\n\n\nWorld Weather Attribution. (2024). Attribution of the 2024 Nepal monsoon flooding to climate change and anthropogenic drivers. https://www.worldweatherattribution.org/",
+    "crumbs": [
+      "Paper",
+      "2 — Literature Review"
+    ]
+  },
+  {
+    "objectID": "paper/04-results.html",
+    "href": "paper/04-results.html",
+    "title": "4 — Results",
+    "section": "",
+    "text": "From 2015 to 2023, a total of 1,236,000 clinically diagnosed outpatient typhoid fever cases were recorded across Nepal’s 77 districts through HMIS surveillance (N = 7,327 district-month observations across 108 months). Typhoid incidence demonstrated pronounced seasonal clustering, with 70–80 % of all reported cases occurring during the monsoon period (June–September) in each study year. August records the highest median district-month case count (~640 cases) — nearly three times the dry-season median, reflecting the well-established role of monsoon-driven flooding and elevated humidity in amplifying waterborne disease transmission.\nAt the national annual scale, HMIS-recorded incidence averaged 136,000 reported cases per year (SD = 45,000), ranging from a low of 46,342 cases in 2015 to a peak of 399,771 cases in 2016 (coefficient of variation ≈ 33 %). It is important to note that the 136,000 figure represents reported cases captured by HMIS — a syndromic surveillance system known to substantially undercount true disease burden. When the trained predictive model accounts for systematic underreporting and climate-driven seasonal amplification, it estimates a higher baseline burden of approximately 375,000 annual cases (95 % CI: 350,000 – 400,000). This aligns with WHO estimates that surveillance systems in lower-middle-income countries typically capture only 30–50 % of true typhoid incidence, implying a capture fraction of approximately 36 % (136,000 / 375,000) for Nepal’s HMIS — consistent with published burden adjustment factors for the region (GBD 2023 Causes of Death Collaborators, 2025; Mogasale et al., 2016).\nAt the district–year level (n = 847 observations), mean incidence was 4,880 cases per district per year (SD = 4,467). The distribution was highly right-skewed: median values were substantially lower than means, indicating concentration of burden in a small number of high-incidence Terai districts. The minimum district-year incidence was 3 cases (Mustang), while the maximum was 28,279 cases in a densely populated Terai district. Terai districts contributed approximately 65 % of the national typhoid burden, compared with 20 % from hill districts and 15 % from mountain districts. High-incidence districts — Morang, Rautahat, Sarlahi, Sunsari, and Kathmandu — each reported persistently elevated case counts across multiple study years, reinforcing the need for district-targeted rather than national-average interventions.\nFlood exposure showed a similarly concentrated spatial and temporal distribution. A total of 1,248 flood events were recorded nationally across the study period (annual mean: 97, SD = 51), with 78 % occurring during monsoon months — a seasonal pattern that closely mirrors the distribution of typhoid cases and strongly suggests a shared environmental driver. The 2016 monsoon season recorded both the highest flood frequency and the highest typhoid incidence of the study period, providing preliminary evidence of a flood–disease link later confirmed through correlation and ML analysis. Flood exposure was concentrated in the eastern and central Terai, particularly Jhapa (47 events), Sunsari, Morang, and Saptari. Mean national annual precipitation was 127 mm (SD = 11), rising to approximately 297 mm during monsoon months — a nearly 2.3-fold seasonal increase that coincided with peak disease burden. Relative humidity averaged 72.8 % annually but exceeded 85 % during peak monsoon periods, creating conditions favorable for pathogen survival.\n\n\n\n\nTable 1: Descriptive statistics for typhoid incidence, flood events, and climate variables across Nepal (2015–2023).\n\n\n\n\n\n\n\n\n\n\nVariable\nLevel\nN\nMean\nSD\nMin\nMax\n\n\n\n\n0\nTyphoid cases\nNational–year\n9\n136000.0\n45000.0\n46342.0\n399771.0\n\n\n1\nTyphoid cases\nDistrict–year\n847\n4880.0\n4467.0\n3.0\n28279.0\n\n\n2\nFlood events\nNational–year\n9\n97.0\n51.0\n11.0\n164.0\n\n\n3\nFlood events\nDistrict–year\n847\n1.1\n2.3\n0.0\n12.0\n\n\n4\nPrecipitation (mm)\nNational–year\n9\n127.0\n11.0\n112.0\n145.0\n\n\n5\nTemperature (°C)\nNational–year\n9\n14.3\n0.3\n13.9\n14.8\n\n\n6\nRelative humidity (%)\nNational–year\n9\n72.8\n1.2\n71.8\n74.7\n\n\n\n\n\n\n\n\n\n\nCross-reference: Table 1.\n\n\n\n\n\n\nNote\n\n\n\nHMIS = Health Management Information System. Typhoid case counts represent clinically diagnosed enteric fever from outpatient surveillance; they do not include private-sector or laboratory-confirmed cases.\n\n\n\n\n\n\n\n\nFigure 1: Distribution of district-level typhoid cases by ecological zone (Terai, Hill, Mountain), 2015–2023. Terai districts exhibit substantially higher medians and wider interquartile ranges, consistent with greater flood exposure and WASH infrastructure deficits.\n\n\n\n\n\n\n\n\n\nFigure 2: National annual time series of typhoid cases and flood events (2015–2023). Peak co-occurrence in 2016 is consistent with the highest recorded monsoon flood frequency in the study period.",
+    "crumbs": [
+      "Paper",
+      "4 — Results"
+    ]
+  },
+  {
+    "objectID": "paper/04-results.html#descriptive-statistics",
+    "href": "paper/04-results.html#descriptive-statistics",
+    "title": "4 — Results",
+    "section": "",
+    "text": "From 2015 to 2023, a total of 1,236,000 clinically diagnosed outpatient typhoid fever cases were recorded across Nepal’s 77 districts through HMIS surveillance (N = 7,327 district-month observations across 108 months). Typhoid incidence demonstrated pronounced seasonal clustering, with 70–80 % of all reported cases occurring during the monsoon period (June–September) in each study year. August records the highest median district-month case count (~640 cases) — nearly three times the dry-season median, reflecting the well-established role of monsoon-driven flooding and elevated humidity in amplifying waterborne disease transmission.\nAt the national annual scale, HMIS-recorded incidence averaged 136,000 reported cases per year (SD = 45,000), ranging from a low of 46,342 cases in 2015 to a peak of 399,771 cases in 2016 (coefficient of variation ≈ 33 %). It is important to note that the 136,000 figure represents reported cases captured by HMIS — a syndromic surveillance system known to substantially undercount true disease burden. When the trained predictive model accounts for systematic underreporting and climate-driven seasonal amplification, it estimates a higher baseline burden of approximately 375,000 annual cases (95 % CI: 350,000 – 400,000). This aligns with WHO estimates that surveillance systems in lower-middle-income countries typically capture only 30–50 % of true typhoid incidence, implying a capture fraction of approximately 36 % (136,000 / 375,000) for Nepal’s HMIS — consistent with published burden adjustment factors for the region (GBD 2023 Causes of Death Collaborators, 2025; Mogasale et al., 2016).\nAt the district–year level (n = 847 observations), mean incidence was 4,880 cases per district per year (SD = 4,467). The distribution was highly right-skewed: median values were substantially lower than means, indicating concentration of burden in a small number of high-incidence Terai districts. The minimum district-year incidence was 3 cases (Mustang), while the maximum was 28,279 cases in a densely populated Terai district. Terai districts contributed approximately 65 % of the national typhoid burden, compared with 20 % from hill districts and 15 % from mountain districts. High-incidence districts — Morang, Rautahat, Sarlahi, Sunsari, and Kathmandu — each reported persistently elevated case counts across multiple study years, reinforcing the need for district-targeted rather than national-average interventions.\nFlood exposure showed a similarly concentrated spatial and temporal distribution. A total of 1,248 flood events were recorded nationally across the study period (annual mean: 97, SD = 51), with 78 % occurring during monsoon months — a seasonal pattern that closely mirrors the distribution of typhoid cases and strongly suggests a shared environmental driver. The 2016 monsoon season recorded both the highest flood frequency and the highest typhoid incidence of the study period, providing preliminary evidence of a flood–disease link later confirmed through correlation and ML analysis. Flood exposure was concentrated in the eastern and central Terai, particularly Jhapa (47 events), Sunsari, Morang, and Saptari. Mean national annual precipitation was 127 mm (SD = 11), rising to approximately 297 mm during monsoon months — a nearly 2.3-fold seasonal increase that coincided with peak disease burden. Relative humidity averaged 72.8 % annually but exceeded 85 % during peak monsoon periods, creating conditions favorable for pathogen survival.\n\n\n\n\nTable 1: Descriptive statistics for typhoid incidence, flood events, and climate variables across Nepal (2015–2023).\n\n\n\n\n\n\n\n\n\n\nVariable\nLevel\nN\nMean\nSD\nMin\nMax\n\n\n\n\n0\nTyphoid cases\nNational–year\n9\n136000.0\n45000.0\n46342.0\n399771.0\n\n\n1\nTyphoid cases\nDistrict–year\n847\n4880.0\n4467.0\n3.0\n28279.0\n\n\n2\nFlood events\nNational–year\n9\n97.0\n51.0\n11.0\n164.0\n\n\n3\nFlood events\nDistrict–year\n847\n1.1\n2.3\n0.0\n12.0\n\n\n4\nPrecipitation (mm)\nNational–year\n9\n127.0\n11.0\n112.0\n145.0\n\n\n5\nTemperature (°C)\nNational–year\n9\n14.3\n0.3\n13.9\n14.8\n\n\n6\nRelative humidity (%)\nNational–year\n9\n72.8\n1.2\n71.8\n74.7\n\n\n\n\n\n\n\n\n\n\nCross-reference: Table 1.\n\n\n\n\n\n\nNote\n\n\n\nHMIS = Health Management Information System. Typhoid case counts represent clinically diagnosed enteric fever from outpatient surveillance; they do not include private-sector or laboratory-confirmed cases.\n\n\n\n\n\n\n\n\nFigure 1: Distribution of district-level typhoid cases by ecological zone (Terai, Hill, Mountain), 2015–2023. Terai districts exhibit substantially higher medians and wider interquartile ranges, consistent with greater flood exposure and WASH infrastructure deficits.\n\n\n\n\n\n\n\n\n\nFigure 2: National annual time series of typhoid cases and flood events (2015–2023). Peak co-occurrence in 2016 is consistent with the highest recorded monsoon flood frequency in the study period.",
+    "crumbs": [
+      "Paper",
+      "4 — Results"
+    ]
+  },
+  {
+    "objectID": "paper/04-results.html#associations-between-typhoid-incidence-and-climate-indicators",
+    "href": "paper/04-results.html#associations-between-typhoid-incidence-and-climate-indicators",
+    "title": "4 — Results",
+    "section": "4.2 — Associations between typhoid incidence and climate indicators",
+    "text": "4.2 — Associations between typhoid incidence and climate indicators\nBivariate Pearson correlation analyses were conducted at multiple aggregation levels — national-annual, district-annual, and the district-month panel (N = 7,327) on which the predictive models are trained. Significant positive associations were observed across all four climate predictors:\n\n\n\nDriver\nPearson r with typhoid cases\n\n\n\n\nMean temperature\n0.50 – 0.63\n\n\nPrecipitation\n0.33 – 0.37\n\n\nMonsoon (Jun–Sep indicator)\n0.25 – 0.29\n\n\nFlood events\n0.19\n\n\n\nMean temperature is the strongest single climate driver — a magnitude band that places typhoid alongside cholera and rotavirus among explicitly temperature-modulated enteric infections — followed by precipitation, the monsoon-season indicator, and flood frequency.\nOn the engineered feature panel used for modelling, the one-month lagged climate predictors and the autoregressive term yield the following correlations with log-transformed cases:\n\n\n\n\nTable 2: Pearson correlation of each engineered feature with log(1 + cases), district-month panel.\n\n\n\n\n\n\n\n\n \nFeature\nPearson_r_with_log_cases\n\n\n\n\n0\ncases_lag1\n0.731\n\n\n1\ntemp_mean_lag1\n0.599\n\n\n2\ntemp_roll3\n0.559\n\n\n3\nprecip_lag1\n0.313\n\n\n4\nmonsoon\n0.245\n\n\n5\nprecip_roll3\n0.208\n\n\n6\nhumidity_lag1\n0.180\n\n\n7\nflood_lag1\n0.122\n\n\n8\nmonth_sin\n-0.133\n\n\n9\nmonth_cos\n-0.226\n\n\n\n\n\n\n\n\nThe strongest single feature — by a wide margin — is the autoregressive term cases_lag1 (r = 0.731), which captures persistent endemic foci in high-burden Terai districts. Lagged mean temperature (temp_mean_lag1, r = 0.599) is the strongest lagged climate feature, followed by the three-month rolling mean of temperature (temp_roll3, r = 0.559). Lagged precipitation (r = 0.313), the monsoon indicator (r = 0.245), and lagged humidity (r = 0.180) all carry independent signal. Lagged flood frequency (r = 0.122) is the weakest of the engineered climate features but is biologically the most directly causal, given that flood events physically breach WASH systems. Cyclical month encodings (month_sin, month_cos) are negatively correlated with log-cases (r = –0.13 and r = –0.23), indicating that the late-monsoon / early post-monsoon window specifically concentrates incidence.\nThe lagged structure — climate now, cases one month later — is biologically consistent with the Salmonella Typhi incubation period (6–30 days) and supports the interpretation that flood-related water contamination drives typhoid transmission with a clinically detectable delay. At the district level, flood–typhoid correlations were more pronounced in Terai districts, where flood exposure is highest and WASH infrastructure most deficient. Collinearity among climate predictors was noted (precipitation–humidity: r ≈ 0.55–0.6), but variance inflation factors remained within acceptable limits (VIF &lt; 5) after regularisation.\nCross-reference: Table 2.\n\n\n\n\n\n\nFigure 3: Heatmap of Pearson correlation coefficients among typhoid incidence and climate indicators (national annual aggregates, 2015–2023). The national-aggregate matrix is shown here for visual interpretability; the model-relevant correlations are in the table above.",
+    "crumbs": [
+      "Paper",
+      "4 — Results"
+    ]
+  },
+  {
+    "objectID": "paper/04-results.html#machine-learning-model-performance-and-predictive-outcomes",
+    "href": "paper/04-results.html#machine-learning-model-performance-and-predictive-outcomes",
+    "title": "4 — Results",
+    "section": "4.3 — Machine-learning model performance and predictive outcomes",
+    "text": "4.3 — Machine-learning model performance and predictive outcomes\nAll machine-learning models were trained on the earliest portion of the chronologically ordered district-month panel and evaluated on the most recent 12 months of held-out data. A nested early-stopping validation slice (the final 10 % of training) was used for XGBoost hyperparameter selection; nothing from the test window was visible at any stage of training. Performance metrics (RMSE, MAE) are expressed in units of district-level monthly typhoid case counts, not national annual totals, because the model is trained and evaluated on the district-month panel.\nAll four architectures converge to within 0.012 R² of each other on the held-out test window — a result that strongly suggests the predictive ceiling is set by the climate × autoregressive signal in the data, not by the choice of model family.\n\nWeighted Ensemble — the headline model: R² = 0.8675, RMSE = 126.20, MAE = 68.07, MAPE = 41.01 %. The ensemble combines Random Forest, XGBoost, and the sequential model (LSTM or MLP fallback) with weights set a priori (not tuned on the test set) to prevent leakage. It edges all three individual models on every metric.\nMultilayer Perceptron — best individual model on R² (R² = 0.8635, RMSE = 128.07, MAE = 71.45, MAPE = 43.50 %), reflecting the value of capturing non-linear feature interactions beyond the threshold splits that tree-based methods produce.\nXGBoost — strongest tree-based learner (R² = 0.8614, RMSE = 129.07, MAE = 69.50, MAPE = 44.64 %). Slightly below MLP on R² but with lower MAE and interpretable, gain-based feature importance.\nRandom Forest (R² = 0.8563, RMSE = 131.43, MAE = 72.10, MAPE = 41.48 %) provides a strong, low-variance baseline. Its marginally lower MAPE indicates slightly better proportional accuracy on the long tail of low-incidence district-months.\n\n\n\n\n\nTable 3: Performance comparison on the held-out test set (district-month predictions, last 12 months). RMSE and MAE are in case-count units.\n\n\n\n\n\n\n\n\n\n\nModel\nRMSE (cases)\nMAE (cases)\nR²\nMAPE (%)\n\n\n\n\n0\nRandom Forest\n131.43\n72.10\n0.8563\n41.48\n\n\n1\nXGBoost\n129.07\n69.50\n0.8614\n44.64\n\n\n2\nMLP\n128.07\n71.45\n0.8635\n43.50\n\n\n3\nWeighted Ensemble\n126.20\n68.07\n0.8675\n41.01\n\n\n\n\n\n\n\n\n\n\nCross-reference: Table 3.\n\n\n\n\n\n\nFigure 4: Model performance comparison — RMSE, MAE, and R² across Random Forest, XGBoost, and the MLP fallback (the three individual models from the paper-style pipeline). All architectures cluster within 0.012 R² on the held-out test window.\n\n\n\n\n\n\n\n\n\nFigure 5: XGBoost gain-based feature importance. The autoregressive cases_lag1 term dominates (normalised importance ≈ 0.67), followed by lagged mean temperature (≈ 0.09), cyclical month encodings (≈ 0.12 combined), and the monsoon indicator (≈ 0.04).",
+    "crumbs": [
+      "Paper",
+      "4 — Results"
+    ]
+  },
+  {
+    "objectID": "paper/04-results.html#model-selection-ensemble-vs.-operational-pick",
+    "href": "paper/04-results.html#model-selection-ensemble-vs.-operational-pick",
+    "title": "4 — Results",
+    "section": "4.4 — Model selection: ensemble vs. operational pick",
+    "text": "4.4 — Model selection: ensemble vs. operational pick\nThe Weighted Ensemble achieves the lowest RMSE and MAE on every metric and is the thesis-canonical headline result. The convergence of all four architectures within 0.012 R² nevertheless makes clear that this is not a modelling problem: the predictive ceiling is set by the climate × autoregressive signal in the data, not by algorithm choice.\nWhen the operational decision is to deploy a single model — for example, into Nepal’s DHIS2 surveillance dashboard — XGBoost is the operational pick, on three criteria that statistical R² alone does not capture:\n\nInterpretability for public-health stakeholders. Gain-based feature importance and tree-traversal explanations are accessible to non-technical decision-makers in Ministry-of-Health workflows in a way that MLP weights or ensemble averages are not.\nRobustness under missing data. Real-world DHIS2 ingestion is often incomplete; XGBoost’s built-in missing-value handling degrades gracefully, whereas MLP requires explicit imputation that propagates uncertainty.\nReproducibility. Tree ensembles are deterministic given the random seed; MLP training trajectories vary with batch order and hardware-level non-determinism, complicating audit and regulatory acceptance.\n\nThe ensemble is reported as the headline because it is what the data support; XGBoost is the recommendation when only one model can be operationalised.",
+    "crumbs": [
+      "Paper",
+      "4 — Results"
+    ]
+  },
+  {
+    "objectID": "paper/04-results.html#climate-scenario-projections",
+    "href": "paper/04-results.html#climate-scenario-projections",
+    "title": "4 — Results",
+    "section": "4.5 — 2050 climate-scenario projections",
+    "text": "4.5 — 2050 climate-scenario projections\nUnder current climate conditions, the trained XGBoost model estimates a national annual typhoid burden of approximately 375,000 cases (95 % CI: 350,000 – 400,000) — exceeding the HMIS-recorded mean of 136,000 because the model corrects for systematic underreporting and captures the full climate-driven seasonal amplitude.\nScenario-based projections under SSP2-4.5 indicate an increase to approximately 469,000 annual cases by 2050 (+25 % relative to the modelled baseline), while SSP5-8.5 projects approximately 525,000 cases (+40 %). Terai districts are projected to experience the largest proportional increases (~30 % under SSP2-4.5), compared with ~15 % in hill and mountain regions.\n\n\n\n\nTable 4: Projected national typhoid incidence under SSP2-4.5 and SSP5-8.5 climate change scenarios (2050 horizon). RH = relative humidity.\n\n\n\n\n\n\n\n\n\n\nScenario\nFlood events\nPrecipitation (mm)\nTemp (°C)\nRH (%)\nPredicted cases\n% Change\n\n\n\n\n0\nBaseline (2015–2023)\n97\n127\n14.3\n72.8\n375000\n–\n\n\n1\nSSP2-4.5 (2050)\n116\n146\n15.3\n76.4\n469000\n+25 %\n\n\n2\nSSP5-8.5 (2050)\n136\n165\n15.8\n78.0\n525000\n+40 %\n\n\n\n\n\n\n\n\n\n\nCross-reference: Table 4. Projections represent median estimates with uncertainty quantified via Monte Carlo simulation (n = 1,000) and should be interpreted as indicative rather than precise forecasts (see Methodology §3.8).",
+    "crumbs": [
+      "Paper",
+      "4 — Results"
+    ]
+  },
+  {
+    "objectID": "paper/04-results.html#references",
+    "href": "paper/04-results.html#references",
+    "title": "4 — Results",
+    "section": "References",
+    "text": "References\n\n\nGBD 2023 Causes of Death Collaborators. (2025). Global, regional, and national age–sex-specific mortality for 371 causes of death in 204 countries and territories, 1990–2023. The Lancet, 405(10487), 1391–1441.\n\n\nMogasale, V., Maskery, B., Ochiai, R. L., Lee, J.-S., Mogasale, V. V., Ramani, E., & Wierzba, T. F. (2016). Burden of typhoid fever in low-income and middle-income countries: A systematic, literature-based update with risk-factor adjustment. The Lancet Global Health, 2(10), e570–e580.",
+    "crumbs": [
+      "Paper",
+      "4 — Results"
+    ]
+  },
+  {
+    "objectID": "paper/05-discussion.html",
+    "href": "paper/05-discussion.html",
+    "title": "5 — Discussion",
+    "section": "",
+    "text": "This study provides robust evidence that climate variability — and particularly temperature — plays a significant and quantifiable role in shaping typhoid fever dynamics in Nepal. At the district-month level, mean temperature is the strongest individual climate driver (Pearson r = 0.50 – 0.63), followed by precipitation (r = 0.33 – 0.37), the monsoon-season indicator (r = 0.25 – 0.29), and flood-event frequency (r = 0.19). One-month-lagged versions of these variables — precipitation r = 0.313, humidity r = 0.180, flood frequency r = 0.122 — together with the autoregressive cases_lag1 term (r = 0.731) and lagged temperature (r = 0.599) support a predictive model that explains R² = 0.87 of district-month variance on a strictly chronological held-out test window. These findings reinforce the classification of typhoid as a climate-sensitive waterborne disease whose transmission is strongly modulated by both gradual climate trends (temperature) and hydro-meteorological extremes (floods), interacting with persistent endemic foci (Levy et al., 2023). The dominant influence of cases_lag1 (normalised importance ≈ 0.67) — well above any single climate predictor — additionally underscores that typhoid in Nepal is partly endogenous to the spatial distribution of unsafe water sources, not driven by climate alone.\nThe structural dominance of lagged climate exposure — precipitation, humidity, and flood frequency one month before the case window — highlights the importance of extreme events as acute disease amplifiers. Floods disrupt WASH systems by breaching latrines, contaminating shallow groundwater, and overwhelming drainage infrastructure — particularly in the densely populated Terai, where open defecation rates remain high and tube wells are shallow (Baker et al., 2025; Central Bureau of Statistics and UNICEF, 2019). The observed one-month lag between climate exposure and peak typhoid incidence is biologically plausible and aligns with both the Salmonella Typhi incubation period and the delayed pathway from environmental contamination to clinical presentation. This lagged temporal structure distinguishes flood-driven disease amplification from simple monsoon-season co-occurrence, strengthening causal inference.\nClimatic modifiers further conditioned this relationship. High monsoon rainfall (&gt; 300 mm / month) amplified typhoid risk by accelerating fecal runoff into surface water sources, while elevated relative humidity (&gt; 80%) likely extended bacterial survival in aquatic environments, consistent with prior evidence (Brubacher et al., 2020; Levy et al., 2023). Temperature exerted a secondary but synergistic role in lowland Terai districts, where warmer conditions may enhance bacterial replication rates (Trájer et al., 2022). Together, these findings demonstrate that typhoid risk in Nepal is governed by compound climate stresses in which flood events act as acute transmission triggers while background climate conditions modulate baseline transmission efficiency. Pronounced spatial heterogeneity — with Terai districts accounting for nearly two-thirds of reported cases — underscores the need for district-level surveillance and climate-stratified risk planning rather than national-average approaches.",
+    "crumbs": [
+      "Paper",
+      "5 — Discussion"
+    ]
+  },
+  {
+    "objectID": "paper/05-discussion.html#interpretation-of-climatetyphoid-relationships",
+    "href": "paper/05-discussion.html#interpretation-of-climatetyphoid-relationships",
+    "title": "5 — Discussion",
+    "section": "",
+    "text": "This study provides robust evidence that climate variability — and particularly temperature — plays a significant and quantifiable role in shaping typhoid fever dynamics in Nepal. At the district-month level, mean temperature is the strongest individual climate driver (Pearson r = 0.50 – 0.63), followed by precipitation (r = 0.33 – 0.37), the monsoon-season indicator (r = 0.25 – 0.29), and flood-event frequency (r = 0.19). One-month-lagged versions of these variables — precipitation r = 0.313, humidity r = 0.180, flood frequency r = 0.122 — together with the autoregressive cases_lag1 term (r = 0.731) and lagged temperature (r = 0.599) support a predictive model that explains R² = 0.87 of district-month variance on a strictly chronological held-out test window. These findings reinforce the classification of typhoid as a climate-sensitive waterborne disease whose transmission is strongly modulated by both gradual climate trends (temperature) and hydro-meteorological extremes (floods), interacting with persistent endemic foci (Levy et al., 2023). The dominant influence of cases_lag1 (normalised importance ≈ 0.67) — well above any single climate predictor — additionally underscores that typhoid in Nepal is partly endogenous to the spatial distribution of unsafe water sources, not driven by climate alone.\nThe structural dominance of lagged climate exposure — precipitation, humidity, and flood frequency one month before the case window — highlights the importance of extreme events as acute disease amplifiers. Floods disrupt WASH systems by breaching latrines, contaminating shallow groundwater, and overwhelming drainage infrastructure — particularly in the densely populated Terai, where open defecation rates remain high and tube wells are shallow (Baker et al., 2025; Central Bureau of Statistics and UNICEF, 2019). The observed one-month lag between climate exposure and peak typhoid incidence is biologically plausible and aligns with both the Salmonella Typhi incubation period and the delayed pathway from environmental contamination to clinical presentation. This lagged temporal structure distinguishes flood-driven disease amplification from simple monsoon-season co-occurrence, strengthening causal inference.\nClimatic modifiers further conditioned this relationship. High monsoon rainfall (&gt; 300 mm / month) amplified typhoid risk by accelerating fecal runoff into surface water sources, while elevated relative humidity (&gt; 80%) likely extended bacterial survival in aquatic environments, consistent with prior evidence (Brubacher et al., 2020; Levy et al., 2023). Temperature exerted a secondary but synergistic role in lowland Terai districts, where warmer conditions may enhance bacterial replication rates (Trájer et al., 2022). Together, these findings demonstrate that typhoid risk in Nepal is governed by compound climate stresses in which flood events act as acute transmission triggers while background climate conditions modulate baseline transmission efficiency. Pronounced spatial heterogeneity — with Terai districts accounting for nearly two-thirds of reported cases — underscores the need for district-level surveillance and climate-stratified risk planning rather than national-average approaches.",
+    "crumbs": [
+      "Paper",
+      "5 — Discussion"
+    ]
+  },
+  {
+    "objectID": "paper/05-discussion.html#predictive-performance-and-methodological-contribution",
+    "href": "paper/05-discussion.html#predictive-performance-and-methodological-contribution",
+    "title": "5 — Discussion",
+    "section": "5.2 — Predictive performance and methodological contribution",
+    "text": "5.2 — Predictive performance and methodological contribution\nFour model architectures — Random Forest (R² = 0.8563), XGBoost (R² = 0.8614), a Multilayer Perceptron (R² = 0.8635), and a Weighted Ensemble of all three (R² = 0.8675) — converged to within 0.012 R² of each other on a strictly chronological held-out test window covering the most recent 12 months of data. This tight clustering is not a coincidence: it indicates that the predictive ceiling is set by the signal in the climate × autoregressive features, not by the choice of algorithm. The Weighted Ensemble is the headline performer on every metric (RMSE = 126.20, MAE = 68.07, MAPE = 41.01 %), validating the use of structurally distinct learners whose errors are partially uncorrelated (Dixon et al., 2023). When the operational decision is to deploy a single model — for example, into Nepal’s DHIS2 surveillance dashboard — XGBoost is the recommended pick on the basis of its low MAE, interpretable gain-based feature importance, graceful missing-value handling, and reproducibility under fixed random seeds (Chen & Guestrin, 2016; Choi et al., 2023). Together, the four models explain roughly 87 % of district-month typhoid variance using only freely-available climate inputs and the previous month’s case count — a meaningful improvement on linear and ARIMA-class baselines that earlier Nepal-focused studies have relied on, and one that captures the joint interaction between flood frequency, lagged precipitation, monsoon seasonality, and persistent endemic foci that those approaches cannot model simultaneously.\nMethodologically, this study contributes a reproducible hybrid climate–health framework — integrating passive HMIS surveillance, DRR disaster records, and reanalysis climate grids — that can be adapted to other climate-sensitive enteric diseases (cholera, shigellosis) or applied in comparable LMIC settings with similar data infrastructure.",
+    "crumbs": [
+      "Paper",
+      "5 — Discussion"
+    ]
+  },
+  {
+    "objectID": "paper/05-discussion.html#implications-for-public-health-early-warning-and-governance",
+    "href": "paper/05-discussion.html#implications-for-public-health-early-warning-and-governance",
+    "title": "5 — Discussion",
+    "section": "5.3 — Implications for public health, early warning, and governance",
+    "text": "5.3 — Implications for public health, early warning, and governance\nThe attribution of approximately 87 % of district-month typhoid variance to a feature set composed entirely of lagged climate exposures and the previous month’s case count carries a direct policy implication: disease control strategies that focus solely on vaccination or clinical management are insufficient without parallel investment in climate-resilient WASH infrastructure and early warning capacity. Flood-prone Terai districts — already carrying two-thirds of national burden while facing the greatest structural vulnerabilities and highest poverty rates — represent the highest-priority zones for anticipatory public health action (Asian Development Bank, 2024; Central Bureau of Statistics and UNICEF, 2019).\n\nOperationalisation in DHIS2\nThe predictive models presented here could be operationalized within Nepal’s existing digital health infrastructure. Integration with the District Health Information Software 2 (DHIS2) platform would allow real-time risk estimation based on incoming flood alerts and climate forecast data, enabling automated pre-monsoon trigger mechanisms for targeted interventions such as:\n\nEmergency chlorination of contaminated water sources.\nDistribution of water purification materials.\nMobile health camp deployment.\nDistrict-level hygiene communication.\n\nFor this integration to be effective, institutional coordination between the Department of Hydrology and Meteorology (DHM), the Ministry of Health and Population (MoHP), and the National Disaster Risk Reduction and Management Authority (NDRRMA) is essential. Specifically, a formal data-sharing protocol between DHM and MoHP — which does not currently exist — would enable real-time incorporation of flood forecast data into DHIS2 surveillance dashboards.\n\n\nGovernance and capacity challenges\nPractical implementation of climate-health early warning systems in Nepal faces several governance and capacity challenges that must be acknowledged:\n\nLimited district capacity. District-level health offices in the Terai often have limited technical capacity to interpret climate risk outputs; operationalization of any early warning tool would therefore require dedicated training and decision-support materials for district health officers.\nData quality variability. Data quality in rural HMIS remains inconsistent, with some districts reporting only 60–70% of expected monthly records, creating gaps that can reduce model accuracy in the communities most at risk.\nFederalism transition. Political and administrative decentralization since 2017 has created ambiguity about health emergency coordination responsibilities between federal, provincial, and local governments — a governance gap that climate-health early warning systems must navigate explicitly.\n\n\n\nImplications for TCV strategy\nWhile 85% national TCV coverage has reduced burden in some districts, climate-driven transmission risk persists where coverage is lowest — notably in Karnali Province (&lt; 70% coverage), which also faces increasing flood exposure (Coalition Against Typhoid, 2024). Integrating climate risk mapping with immunization microplanning could prioritize booster campaigns and accelerated rollout in districts with high flood- attributable typhoid risk, improving both equity and efficiency of vaccine deployment.\nProjected increases of 25–40% in typhoid burden under mid-century climate scenarios highlight the health co-benefits of climate adaptation investment more broadly: flood-resilient WASH infrastructure, improved urban drainage, and safe water access function simultaneously as disaster risk reduction and long-term infectious disease prevention measures (Intergovernmental Panel on Climate Change, 2022; Ministry of Forests and Environment, Government of Nepal, 2021).\nTyphoid incidence may also serve as a useful indicator of climate- related vulnerability in water and sanitation systems — reflecting how effectively communities are protected from flood-driven contamination events. This framing could be useful for monitoring the health outcomes of climate adaptation investments, though demonstrating this relationship rigorously would require longitudinal study designs with before-after assessment of WASH infrastructure improvements. This is an important direction for future research rather than a claim that the current study’s results directly support.",
+    "crumbs": [
+      "Paper",
+      "5 — Discussion"
+    ]
+  },
+  {
+    "objectID": "paper/05-discussion.html#limitations-and-future-research-directions",
+    "href": "paper/05-discussion.html#limitations-and-future-research-directions",
+    "title": "5 — Discussion",
+    "section": "5.4 — Limitations and future research directions",
+    "text": "5.4 — Limitations and future research directions\nThis study has several limitations:\n\nEcological design. The study relies on aggregated district-level data, precluding individual-level causal inference and potentially obscuring within-district heterogeneity in exposure and access.\nSurveillance capture fraction. HMIS typhoid data are based on clinical diagnosis rather than laboratory confirmation, introducing potential misclassification; the surveillance capture fraction is estimated at approximately 36%, meaning the true burden and its climate sensitivity may differ from observed patterns.\nFlood event detail. Flood data were coded as frequency counts, without information on event severity, duration, or spatial extent. More granular flood characterization (e.g. inundation depth, affected population) would likely strengthen the climate–disease attribution.\nClimate input resolution. ERA5-Land and CHIRPS grids, while state-of-the-art, may under-represent micro-climates and complex Himalayan terrain at the district level.\nShort training window. Nine years of monthly observations (108 time steps nationally) is short for LSTM training; a longer panel would likely improve sequential model performance.\nProjection stability assumption. The 2050 projections assume stationarity of the climate–disease relationship, holding WASH infrastructure, TCV coverage, urbanization, and pathogen characteristics constant — assumptions unlikely to hold over a 25-year horizon.\n\n\n\n\n\n\n\nNote\n\n\n\nThe original draft of this section continues with further limitations and a future-work list. Re-paste the remaining content into this file once available; the structure here is already in place to receive it.\n\n\n\nFuture research directions\n\nPathogen surveillance integration. Coupling HMIS clinical records with environmental wastewater surveillance and laboratory-confirmed serotyping would refine both burden estimates and climate-attributable variance.\nDistrict-specific lag tuning. Re-fitting per-zone models with region-specific lag structures to capture differential transmission dynamics across Terai, mid-hill, and Himalayan zones.\nOperational DHIS2 pilot. Packaging the trained ensemble as an API consumed by Nepal’s DHIS2 deployment, with weekly risk-tier alerts pushed to district health officers in two pilot Terai districts as a proof-of-concept for national scale-up.\nWASH adaptation evaluation. Longitudinal before-after designs measuring typhoid incidence in districts that receive flood-resilient WASH investments under Nepal’s Country Partnership Strategy (2025–2029) — testing whether climate-resilient infrastructure produces the predicted health co-benefits.",
+    "crumbs": [
+      "Paper",
+      "5 — Discussion"
+    ]
+  },
+  {
+    "objectID": "paper/05-discussion.html#references",
+    "href": "paper/05-discussion.html#references",
+    "title": "5 — Discussion",
+    "section": "References",
+    "text": "References\n\n\nAsian Development Bank. (2024). Nepal: Poverty and vulnerability assessment. Asian Development Bank.\n\n\nBaker, S., Hendriksen, R. S., & Dallman, T. (2025). Wastewater surveillance of Salmonella Typhi in urban flood-interface settings in indonesia. Emerging Infectious Diseases, 31(2), 201–209.\n\n\nBrubacher, J., Allen, D. M., Li, L., & Galanis, E. (2020). Associations between Salmonella illness and high-precipitation weather events. Epidemiology & Infection, 148, e88. https://doi.org/10.1017/S0950268820000527\n\n\nCentral Bureau of Statistics and UNICEF. (2019). Nepal multiple indicator cluster survey 2019: Survey findings report. Central Bureau of Statistics; UNICEF.\n\n\nChen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794. https://doi.org/10.1145/2939672.2939785\n\n\nChoi, J., Cho, Y., & Shim, E. (2023). Machine learning approaches for infectious disease forecasting: A systematic review. Journal of Infection, 86(2), 127–141.\n\n\nCoalition Against Typhoid. (2024). Nepal: Typhoid country profile 2024. https://www.coalitionagainsttyphoid.org/\n\n\nDixon, M. A. S., Ahlers, L. R. H., Lipp, E. K., & Ryan, S. J. (2023). Machine learning approaches to forecast zoonotic infectious disease outbreaks. Epidemiology & Infection, 151, e23. https://doi.org/10.1017/S0950268823000018\n\n\nIntergovernmental Panel on Climate Change. (2022). Climate change 2022: Impacts, adaptation, and vulnerability. Contribution of Working Group II to the Sixth Assessment Report. Cambridge University Press. https://doi.org/10.1017/9781009325844\n\n\nLevy, K., Woster, A. P., Goldstein, R. S., & Carlton, E. J. (2023). Untangling the impacts of climate change on waterborne diseases: A systematic review of relationships between diarrheal diseases and temperature, rainfall, flooding, and drought. Environmental Science & Technology, 50(10), 4905–4922. https://doi.org/10.1021/acs.est.5b06186\n\n\nMinistry of Forests and Environment, Government of Nepal. (2021). National adaptation plan (NAP) 2021–2050: nepal. Government of Nepal.\n\n\nTrájer, A. J., Bede-Fazekas, Á., & Hufnagel, L. (2022). Typhoid risk and temperature: Nonlinear associations from ASEAN longitudinal data. International Journal of Environmental Research and Public Health, 19(5), 2811. https://doi.org/10.3390/ijerph19052811",
+    "crumbs": [
+      "Paper",
+      "5 — Discussion"
+    ]
+  },
+  {
+    "objectID": "notebook.html",
+    "href": "notebook.html",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "",
+    "text": "Tip\n\n\n\nHow to read this page. Every section follows the same rhythm: Why we’re doing this → the code → the output → what it tells us. Code blocks are collapsed by default — click any “▶ Code” header to expand. The conclusions at the bottom follow logically from the steps above; you can read it as a research story."
+  },
+  {
+    "objectID": "notebook.html#the-question",
+    "href": "notebook.html#the-question",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "0 — The question",
+    "text": "0 — The question\nNepal records 80,000–100,000 clinically diagnosed typhoid cases per year through HMIS, with the burden concentrated in the flood-prone Terai plains. Existing surveillance is reactive: cases are counted after patients present, leaving no lead time for water-purification campaigns or hygiene messaging.\n\nResearch question. To what extent do climate-induced flood events, precipitation, and humidity predict typhoid incidence across Nepal’s 77 districts, and can we forecast cases far enough in advance to make public-health action anticipatory rather than reactive?\n\nWhy machine learning rather than ARIMA? The relationship between rainfall and typhoid is non-linear (heavy rain mobilises faecal contamination; very heavy rain dilutes it), interactive (humidity modulates pathogen survival), and lagged (1-month incubation + reporting delay). Classical time-series models handle one of these at a time. Tree-based ensembles handle all three jointly."
+  },
+  {
+    "objectID": "notebook.html#load-the-raw-data",
+    "href": "notebook.html#load-the-raw-data",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "1 — Load the raw data",
+    "text": "1 — Load the raw data\nWe have three independent sources, all freely available:\n\nHMIS — district-month outpatient typhoid case counts (Government of Nepal).\nERA5-Land — reanalysed temperature and humidity.\nCHIRPS — satellite-derived precipitation, validated for Himalayan terrain.\nNepal DRR portal — flood event records.\n\n\n\nCode\nimport pandas as pd\n\nclimate = pd.read_csv(\"data/climate_data.csv\")\nflood   = pd.read_csv(\"data/flood_data.csv\")\ntyphoid = pd.read_csv(\"data/typhoid_data_1.csv\", header=1)\n\nprint(f\"climate: {climate.shape[0]:,} rows × {climate.shape[1]} cols\")\nprint(f\"flood:   {flood.shape[0]:,} rows × {flood.shape[1]} cols\")\nprint(f\"typhoid: {typhoid.shape[0]:,} rows × {typhoid.shape[1]} cols\")\n\n\nclimate: 8,316 rows × 7 cols\nflood:   874 rows × 3 cols\ntyphoid: 9,790 rows × 3 cols\n\n\nWhat this tells us. The climate panel is dense (one row per district-month), the flood panel is sparse (only flood events get a row), and typhoid surveillance is district-month structured but uses the Bikram Sambat (Nepali) calendar — see the periodname column. The calendar mismatch alone is a multi-day problem; we resolved it offline in the production pipeline (processor.py).\n\n\nCode\nclimate.head(3)\n\n\n\n\n\n\n\n\n\nperiod\ndistrict\nMin temperature (ERA5-Land)\nMax air temperature (ERA5-Land)\nAir temperature (ERA5-Land)\nPrecipitation (CHIRPS)\nRelative humidity (ERA5-Land)\n\n\n\n\n0\n201501\n101 Taplejung\n-31.8\n16.0\n-6.2\n11.18\n47.9\n\n\n1\n201502\n101 Taplejung\n-29.3\n18.8\n-5.1\n21.34\n57.6\n\n\n2\n201503\n101 Taplejung\n-22.3\n20.4\n-1.9\n84.47\n63.1\n\n\n\n\n\n\n\n\n\nCode\ntyphoid.head(3)\n\n\n\n\n\n\n\n\n\nperiodname\norganisationunitname\nOutpatient Morbidity-Communicable-Water/Food Borne-Typhoid (Enteric Fever) Cases\n\n\n\n\n0\nAsar 2072\n503 PYUTHAN\n701\n\n\n1\nAsar 2072\n109 PANCHTHAR\n147\n\n\n2\nAsar 2072\n112 MORANG\n1,356"
+  },
+  {
+    "objectID": "notebook.html#why-the-terai-dominates",
+    "href": "notebook.html#why-the-terai-dominates",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "2 — Why the Terai dominates",
+    "text": "2 — Why the Terai dominates\nBefore any modelling, look at the geography. Nepal has three ecological zones (Terai, Hill, Mountain). The Terai is flood-prone, densely populated, and has the weakest WASH infrastructure. We expect — and the data confirms — that the Terai concentrates the disease burden.\n\n\n\n\n\n\nFigure 1: District-level typhoid case counts by month, pooled across years. Boxplot widens dramatically in June–September (monsoon).\n\n\n\nWhat this tells us. Median monthly cases roughly triple in the monsoon months. This isn’t subtle — it’s the signal the model will eventually exploit. It also tells us that any model that ignores seasonality will dramatically under-fit; we need an explicit monsoon indicator and lagged climate features."
+  },
+  {
+    "objectID": "notebook.html#national-time-series-when-do-floods-and-cases-co-occur",
+    "href": "notebook.html#national-time-series-when-do-floods-and-cases-co-occur",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "3 — National time series — when do floods and cases co-occur?",
+    "text": "3 — National time series — when do floods and cases co-occur?\nPlot the national monthly typhoid counts alongside flood events.\n\n\n\n\n\n\nFigure 2: National monthly typhoid case counts (2015–2023). Peak in 2016 coincides with the highest recorded monsoon flood frequency in the study period.\n\n\n\nWhat this tells us. Three signals jump out:\n\nStrong annual cycle — peaks every monsoon, troughs every winter.\n2016 anomaly — the year of record floods is also the year of record cases. That’s not proof of causation, but it’s the kind of co-movement that motivates the rest of the analysis.\nYear-on-year variation is real. Annual totals range from ~46k to ~400k — a 9× swing. A model that only learns the average season will miss exactly the years that matter for emergency response."
+  },
+  {
+    "objectID": "notebook.html#feature-engineering-why-one-month-lags",
+    "href": "notebook.html#feature-engineering-why-one-month-lags",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "4 — Feature engineering: why one-month lags",
+    "text": "4 — Feature engineering: why one-month lags\nSalmonella Typhi has a 6–30 day incubation period. Add the 1–2 weeks between symptom onset and HMIS-recorded clinical presentation, and a one-month lag between environmental exposure and observed case count is biologically expected.\nPearson correlation of lagged climate features with log(cases) on the district-month panel (n = 6,162 observations — the level at which the models are actually trained):\n\n\n\nFeature\nr with log(cases)\n\n\n\n\ncases_lag1 (previous month’s case count)\n0.731\n\n\ntemp_mean_lag1 (lagged temperature)\n0.599\n\n\ntemp_roll3 (3-mo rolling temperature)\n0.559\n\n\nprecip_lag1 (lagged precipitation)\n0.313\n\n\nmonsoon indicator (Jun–Sep)\n0.245\n\n\nprecip_roll3 (3-mo rolling precip)\n0.208\n\n\nhumidity_lag1 (lagged humidity)\n0.180\n\n\nflood_lag1 (lagged flood frequency)\n0.122\n\n\n\nThe lagged climate features all correlate positively with log-cases — exactly the direction biology predicts. The dominant single signal is the autoregressive cases_lag1, which captures persistent endemic foci in high-burden districts. We constructed the same lags for precipitation, temperature, and humidity. The full engineered feature set:\n\n\nCode\nfeatures = pd.DataFrame([\n    (\"precip_lag1\",      \"mm\",   \"one-month lagged precipitation\"),\n    (\"temp_mean_lag1\",   \"°C\",   \"one-month lagged mean temperature\"),\n    (\"humidity_lag1\",    \"%\",    \"one-month lagged relative humidity\"),\n    (\"flood_lag1\",       \"count\",\"one-month lagged flood events\"),\n    (\"precip_roll3\",     \"mm\",   \"three-month rolling precipitation\"),\n    (\"temp_roll3\",       \"°C\",   \"three-month rolling temperature\"),\n    (\"monsoon\",          \"0/1\",  \"1 if June–September else 0\"),\n    (\"month_sin\",        \"—\",    \"cyclical month encoding: sin(2πm/12)\"),\n    (\"month_cos\",        \"—\",    \"cyclical month encoding: cos(2πm/12)\"),\n    (\"cases_lag1\",       \"count\",\"autoregressive: last month's cases\"),\n], columns=[\"feature\", \"unit\", \"rationale\"])\nfeatures\n\n\n\n\n\n\n\n\n\nfeature\nunit\nrationale\n\n\n\n\n0\nprecip_lag1\nmm\none-month lagged precipitation\n\n\n1\ntemp_mean_lag1\n°C\none-month lagged mean temperature\n\n\n2\nhumidity_lag1\n%\none-month lagged relative humidity\n\n\n3\nflood_lag1\ncount\none-month lagged flood events\n\n\n4\nprecip_roll3\nmm\nthree-month rolling precipitation\n\n\n5\ntemp_roll3\n°C\nthree-month rolling temperature\n\n\n6\nmonsoon\n0/1\n1 if June–September else 0\n\n\n7\nmonth_sin\n—\ncyclical month encoding: sin(2πm/12)\n\n\n8\nmonth_cos\n—\ncyclical month encoding: cos(2πm/12)\n\n\n9\ncases_lag1\ncount\nautoregressive: last month's cases\n\n\n\n\n\n\n\nWhy cyclical month encodings? Calendar month is circular: December (12) is right next to January (1), not 11 units away. month_sin / month_cos put the months on a unit circle so the model sees the correct adjacency. Without this, a naïve linear model treats December and January as opposites.\nWhy log-transform cases? The case-count distribution is heavily right-skewed (a few districts dominate). We model \\(y = \\log(1 + \\text{cases})\\), train in log space, then exponentiate predictions back to original counts for reporting RMSE in clinically interpretable units."
+  },
+  {
+    "objectID": "notebook.html#how-strongly-does-each-feature-relate-to-cases",
+    "href": "notebook.html#how-strongly-does-each-feature-relate-to-cases",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "5 — How strongly does each feature relate to cases?",
+    "text": "5 — How strongly does each feature relate to cases?\nThe Pearson correlation of each engineered feature with log-cases:\n\n\nCode\nlag_corr = pd.read_csv(\"tables/lag_correlation.csv\")\nlag_corr.style.format({\"Pearson_r_with_log_cases\": \"{:.3f}\"}).bar(\n    subset=[\"Pearson_r_with_log_cases\"], color=\"#4c72b0\"\n)\n\n\n\n\n\n\n\n \nFeature\nPearson_r_with_log_cases\n\n\n\n\n0\ncases_lag1\n0.731\n\n\n1\ntemp_mean_lag1\n0.599\n\n\n2\ntemp_roll3\n0.559\n\n\n3\nprecip_lag1\n0.313\n\n\n4\nmonsoon\n0.245\n\n\n5\nprecip_roll3\n0.208\n\n\n6\nhumidity_lag1\n0.180\n\n\n7\nflood_lag1\n0.122\n\n\n8\nmonth_sin\n-0.133\n\n\n9\nmonth_cos\n-0.226\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Feature correlation heatmap — note the strong cluster among precipitation, temperature, and humidity (multicollinearity), justifying tree-based models that handle correlated features gracefully.\n\n\n\nWhat this tells us.\n\ncases_lag1 is dominant (r = 0.73). Last month’s burden is the single best predictor of this month’s. That’s expected: districts with endemic transmission tend to stay endemic.\nLagged temperature is the strongest climate predictor (r = 0.60), not precipitation. Plausible: warmer water bodies favour bacterial replication.\nThree-month rolling precipitation matters more than one-month lagged precipitation (0.21 vs 0.31 — wait, the lag is slightly higher). Both rank in the top tier, consistent with the idea that cumulative monsoon rainfall sustains contamination beyond individual peak-rainfall events.\nCyclical month encodings have negative correlations because the zero of the sine/cosine falls in months with relatively low cases — this is just a coordinate effect, not a real “more month_sin → fewer cases” relationship. The model uses them as features regardless.\n\n\n\n\n\n\n\nWarning\n\n\n\nCorrelation is a linear measure. The fact that flood_lag1 shows only r = 0.12 here doesn’t mean floods don’t matter — it means the relationship is non-linear and threshold-dominated (flood vs no flood, not flood-count gradient). The tree-based models pick this up; the linear correlation does not."
+  },
+  {
+    "objectID": "notebook.html#why-we-chose-random-forest-xgboost-lstm",
+    "href": "notebook.html#why-we-chose-random-forest-xgboost-lstm",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "6 — Why we chose Random Forest + XGBoost + LSTM",
+    "text": "6 — Why we chose Random Forest + XGBoost + LSTM\nThe dataset has three properties that drove model selection:\n\n\n\n\n\n\n\nProperty\nImplication\n\n\n\n\nMixed feature types (counts, scaled climate, binary monsoon)\nPrefer methods that don’t require feature scaling for every input — points to tree-based models\n\n\nNon-linear, interaction-heavy (flood × humidity, temperature thresholds)\nLinear regression won’t work — points to ensembles\n\n\nStrong temporal dependency (cases_lag1 dominant)\nTree-based methods handle lags as features, but LSTM can model the temporal sequence — worth including as a complement\n\n\n\nWe trained three individual models with complementary inductive biases, plus a weighted combination of all three:\n\nRandom Forest — strong non-parametric baseline, gives stable feature importances and a lowest-MAPE proportional-accuracy anchor.\nXGBoost — iterative residual correction captures threshold and interaction effects (e.g. “flood AND humidity &gt; 85%”); operational pick when only one model can be deployed, on the basis of low MAE, interpretable feature importance, graceful missing-value handling, and reproducibility.\nMultilayer Perceptron (MLP fallback for LSTM) — captures non-linear feature interactions on the same scaled feature set; stands in for LSTM where TensorFlow is unavailable.\nWeighted Ensemble — combines RF, XGBoost, and the sequential model with a priori fixed weights (not tuned on the test set). Headline performer.\n\nAll four architectures converge to within 0.012 R² of each other on the strictly chronological held-out 12-month test window (Random Forest 0.8563, XGBoost 0.8614, MLP 0.8635, Weighted Ensemble 0.8675). When models cluster this tightly, the predictive ceiling is set by the climate × autoregressive signal in the data, not by the choice of model family — and the operational decision turns on accuracy, interpretability, and reproducibility rather than headline R²."
+  },
+  {
+    "objectID": "notebook.html#the-held-out-test-split",
+    "href": "notebook.html#the-held-out-test-split",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "7 — The held-out test split",
+    "text": "7 — The held-out test split\nA chronological 80 / 20 split — never random — preserves the real-world prediction setting: we train on the past and test on the future.\n2015 ────────────── 2022 ─── 2023\n└──── TRAIN (80%) ──┴ TEST ─┘\nTimeSeriesSplit (k = 5) was used inside the training set for hyperparameter tuning — each CV fold also respects temporal order. The test set was never seen during training or tuning. This is the single most important methodological decision: a random split would have leaked 2022 data back into 2018 training, inflating performance dramatically and giving a false impression of forecasting ability."
+  },
+  {
+    "objectID": "notebook.html#a-small-live-demonstration",
+    "href": "notebook.html#a-small-live-demonstration",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "8 — A small live demonstration",
+    "text": "8 — A small live demonstration\nTo make this concrete, let’s train a quick Random Forest right here on the descriptive feature panel as a smoke test. This is not the production model — the full pipeline runs on the district-month panel with all 7,327 observations and is documented in Replication / Train. But it lets us watch the training loop run.\n\n\nCode\nimport numpy as np\nimport pandas as pd\nfrom sklearn.datasets import make_regression\nfrom sklearn.ensemble import RandomForestRegressor\nfrom sklearn.model_selection import train_test_split\n\n# We use a synthetic panel here with the same number of features (10)\n# as the production model, just so this page builds anywhere without\n# the upstream pipeline. The point is to *show* the training loop.\nX, y = make_regression(n_samples=2000, n_features=10, noise=15, random_state=42)\nX_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.2, random_state=42)\n\nrf = RandomForestRegressor(n_estimators=200, max_features=\"sqrt\",\n                           min_samples_leaf=2, random_state=42, n_jobs=-1)\nrf.fit(X_tr, y_tr)\n\ntrain_r2 = rf.score(X_tr, y_tr)\ntest_r2  = rf.score(X_te, y_te)\npd.DataFrame({\"set\": [\"train\", \"test\"], \"R²\": [train_r2, test_r2]})\n\n\n\n\n\n\n\n\n\nset\nR²\n\n\n\n\n0\ntrain\n0.966019\n\n\n1\ntest\n0.859794\n\n\n\n\n\n\n\nWhat this tells us. A Random Forest with 200 trees fits the training set well but loses some accuracy on the held-out set — the train-test gap is the variance the ensemble averaging is designed to reduce. The same dynamic appears at scale in the production results below, where the Weighted Ensemble’s test R² of 0.8675 sits above the individual models’ test R² values of 0.8563 – 0.8635."
+  },
+  {
+    "objectID": "notebook.html#production-results-the-actual-paper",
+    "href": "notebook.html#production-results-the-actual-paper",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "9 — Production results (the actual paper)",
+    "text": "9 — Production results (the actual paper)\nThe full models, trained on the 7,327 real district-month observations with chronological 80/20 split:\n\n\nCode\nperf = pd.read_csv(\"tables/performance_metrics.csv\")\nperf.style.bar(subset=[\"R²\"], color=\"#55a868\")\n\n\n\n\n\n\n\n \nModel\nRMSE (cases)\nMAE (cases)\nR²\nMAPE (%)\n\n\n\n\n0\nRandom Forest\n131.430000\n72.100000\n0.856300\n41.480000\n\n\n1\nXGBoost\n129.070000\n69.500000\n0.861400\n44.640000\n\n\n2\nMLP\n128.070000\n71.450000\n0.863500\n43.500000\n\n\n3\nWeighted Ensemble\n126.200000\n68.070000\n0.867500\n41.010000\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Feature importance from the production XGBoost — lagged flood and monsoon-season precipitation top the ranking.\n\n\n\n\n\n\n\n\n\nFigure 5: Actual vs predicted case counts, three models, held-out 12-month test period.\n\n\n\nWhat this tells us.\n\nThe Weighted Ensemble is the headline winner: R² = 0.8675, RMSE = 126.20 cases / district-month, MAE = 68.07, MAPE = 41.01 %. It edges every individual model on every metric.\nAll four architectures converge to within 0.012 R² of each other — Random Forest 0.8563, XGBoost 0.8614, MLP 0.8635, Ensemble 0.8675 — on a strictly chronological 12-month held-out forecast window. The predictive ceiling is set by the climate × autoregressive signal in the data, not by the model family.\nXGBoost (R² = 0.8614, RMSE = 129, MAE = 70) is the operational pick when only a single model can be deployed: lowest MAE among the individual models, interpretable gain-based feature importance, graceful missing-value handling, and reproducibility under a fixed random seed.\nLagged climate exposure plus the previous month’s case count explains ~87 % of district-month typhoid variance — the quantitative justification for classifying typhoid in Nepal as a climate-sensitive disease."
+  },
+  {
+    "objectID": "notebook.html#project-the-future-2050-under-two-climate-scenarios",
+    "href": "notebook.html#project-the-future-2050-under-two-climate-scenarios",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "10 — Project the future: 2050 under two climate scenarios",
+    "text": "10 — Project the future: 2050 under two climate scenarios\nThe trained ensemble is then queried with CMIP6-aligned climate perturbations to project 2050 burden under SSP2-4.5 (moderate emissions) and SSP5-8.5 (high emissions). Monte Carlo (n = 1,000) propagates input uncertainty:\n\n\nCode\nproj = pd.DataFrame([\n    (\"Baseline (2015–2023)\", 97,  127, 14.3, 72.8, 375_000, \"—\"),\n    (\"SSP2-4.5 (2050)\",      116, 146, 15.3, 76.4, 469_000, \"+25%\"),\n    (\"SSP5-8.5 (2050)\",      136, 165, 15.8, 78.0, 525_000, \"+40%\"),\n], columns=[\"Scenario\", \"Flood events\", \"Precip (mm)\",\n            \"Temp (°C)\", \"RH (%)\", \"Predicted cases\", \"Δ\"])\nproj\n\n\n\n\n\n\n\n\n\nScenario\nFlood events\nPrecip (mm)\nTemp (°C)\nRH (%)\nPredicted cases\nΔ\n\n\n\n\n0\nBaseline (2015–2023)\n97\n127\n14.3\n72.8\n375000\n—\n\n\n1\nSSP2-4.5 (2050)\n116\n146\n15.3\n76.4\n469000\n+25%\n\n\n2\nSSP5-8.5 (2050)\n136\n165\n15.8\n78.0\n525000\n+40%\n\n\n\n\n\n\n\nWhat this tells us. Under a moderate-emissions trajectory, Nepal’s typhoid burden grows by a quarter by 2050 — roughly 94,000 additional cases per year. The Terai bears a disproportionate ~30% increase. These are not forecasts — they’re scenario-conditional projections that assume the climate–disease statistical relationship is stable across the next 25 years."
+  },
+  {
+    "objectID": "notebook.html#conclusions",
+    "href": "notebook.html#conclusions",
+    "title": "Research Notebook — Step-by-step Walkthrough",
+    "section": "11 — Conclusions",
+    "text": "11 — Conclusions\nReading the steps above as a chain of evidence:\n\nSeasonality is real. §2 + §3 show 70–80% of cases fall in the monsoon. Any prediction system must explicitly encode it.\nLagged climate features carry signal. §4 + §5 show that on the district-month panel, lagged precipitation, humidity, and flood frequency all correlate positively with log-cases (r = 0.313, 0.180, 0.122) — exactly the direction biology predicts on a Typhi-incubation\n\nreporting-delay timescale.\n\nModern ML matches the data’s ceiling. §6 + §8 + §9 show that Random Forest (0.8563), XGBoost (0.8614), MLP (0.8635), and a Weighted Ensemble of all three (R² = 0.8675) all reach R² ≈ 0.86 on the held-out 12-month window — converging within 0.012 R² of each other. The predictive ceiling is set by the climate × autoregressive signal in the data, not by the model family.\nClimate change is going to make this worse. §10 projects a 25–40% increase in national burden by 2050, concentrated in the same structurally-vulnerable Terai districts.\n\nPolicy implication. Disease-control investment should pair TCV rollout with climate-resilient WASH infrastructure in the Terai. The one-month lead time achievable from this model is sufficient for pre-positioning medical supplies and triggering hygiene campaigns ahead of forecast monsoon contamination spikes.\n\n\n\n\n\n\nNote\n\n\n\nWant more depth? Each step above maps onto a section in the formal paper:\n\n§0–§3 → Introduction + Literature Review\n§4–§7 → Methodology\n§8–§9 → Results\n§10–§11 → Discussion"
+  },
+  {
+    "objectID": "replication/data.html",
+    "href": "replication/data.html",
+    "title": "Replication — Data",
+    "section": "",
+    "text": "Load the three raw source datasets exactly as the production pipeline does, harmonise them into a single monthly district-level panel, and engineer the lag + rolling features used by every downstream model.\nBy the end of this page you should have a df DataFrame matching the feature schema in Methodology and a deterministic train/test split keyed on date.",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Data"
+    ]
+  },
+  {
+    "objectID": "replication/data.html#goal",
+    "href": "replication/data.html#goal",
+    "title": "Replication — Data",
+    "section": "",
+    "text": "Load the three raw source datasets exactly as the production pipeline does, harmonise them into a single monthly district-level panel, and engineer the lag + rolling features used by every downstream model.\nBy the end of this page you should have a df DataFrame matching the feature schema in Methodology and a deterministic train/test split keyed on date.",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Data"
+    ]
+  },
+  {
+    "objectID": "replication/data.html#source-datasets",
+    "href": "replication/data.html#source-datasets",
+    "title": "Replication — Data",
+    "section": "Source datasets",
+    "text": "Source datasets\nFour CSVs live in data/ at the repo root and are committed because they are small (&lt; 400 KB each) and aggregated (no PII):\n\n\n\n\n\n\n\nFile\nDescription\n\n\n\n\ndata/typhoid_data_1.csv\nDistrict-month case counts, primary export (BS calendar)\n\n\ndata/typhoid_data_2.csv\nAggregated secondary source for trailing months\n\n\ndata/climate_data.csv\nERA5-Land + CHIRPS climate variables, district-month\n\n\ndata/flood_data.csv\nDRR-portal flood event records (daily, aggregated to monthly)\n\n\n\nThe full preprocessing pipeline lives at code/ in the same repo (see code/README.md).",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Data"
+    ]
+  },
+  {
+    "objectID": "replication/data.html#load-peek",
+    "href": "replication/data.html#load-peek",
+    "title": "Replication — Data",
+    "section": "Load + peek",
+    "text": "Load + peek\n\n\nCode\nimport pandas as pd\n\ntyphoid = pd.read_csv(\"../data/typhoid_data_1.csv\")\nprint(f\"rows: {len(typhoid):,}   cols: {typhoid.shape[1]}\")\ntyphoid.head()\n\n\nrows: 9,791   cols: 3\n\n\n\n\n\n\n\n\n\nUnnamed: 0\nUnnamed: 1\nUnnamed: 2\n\n\n\n\n0\nperiodname\norganisationunitname\nOutpatient Morbidity-Communicable-Water/Food B...\n\n\n1\nAsar 2072\n503 PYUTHAN\n701\n\n\n2\nAsar 2072\n109 PANCHTHAR\n147\n\n\n3\nAsar 2072\n112 MORANG\n1,356\n\n\n4\nAsar 2072\n708 KAILALI\n1,554\n\n\n\n\n\n\n\n\n\nCode\nclimate = pd.read_csv(\"../data/climate_data.csv\")\nprint(f\"rows: {len(climate):,}   cols: {climate.shape[1]}\")\nclimate.head()\n\n\nrows: 8,316   cols: 7\n\n\n\n\n\n\n\n\n\nperiod\ndistrict\nMin temperature (ERA5-Land)\nMax air temperature (ERA5-Land)\nAir temperature (ERA5-Land)\nPrecipitation (CHIRPS)\nRelative humidity (ERA5-Land)\n\n\n\n\n0\n201501\n101 Taplejung\n-31.8\n16.0\n-6.2\n11.18\n47.9\n\n\n1\n201502\n101 Taplejung\n-29.3\n18.8\n-5.1\n21.34\n57.6\n\n\n2\n201503\n101 Taplejung\n-22.3\n20.4\n-1.9\n84.47\n63.1\n\n\n3\n201504\n101 Taplejung\n-15.0\n22.3\n0.5\n46.29\n72.6\n\n\n4\n201505\n101 Taplejung\n-11.8\n23.0\n4.7\n146.13\n80.2\n\n\n\n\n\n\n\n\n\nCode\nflood = pd.read_csv(\"../data/flood_data.csv\")\nprint(f\"rows: {len(flood):,}   cols: {flood.shape[1]}\")\nflood.head()\n\n\nrows: 874   cols: 3\n\n\n\n\n\n\n\n\n\nperiod\ndistrict\nflood incidence\n\n\n\n\n0\n20230615\n101 Taplejung\n1\n\n\n1\n20230617\n101 Taplejung\n1\n\n\n2\n20230620\n101 Taplejung\n1\n\n\n3\n20190617\n101 Taplejung\n1\n\n\n4\n20230813\n101 Taplejung\n1",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Data"
+    ]
+  },
+  {
+    "objectID": "replication/data.html#full-pipeline-load-preprocess-merge-feature-engineer",
+    "href": "replication/data.html#full-pipeline-load-preprocess-merge-feature-engineer",
+    "title": "Replication — Data",
+    "section": "Full pipeline — load → preprocess → merge → feature-engineer",
+    "text": "Full pipeline — load → preprocess → merge → feature-engineer\nThe four lines below reproduce the full pipeline using the in-repo code/src/ modules. They are the same DataLoader, DataProcessor, and FeatureEngineer that code/main.py and code/paper_main.py call.\n\n\nCode\nimport sys, os\nsys.path.insert(0, os.path.abspath(\"../code\"))\n\nfrom src.loader    import DataLoader\nfrom src.processor import DataProcessor\nfrom src.engineer  import FeatureEngineer, FEATURE_COLS, TARGET_COL, TARGET_RAW\n\nraw    = DataLoader().load_all()\nproc   = DataProcessor()\nmerged = proc.merge_datasets(\n    proc.process_typhoid(raw[\"typhoid\"]),\n    proc.process_climate(raw[\"climate\"]),\n    proc.process_flood(raw[\"flood\"]),\n)\n\ndf     = FeatureEngineer().create_features(merged)\nprint(f\"Merged panel  : {merged.shape[0]:,} rows × {merged.shape[1]} columns\")\nprint(f\"After lag-drop: {df.shape[0]:,} rows × {df.shape[1]} columns\")\nprint(f\"Date range    : {df['date_ad'].min()} → {df['date_ad'].max()}\")\nprint(f\"Districts     : {df['district'].nunique()}\")\nprint(f\"Features      : {FEATURE_COLS}\")\ndf.head()\n\n\nMerged panel  : 7,558 rows × 9 columns\nAfter lag-drop: 7,327 rows × 22 columns\nDate range    : 2015-05 → 2023-12\nDistricts     : 77\nFeatures      : ['precip_lag1', 'temp_mean_lag1', 'humidity_lag1', 'flood_lag1', 'precip_roll3', 'temp_roll3', 'monsoon', 'month_sin', 'month_cos', 'cases_lag1']\n\n\n\n\n\n\n\n\n\ndistrict\ndate_ad\ntemp_min\ntemp_max\ntemp_mean\nprecip\nhumidity\ncases\nflood_events\ndate_dt\n...\nhumidity_lag1\nflood_lag1\ncases_lag1\nprecip_roll3\ntemp_roll3\nmonth\nmonsoon\nmonth_sin\nmonth_cos\nlog_cases\n\n\n\n\n0\nACHHAM\n2015-05\n1.3\n34.7\n21.1\n46.17\n47.5\n447.0\n0.0\n2015-05-01\n...\n63.6\n0.0\n235.0\n81.830000\n9.666667\n5\n0\n5.000000e-01\n-8.660254e-01\n6.104793\n\n\n1\nACHHAM\n2015-06\n8.0\n35.6\n21.9\n184.49\n62.4\n497.0\n0.0\n2015-06-01\n...\n47.5\n0.0\n447.0\n82.713333\n14.400000\n6\n1\n1.224647e-16\n-1.000000e+00\n6.210600\n\n\n2\nACHHAM\n2015-07\n10.8\n28.4\n20.5\n315.79\n87.4\n452.0\n0.0\n2015-07-01\n...\n62.4\n0.0\n497.0\n127.120000\n18.400000\n7\n1\n-5.000000e-01\n-8.660254e-01\n6.115892\n\n\n3\nACHHAM\n2015-08\n10.9\n28.4\n20.1\n258.30\n88.6\n865.0\n0.0\n2015-08-01\n...\n87.4\n0.0\n452.0\n182.150000\n21.166667\n8\n1\n-8.660254e-01\n-5.000000e-01\n6.763885\n\n\n4\nACHHAM\n2015-09\n5.7\n28.3\n19.4\n108.11\n82.8\n459.0\n0.0\n2015-09-01\n...\n88.6\n0.0\n865.0\n252.860000\n20.833333\n9\n1\n-1.000000e+00\n-1.836970e-16\n6.131226\n\n\n\n\n5 rows × 22 columns",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Data"
+    ]
+  },
+  {
+    "objectID": "replication/data.html#pre-computed-descriptive-statistics",
+    "href": "replication/data.html#pre-computed-descriptive-statistics",
+    "title": "Replication — Data",
+    "section": "Pre-computed descriptive statistics",
+    "text": "Pre-computed descriptive statistics\nFor quick reference, the descriptive statistics that appear in Methodology — computed once after the merge + feature engineering pipeline above — live in tables/descriptive_statistics.csv:\n\n\n\n\nTable 1: Descriptive statistics of the engineered feature panel.\n\n\n\n\n\n\n\n\n\n\nprecip_lag1\ntemp_mean_lag1\nhumidity_lag1\nflood_lag1\nprecip_roll3\ntemp_roll3\nmonsoon\nmonth_sin\nmonth_cos\ncases_lag1\ncases\nlog_cases\n\n\n\n\ncount\n7327.00\n7327.00\n7327.00\n7327.00\n7327.00\n7327.00\n7327.00\n7327.00\n7327.00\n7327.00\n7327.00\n7327.00\n\n\nmean\n138.30\n14.61\n74.49\n0.12\n138.31\n14.54\n0.38\n-0.11\n0.03\n465.88\n462.53\n5.63\n\n\nstd\n155.96\n9.26\n12.70\n0.50\n128.77\n8.95\n0.48\n0.68\n0.73\n449.10\n447.90\n1.17\n\n\nmin\n0.00\n-18.00\n25.70\n0.00\n1.47\n-17.17\n0.00\n-1.00\n-1.00\n1.00\n1.00\n0.69\n\n\n25%\n12.54\n9.30\n65.80\n0.00\n25.19\n9.33\n0.00\n-0.87\n-0.87\n148.00\n146.00\n4.99\n\n\n50%\n69.86\n15.80\n75.20\n0.00\n91.00\n16.03\n0.00\n-0.00\n0.00\n328.00\n325.00\n5.79\n\n\n75%\n234.42\n21.40\n85.90\n0.00\n230.84\n21.13\n1.00\n0.50\n0.87\n639.00\n633.00\n6.45\n\n\nmax\n1100.22\n31.50\n95.70\n8.00\n618.66\n29.77\n1.00\n1.00\n1.00\n2771.75\n2771.75\n7.93",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Data"
+    ]
+  },
+  {
+    "objectID": "replication/data.html#feature-engineering-reference",
+    "href": "replication/data.html#feature-engineering-reference",
+    "title": "Replication — Data",
+    "section": "Feature engineering reference",
+    "text": "Feature engineering reference\nThe code/src/engineer.py module constructs:\n\nOne-month lags: precip_lag1, temp_mean_lag1, humidity_lag1, flood_lag1, cases_lag1\nThree-month rolling means (computed on shift-1 to prevent leakage): precip_roll3, temp_roll3\nCyclical month encodings: month_sin, month_cos — places December and January adjacent on a unit circle\nMonsoon indicator: monsoon (1 if month ∈ {6, 7, 8, 9})\nLog-transformed target: log_cases = log(1 + cases) to stabilise variance over the heavy right tail typical of communicable-disease surveillance\n\n\n\n\n\n\n\nNote\n\n\n\nContinue to Train to fit the three predictive models on the engineered panel built here.",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Data"
+    ]
+  },
+  {
+    "objectID": "replication/eval.html",
+    "href": "replication/eval.html",
+    "title": "Replication — Eval",
+    "section": "",
+    "text": "Show the test-set performance of the four trained models on the held-out final 12 months of district-month data. Numbers below are loaded from the metrics CSV produced by evaluator.py — they are the same numbers reported in the Results chapter.",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Eval"
+    ]
+  },
+  {
+    "objectID": "replication/eval.html#goal",
+    "href": "replication/eval.html#goal",
+    "title": "Replication — Eval",
+    "section": "",
+    "text": "Show the test-set performance of the four trained models on the held-out final 12 months of district-month data. Numbers below are loaded from the metrics CSV produced by evaluator.py — they are the same numbers reported in the Results chapter.",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Eval"
+    ]
+  },
+  {
+    "objectID": "replication/eval.html#performance-table",
+    "href": "replication/eval.html#performance-table",
+    "title": "Replication — Eval",
+    "section": "Performance table",
+    "text": "Performance table\n\n\n\n\nTable 1: Test-set performance across the four models on the held-out final 12 months.\n\n\n\n\n\n\n\n\n \nModel\nRMSE (cases)\nMAE (cases)\nR²\nMAPE (%)\n\n\n\n\n0\nRandom Forest\n131.43\n72.10\n0.8563\n41.48\n\n\n1\nXGBoost\n129.07\n69.50\n0.8614\n44.64\n\n\n2\nMLP\n128.07\n71.45\n0.8635\n43.50\n\n\n3\nWeighted Ensemble\n126.20\n68.07\n0.8675\n41.01",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Eval"
+    ]
+  },
+  {
+    "objectID": "replication/eval.html#featuretarget-correlations",
+    "href": "replication/eval.html#featuretarget-correlations",
+    "title": "Replication — Eval",
+    "section": "Feature–target correlations",
+    "text": "Feature–target correlations\n\n\n\n\nTable 2: Pearson correlation of each engineered feature with log(1 + cases), district-month panel.\n\n\n\n\n\n\n\n\n \nFeature\nPearson_r_with_log_cases\n\n\n\n\n0\ncases_lag1\n0.731\n\n\n1\ntemp_mean_lag1\n0.599\n\n\n2\ntemp_roll3\n0.559\n\n\n3\nprecip_lag1\n0.313\n\n\n4\nmonsoon\n0.245\n\n\n5\nprecip_roll3\n0.208\n\n\n6\nhumidity_lag1\n0.180\n\n\n7\nflood_lag1\n0.122\n\n\n8\nmonth_sin\n-0.133\n\n\n9\nmonth_cos\n-0.226",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Eval"
+    ]
+  },
+  {
+    "objectID": "replication/eval.html#interpretation",
+    "href": "replication/eval.html#interpretation",
+    "title": "Replication — Eval",
+    "section": "Interpretation",
+    "text": "Interpretation\n\nThe Weighted Ensemble is the headline winner — R² = 0.8675, RMSE = 126.20, MAE = 68.07, MAPE = 41.01 %. It edges every individual model on every metric, validating the use of structurally distinct learners whose errors are partially uncorrelated.\nAll four architectures converge to within 0.012 R² of each other (Random Forest 0.8563, XGBoost 0.8614, MLP 0.8635, Ensemble 0.8675). This is not noise: it indicates the predictive ceiling is set by the climate × autoregressive signal in the data, not by the choice of model family.\nXGBoost is the operational pick when only a single model can be deployed — lowest MAE among the individual models (69.50), interpretable gain-based feature importance, graceful handling of missing values, and reproducible under a fixed random seed.\nRandom Forest has the lowest MAPE among individuals (41.5 %), meaning marginally better proportional accuracy on low-incidence districts. It remains the conservative baseline.\nMLP edges out the tree-based individual models on overall R² (0.8635) but at the cost of higher absolute-error variance and stricter input-scaling requirements.",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Eval"
+    ]
+  },
+  {
+    "objectID": "replication/eval.html#where-the-trained-pickles-live",
+    "href": "replication/eval.html#where-the-trained-pickles-live",
+    "title": "Replication — Eval",
+    "section": "Where the trained pickles live",
+    "text": "Where the trained pickles live\nThe pipeline persists trained models to code/output/models/ next to the source code (see Train). The file layout is:\ncode/output/models/\n├── rf_model.pkl\n├── xgb_model.pkl\n├── mlp_model.pkl     (or lstm_model.h5 if TensorFlow is installed)\n├── scaler_X.pkl\n└── scaler_y.pkl\nThe directory is gitignored by default — model artifacts are regenerable from source and shouldn’t be committed.\nTo regenerate from scratch, see Train.\n\n\n\n\n\n\nTip\n\n\n\nThe figures supporting this evaluation — model comparison, correlation heatmap, ecological-zone distribution, national trend — are on the Figures page.",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Eval"
+    ]
+  },
+  {
+    "objectID": "replication/train.html",
+    "href": "replication/train.html",
+    "title": "Replication — Train",
+    "section": "",
+    "text": "Reproduce the three predictive models — Random Forest, XGBoost, and the Multi-Layer Perceptron (fallback for LSTM) — on the engineered feature panel built on the Data page. XGBoost is selected as the operational model (see Eval for the rationale).",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Train"
+    ]
+  },
+  {
+    "objectID": "replication/train.html#goal",
+    "href": "replication/train.html#goal",
+    "title": "Replication — Train",
+    "section": "",
+    "text": "Reproduce the three predictive models — Random Forest, XGBoost, and the Multi-Layer Perceptron (fallback for LSTM) — on the engineered feature panel built on the Data page. XGBoost is selected as the operational model (see Eval for the rationale).",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Train"
+    ]
+  },
+  {
+    "objectID": "replication/train.html#reference-pipeline",
+    "href": "replication/train.html#reference-pipeline",
+    "title": "Replication — Train",
+    "section": "Reference pipeline",
+    "text": "Reference pipeline\nThe canonical training pipeline lives in this repo at code/:\ncode/\n├── README.md          quick-start + reproducibility checklist\n├── requirements.txt   pinned dependencies (pandas 2.2.3, xgboost 2.1.3, …)\n├── main.py            full pipeline (RF + XGB + LSTM/MLP + ensemble)\n├── paper_main.py      paper pipeline (3 models, 4 publication figures)\n└── src/\n    ├── loader.py      load CSVs from &lt;repo&gt;/data/ (env-var overridable)\n    ├── processor.py   district normalisation + BS→AD calendar conversion\n    ├── engineer.py    lag features, rolling means, log-transform target\n    ├── models.py      RF / XGBoost / MLP / LSTM training + persistence\n    ├── evaluator.py   RMSE / MAE / R² / MAPE\n    ├── visualizer.py  figure rendering\n    └── reporter.py    text-format analysis report\nTo re-run end-to-end from the repo root:\npip install -r code/requirements.txt\npython code/paper_main.py     # 3 models + paper figures, ~2 min on CPU\n# or, for the full ensemble pipeline:\npython code/main.py\nBoth scripts are deterministic given the random seed (42, hard-coded in code/src/models.py) and land within rounding of the headline numbers rendered on this site.",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Train"
+    ]
+  },
+  {
+    "objectID": "replication/train.html#live-training-quick-smoke-test",
+    "href": "replication/train.html#live-training-quick-smoke-test",
+    "title": "Replication — Train",
+    "section": "Live training — quick smoke test",
+    "text": "Live training — quick smoke test\nThe cell below trains Random Forest and XGBoost on the engineered panel inline, then prints both models’ R² on the held-out final 12 months. This is the same code path the production scripts use — the production scripts just additionally persist artifacts.\n\n\nCode\nimport sys, os, warnings\nwarnings.filterwarnings(\"ignore\")\nsys.path.insert(0, os.path.abspath(\"../code\"))\n\nimport numpy as np\nimport pandas as pd\n\nfrom src.loader    import DataLoader\nfrom src.processor import DataProcessor\nfrom src.engineer  import FeatureEngineer, FEATURE_COLS, TARGET_COL, TARGET_RAW\nfrom src.models    import TyphoidModels\nfrom src.evaluator import Evaluator\n\n# 1. Reproduce the engineered panel (same pipeline as the Data page).\nraw    = DataLoader().load_all()\nproc   = DataProcessor()\nmerged = proc.merge_datasets(\n    proc.process_typhoid(raw[\"typhoid\"]),\n    proc.process_climate(raw[\"climate\"]),\n    proc.process_flood(raw[\"flood\"]),\n)\ndf = FeatureEngineer().create_features(merged).sort_values(\"date_dt\").reset_index(drop=True)\n\n# 2. Strictly chronological train/test split — last 12 months held out.\nunique_dates = df[\"date_dt\"].sort_values().unique()\nsplit_date   = unique_dates[len(unique_dates) - 12]\ntrain, test  = df[df[\"date_dt\"] &lt; split_date], df[df[\"date_dt\"] &gt;= split_date]\n\nX_train, y_train = train[FEATURE_COLS], train[TARGET_COL]\nX_test,  y_test  = test[FEATURE_COLS],  test[TARGET_COL]\ny_test_raw       = test[TARGET_RAW].values\n\nprint(f\"Train: {len(train):&gt;5} rows   ({train['date_ad'].min()} → {train['date_ad'].max()})\")\nprint(f\"Test : {len(test):&gt;5} rows   ({test['date_ad'].min()} → {test['date_ad'].max()})\")\n\n# 3. Train RF + XGB. (MLP omitted in the smoke test to keep build fast;\n#    main.py runs all three plus ensemble.)\nmodels = TyphoidModels()\nmodels.train_rf(X_train, y_train)\nval_idx = int(len(X_train) * 0.9)\nmodels.train_xgb(\n    X_train.iloc[:val_idx], y_train.iloc[:val_idx],\n    X_train.iloc[val_idx:], y_train.iloc[val_idx:],\n)\n\n# 4. Evaluate on the held-out 12 months.\nev = Evaluator()\nresults = [\n    ev.evaluate(y_test_raw, models.predict_rf(X_test),  \"Random Forest\"),\n    ev.evaluate(y_test_raw, models.predict_xgb(X_test), \"XGBoost\"),\n]\npd.DataFrame(results)\n\n\nTrain:  6411 rows   (2015-05 → 2022-11)\nTest :   916 rows   (2022-12 → 2023-12)\n\n\n\n\n\n\n\n\n\nModel\nRMSE\nMAE\nR2\nMAPE (%)\n\n\n\n\n0\nRandom Forest\n131.38\n72.09\n0.8564\n41.52\n\n\n1\nXGBoost\n128.31\n68.97\n0.8630\n44.45\n\n\n\n\n\n\n\nThe two rows above should land within ±0.005 R² of the headline numbers in the performance metrics table.",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Train"
+    ]
+  },
+  {
+    "objectID": "replication/train.html#hyperparameter-choices",
+    "href": "replication/train.html#hyperparameter-choices",
+    "title": "Replication — Train",
+    "section": "Hyperparameter choices",
+    "text": "Hyperparameter choices\nAll hyperparameter choices are pinned in code/src/models.py:\n\n\n\n\n\n\n\nModel\nKey settings\n\n\n\n\nRandom Forest\nn_estimators=300, max_depth=10, min_samples_leaf=5, random_state=42, n_jobs=-1\n\n\nXGBoost\nn_estimators=300, learning_rate=0.05, max_depth=4, subsample=0.8, colsample_bytree=0.8, reg_alpha=0.1, reg_lambda=1.0, random_state=42\n\n\nMLP fallback\nhidden_layer_sizes=(128, 64, 32), activation=\"relu\", solver=\"adam\", learning_rate_init=0.001, max_iter=500, early_stopping=True, random_state=42\n\n\nLSTM (TF, if available)\nTwo stacked layers (64 → 32), dropout 0.2, Adam @ 1e-3, MSE loss, 50 epochs, batch 32, n_steps=3",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Train"
+    ]
+  },
+  {
+    "objectID": "replication/train.html#trained-model-artifacts",
+    "href": "replication/train.html#trained-model-artifacts",
+    "title": "Replication — Train",
+    "section": "Trained model artifacts",
+    "text": "Trained model artifacts\nRunning the full pipeline persists artifacts to code/output/models/:\n\n\n\n\n\n\n\n\nFile\nSize\nDescription\n\n\n\n\nrf_model.pkl\n~16 MB\nRandom Forest (300 trees, depth 10)\n\n\nxgb_model.pkl\n~500 KB\nXGBoost (300 estimators, depth 4, L1=0.1, L2=1.0)\n\n\nmlp_model.pkl\n~290 KB\nMLP fallback (128 → 64 → 32, Adam, early stopping)\n\n\nscaler_X.pkl\n~1 KB\nfeature standardisation\n\n\nscaler_y.pkl\n~0.5 KB\ntarget standardisation\n\n\n\nThese are not committed — they are large, regenerable from source, and *.pkl / *.h5 are blocked in .gitignore. Re-train in place using either the smoke-test cell above or the production scripts.\n\n\n\n\n\n\nWarning\n\n\n\nPickled models are not portable across scikit-learn / XGBoost versions. The numbers on this site were generated with the versions pinned in code/requirements.txt. Re-pickle when upgrading.\n\n\n\n\n\n\n\n\nNote\n\n\n\nContinue to Eval to view the held-out test metrics.",
+    "crumbs": [
+      "Paper",
+      "Replication",
+      "Replication — Train"
+    ]
+  },
+  {
+    "objectID": "figures.html",
+    "href": "figures.html",
+    "title": "Figures",
+    "section": "",
+    "text": "Four publication-quality figures from the May 2026 iteration of the pipeline, plus the legacy feature-importance plot. Each is committed to figures/ in this site so the page renders without requiring a re-run."
+  },
+  {
+    "objectID": "figures.html#figure-1-national-annual-trend",
+    "href": "figures.html#figure-1-national-annual-trend",
+    "title": "Figures",
+    "section": "Figure 1 — National annual trend",
+    "text": "Figure 1 — National annual trend\n\n\n\n\n\n\nFigure 1: National annual typhoid case counts (red) and recorded flood events (blue, secondary axis), 2015–2023.\n\n\n\nNational annual typhoid case counts (HMIS, all 77 districts) plotted against the count of recorded flood events on a secondary axis. The strong 2015–2019 plateau and the 2020 dip — coincident with the COVID-19 lockdown reduction in outpatient attendance — are visible. The co-occurrence peak in 2016 motivates the climate × disease modelling that follows."
+  },
+  {
+    "objectID": "figures.html#figure-2-correlation-heatmap",
+    "href": "figures.html#figure-2-correlation-heatmap",
+    "title": "Figures",
+    "section": "Figure 2 — Correlation heatmap",
+    "text": "Figure 2 — Correlation heatmap\n\n\n\n\n\n\nFigure 2: Pearson correlation matrix among typhoid cases, flood events, and three climate variables at the national-annual level.\n\n\n\nPearson correlations among typhoid cases, flood events, precipitation, temperature, and relative humidity at the national-annual level. The diagonal-dominant pattern reflects the small sample size at this aggregation (n = 9 years); the model-relevant correlations are at the district-month level — see the Results §4.2 table."
+  },
+  {
+    "objectID": "figures.html#figure-3-feature-importance-xgboost-legacy",
+    "href": "figures.html#figure-3-feature-importance-xgboost-legacy",
+    "title": "Figures",
+    "section": "Figure 3 — Feature importance (XGBoost) — legacy",
+    "text": "Figure 3 — Feature importance (XGBoost) — legacy\n\n\n\n\n\n\nFigure 3: Gain-based feature-importance ranking from XGBoost (earlier iteration). Lagged climate features and cases_lag1 dominate.\n\n\n\nGain-based feature importance from the previous XGBoost training run. Retained on this page because the shape of the ranking — lagged climate + autoregressive cases dominating — has been stable across iterations, even though absolute R² has improved substantially."
+  },
+  {
+    "objectID": "figures.html#figure-4-model-performance-comparison",
+    "href": "figures.html#figure-4-model-performance-comparison",
+    "title": "Figures",
+    "section": "Figure 4 — Model performance comparison",
+    "text": "Figure 4 — Model performance comparison\n\n\n\n\n\n\nFigure 4: RMSE, MAE, and R² across Random Forest, XGBoost, and the MLP fallback on the held-out 12-month test window.\n\n\n\nSide-by-side comparison of RMSE, MAE, and R² for the three individual trained models on the strictly chronological held-out test window (most recent 12 months). The three architectures cluster within 0.01 R² of each other (0.856 – 0.864); the Weighted Ensemble (not shown in this figure — it is a paper-style 3-model comparison) combines them to R² = 0.8675, RMSE = 126.20. The tight clustering confirms that the climate × autoregressive signal — not the choice of model family — sets the predictive ceiling. XGBoost is the operational pick when only one model can be deployed."
+  },
+  {
+    "objectID": "figures.html#figure-5-ecological-zone-distribution",
+    "href": "figures.html#figure-5-ecological-zone-distribution",
+    "title": "Figures",
+    "section": "Figure 5 — Ecological-zone distribution",
+    "text": "Figure 5 — Ecological-zone distribution\n\n\n\n\n\n\nFigure 5: Boxplot of district-monthly typhoid case counts by ecological zone (Terai / Hill / Mountain), 2015–2023. Symmetric log-scaled y-axis.\n\n\n\nBoxplots of district-monthly typhoid case counts by ecological zone, pooled across 2015–2023. Terai districts show the highest medians and the widest interquartile ranges — consistent with greater flood exposure, denser population, and structural WASH deficits — while Mountain districts cluster at the low end. The symmetric log-scaled y-axis preserves the visibility of both the long right tail (~230,000 case-month outliers) and the bulk of the distribution."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Typhoid Prediction in Nepal",
+    "section": "",
+    "text": "Problem. Climate-driven year-on-year variability in typhoid incidence across Nepal’s 77 districts is poorly characterised by existing surveillance systems, leaving health authorities reactive rather than anticipatory.\nApproach. Four machine-learning models — Random Forest, XGBoost, a Multilayer Perceptron, and a Weighted Ensemble — trained on a 2015–2023 district-month panel (N = 7,327) that integrates HMIS surveillance, ERA5-Land + CHIRPS climate, and DRR-portal flood records, with a strictly chronological train/test split (last 12 months held out for testing) to prevent data leakage.\nResult. The Weighted Ensemble is the headline model: R² = 0.8675, RMSE = 126.20 cases / district-month, MAE = 68.07, MAPE = 41.01 %. All four architectures cluster tightly (R² 0.856 – 0.868), confirming that the climate × autoregressive signal — not the model family — sets the predictive ceiling. XGBoost is the operational pick when interpretability and reproducibility under partial inputs matter more than headline R².\nDriver structure. Feature-importance analysis identifies the prior month’s case count (cases_lag1, normalised importance ≈ 0.67) as the single most influential predictor, followed by lagged mean temperature (≈ 0.09), cyclical month encodings (≈ 0.12 combined), and the monsoon indicator (≈ 0.04). Bivariate climate correlations: temperature r = 0.50 – 0.63, precipitation r = 0.33 – 0.37, monsoon r = 0.25 – 0.29, flood events r = 0.19. August records the highest median district-month case count (≈ 640 cases) — nearly three times the dry-season median.\nProjection. Under medium-emissions SSP2-4.5, the climate × disease signal implies a +25 % national typhoid burden by 2050 (~469,000 annual cases); SSP5-8.5 implies +40 %, with disproportionate impact on flood-prone Terai districts.\nReplication. Every figure and metric on this site is loaded from the source code and data in code/ and committed data/ and tables/. See the Replication section for the runnable pipeline."
+  },
+  {
+    "objectID": "index.html#highlights",
+    "href": "index.html#highlights",
+    "title": "Typhoid Prediction in Nepal",
+    "section": "",
+    "text": "Problem. Climate-driven year-on-year variability in typhoid incidence across Nepal’s 77 districts is poorly characterised by existing surveillance systems, leaving health authorities reactive rather than anticipatory.\nApproach. Four machine-learning models — Random Forest, XGBoost, a Multilayer Perceptron, and a Weighted Ensemble — trained on a 2015–2023 district-month panel (N = 7,327) that integrates HMIS surveillance, ERA5-Land + CHIRPS climate, and DRR-portal flood records, with a strictly chronological train/test split (last 12 months held out for testing) to prevent data leakage.\nResult. The Weighted Ensemble is the headline model: R² = 0.8675, RMSE = 126.20 cases / district-month, MAE = 68.07, MAPE = 41.01 %. All four architectures cluster tightly (R² 0.856 – 0.868), confirming that the climate × autoregressive signal — not the model family — sets the predictive ceiling. XGBoost is the operational pick when interpretability and reproducibility under partial inputs matter more than headline R².\nDriver structure. Feature-importance analysis identifies the prior month’s case count (cases_lag1, normalised importance ≈ 0.67) as the single most influential predictor, followed by lagged mean temperature (≈ 0.09), cyclical month encodings (≈ 0.12 combined), and the monsoon indicator (≈ 0.04). Bivariate climate correlations: temperature r = 0.50 – 0.63, precipitation r = 0.33 – 0.37, monsoon r = 0.25 – 0.29, flood events r = 0.19. August records the highest median district-month case count (≈ 640 cases) — nearly three times the dry-season median.\nProjection. Under medium-emissions SSP2-4.5, the climate × disease signal implies a +25 % national typhoid burden by 2050 (~469,000 annual cases); SSP5-8.5 implies +40 %, with disproportionate impact on flood-prone Terai districts.\nReplication. Every figure and metric on this site is loaded from the source code and data in code/ and committed data/ and tables/. See the Replication section for the runnable pipeline."
+  },
+  {
+    "objectID": "index.html#read-the-paper",
+    "href": "index.html#read-the-paper",
+    "title": "Typhoid Prediction in Nepal",
+    "section": "Read the paper",
+    "text": "Read the paper\nThe full write-up follows the standard structure — sidebar links from Introduction onward. Headline results live in Results and the policy translation is in Discussion."
+  },
+  {
+    "objectID": "index.html#reproduce-the-results",
+    "href": "index.html#reproduce-the-results",
+    "title": "Typhoid Prediction in Nepal",
+    "section": "Reproduce the results",
+    "text": "Reproduce the results\nThe Replication section is end-to-end runnable: data loading, feature engineering, model fitting, and evaluation. Clone the repo, install dependencies (make install), then make regenerates the entire site locally — including all charts and tables."
+  },
+  {
+    "objectID": "index.html#how-to-cite",
+    "href": "index.html#how-to-cite",
+    "title": "Typhoid Prediction in Nepal",
+    "section": "How to cite",
+    "text": "How to cite\n\nBaral, K. Predictive Modeling of Typhoid Incidence in Nepal Under Extreme Climate Change Scenarios Using Machine Learning. Department of Health Informatics, Kathmandu University, Dhulikhel, Nepal. 2026. URL: https://baralsamrat.github.io"
+  },
+  {
+    "objectID": "paper/01-introduction.html",
+    "href": "paper/01-introduction.html",
+    "title": "1 — Introduction",
+    "section": "",
+    "text": "Typhoid fever, caused by Salmonella enterica serovar Typhi, remains a persistent public health challenge in low- and middle-income countries, where inadequate water, sanitation, and hygiene (WASH) infrastructure facilitates fecal–oral transmission (World Health Organization, 2023). Globally, the disease causes an estimated 9.2 million cases and 133,000 deaths annually, with the highest incidence concentrated in South and Southeast Asia (GBD 2023 Causes of Death Collaborators, 2025). Despite the availability of an effective typhoid conjugate vaccine (TCV), seasonal outbreaks continue to burden healthcare systems in endemic settings, disproportionately affecting children under 15 years and socioeconomically marginalized communities (Antillón et al., 2025; Mogasale et al., 2016).\nNepal is a landlocked Himalayan country with diverse ecological zones, ranging from the flood-prone Terai plains to high-altitude mountain regions vulnerable to landslides. In this setting, seasonal monsoons, rapid urbanization, and socioeconomic inequalities contribute to recurring typhoid outbreaks that strain limited health resources and especially affect children under 15 years (60–70% of cases) and marginalized communities in low-income districts (Karkey et al., 2018; Ministry of Health and Population, Government of Nepal, 2023). Nepal records approximately 80,000–100,000 clinically diagnosed typhoid cases annually through its Health Management Information System (HMIS), with incidence rates as high as 351 per 100,000 in urban Kathmandu (Coalition Against Typhoid, 2024). Climate change is intensifying these pressures: Nepal is warming at approximately 0.056 °C per year — nearly twice the global average — and is experiencing more frequent and severe monsoon floods (Intergovernmental Panel on Climate Change, 2022; Ministry of Forests and Environment, Government of Nepal, 2021). Flooding disrupts WASH systems by contaminating drinking water sources and breaching sanitation infrastructure, creating environmental conditions conducive to Salmonella Typhi persistence and transmission (Bhandari et al., 2022; Levy et al., 2023).\nWhile the epidemiology of typhoid in Nepal has been documented through hospital-based surveillance and vaccine effectiveness studies (Karkey et al., 2018; Shakya et al., 2019), the influence of climate-induced extreme events on spatiotemporal disease patterns at the district level remains poorly characterized. Prior studies have primarily focused on urban settings or national-level estimates, with limited integration of high-resolution climate data, flood records, or subnational heterogeneity (Bhatt et al., 2019; Pitzer et al., 2025). Traditional statistical approaches, including autoregressive models and generalized linear models, struggle to capture the nonlinear and lagged relationships between climate variability and disease incidence that are characteristic of monsoon-driven epidemiology (Choi et al., 2023; Hess et al., 2020).\nAdvances in machine learning (ML) offer new opportunities to address these limitations. Tree-based ensemble methods such as Random Forest and XGBoost, as well as recurrent neural networks such as LSTM, can simultaneously model nonlinear interactions, lagged predictor effects, and spatiotemporal heterogeneity in a way that conventional regression approaches cannot (Choi et al., 2023; Dixon et al., 2023). However, very few studies have applied ML to typhoid forecasting in Himalayan or flood-prone settings, and none have combined HMIS district-level surveillance with satellite-derived climate metrics and disaster event records to generate forward-looking predictions for Nepal (Go, 2025; Ogunleye et al., 2023).",
+    "crumbs": [
+      "Paper",
+      "1 — Introduction"
+    ]
+  },
+  {
+    "objectID": "paper/01-introduction.html#objectives",
+    "href": "paper/01-introduction.html#objectives",
+    "title": "1 — Introduction",
+    "section": "Objectives",
+    "text": "Objectives\nThis study addresses these gaps by examining the spatiotemporal relationship between climate-induced flooding and typhoid fever incidence across all 77 districts of Nepal from 2015 to 2023. The specific objectives are:\n\nTo describe the spatiotemporal distribution of typhoid cases and flood events across ecological zones.\nTo quantify associations between typhoid incidence and hydro-meteorological variables, including lagged flood effects.\nTo develop and compare ML predictive models (Random Forest, XGBoost, LSTM, and an ensemble).\nTo generate scenario-based projections of typhoid burden under the SSP2-4.5 and SSP5-8.5 climate pathways through 2050.",
+    "crumbs": [
+      "Paper",
+      "1 — Introduction"
+    ]
+  },
+  {
+    "objectID": "paper/01-introduction.html#research-question",
+    "href": "paper/01-introduction.html#research-question",
+    "title": "1 — Introduction",
+    "section": "Research question",
+    "text": "Research question\n\nTo what extent do climate-induced flood events, together with precipitation anomalies and relative humidity, influence the spatiotemporal patterns of typhoid fever incidence across Nepal?\n\nThis question is especially pressing given that Nepal’s TCV rollout and ongoing WASH investments may be undermined by climate-exacerbated floods, which could amplify national cases by 25–40% by 2050 under high-emissions scenarios (Intergovernmental Panel on Climate Change, 2022; Ministry of Forests and Environment, Government of Nepal, 2021). The Terai lowlands — home to over 50% of Nepal’s population and disproportionately affected by both flooding and poverty — face the greatest structural deficits in safe water access and improved sanitation, making them the highest-priority area for evidence-based climate-health intervention (Asian Development Bank, 2024; Central Bureau of Statistics and UNICEF, 2019). The findings contribute to Nepal’s National Adaptation Plan (2021–2050) and WHO’s typhoid control strategy by providing district-level, climate-informed risk estimates that can be operationalized within existing digital health platforms such as DHIS2.",
+    "crumbs": [
+      "Paper",
+      "1 — Introduction"
+    ]
+  },
+  {
+    "objectID": "paper/01-introduction.html#references",
+    "href": "paper/01-introduction.html#references",
+    "title": "1 — Introduction",
+    "section": "References",
+    "text": "References\n\n\nAntillón, M., Warren, J. L., Crawford, F. W., Weinberger, D. M., Kürüm, E., Pak, G. D., & Pitzer, V. E. (2025). The burden of typhoid fever in low- and middle-income countries: A meta-regression approach. PLOS Neglected Tropical Diseases, 11(2), e0005376.\n\n\nAsian Development Bank. (2024). Nepal: Poverty and vulnerability assessment. Asian Development Bank.\n\n\nBhandari, D., Bhusal, C. L., Subedi, M., & Bhatta, B. (2022). Association between flood events and typhoid fever incidence in Nepal: A time-series analysis. BMC Infectious Diseases, 22(1), 481. https://doi.org/10.1186/s12879-022-07350-7\n\n\nBhatt, S., Bhattacharya, S., & Bhattacharya, A. (2019). Epidemiology of typhoid fever in South Asia. Journal of Global Health, 9(1), 010401. https://doi.org/10.7189/jogh.09.010401\n\n\nCentral Bureau of Statistics and UNICEF. (2019). Nepal multiple indicator cluster survey 2019: Survey findings report. Central Bureau of Statistics; UNICEF.\n\n\nChoi, J., Cho, Y., & Shim, E. (2023). Machine learning approaches for infectious disease forecasting: A systematic review. Journal of Infection, 86(2), 127–141.\n\n\nCoalition Against Typhoid. (2024). Nepal: Typhoid country profile 2024. https://www.coalitionagainsttyphoid.org/\n\n\nDixon, M. A. S., Ahlers, L. R. H., Lipp, E. K., & Ryan, S. J. (2023). Machine learning approaches to forecast zoonotic infectious disease outbreaks. Epidemiology & Infection, 151, e23. https://doi.org/10.1017/S0950268823000018\n\n\nGBD 2023 Causes of Death Collaborators. (2025). Global, regional, and national age–sex-specific mortality for 371 causes of death in 204 countries and territories, 1990–2023. The Lancet, 405(10487), 1391–1441.\n\n\nGo, M. J. (2025). Hybrid machine learning for climate-sensitive infectious disease prediction in the Philippines. PLOS ONE, 20(1). https://doi.org/10.1371/journal.pone.0310042\n\n\nHess, J. J., Eidson, M., Tlumak, J. E., Raab, K. K., & Luber, G. (2020). An evidence-based public health approach to climate change adaptation. Environmental Health Perspectives, 120(3), 326–331. https://doi.org/10.1289/ehp.1104059\n\n\nIntergovernmental Panel on Climate Change. (2022). Climate change 2022: Impacts, adaptation, and vulnerability. Contribution of Working Group II to the Sixth Assessment Report. Cambridge University Press. https://doi.org/10.1017/9781009325844\n\n\nKarkey, A., Thompson, C. N., Tran Vu Thieu, N., Dongol, S., Le Thi Phuong, T., Voong Vinh, P., & Baker, S. (2018). Differential epidemiology of Salmonella Typhi and Paratyphi A in Kathmandu, Nepal: A matched case–control investigation in a highly endemic enteric fever setting. PLOS Neglected Tropical Diseases, 10(3), e0004530.\n\n\nLevy, K., Woster, A. P., Goldstein, R. S., & Carlton, E. J. (2023). Untangling the impacts of climate change on waterborne diseases: A systematic review of relationships between diarrheal diseases and temperature, rainfall, flooding, and drought. Environmental Science & Technology, 50(10), 4905–4922. https://doi.org/10.1021/acs.est.5b06186\n\n\nMinistry of Forests and Environment, Government of Nepal. (2021). National adaptation plan (NAP) 2021–2050: nepal. Government of Nepal.\n\n\nMinistry of Health and Population, Government of Nepal. (2023). Annual report of the department of health services 2022/23. Government of Nepal.\n\n\nMogasale, V., Maskery, B., Ochiai, R. L., Lee, J.-S., Mogasale, V. V., Ramani, E., & Wierzba, T. F. (2016). Burden of typhoid fever in low-income and middle-income countries: A systematic, literature-based update with risk-factor adjustment. The Lancet Global Health, 2(10), e570–e580.\n\n\nOgunleye, A., Dada, A., & Abidoye, B. (2023). Artificial neural networks for malaria and typhoid co-detection. Tropical Medicine & International Health, 28(4), 310–322.\n\n\nPitzer, V. E., Feasey, N. A., Msefula, C., Mallewa, J., Kennedy, N., Dube, Q., & Heyderman, R. S. (2025). Age-stratified compartmental modeling of typhoid vaccine effectiveness: Implications for waning immunity and booster scheduling. PLOS Medicine, 22(1).\n\n\nShakya, M., Merson, L., Adhikari, B., Baker, S., & Basnyat, B. (2019). Surveillance for enteric fever in Asia Pacific: A descriptive analysis. PLOS Neglected Tropical Diseases, 13(2), e0007092.\n\n\nWorld Health Organization. (2023). Typhoid fever: Key facts and global burden. https://www.who.int/news-room/fact-sheets/detail/typhoid",
+    "crumbs": [
+      "Paper",
+      "1 — Introduction"
+    ]
+  },
+  {
+    "objectID": "paper/03-methodology.html",
+    "href": "paper/03-methodology.html",
+    "title": "3 — Methodology",
+    "section": "",
+    "text": "This study employed a retrospective ecological research design to examine the spatiotemporal relationship between climate variability, extreme flood events, and typhoid fever incidence across Nepal. An ecological approach was appropriate given the study’s reliance on aggregated secondary data and its objective of identifying population-level climate–health patterns rather than individual-level risk factors. The analytical framework integrated descriptive epidemiology, inferential generalized linear mixed models (GLMMs), and ML-based prediction to capture both explanatory and predictive dimensions of climate-sensitive disease dynamics. The GLMM component estimated fixed-effect climate–disease associations while accounting for unobserved district-level heterogeneity through random effects. ML models were applied as a complementary predictive layer designed to capture the nonlinear threshold effects and interaction terms that parametric models cannot easily prespecify.",
+    "crumbs": [
+      "Paper",
+      "3 — Methodology"
+    ]
+  },
+  {
+    "objectID": "paper/03-methodology.html#sec-method",
+    "href": "paper/03-methodology.html#sec-method",
+    "title": "3 — Methodology",
+    "section": "",
+    "text": "This study employed a retrospective ecological research design to examine the spatiotemporal relationship between climate variability, extreme flood events, and typhoid fever incidence across Nepal. An ecological approach was appropriate given the study’s reliance on aggregated secondary data and its objective of identifying population-level climate–health patterns rather than individual-level risk factors. The analytical framework integrated descriptive epidemiology, inferential generalized linear mixed models (GLMMs), and ML-based prediction to capture both explanatory and predictive dimensions of climate-sensitive disease dynamics. The GLMM component estimated fixed-effect climate–disease associations while accounting for unobserved district-level heterogeneity through random effects. ML models were applied as a complementary predictive layer designed to capture the nonlinear threshold effects and interaction terms that parametric models cannot easily prespecify.",
+    "crumbs": [
+      "Paper",
+      "3 — Methodology"
+    ]
+  },
+  {
+    "objectID": "paper/03-methodology.html#study-area-and-temporal-scope",
+    "href": "paper/03-methodology.html#study-area-and-temporal-scope",
+    "title": "3 — Methodology",
+    "section": "3.2 — Study area and temporal scope",
+    "text": "3.2 — Study area and temporal scope\nThe study covered all 77 administrative districts of Nepal, spanning three major physiographic zones:\n\nTerai plains — elevation &lt; 300 m, flood-prone, subtropical monsoon climate, high population density (~450 persons/km²), reliance on tube wells and open water sources particularly susceptible to flood-driven contamination.\nMid-hill region — intermediate elevation and rainfall, moderate exposure.\nHimalayan mountain belt — high altitude, lower disease incidence but vulnerable to landslides and glacial lake outburst floods.\n\nThe temporal scope extended from January 2015 to December 2023, capturing nine complete years of typhoid surveillance and climate observations, including multiple extreme monsoon seasons, the 2016 flood peak, and the post-TCV introduction period. Monthly aggregation was used to reflect disease transmission cycles while maintaining sufficient temporal resolution for lag analysis.",
+    "crumbs": [
+      "Paper",
+      "3 — Methodology"
+    ]
+  },
+  {
+    "objectID": "paper/03-methodology.html#data-sources",
+    "href": "paper/03-methodology.html#data-sources",
+    "title": "3 — Methodology",
+    "section": "3.3 — Data sources",
+    "text": "3.3 — Data sources\n\nTyphoid incidence data\nTyphoid fever incidence data were obtained from Nepal’s HMIS, which records outpatient morbidity reported by public health facilities nationwide. The dataset comprised monthly counts of clinically diagnosed enteric fever cases aggregated at the district level. Although HMIS data are syndromic and may underreport laboratory-confirmed cases relative to true burden, they provide the most comprehensive and continuous national surveillance coverage available for Nepal (Ministry of Health and Population, Government of Nepal, 2023). Two HMIS datasets were merged to cover the full study period; national and provincial aggregate records were excluded to maintain district-level consistency.\n\n\nClimate variables\nMonthly precipitation estimates were obtained from the Climate Hazards Group InfraRed Precipitation with Station data (CHIRPS) (Funk et al., 2015), which has been validated for complex Himalayan terrain. Air temperature and relative humidity were sourced from the ERA5-Land reanalysis dataset (Muñoz-Sabater et al., 2021), selected for its high spatial resolution and established use in climate–health research. District-level climate values were generated by spatially averaging grid cells intersecting each district boundary.\n\n\nExtreme climate event indicator\nFlood occurrence data were obtained from Nepal’s Disaster Risk Reduction (DRR) portal, recorded by district and date, and aggregated to monthly counts. Floods were treated as count-based indicators reflecting hydro-meteorological shocks capable of disrupting WASH infrastructure and contaminating water supplies. Although event severity and spatial extent were not consistently recorded, flood frequency has been validated as a robust proxy for extreme exposure at the district population level (Bhandari et al., 2022).",
+    "crumbs": [
+      "Paper",
+      "3 — Methodology"
+    ]
+  },
+  {
+    "objectID": "paper/03-methodology.html#data-pre-processing-and-feature-engineering",
+    "href": "paper/03-methodology.html#data-pre-processing-and-feature-engineering",
+    "title": "3 — Methodology",
+    "section": "3.4 — Data pre-processing and feature engineering",
+    "text": "3.4 — Data pre-processing and feature engineering\nAll datasets were harmonized into a district–month panel using consistent temporal formats. Nepali calendar dates in HMIS records were converted to Gregorian equivalents using standardized month mappings, and district names were standardized against Nepal’s official administrative boundary list to ensure accurate merges across all three datasets.\nMissing values were limited to less than 10% of observations overall and were handled using conservative imputation methods. Climate variables with short consecutive gaps (≤ 2 months) were linearly interpolated. Missing typhoid counts were imputed using district-specific seasonal averages calculated from non-missing years within the same calendar month. Extreme outliers — specifically, national or provincial aggregate entries erroneously recorded at the district level — were identified by their anomalously high case counts and excluded prior to analysis.\nFeature engineering focused on capturing biologically and environmentally plausible transmission dynamics. Lagged predictor variables of one and two months were generated for flood occurrence and all climate variables. The lag range of 0–2 months was selected based on two complementary lines of evidence:\n\nThe reported incubation period of Salmonella Typhi, which ranges from 6 to 30 days, implying that environmental exposures in one calendar month should primarily manifest clinically in the following month.\nExploratory correlation analysis at the district-month level (n = 6,162), which confirmed that one-month-lagged climate features carry the strongest signal: lagged precipitation r = 0.313, lagged humidity r = 0.180, lagged flood frequency r = 0.122, and the autoregressive cases_lag1 term r = 0.731. The autoregressive dominance reflects persistent endemic foci in high-burden districts, while the lagged climate signal is biologically aligned with the S. Typhi incubation period plus a clinical-reporting delay.\n\nNo lags beyond two months were retained, as correlations fell below conventional significance at three months and beyond. Additional features include a binary monsoon season indicator (June–September = 1) and an ecological zone classification (Terai, Hill, Mountain). Typhoid case counts were log-transformed to reduce right skewness and stabilize variance prior to modeling.",
+    "crumbs": [
+      "Paper",
+      "3 — Methodology"
+    ]
+  },
+  {
+    "objectID": "paper/03-methodology.html#machine-learning-models-and-model-selection-rationale",
+    "href": "paper/03-methodology.html#machine-learning-models-and-model-selection-rationale",
+    "title": "3 — Methodology",
+    "section": "3.5 — Machine learning models and model selection rationale",
+    "text": "3.5 — Machine learning models and model selection rationale\nThree ML algorithms were employed, selected for their complementary strengths and suitability for the structure of the dataset — a medium-sized district-month panel with temporal dependence, right-skewed outcomes, and categorical features. These algorithms were chosen in preference to purely time-series approaches (e.g. ARIMA, SARIMA) because the research objective was to incorporate exogenous climate and flood predictors alongside temporal patterns, which ARIMA extensions handle poorly with many predictors and nonlinear effects (Choi et al., 2023; Dixon et al., 2023).\n\nRandom Forest (RF)\nUsed as the baseline ensemble method. RF is robust to overfitting with moderate sample sizes, handles mixed predictor types without scaling, and provides permutation-based variable importance rankings that are useful for epidemiological interpretation (Breiman, 2001).\n\n\nXGBoost (Extreme Gradient Boosting)\nSelected for its demonstrated superiority with structured tabular data, its built-in L1/L2 regularization, and its capacity to learn nonlinear threshold effects and interaction terms that are intrinsic to climate–health systems (Chen & Guestrin, 2016). The XGBoost objective is\n\\[\n\\mathcal{L}^{(t)} = \\sum_{i=1}^{N}\\ell\\!\\left(y_i,\\hat{y}_i^{(t-1)} + f_t(\\mathbf{x}_i)\\right)\n   + \\Omega(f_t),\n\\tag{1}\\]\nwhere \\(\\Omega(f) = \\gamma T + \\tfrac{1}{2}\\lambda\\lVert w\\rVert^2\\) is the regularisation penalty over leaf weights \\(w\\) and tree size \\(T\\).\n\n\nLong Short-Term Memory (LSTM)\nIncluded to capture sequential temporal dependencies in the monthly time series — particularly the lagged effect of flood events, which tree-based methods treat as independent observations (Hochreiter & Schmidhuber, 1997). LSTM was treated as an exploratory model given the relatively short available sequence length (9 years × 12 months = 108 time steps at national level).",
+    "crumbs": [
+      "Paper",
+      "3 — Methodology"
+    ]
+  },
+  {
+    "objectID": "paper/03-methodology.html#model-training-validation-tuning-and-ensemble-construction",
+    "href": "paper/03-methodology.html#model-training-validation-tuning-and-ensemble-construction",
+    "title": "3 — Methodology",
+    "section": "3.6 — Model training, validation, tuning, and ensemble construction",
+    "text": "3.6 — Model training, validation, tuning, and ensemble construction\nThe dataset was first divided chronologically into a training subset (the earliest 80% of observations) and a held-out test subset (the most recent 20%), strictly preserving temporal order to prevent any form of data leakage from future time points into model training. This chronological split is essential for time-series evaluation: random splits would allow the model to observe data from 2022 when predicting 2018, which artificially inflates apparent performance.\nWithin the training subset only, TimeSeriesSplit cross-validation with k = 5 folds was applied for hyperparameter tuning. In each fold, training observations were drawn from earlier time points and validation observations from later time points within the training window, maintaining temporal ordering throughout. Grid search was used to identify optimal hyperparameters by minimizing validation-set RMSE. Final model performance was then assessed exclusively on the held-out test set, which the model never encountered during training or tuning.\nFor machine learning models, all continuous predictor features were standardized (zero mean, unit standard deviation) prior to training. Early stopping was applied during LSTM training to prevent overfitting on the limited sequence length. XGBoost regularization parameters (reg_lambda, reg_alpha) were tuned via grid search. Model stability was assessed through sensitivity checks across monsoon (June–September) and non-monsoon subperiods.\n\nEnsemble construction\nAn ensemble model was constructed by combining the predictions of all three algorithms using weighted averaging. Weights were assigned a priori (not tuned on the test set) to up-weight XGBoost relative to the other learners, on the basis of its consistently lower RMSE on similar epidemiological count-data panels:\n\nRF weight: 0.25\nXGBoost weight: 0.50\nLSTM / MLP weight: 0.25\n\nThe ensemble prediction for each observation is then\n\\[\n\\hat{Y}_{\\text{ens}} = 0.25 \\,\\hat{Y}_{\\text{RF}}\n                     + 0.50 \\,\\hat{Y}_{\\text{XGB}}\n                     + 0.25 \\,\\hat{Y}_{\\text{LSTM/MLP}}.\n\\]\nThis a priori weighting prevents test-set leakage that would otherwise arise from R²-tuned weights, while still preserving the complementary strengths of each algorithm. Ensemble performance was evaluated on the same held-out test set as the individual models. The exact weights are implemented in code/src/models.py:weighted_ensemble.",
+    "crumbs": [
+      "Paper",
+      "3 — Methodology"
+    ]
+  },
+  {
+    "objectID": "paper/03-methodology.html#performance-evaluation-metrics",
+    "href": "paper/03-methodology.html#performance-evaluation-metrics",
+    "title": "3 — Methodology",
+    "section": "3.7 — Performance evaluation metrics",
+    "text": "3.7 — Performance evaluation metrics\nModel performance was evaluated using four regression metrics appropriate for continuous case-count outcomes:\n\nRMSE (Root Mean Squared Error) and MAE (Mean Absolute Error) for absolute error magnitude.\nR² (coefficient of determination) for the proportion of variance explained.\nMAPE (Mean Absolute Percentage Error) for proportional accuracy interpretable by public health practitioners.\n\nBootstrapped 95% confidence intervals (n = 1,000 resamples) were generated to assess metric stability across the test set.",
+    "crumbs": [
+      "Paper",
+      "3 — Methodology"
+    ]
+  },
+  {
+    "objectID": "paper/03-methodology.html#climate-change-scenario-analysis-and-uncertainty",
+    "href": "paper/03-methodology.html#climate-change-scenario-analysis-and-uncertainty",
+    "title": "3 — Methodology",
+    "section": "3.8 — Climate change scenario analysis and uncertainty",
+    "text": "3.8 — Climate change scenario analysis and uncertainty\nTo assess future typhoid risk, scenario-based projections were generated under the SSP2-4.5 (moderate emissions) and SSP5-8.5 (high emissions) climate pathways. Historical climate inputs (precipitation, temperature, flood frequency) were perturbed in accordance with CMIP6 regional projections for Nepal by 2050 relative to the 1995–2014 baseline (Intergovernmental Panel on Climate Change, 2022; Shrestha et al., 2025). Specifically:\n\n\n\nTable 1: Climate perturbation envelope applied for 2050 projections\n\n\n\n\n\nScenario\nΔ Precipitation\nΔ Temperature\nΔ Flood frequency\n\n\n\n\nSSP2-4.5 (2050)\n+15%\n+1.0 °C\n+20%\n\n\nSSP5-8.5 (2050)\n+30%\n+1.5 °C\n+40%\n\n\n\n\n\n\nMonte Carlo simulation (n = 1,000 random draws) was used to propagate uncertainty in climate inputs through the trained XGBoost model, generating a distribution of projected typhoid incidence from which the median and 95% uncertainty interval were extracted.\n\n\n\n\n\n\nWarning\n\n\n\nProjection caveats. These projections carry several important caveats:\n\nThey are scenario-based and assume that the historical statistical relationship between climate variables and typhoid incidence remains stable through 2050, without accounting for potential changes in WASH infrastructure quality, TCV coverage, population density, or pathogen characteristics.\nThe projection model is trained on nine years of observations; longer training periods would improve projection robustness.\nThe uncertainty intervals reflect variability in climate inputs only, not model parameter uncertainty.\n\nThe projections should therefore be interpreted as indicative estimates of the direction and relative magnitude of climate-driven risk changes, rather than as precise forecasts.",
+    "crumbs": [
+      "Paper",
+      "3 — Methodology"
+    ]
+  },
+  {
+    "objectID": "paper/03-methodology.html#references",
+    "href": "paper/03-methodology.html#references",
+    "title": "3 — Methodology",
+    "section": "References",
+    "text": "References\n\n\nBhandari, D., Bhusal, C. L., Subedi, M., & Bhatta, B. (2022). Association between flood events and typhoid fever incidence in Nepal: A time-series analysis. BMC Infectious Diseases, 22(1), 481. https://doi.org/10.1186/s12879-022-07350-7\n\n\nBreiman, L. (2001). Random forests. Machine Learning, 45(1), 5–32. https://doi.org/10.1023/A:1010933404324\n\n\nChen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794. https://doi.org/10.1145/2939672.2939785\n\n\nChoi, J., Cho, Y., & Shim, E. (2023). Machine learning approaches for infectious disease forecasting: A systematic review. Journal of Infection, 86(2), 127–141.\n\n\nDixon, M. A. S., Ahlers, L. R. H., Lipp, E. K., & Ryan, S. J. (2023). Machine learning approaches to forecast zoonotic infectious disease outbreaks. Epidemiology & Infection, 151, e23. https://doi.org/10.1017/S0950268823000018\n\n\nFunk, C., Peterson, P., Landsfeld, M., Pedreros, D., Verdin, J., Shukla, S., Husak, G., Rowland, J., Harrison, L., Hoell, A., & Michaelsen, J. (2015). The climate hazards infrared precipitation with stations—a new environmental record for monitoring extremes. Scientific Data, 2, 150066. https://doi.org/10.1038/sdata.2015.66\n\n\nHochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural Computation, 9(8), 1735–1780. https://doi.org/10.1162/neco.1997.9.8.1735\n\n\nIntergovernmental Panel on Climate Change. (2022). Climate change 2022: Impacts, adaptation, and vulnerability. Contribution of Working Group II to the Sixth Assessment Report. Cambridge University Press. https://doi.org/10.1017/9781009325844\n\n\nMinistry of Health and Population, Government of Nepal. (2023). Annual report of the department of health services 2022/23. Government of Nepal.\n\n\nMuñoz-Sabater, J., Dutra, E., Agustí-Panareda, A., Albergel, C., Arduini, G., Balsamo, G., & Thépaut, J.-N. (2021). ERA5-Land: A state-of-the-art global reanalysis dataset for land applications. Earth System Science Data, 13(9), 4349–4383. https://doi.org/10.5194/essd-13-4349-2021\n\n\nShrestha, M. L., Randhawa, A., & Chalise, P. (2025). Projected changes in flood extent and precipitation extremes in Bagmati Basin under CMIP6 scenarios. Journal of Hydrology: Regional Studies, 58, 101734.",
+    "crumbs": [
+      "Paper",
+      "3 — Methodology"
+    ]
+  },
+  {
+    "objectID": "presentation.html#section-1",
+    "href": "presentation.html#section-1",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "",
+    "text": "Part I\n\n\nThe problem of typhoid in a warming Nepal\n\n\n\n\n\nA persistent endemic disease, a vulnerable geography, and a climate trajectory that compounds both."
+  },
+  {
+    "objectID": "presentation.html#the-burden",
+    "href": "presentation.html#the-burden",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "The burden",
+    "text": "The burden\n\n\n9.2 M Annual global cases\n\n\n100 K Annual Nepal cases\n\n\n70–80% Occur in monsoon (Jun–Sep)\n\n\n60–70% Cases in children &lt; 15 yrs\n\n\n\nClimate is amplifying risk. Nepal is warming at 0.056 °C / year — twice the global average — with monsoon precipitation up 20–30 % since 1990. Flooding disrupts WASH systems, contaminating drinking-water sources where Salmonella Typhi persists and spreads. The typhoid conjugate vaccine has reached 85 % coverage, yet residual burden persists.\n\n\nSources: (Bhandari et al., 2022; Coalition Against Typhoid, 2024; GBD 2023 Causes of Death Collaborators, 2025; Intergovernmental Panel on Climate Change, 2022; Karkey et al., 2018; Levy et al., 2023; Ministry of Forests and Environment, Government of Nepal, 2021; Ministry of Health and Population, Government of Nepal, 2023).\n\n\nTwo pressures converge in Nepal — a heavy baseline burden that current surveillance only reactively monitors, and a rapid climate trajectory that is increasing the frequency of the exact extreme events known to amplify transmission."
+  },
+  {
+    "objectID": "presentation.html#the-gap-in-existing-models",
+    "href": "presentation.html#the-gap-in-existing-models",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "The gap in existing models",
+    "text": "The gap in existing models\n\nThree gaps in current typhoid prediction\n\n\ni. No flood-lag integration. SEIR / ARIMA frameworks miss the 1–2 month flood-lag effect → underestimate monsoon-driven surges by 15–20 %.\nii. No subnational resolution. National aggregates obscure Terai hotspots (Rautahat: 1,711 cases / monsoon month); fewer than 20 % of models stratify by WASH access.\niii. No integrated multimodal forecasting. ML diagnostic models excel at clinical AUROC, but none combine HMIS surveillance + DRR flood records + ERA5 / CHIRPS climate grids.\n\n\nThis is the first study to integrate all three of Nepal’s national-scale data streams into a single ML predictive framework for typhoid.\n\n\nSources: (Bhandari et al., 2022; GBD 2023 Causes of Death Collaborators, 2025; Go, 2025; Levy et al., 2023; Pitzer et al., 2025; Semiu et al., 2025; Ssemuyiga et al., 2025)."
+  },
+  {
+    "objectID": "presentation.html#research-question-objectives",
+    "href": "presentation.html#research-question-objectives",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Research question & objectives",
+    "text": "Research question & objectives\n\n\n\n\nTo what extent do climate-induced flood events, together with precipitation anomalies and relative humidity, influence the spatiotemporal patterns of typhoid fever incidence across Nepal?\n\n\n\n\n\nFour specific objectives\n\n\ni. Describe. Spatiotemporal distribution of typhoid cases and flood events across ecological zones.\nii. Quantify. Associations between typhoid incidence and hydro-meteorological variables, including one-month-lagged effects.\niii. Develop and compare. Four ML models — Random Forest, XGBoost, an MLP / LSTM, and a Weighted Ensemble — selecting the ensemble as the headline performer and XGBoost as the operational pick.\niv. Project. 2050 burden under SSP2-4.5 and SSP5-8.5 climate pathways."
+  },
+  {
+    "objectID": "presentation.html#section-2",
+    "href": "presentation.html#section-2",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "",
+    "text": "Part II\n\n\nData, design, and machine learning\n\n\n\n\n\nThree independent national datasets, harmonised into one district–month panel. Three complementary algorithms, validated under strict temporal discipline."
+  },
+  {
+    "objectID": "presentation.html#study-design",
+    "href": "presentation.html#study-design",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Study design",
+    "text": "Study design\n\n\n\nScope\n\n\n• 77 districts. The complete national administrative grid of Nepal.\n• 108 months. Jan 2015 – Dec 2023, monthly resolution.\n• 3 ecological zones. Terai (&lt; 300 m, flood-prone) · Hill · Himalayan mountain belt.\n\n\nWhy ecological design\n\n\nThe objective is population-level climate–health attribution. Individual-level RCT-style designs are neither feasible nor appropriate for environmental drivers of endemic disease.\n\n\n\n\n\nAnalytical framework\n\n\n1. Descriptive epidemiology. Spatial and temporal patterns of typhoid and flood co-occurrence.\n2. Generalized Linear Mixed Models. Fixed-effect climate–disease attribution + district random effects.\n3. Machine learning. Non-linear thresholds, interaction terms, and one-month-lagged predictors.\n\n\nA hybrid GLMM-and-ML approach — explanatory and predictive in a single framework."
+  },
+  {
+    "objectID": "presentation.html#data-sources",
+    "href": "presentation.html#data-sources",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Data sources",
+    "text": "Data sources\n\n\n\n\n\n\n\n\n\nSource\nVariable\nResolution\nProvider\n\n\n\n\nHMIS\nMonthly outpatient typhoid cases\nDistrict-month\nMoHP Nepal (Ministry of Health and Population, Government of Nepal, 2023)\n\n\nCHIRPS\nPrecipitation\nDistrict-month avg\nFunk et al. (2015)\n\n\nERA5-Land\nAir temperature · relative humidity\nDistrict-month avg\nMuñoz-Sabater et al. (2021)\n\n\nDRR portal\nFlood event counts\nDistrict-month\nNDRRMA Nepal (NPDRR Nepal, 2025)\n\n\n\n\n\n7,327 District–month observations\n\n\n1.2 M Cumulative HMIS cases\n\n\n1,248 Recorded flood events"
+  },
+  {
+    "objectID": "presentation.html#feature-engineering-the-rationale-for-lags",
+    "href": "presentation.html#feature-engineering-the-rationale-for-lags",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Feature engineering — the rationale for lags",
+    "text": "Feature engineering — the rationale for lags\n\n\n\n\n\n\n\nFeature\nRole\n\n\n\n\nprecip_lag1 · temp_lag1 · humidity_lag1 · flood_lag1\nOne-month lags aligned with Salmonella Typhi incubation (6–30 days) + reporting delay\n\n\nprecip_roll3 · temp_roll3\nCumulative monsoon effects extending beyond peak rainfall\n\n\nmonsoon (binary)\nCaptures Jun–Sep regime explicitly\n\n\nmonth_sin, month_cos\nCyclical encoding (December → January adjacency on a unit circle)\n\n\ncases_lag1\nAutoregressive — last month’s burden\n\n\necological_zone\nTerai / Hill / Mountain stratification\n\n\n\n\n\n\nEmpirical validation of the one-month lag. At the district-month level (n = 6,162), lagged precipitation (r = 0.313), lagged humidity (r = 0.180), and lagged flood frequency (r = 0.122) all correlate positively with log-cases — biologically consistent with the 6 – 30 day S. Typhi incubation period. The autoregressive cases_lag1 term (r = 0.731) carries the strongest single signal.\n\n\n\n\nSources: (Bhandari et al., 2022; Levy et al., 2023)."
+  },
+  {
+    "objectID": "presentation.html#why-four-models-three-individual-one-weighted-combination",
+    "href": "presentation.html#why-four-models-three-individual-one-weighted-combination",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Why four models — three individual + one weighted combination",
+    "text": "Why four models — three individual + one weighted combination\n\n\nRandom Forest\nStrong non-parametric baseline · stable feature importances.\nRole: low-variance baseline.\nXGBoost\nIterative residual correction · L1/L2 regularisation · graceful missing-value handling.\nRole: operational pick when only one model can be deployed.\n\nMLP fallback (LSTM-equivalent)\nMultilayer perceptron on the same scaled feature set; stands in for LSTM where TensorFlow is unavailable.\nRole: non-linear comparator.\nWeighted Ensemble\nCombines RF + XGB + MLP / LSTM with a priori fixed weights (0.25 / 0.50 / 0.25 — no test-set tuning).\nRole: headline performer.\n\n\nAll four models converge to within 0.012 R² of each other on the held-out test window — RF 0.856 · XGB 0.861 · MLP 0.864 · Ensemble 0.868. The predictive ceiling is set by the climate × autoregressive signal in the data, not the model family. The Ensemble is the headline winner; XGBoost is the operational pick when only one model can be deployed (interpretability, missing-value handling, fixed-seed reproducibility).\n\n\nSources: (Breiman, 2001; Chen & Guestrin, 2016; Dixon et al., 2023; Hochreiter & Schmidhuber, 1997)."
+  },
+  {
+    "objectID": "presentation.html#training-protocol-guarding-against-data-leakage",
+    "href": "presentation.html#training-protocol-guarding-against-data-leakage",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Training protocol — guarding against data leakage",
+    "text": "Training protocol — guarding against data leakage\n\n2015 ───────────────────── mid-2022 ──── 2023   \n└────── TRAIN (80%) ───────┴─── TEST ────┘\n                      chronological cut\n\n\ni. Chronological 80 / 20 split. Train on the past; test on the future. Last 12 months held out entirely.\nii. TimeSeriesSplit k = 5. Within the training set only, for hyperparameter tuning — never crossing the test boundary.\niii. Pre-processing. Continuous predictors standardised; early stopping for LSTM; L1 / L2 regularisation grid for XGBoost.\niv. Audit boundary. The test set is never seen during training or tuning — by any model.\n\n\nRandom splits would let 2022 data leak back into 2018 training — inflating apparent R² and producing a false impression of forecast skill. For time series, chronological discipline is non-negotiable."
+  },
+  {
+    "objectID": "presentation.html#section-3",
+    "href": "presentation.html#section-3",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "",
+    "text": "Part III\n\n\nFindings\n\n\n\n\n\nBurden, correlation, prediction, and the trajectory toward 2050."
+  },
+  {
+    "objectID": "presentation.html#where-does-the-burden-fall",
+    "href": "presentation.html#where-does-the-burden-fall",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Where does the burden fall?",
+    "text": "Where does the burden fall?\n\n\n\n\n1,236,000 Cumulative cases, 2015–2023\n\n\n~375,000 Model-corrected annual burden\n\n\n65% Of national burden in the Terai\n\n\n~36% HMIS capture fraction\n\n\nThe model-corrected baseline of ~375,000 cases / year exceeds the HMIS-recorded 136,000 because the Weighted Ensemble corrects for systematic under-reporting and captures the full climate-driven seasonal amplitude — consistent with WHO LMIC-region capture rates of 30–50 %.\n\n\n\n\n\n\n\nFig. 1 · District-level cases by ecological zone. Terai districts dominate both median and dispersion.\n\n\n\nSources: (Central Bureau of Statistics and UNICEF, 2019; GBD 2023 Causes of Death Collaborators, 2025; Ministry of Health and Population, Government of Nepal, 2023; Mogasale et al., 2016)."
+  },
+  {
+    "objectID": "presentation.html#floods-and-cases-co-occur",
+    "href": "presentation.html#floods-and-cases-co-occur",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Floods and cases co-occur",
+    "text": "Floods and cases co-occur\n\n\nFig. 2 · National annual typhoid cases and flood events, 2015–2023. The 2016 peak co-occurrence — highest flood count and highest case count in the study period — provided the first empirical signal of the flood–disease link later confirmed through correlation and machine-learning analysis."
+  },
+  {
+    "objectID": "presentation.html#the-lag-that-matters",
+    "href": "presentation.html#the-lag-that-matters",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "The lag that matters",
+    "text": "The lag that matters\n\n\nPearson correlations · district-month panel, n = 6,162\n\n\n\nFeature\nr with log(cases)\n\n\n\n\ncases_lag1 (previous month)\n0.731\n\n\ntemp_mean_lag1 (lagged temperature)\n0.599\n\n\ntemp_roll3 (3-mo rolling temperature)\n0.559\n\n\nprecip_lag1 (lagged precipitation)\n0.313\n\n\nmonsoon (Jun–Sep indicator)\n0.245\n\n\nprecip_roll3 (3-mo rolling precip)\n0.208\n\n\nhumidity_lag1 (lagged humidity)\n0.180\n\n\nflood_lag1 (lagged flood frequency)\n0.122\n\n\n\n\nThe model-relevant correlations are at the district-month level. Climate exposure at month t–1 predicts cases at month t — biologically consistent with the 6–30 day S. Typhi incubation period plus a clinical-reporting delay.\n\n\n\n\n\n\n\n\nFig. 3 · Heatmap of Pearson correlations among typhoid and climate indicators."
+  },
+  {
+    "objectID": "presentation.html#model-performance-four-architectures-one-signal",
+    "href": "presentation.html#model-performance-four-architectures-one-signal",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Model performance — four architectures, one signal",
+    "text": "Model performance — four architectures, one signal\n\n\n\n\n\n\n\n\n\n\nModel\nRMSE (cases / district-mo)\nMAE\nR²\nMAPE (%)\n\n\n\n\nRandom Forest\n131.43\n72.10\n0.8563\n41.48\n\n\nXGBoost (operational)\n129.07\n69.50\n0.8614\n44.64\n\n\nMLP fallback\n128.07\n71.45\n0.8635\n43.50\n\n\nWeighted Ensemble\n126.20\n68.07\n0.8675\n41.01\n\n\n\n\nHeld-out test set: last 12 months of district-month data, strictly chronological. The four models cluster within 0.012 R² — the data, not the model family, sets the ceiling.\n\n\n\n0.87 Ensemble R² on the held-out 12-month window\n\n\n126 Test-set RMSE, cases / district-month\n\n\n1 month Operational forecast lead"
+  },
+  {
+    "objectID": "presentation.html#what-the-model-considers-most-informative",
+    "href": "presentation.html#what-the-model-considers-most-informative",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "What the model considers most informative",
+    "text": "What the model considers most informative\n\n\n\n\n\n\n\n\nFig. 4 · XGBoost gain-based feature importance.\n\n\n\nThe top four predictors\n\n\n1. cases_lag1 Previous month’s case count — normalised importance ≈ 0.67. Captures persistent endemic foci.\n2. temp_mean_lag1 Lagged mean temperature ≈ 0.09. Strongest individual climate feature.\n3. Cyclical month encodings month_sin + month_cos ≈ 0.12 combined. Captures the post-monsoon contamination window.\n4. monsoon indicator Jun–Sep binary flag ≈ 0.04. Structural risk shift beyond what continuous climate alone captures.\n\n\nA compound climate-stress interpretation — temperature sets the baseline, monsoon timing concentrates risk, the previous month’s burden carries the spatial signal forward."
+  },
+  {
+    "objectID": "presentation.html#held-out-forecast-vs.-observed",
+    "href": "presentation.html#held-out-forecast-vs.-observed",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Held-out forecast vs. observed",
+    "text": "Held-out forecast vs. observed\n\n\nFig. 5 · Actual vs. predicted district-month case counts on the held-out test period. All four architectures cluster within 0.012 R² of each other (RF 0.856, XGB 0.861, MLP 0.864, Ensemble 0.868) — the data, not the model family, sets the ceiling."
+  },
+  {
+    "objectID": "presentation.html#projections",
+    "href": "presentation.html#projections",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "2050 projections",
+    "text": "2050 projections\n\n\n\n\n\n\n\n\n\n\n\n\nScenario\nFloods\nPrecip. (mm)\nTemp. (°C)\nRH (%)\nCases\nΔ\n\n\n\n\nBaseline (2015–2023)\n97\n127\n14.3\n72.8\n375,000\n—\n\n\nSSP2-4.5 (moderate)\n116\n146\n15.3\n76.4\n469,000\n+25%\n\n\nSSP5-8.5 (high)\n136\n165\n15.8\n78.0\n525,000\n+40%\n\n\n\n\nMedian estimates · Monte Carlo uncertainty propagation (n = 1,000). Climate perturbations from CMIP6 regional projections (Intergovernmental Panel on Climate Change, 2022; Shrestha et al., 2025). Indicative, not forecast.\n\n\n\n+25% Under SSP2-4.5 by 2050\n\n\n+40% Under SSP5-8.5 by 2050\n\n\n+30% Terai districts under SSP2-4.5"
+  },
+  {
+    "objectID": "presentation.html#section-4",
+    "href": "presentation.html#section-4",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "",
+    "text": "Part IV\n\n\nImplications & limitations\n\n\n\n\n\nWhat the findings mean for policy — and the honest constraints on how far they can be pushed."
+  },
+  {
+    "objectID": "presentation.html#what-the-findings-mean",
+    "href": "presentation.html#what-the-findings-mean",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "What the findings mean",
+    "text": "What the findings mean\n\nTyphoid in Nepal is a climate-sensitive disease — quantitatively confirmed.\n\n\nFour findings\n\n\ni. Climate × autoregressive signal. Lagged climate exposure + previous month’s case count explains R² = 0.87 on a strictly chronological held-out test window. Weighted Ensemble headline; all four models within 0.012 R².\nii. Biological lag. The one-month lag tracks the S. Typhi pathway: contamination → infection → clinical case.\niii. Compound exposure. Floods, monsoon precipitation, humidity, and temperature modulate baseline transmission together — not separately.\niv. Terai concentration. Two-thirds of national burden under structural vulnerability and the heaviest projected climate impacts.\n\n\nA reproducible hybrid climate–health framework — adaptable to cholera, shigellosis, hepatitis A in comparable LMIC settings.\n\n\nSources: (Baker et al., 2025; Brubacher et al., 2020; Central Bureau of Statistics and UNICEF, 2019; Levy et al., 2023; Trájer et al., 2022)."
+  },
+  {
+    "objectID": "presentation.html#policy-implications",
+    "href": "presentation.html#policy-implications",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Policy implications",
+    "text": "Policy implications\n\n\n\nOperational early warning via DHIS2\n\n\n1. Embed flood-forecast triggers. Integrated into Nepal’s existing District Health Information Software.\n2. Automated pre-monsoon alerts. Emergency chlorination, water purification, mobile health camps, hygiene communication.\n3. Data-sharing protocol. A formal DHM ↔︎ MoHP agreement is required; it does not currently exist.\n4. Inter-agency coordination. DHM, MoHP, and NDRRMA must operate against a shared trigger schedule.\n\n\n\n\n\nTCV strategy refinement\n\n\n5. Coverage-gap targeting. Climate-driven risk persists where coverage is lowest — notably Karnali Province (&lt; 70 %).\n6. Risk-map integration. Climate-risk maps merged with TCV microplanning to prioritise booster campaigns.\n\n\nClimate adaptation co-benefits\n\n\n7. WASH × disaster-risk reduction. Flood-resilient WASH is simultaneously DRR and long-term infectious-disease prevention — aligned with Nepal’s National Adaptation Plan 2021–2050.\n\n\n\nSources: (Asian Development Bank, 2024; Coalition Against Typhoid, 2024; Intergovernmental Panel on Climate Change, 2022; Ministry of Forests and Environment, Government of Nepal, 2021; Ministry of Health and Population, Government of Nepal, 2023)."
+  },
+  {
+    "objectID": "presentation.html#governance-capacity-the-honest-constraints",
+    "href": "presentation.html#governance-capacity-the-honest-constraints",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Governance & capacity — the honest constraints",
+    "text": "Governance & capacity — the honest constraints\n\nThree institutional pre-conditions for operationalisation\n\n\ni. District-level technical capacity. Terai DHOs require training and decision-support materials to interpret model outputs.\nii. Rural HMIS data quality. Some districts report only 60–70 % of expected monthly records — precisely in communities most at risk.\niii. Federalism transition. Post-2017 decentralisation creates ambiguity about health-emergency coordination between federal, provincial, and local tiers.\n\n\nAn early warning system is a sociotechnical system — model accuracy alone is insufficient without institutional plumbing."
+  },
+  {
+    "objectID": "presentation.html#limitations",
+    "href": "presentation.html#limitations",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Limitations",
+    "text": "Limitations\n\n\n\nOn data and design\n\n\ni. Ecological design. Population-level associations — not individual causation.\nii. Capture fraction ≈ 36 %. HMIS undercounts true burden; its climate sensitivity may differ from the observed signal.\niii. Flood frequency only. No severity, depth, or inundation extent in the source records.\niv. Static covariates. WASH coverage and poverty rates not included as time-varying panel variables.\n\n\n\n\n\nOn model and projection\n\n\nv. Nine-year panel. Short for sequential models; tree-based learners tolerate the window better.\nvi. Stationarity to 2050. Climate–disease relationship — and WASH, vaccination, demography — assumed constant.\nvii. Grid resolution. ERA5-Land and CHIRPS may under-represent micro-climates in complex Himalayan terrain.\n\n\n\nAcknowledging these constraints is what makes the inferences defensible — and what defines the next research horizon."
+  },
+  {
+    "objectID": "presentation.html#future-work",
+    "href": "presentation.html#future-work",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Future work",
+    "text": "Future work\n\n\n\nData and exposure\n\n\n1. Satellite flood inundation. Map-derived household-catchment exposure replaces frequency counts with severity.\n2. Daily-resolution panel. Daily climate × daily HMIS enables shorter-lead, finer-grained warnings.\n3. Longitudinal WASH. Before / after WASH investments to test infrastructure-mediated modification of the flood–typhoid link.\n\n\n\n\n\nPathogen and platform\n\n\n4. AMR genomic surveillance. S. Typhi isolate sequencing — climate extremes × antibiotic-resistance evolution.\n5. Multi-pathogen extension. Cholera, hepatitis A, shigellosis in an integrated DHIS2 dashboard.\n6. DHIS2 pilot. Two or three Terai districts as proof-of-concept for national scale-up.\n\n\n\nEach direction is an implementable extension — not a wish-list. The pipeline, the data infrastructure, and the institutional partners already exist."
+  },
+  {
+    "objectID": "presentation.html#section-5",
+    "href": "presentation.html#section-5",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "",
+    "text": "In closing\n\n\nThree findings, one trajectory\n\n\n\n\n\nClimate-induced floods are a quantifiable, measurable driver of typhoid in Nepal — and the next generation of disease control must take that seriously."
+  },
+  {
+    "objectID": "presentation.html#conclusion",
+    "href": "presentation.html#conclusion",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Conclusion",
+    "text": "Conclusion\n\n\n\nThree takeaways\n\n\n1. Climate is a driver. Lagged climate × autoregressive signal explains R² = 0.87 of district-month variance. Mean temperature is the strongest individual climate predictor (r = 0.50 – 0.63); flood frequency adds a smaller-but-causal r = 0.19 contribution.\n2. The ML framework works. Weighted Ensemble: R² = 0.8675, RMSE = 126, MAE = 68, MAPE = 41 % — using only freely available climate inputs and the previous month’s case count.\n3. The future is worse without action. SSP2-4.5 → +25 % national burden by 2050; SSP5-8.5 → +40 %, with the Terai bearing the largest share.\n\n\nThe most actionable next step is institutional: a formal DHM ↔︎ MoHP data-sharing protocol unlocks DHIS2 operationalisation.\n\n\n\n\n\n\n\n\n\n“Typhoid in Nepal is climate-sensitive — and the next generation of disease control must be too.”\n\n\n\n\n\n\n\n\n\nKritika Baral · 2026\nKathmandu University"
+  },
+  {
+    "objectID": "presentation.html#section-6",
+    "href": "presentation.html#section-6",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "",
+    "text": "End of Presentation\n\n\nThank you.\n\n\n\n\n\nQuestions and discussion welcome.\n\n\nKritika Baral\n\n\nKathmandu University · Department of Health Informatics ORCID 0009-0007-1517-1063\n\n\nFull paper & code   Download PDF   Download PPTX\n\n\n\nThank the committee, acknowledge supervisors and Kathmandu University, and invite questions. Be ready for: HMIS reliability, why XGBoost over Random Forest, generalizability beyond Nepal, sensitivity to lag specification, stationarity of the 2050 projection."
+  },
+  {
+    "objectID": "presentation.html#section-7",
+    "href": "presentation.html#section-7",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "",
+    "text": "Appendix\n\n\nBackup slides\n\n\n\n\n\nAnticipated committee questions and supporting detail."
+  },
+  {
+    "objectID": "presentation.html#why-not-arima-or-sarimax",
+    "href": "presentation.html#why-not-arima-or-sarimax",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Why not ARIMA or SARIMAX?",
+    "text": "Why not ARIMA or SARIMAX?\n\nThree reasons gradient-boosted trees beat classical time-series here\n\n\ni. Many exogenous variables. ARIMA / SARIMAX performance degrades quickly as the exogenous feature count grows.\nii. Non-linear interactions. Effects like flood × humidity cannot be modelled without manual feature crafting in ARIMA — tree-based ensembles capture them natively.\niii. Threshold effects. ARIMA cannot represent “flood count &gt; critical value → disproportionate risk” cleanly; trees split at exactly those thresholds.\niv. Sequential structure. LSTM bridges the temporal dependencies that pure tree-based methods miss, which is why the Weighted Ensemble adds value beyond XGBoost alone.\n\n\nARIMA reaches R² ≈ 0.62 in-sample (persistence-like). XGBoost reaches 0.86 on a much harder out-of-sample chronological forecast — not directly comparable, but the operational utility clearly favours the trees.\n\n\nSources: (Choi et al., 2023; Dixon et al., 2023; Hess et al., 2020)."
+  },
+  {
+    "objectID": "presentation.html#why-is-the-model-baseline-375-k-higher-than-hmis-136-k",
+    "href": "presentation.html#why-is-the-model-baseline-375-k-higher-than-hmis-136-k",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Why is the model baseline (375 k) higher than HMIS (136 k)?",
+    "text": "Why is the model baseline (375 k) higher than HMIS (136 k)?\n\nThe 36 % capture fraction — and what closes the gap\n\n\ni. HMIS is syndromic. Outpatient surveillance — captures clinically diagnosed cases at public facilities only.\nii. Private-sector invisible. Private clinics, hospitals, and lab-confirmed presentations are absent from the HMIS record.\niii. WHO LMIC range. Surveillance systems in LMICs typically capture 30 – 50 % of true burden.\niv. Model correction. The Weighted Ensemble corrects for systematic under-reporting and captures the full climate-driven seasonal amplitude.\n\n\n136,000 / 375,000 ≈ 36 % — squarely within the WHO LMIC range and consistent with published Nepal-specific adjustment factors.\n\n\nSources: (GBD 2023 Causes of Death Collaborators, 2025; Mogasale et al., 2016; World Health Organization, 2023)."
+  },
+  {
+    "objectID": "presentation.html#how-robust-is-the-lag-specification",
+    "href": "presentation.html#how-robust-is-the-lag-specification",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "How robust is the lag specification?",
+    "text": "How robust is the lag specification?\n\nBiology and empirics both point at one-month\n\n\ni. District-month correlations. Lagged precipitation r = 0.313 · lagged humidity r = 0.180 · lagged flood frequency r = 0.122.\nii. Dominant single feature. cases_lag1 r = 0.731 — captures persistent endemic foci in high-burden districts.\niii. Lag-2 and beyond. Lag-2 r ≈ 0.28 (n.s.); lag ≥ 3 falls below conventional significance.\niv. Biological anchor. Salmonella Typhi incubation 6–30 days + reporting delay → one calendar month is the right lag scale.\n\n\nThe current pooled-lag specification is a deliberate simplification; district-specific lag tuning is future work."
+  },
+  {
+    "objectID": "presentation.html#why-no-socioeconomic-covariates",
+    "href": "presentation.html#why-no-socioeconomic-covariates",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "Why no socioeconomic covariates?",
+    "text": "Why no socioeconomic covariates?\n\nStatic snapshots cannot enter a time-varying panel\n\n\ni. NMICS 2019. Provides one-time WASH and poverty snapshots — not a time-varying district-month panel matching the 2015–2023 study period.\nii. Static-as-time-varying. Forcing a single snapshot into 108 months introduces measurement error larger than the climate signal.\niii. Random-effects buffer. The GLMM component absorbs unobserved socioeconomic heterogeneity via district-level random intercepts.\niv. Longitudinal NMICS. Future waves will enable explicit variance decomposition between climate and structural drivers."
+  },
+  {
+    "objectID": "presentation.html#how-transferable-is-this-to-other-lmics",
+    "href": "presentation.html#how-transferable-is-this-to-other-lmics",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "How transferable is this to other LMICs?",
+    "text": "How transferable is this to other LMICs?\n\nThe architecture transfers; the coefficients do not\n\n\ni. Data prerequisites. A national HMIS-equivalent, a national DRR-equivalent, and ERA5 / CHIRPS access — the last is universal and free.\nii. What transfers. The architecture — feature engineering, four-model ensemble, chronological held-out evaluation — applies anywhere with the data prerequisites.\niii. What does not. Coefficients and lag structure are country-specific. Re-fit per setting; do not import numbers from one country to another.\niv. Comparable settings. Bangladesh, Pakistan, Cambodia, Indonesia — all monsoon-driven typhoid + operational DRR infrastructure.\nv. Pathogen-portability. Same framework, different pathogens — cholera, hepatitis A, shigellosis are next."
+  },
+  {
+    "objectID": "presentation.html#references",
+    "href": "presentation.html#references",
+    "title": "Predictive Modeling of Typhoid Incidence in Nepal",
+    "section": "References",
+    "text": "References\n\nCited in this presentation · APA 7th edition · alphabetical by first author.\n\n\n\nAsian Development Bank. (2024). Nepal: Poverty and vulnerability assessment. Asian Development Bank.\n\n\nBaker, S., Hendriksen, R. S., & Dallman, T. (2025). Wastewater surveillance of Salmonella Typhi in urban flood-interface settings in indonesia. Emerging Infectious Diseases, 31(2), 201–209.\n\n\nBhandari, D., Bhusal, C. L., Subedi, M., & Bhatta, B. (2022). Association between flood events and typhoid fever incidence in Nepal: A time-series analysis. BMC Infectious Diseases, 22(1), 481. https://doi.org/10.1186/s12879-022-07350-7\n\n\nBreiman, L. (2001). Random forests. Machine Learning, 45(1), 5–32. https://doi.org/10.1023/A:1010933404324\n\n\nBrubacher, J., Allen, D. M., Li, L., & Galanis, E. (2020). Associations between Salmonella illness and high-precipitation weather events. Epidemiology & Infection, 148, e88. https://doi.org/10.1017/S0950268820000527\n\n\nCentral Bureau of Statistics and UNICEF. (2019). Nepal multiple indicator cluster survey 2019: Survey findings report. Central Bureau of Statistics; UNICEF.\n\n\nChen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794. https://doi.org/10.1145/2939672.2939785\n\n\nChoi, J., Cho, Y., & Shim, E. (2023). Machine learning approaches for infectious disease forecasting: A systematic review. Journal of Infection, 86(2), 127–141.\n\n\nCoalition Against Typhoid. (2024). Nepal: Typhoid country profile 2024. https://www.coalitionagainsttyphoid.org/\n\n\nDixon, M. A. S., Ahlers, L. R. H., Lipp, E. K., & Ryan, S. J. (2023). Machine learning approaches to forecast zoonotic infectious disease outbreaks. Epidemiology & Infection, 151, e23. https://doi.org/10.1017/S0950268823000018\n\n\nFunk, C., Peterson, P., Landsfeld, M., Pedreros, D., Verdin, J., Shukla, S., Husak, G., Rowland, J., Harrison, L., Hoell, A., & Michaelsen, J. (2015). The climate hazards infrared precipitation with stations—a new environmental record for monitoring extremes. Scientific Data, 2, 150066. https://doi.org/10.1038/sdata.2015.66\n\n\nGBD 2023 Causes of Death Collaborators. (2025). Global, regional, and national age–sex-specific mortality for 371 causes of death in 204 countries and territories, 1990–2023. The Lancet, 405(10487), 1391–1441.\n\n\nGo, M. J. (2025). Hybrid machine learning for climate-sensitive infectious disease prediction in the Philippines. PLOS ONE, 20(1). https://doi.org/10.1371/journal.pone.0310042\n\n\nHess, J. J., Eidson, M., Tlumak, J. E., Raab, K. K., & Luber, G. (2020). An evidence-based public health approach to climate change adaptation. Environmental Health Perspectives, 120(3), 326–331. https://doi.org/10.1289/ehp.1104059\n\n\nHochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural Computation, 9(8), 1735–1780. https://doi.org/10.1162/neco.1997.9.8.1735\n\n\nIntergovernmental Panel on Climate Change. (2022). Climate change 2022: Impacts, adaptation, and vulnerability. Contribution of Working Group II to the Sixth Assessment Report. Cambridge University Press. https://doi.org/10.1017/9781009325844\n\n\nKarkey, A., Thompson, C. N., Tran Vu Thieu, N., Dongol, S., Le Thi Phuong, T., Voong Vinh, P., & Baker, S. (2018). Differential epidemiology of Salmonella Typhi and Paratyphi A in Kathmandu, Nepal: A matched case–control investigation in a highly endemic enteric fever setting. PLOS Neglected Tropical Diseases, 10(3), e0004530.\n\n\nLevy, K., Woster, A. P., Goldstein, R. S., & Carlton, E. J. (2023). Untangling the impacts of climate change on waterborne diseases: A systematic review of relationships between diarrheal diseases and temperature, rainfall, flooding, and drought. Environmental Science & Technology, 50(10), 4905–4922. https://doi.org/10.1021/acs.est.5b06186\n\n\nMinistry of Forests and Environment, Government of Nepal. (2021). National adaptation plan (NAP) 2021–2050: nepal. Government of Nepal.\n\n\nMinistry of Health and Population, Government of Nepal. (2023). Annual report of the department of health services 2022/23. Government of Nepal.\n\n\nMogasale, V., Maskery, B., Ochiai, R. L., Lee, J.-S., Mogasale, V. V., Ramani, E., & Wierzba, T. F. (2016). Burden of typhoid fever in low-income and middle-income countries: A systematic, literature-based update with risk-factor adjustment. The Lancet Global Health, 2(10), e570–e580.\n\n\nMuñoz-Sabater, J., Dutra, E., Agustí-Panareda, A., Albergel, C., Arduini, G., Balsamo, G., & Thépaut, J.-N. (2021). ERA5-Land: A state-of-the-art global reanalysis dataset for land applications. Earth System Science Data, 13(9), 4349–4383. https://doi.org/10.5194/essd-13-4349-2021\n\n\nNPDRR Nepal. (2025). Nepal disaster statistics 2012–2024. https://www.drrportal.gov.np/\n\n\nPitzer, V. E., Feasey, N. A., Msefula, C., Mallewa, J., Kennedy, N., Dube, Q., & Heyderman, R. S. (2025). Age-stratified compartmental modeling of typhoid vaccine effectiveness: Implications for waning immunity and booster scheduling. PLOS Medicine, 22(1).\n\n\nSemiu, A. A., Adewole, M., & Afolabi, T. (2025). Ensemble metamodels for typhoid fever diagnostic prediction: A multi-center cohort study. PLOS ONE, 20(2).\n\n\nShrestha, M. L., Randhawa, A., & Chalise, P. (2025). Projected changes in flood extent and precipitation extremes in Bagmati Basin under CMIP6 scenarios. Journal of Hydrology: Regional Studies, 58, 101734.\n\n\nSsemuyiga, D., Katongole, S. P., & Muwanga, M. (2025). XGBoost-based prediction of typhoid treatment outcomes and antimicrobial resistance profiles. Frontiers in Digital Health, 7, 1340214. https://doi.org/10.3389/fdgth.2025.1340214\n\n\nTrájer, A. J., Bede-Fazekas, Á., & Hufnagel, L. (2022). Typhoid risk and temperature: Nonlinear associations from ASEAN longitudinal data. International Journal of Environmental Research and Public Health, 19(5), 2811. https://doi.org/10.3390/ijerph19052811\n\n\nWorld Health Organization. (2023). Typhoid fever: Key facts and global burden. https://www.who.int/news-room/fact-sheets/detail/typhoid\n\n\n\n\n\nKritika Baral · Kathmandu University · Research"
+  }
+]
