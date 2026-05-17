@@ -155,13 +155,19 @@ models for climate-vulnerable Nepal:
    conjunction with ERA5-CHIRPS climate metrics [@semiu2025; @go2025].
 
 This study addresses these gaps by developing a hybrid GLMM and ML
-framework that integrates HMIS surveillance (1.2 million cases over nine
-years), DRR flood records, and ERA5-Land / CHIRPS climate grids for
-district-stratified, lagged attributions. By estimating flood-driven
-variance (~18%) and generating scenario-based projections through 2050,
-the study supports Nepal's National Adaptation Plan (2021–2050) and WHO
-typhoid control targets, while providing scalable, replicable insights
-for comparable LMICs in South Asia.
+framework that integrates HMIS surveillance (1.2 million cases over
+nine years; *N* = 7,327 district-month observations), DRR flood
+records, and ERA5-Land / CHIRPS climate grids for district-stratified,
+lagged attributions. A four-model machine-learning framework — Random
+Forest, XGBoost, Multilayer Perceptron, and a Weighted Ensemble —
+achieves **R² = 0.8675** on a strictly chronological 12-month held-out
+test window. By quantifying the contribution of each climate driver
+(mean temperature r = 0.50 – 0.63; precipitation r = 0.33 – 0.37;
+monsoon r = 0.25 – 0.29; flood events r = 0.19) and generating
+scenario-based projections through 2050, the study supports Nepal's
+National Adaptation Plan (2021–2050) and WHO typhoid control targets,
+while providing scalable, replicable insights for comparable LMICs in
+South Asia.
 
 ## References {.unnumbered}
 

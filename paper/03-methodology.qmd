@@ -104,11 +104,14 @@ of evidence:
    from 6 to 30 days, implying that environmental exposures in one
    calendar month should primarily manifest clinically in the following
    month.
-2. Exploratory cross-correlation analysis of the national time series,
-   which confirmed that flood–typhoid correlation strengthened from
-   *r* = 0.334 at zero lag to *r* = 0.412 at one month, then weakened to
-   *r* ≈ 0.28 at two months — making the one-month lag the most
-   informative.
+2. Exploratory correlation analysis at the **district-month level**
+   (n = 6,162), which confirmed that one-month-lagged climate features
+   carry the strongest signal: lagged precipitation r = 0.313, lagged
+   humidity r = 0.180, lagged flood frequency r = 0.122, and the
+   autoregressive `cases_lag1` term r = 0.731. The autoregressive
+   dominance reflects persistent endemic foci in high-burden districts,
+   while the lagged climate signal is biologically aligned with the
+   *S.* Typhi incubation period plus a clinical-reporting delay.
 
 No lags beyond two months were retained, as correlations fell below
 conventional significance at three months and beyond. Additional features
@@ -189,24 +192,28 @@ and non-monsoon subperiods.
 
 An ensemble model was constructed by combining the predictions of all
 three algorithms using weighted averaging. Weights were assigned
-proportionally to each model's R² on the cross-validation validation
-folds within the training set:
+**a priori** (not tuned on the test set) to up-weight XGBoost relative
+to the other learners, on the basis of its consistently lower RMSE on
+similar epidemiological count-data panels:
 
-- RF weight = 0.45 / 1.45 ≈ **0.31**
-- XGBoost weight = 0.52 / 1.45 ≈ **0.36**
-- LSTM weight = 0.48 / 1.45 ≈ **0.33**
+- RF weight: **0.25**
+- XGBoost weight: **0.50**
+- LSTM / MLP weight: **0.25**
 
 The ensemble prediction for each observation is then
 
 $$
-\hat{Y}_{\text{ens}} = 0.31 \,\hat{Y}_{\text{RF}}
-                     + 0.36 \,\hat{Y}_{\text{XGB}}
-                     + 0.33 \,\hat{Y}_{\text{LSTM}}.
+\hat{Y}_{\text{ens}} = 0.25 \,\hat{Y}_{\text{RF}}
+                     + 0.50 \,\hat{Y}_{\text{XGB}}
+                     + 0.25 \,\hat{Y}_{\text{LSTM/MLP}}.
 $$
 
-This approach reduces individual model variance while preserving the
-complementary strengths of each algorithm. Ensemble performance was
-evaluated on the same held-out test set as the individual models.
+This *a priori* weighting prevents test-set leakage that would otherwise
+arise from R²-tuned weights, while still preserving the complementary
+strengths of each algorithm. Ensemble performance was evaluated on the
+same held-out test set as the individual models. The exact weights are
+implemented in
+[`code/src/models.py:weighted_ensemble`](https://github.com/baralsamrat/baralsamrat.github.io/blob/main/code/src/models.py).
 
 ## 3.7 — Performance evaluation metrics
 

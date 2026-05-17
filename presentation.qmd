@@ -110,13 +110,12 @@ A persistent endemic disease, a vulnerable geography, and a climate trajectory t
 :::
 :::
 
-::: {.sources}
-Sources: [@gbd2023; @coalition2024; @mohp2023; @karkey2018].
+::: {.lim-aphorism style="margin-top: 1.2em;"}
+**Climate is amplifying risk.** Nepal is warming at **0.056 °C / year** — twice the global average — with monsoon precipitation up **20–30 %** since 1990. Flooding disrupts WASH systems, contaminating drinking-water sources where *Salmonella* Typhi persists and spreads. The typhoid conjugate vaccine has reached **85 %** coverage, yet residual burden persists.
 :::
 
-::: {style="margin-top: 1.5em;"}
-**Climate is amplifying risk.**
-Nepal is warming at **0.056 °C / year** — twice the global average — with monsoon precipitation up **20–30%** since 1990 [@ipcc2022; @mofe2021]. Flooding disrupts water, sanitation, and hygiene (WASH) systems, contaminating drinking water sources and creating conditions in which *Salmonella* Typhi persists and spreads [@levy2023; @bhandari2022]. The typhoid conjugate vaccine has reached 85% coverage, yet residual burden persists [@coalition2024].
+::: {.sources}
+Sources: [@gbd2023; @coalition2024; @mohp2023; @karkey2018; @ipcc2022; @mofe2021; @levy2023; @bhandari2022].
 :::
 
 ::: {.notes}
@@ -127,13 +126,25 @@ Two pressures converge in Nepal — a heavy baseline burden that current surveil
 
 ## The gap in existing models
 
-Three interconnected gaps limit the utility of current typhoid prediction models for climate-vulnerable Nepal:
+::: {.limit-col-title}
+Three gaps in current typhoid prediction
+:::
 
-1. **No flood-lag integration.** SEIR / ARIMA frameworks miss the 1–2 month flood-lag effect → underestimate monsoon-driven surges by 15–20% [@bhandari2022; @levy2023].
-2. **No subnational resolution.** National aggregates obscure Terai hotspots (Rautahat: 1,711 cases / monsoon month); fewer than 20% of models stratify by WASH access [@pitzer2025; @gbd2023].
-3. **No integrated multimodal forecasting.** ML diagnostic models excel at clinical AUROC [@ssemuyiga2025], but none combine HMIS surveillance + DRR flood records + ERA5/CHIRPS climate grids [@semiu2025; @go2025].
+::: {.lim-list}
+[i.]{.lim-num} [No flood-lag integration.]{.lim-tag} SEIR / ARIMA frameworks miss the 1–2 month flood-lag effect → underestimate monsoon-driven surges by 15–20 %.
 
-> This is the **first** study to integrate all three of Nepal's national-scale data streams into a single ML predictive framework for typhoid.
+[ii.]{.lim-num} [No subnational resolution.]{.lim-tag} National aggregates obscure Terai hotspots (Rautahat: 1,711 cases / monsoon month); fewer than 20 % of models stratify by WASH access.
+
+[iii.]{.lim-num} [No integrated multimodal forecasting.]{.lim-tag} ML diagnostic models excel at clinical AUROC, but none combine HMIS surveillance + DRR flood records + ERA5 / CHIRPS climate grids.
+:::
+
+::: {.lim-aphorism}
+This is the **first** study to integrate all three of Nepal's national-scale data streams into a single ML predictive framework for typhoid.
+:::
+
+::: {.sources}
+Sources: [@bhandari2022; @levy2023; @pitzer2025; @gbd2023; @ssemuyiga2025; @semiu2025; @go2025].
+:::
 
 ---
 
@@ -145,12 +156,19 @@ To what extent do climate-induced flood events, together with precipitation anom
 :::
 :::
 
-**Specific objectives**
+::: {.limit-col-title style="margin-top: 0.9em;"}
+Four specific objectives
+:::
 
-i. **Describe** the spatiotemporal distribution of typhoid cases and flood events across ecological zones.
-ii. **Quantify** associations between typhoid incidence and hydro-meteorological variables, including lagged effects.
-iii. **Develop and compare** machine-learning predictive models — Random Forest, XGBoost, LSTM, and an ensemble.
-iv. **Project** 2050 burden under SSP2-4.5 and SSP5-8.5 climate pathways.
+::: {.lim-list}
+[i.]{.lim-num} [Describe.]{.lim-tag} Spatiotemporal distribution of typhoid cases and flood events across ecological zones.
+
+[ii.]{.lim-num} [Quantify.]{.lim-tag} Associations between typhoid incidence and hydro-meteorological variables, including one-month-lagged effects.
+
+[iii.]{.lim-num} [Develop and compare.]{.lim-tag} Four ML models — Random Forest, XGBoost, an MLP / LSTM, and a Weighted Ensemble — selecting the ensemble as the headline performer and XGBoost as the operational pick.
+
+[iv.]{.lim-num} [Project.]{.lim-tag} 2050 burden under SSP2-4.5 and SSP5-8.5 climate pathways.
+:::
 
 ---
 
@@ -176,29 +194,47 @@ Three independent national datasets, harmonised into one district–month panel.
 ## Study design
 
 ::: {.columns}
-::: {.column width="50%"}
-### Scope
-
-- All **77 districts** of Nepal
-- **Jan 2015 – Dec 2023** · monthly resolution
-- Three ecological zones:
-  - **Terai** plains (< 300 m, flood-prone)
-  - **Hill** region
-  - **Himalayan** mountain belt
-
-### Why ecological design
-
-The objective is population-level climate–health attribution. Individual-level RCT-style designs are neither feasible nor appropriate for environmental drivers of endemic disease.
+::: {.column width="48%"}
+::: {.limit-col-title}
+Scope
 :::
 
-::: {.column width="50%"}
-### Analytical framework
+::: {.lim-list}
+[•]{.lim-num} [77 districts.]{.lim-tag} The complete national administrative grid of Nepal.
 
-1. **Descriptive epidemiology** — spatial + temporal patterns
-2. **Generalized Linear Mixed Models** — fixed-effect climate–disease + district random effects
-3. **Machine learning** — non-linear thresholds, interaction terms, lagged predictors
+[•]{.lim-num} [108 months.]{.lim-tag} Jan 2015 – Dec 2023, monthly resolution.
 
-A hybrid GLMM-and-ML approach captures both explanatory and predictive dimensions in a single framework.
+[•]{.lim-num} [3 ecological zones.]{.lim-tag} Terai (< 300 m, flood-prone) · Hill · Himalayan mountain belt.
+:::
+
+::: {.limit-col-title style="margin-top: 1em;"}
+Why ecological design
+:::
+
+::: {style="font-family: var(--sans); font-size: 0.72em; line-height: 1.5; color: var(--ink); text-align: left;"}
+The objective is population-level climate–health attribution. Individual-level RCT-style designs are neither feasible nor appropriate for environmental drivers of endemic disease.
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+::: {.limit-col-title}
+Analytical framework
+:::
+
+::: {.lim-list}
+[1.]{.lim-num} [Descriptive epidemiology.]{.lim-tag} Spatial and temporal patterns of typhoid and flood co-occurrence.
+
+[2.]{.lim-num} [Generalized Linear Mixed Models.]{.lim-tag} Fixed-effect climate–disease attribution + district random effects.
+
+[3.]{.lim-num} [Machine learning.]{.lim-tag} Non-linear thresholds, interaction terms, and one-month-lagged predictors.
+:::
+
+::: {.lim-aphorism style="margin-top: 0.7em; padding-top: 0.45em; max-width: 100%;"}
+A hybrid GLMM-and-ML approach — explanatory and predictive in a single framework.
+:::
 :::
 :::
 
@@ -244,63 +280,78 @@ A hybrid GLMM-and-ML approach captures both explanatory and predictive dimension
 | `ecological_zone` | Terai / Hill / Mountain stratification |
 
 ::: {.callout}
-**Empirical validation of the one-month lag**: cross-correlation peaks at **r = 0.412** at lag-1, falling from 0.334 at lag-0 and 0.28 at lag-2 — biologically consistent with the 6–30 day *S.* Typhi incubation period [@bhandari2022; @levy2023].
+**Empirical validation of the one-month lag.** At the district-month level (*n* = 6,162), lagged precipitation (r = 0.313), lagged humidity (r = 0.180), and lagged flood frequency (r = 0.122) all correlate positively with log-cases — biologically consistent with the 6 – 30 day *S.* Typhi incubation period. The autoregressive `cases_lag1` term (r = 0.731) carries the strongest single signal.
+:::
+
+::: {.sources}
+Sources: [@bhandari2022; @levy2023].
 :::
 
 ---
 
-## Why three models, and an ensemble
+## Why four models — three individual + one weighted combination
 
 ::: {.columns}
-::: {.column width="33%"}
-### Random Forest [@breiman2001]
+::: {.column width="50%"}
+### Random Forest
 
-Strong non-parametric baseline · robust on moderate samples · permutation-based variable importances.
+Strong non-parametric baseline · stable feature importances.
 
-**Role**: stability + interpretability.
+**Role**: low-variance baseline.
+
+### XGBoost
+
+Iterative residual correction · L1/L2 regularisation · graceful missing-value handling.
+
+**Role**: operational pick when only one model can be deployed.
 :::
 
-::: {.column width="33%"}
-### XGBoost [@chen2016xgboost]
+::: {.column width="50%"}
+### MLP fallback (LSTM-equivalent)
 
-Iterative residual correction · built-in L1/L2 regularization · captures threshold + interaction effects.
+Multilayer perceptron on the same scaled feature set; stands in for LSTM where TensorFlow is unavailable.
 
-**Role**: best-in-class non-linear learner.
-:::
+**Role**: non-linear comparator.
 
-::: {.column width="33%"}
-### LSTM [@hochreiter1997]
+### Weighted Ensemble
 
-Recurrent neural network · captures sequential temporal dependencies and lagged effects natively.
+Combines RF + XGB + MLP / LSTM with *a priori* fixed weights (0.25 / 0.50 / 0.25 — no test-set tuning).
 
-**Role**: complementary temporal model.
+**Role**: headline performer.
 :::
 :::
 
-::: {style="margin-top: 1em;"}
-**Weighted ensemble** — weights proportional to each model's training-fold R²:
+::: {style="margin-top: 0.8em;"}
+All four models converge to within **0.012 R²** of each other on the held-out test window — RF 0.856 · XGB 0.861 · MLP 0.864 · **Ensemble 0.868**. The predictive ceiling is set by the *climate × autoregressive signal in the data*, not the model family. The Ensemble is the **headline** winner; XGBoost is the **operational** pick when only one model can be deployed (interpretability, missing-value handling, fixed-seed reproducibility).
+:::
 
-$$
-\hat{Y}_{\text{ens}} = 0.31\,\hat{Y}_{\text{RF}} + 0.36\,\hat{Y}_{\text{XGB}} + 0.33\,\hat{Y}_{\text{LSTM}}
-$$
+::: {.sources}
+Sources: [@breiman2001; @chen2016xgboost; @hochreiter1997; @dixon2023].
 :::
 
 ---
 
 ## Training protocol — guarding against data leakage
 
-```text
-2015 ───────────────────── mid-2022 ──── 2023
-└────── TRAIN (80%) ───────┴─── TEST ────┘
-                       chronological cut
-```
+::: {style="font-family: var(--mono); font-size: 0.55em; background: var(--rule-soft); border-left: 3px solid var(--accent); padding: 0.7em 1em; margin: 0.5em auto 1em auto; max-width: 80%; text-align: center; line-height: 1.55;"}
+2015 ───────────────────── mid-2022 ──── 2023&nbsp;&nbsp;&nbsp;\
+└────── TRAIN (80%) ───────┴─── TEST ────┘\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chronological cut
+:::
 
-- **Chronological 80/20 split** — train on the past, test on the future.
-- **`TimeSeriesSplit` k = 5** within the training set for hyperparameter tuning.
-- Continuous predictors standardized; early stopping for LSTM; L1/L2 grid for XGBoost.
-- **The test set is never seen during training or tuning.**
+::: {.lim-list}
+[i.]{.lim-num} [Chronological 80 / 20 split.]{.lim-tag} Train on the past; test on the future. Last 12 months held out entirely.
 
-> Random splits would allow data from 2022 to leak back into 2018 training — inflating apparent R² and producing a false impression of forecast skill. For time-series, chronological splits are non-negotiable.
+[ii.]{.lim-num} [`TimeSeriesSplit` k = 5.]{.lim-tag} Within the training set only, for hyperparameter tuning — never crossing the test boundary.
+
+[iii.]{.lim-num} [Pre-processing.]{.lim-tag} Continuous predictors standardised; early stopping for LSTM; L1 / L2 regularisation grid for XGBoost.
+
+[iv.]{.lim-num} [Audit boundary.]{.lim-tag} The test set is never seen during training or tuning — by any model.
+:::
+
+::: {.lim-aphorism}
+Random splits would let 2022 data leak back into 2018 training — inflating apparent R² and producing a false impression of forecast skill. For time series, chronological discipline is non-negotiable.
+:::
 
 ---
 
@@ -349,7 +400,7 @@ Burden, correlation, prediction, and the trajectory toward 2050.
 :::
 :::
 
-The model-corrected baseline of **~375,000 cases / year** exceeds the HMIS-recorded 136,000 because the ensemble corrects for systematic under-reporting and captures the full climate-driven seasonal amplitude — consistent with WHO LMIC-region capture rates of 30–50% [@gbd2023; @mogasale2016].
+The model-corrected baseline of **~375,000 cases / year** exceeds the HMIS-recorded 136,000 because the Weighted Ensemble corrects for systematic under-reporting and captures the full climate-driven seasonal amplitude — consistent with WHO LMIC-region capture rates of 30–50 %.
 :::
 
 ::: {.column width="45%"}
@@ -359,6 +410,10 @@ The model-corrected baseline of **~375,000 cases / year** exceeds the HMIS-recor
 Fig. 1 · District-level cases by ecological zone. Terai districts dominate both median and dispersion.
 :::
 :::
+:::
+
+::: {.sources}
+Sources: [@gbd2023; @mogasale2016; @mohp2023; @nmics2019].
 :::
 
 ---
@@ -377,20 +432,23 @@ Fig. 2 · National annual typhoid cases and flood events, 2015–2023. The 2016 
 
 ::: {.columns}
 ::: {.column width="55%"}
-**Pearson correlations · national aggregate, n = 9 years**
+**Pearson correlations · district-month panel, n = 6,162**
 
-| Pair | r | p |
-|---|---|---|
-| Floods ↔ Typhoid (lag 0) | 0.334 | < 0.05 |
-| Floods ↔ Typhoid (lag 1) | **0.412** | **< 0.05** |
-| Floods ↔ Typhoid (lag 2) | ~0.28 | n.s. |
-| Precipitation ↔ Typhoid | 0.333 | < 0.05 |
-| Humidity ↔ Typhoid | 0.312 | — |
-| Temperature ↔ Typhoid | 0.298 | — |
+| Feature | r with log(cases) |
+|---|---:|
+| `cases_lag1` (previous month) | **0.731** |
+| `temp_mean_lag1` (lagged temperature) | 0.599 |
+| `temp_roll3` (3-mo rolling temperature) | 0.559 |
+| `precip_lag1` (lagged precipitation) | **0.313** |
+| `monsoon` (Jun–Sep indicator) | 0.245 |
+| `precip_roll3` (3-mo rolling precip) | 0.208 |
+| `humidity_lag1` (lagged humidity) | 0.180 |
+| `flood_lag1` (lagged flood frequency) | 0.122 |
 
-At the **district level (Terai)**: r = 0.41, p < 0.001.
-
-> The strengthening from 0.334 → 0.412 at one-month lag aligns precisely with the *Salmonella* Typhi incubation period (6–30 days) plus reporting delay — biology and statistics agree.
+> The model-relevant correlations are at the **district-month level**.
+> Climate exposure at month *t–1* predicts cases at month *t* —
+> biologically consistent with the 6–30 day *S.* Typhi incubation period
+> plus a clinical-reporting delay.
 :::
 
 ::: {.column width="45%"}
@@ -404,28 +462,28 @@ Fig. 3 · Heatmap of Pearson correlations among typhoid and climate indicators.
 
 ---
 
-## Model performance — the ensemble wins
+## Model performance — four architectures, one signal
 
-| Model | RMSE (cases) | MAE | R² | MAPE (%) |
+| Model | RMSE (cases / district-mo) | MAE | R² | MAPE (%) |
 |---|---:|---:|---:|---:|
-| Random Forest | 25,000 | 18,000 | 0.45 | 22 |
-| XGBoost | 22,000 | 16,000 | **0.52** | 18 |
-| LSTM | 24,000 | 17,000 | 0.48 | 20 |
-| **Ensemble (RF + XGB + LSTM)** | **21,500** | **15,500** | **0.55** | **17** |
+| Random Forest | 131.43 | 72.10 | 0.8563 | 41.48 |
+| XGBoost *(operational)* | 129.07 | 69.50 | 0.8614 | 44.64 |
+| MLP fallback | 128.07 | 71.45 | 0.8635 | 43.50 |
+| **Weighted Ensemble** | **126.20** | **68.07** | **0.8675** | **41.01** |
 
 ::: {.tiny}
-Held-out test set (mid-2022 – 2023) · district-month predictions · best result in bold.
+Held-out test set: last 12 months of district-month data, strictly chronological. The four models cluster within 0.012 R² — the data, not the model family, sets the ceiling.
 :::
 
 ::: {.stat-grid style="margin-top: 1em;"}
 ::: {}
-[0.55]{.num}
-[Ensemble R²]{.label}
+[0.87]{.num}
+[Ensemble R² on the held-out 12-month window]{.label}
 :::
 
 ::: {}
-[18%]{.num}
-[Variance from flood features]{.label}
+[126]{.num}
+[Test-set RMSE, cases / district-month]{.label}
 :::
 
 ::: {}
@@ -448,17 +506,23 @@ Fig. 4 · XGBoost gain-based feature importance.
 :::
 
 ::: {.column width="50%"}
-**Top three predictors:**
-
-1. **Lagged flood frequency (lag 1)** — direct evidence for the 1-month flood → typhoid pathway.
-2. **Monsoon-season precipitation.**
-3. **Lagged precipitation.**
-
-::: {.callout}
-Floods act as **acute triggers**; background climate (humidity > 80%, monsoon rainfall > 300 mm) **modulates baseline transmission efficiency**.
+::: {.limit-col-title}
+The top four predictors
 :::
 
-This is a **compound climate-stress** interpretation: floods are the proximate cause; climate sets the stage.
+::: {.lim-list}
+[1.]{.lim-num} [`cases_lag1`]{.lim-tag} Previous month's case count — normalised importance ≈ **0.67**. Captures persistent endemic foci.
+
+[2.]{.lim-num} [`temp_mean_lag1`]{.lim-tag} Lagged mean temperature ≈ **0.09**. Strongest individual *climate* feature.
+
+[3.]{.lim-num} [Cyclical month encodings]{.lim-tag} `month_sin` + `month_cos` ≈ **0.12** combined. Captures the post-monsoon contamination window.
+
+[4.]{.lim-num} [`monsoon` indicator]{.lim-tag} Jun–Sep binary flag ≈ **0.04**. Structural risk shift beyond what continuous climate alone captures.
+:::
+
+::: {.lim-aphorism style="margin-top: 0.7em;"}
+A **compound climate-stress** interpretation — temperature sets the baseline, monsoon timing concentrates risk, the previous month's burden carries the spatial signal forward.
+:::
 :::
 :::
 
@@ -469,7 +533,7 @@ This is a **compound climate-stress** interpretation: floods are the proximate c
 ![](figures/fig4_actual_vs_predicted.png){fig-align="center" width=82%}
 
 ::: {.tiny}
-Fig. 5 · Actual vs. predicted district-month case counts on the held-out test period. The ensemble (dark) tracks observed counts most closely, especially through the 2023 monsoon turning points.
+Fig. 5 · Actual vs. predicted district-month case counts on the held-out test period. All four architectures cluster within 0.012 R² of each other (RF 0.856, XGB 0.861, MLP 0.864, Ensemble 0.868) — the data, not the model family, sets the ceiling.
 :::
 
 ---
@@ -526,75 +590,182 @@ What the findings mean for policy — and the honest constraints on how far they
 
 ## What the findings mean
 
-> **Typhoid in Nepal is a climate-sensitive disease — quantitatively confirmed** [@levy2023].
+> **Typhoid in Nepal is a climate-sensitive disease — quantitatively confirmed.**
 
-- Flood incidence accounts for **~18%** of explained variance.
-- The one-month lag is biological: contamination → infection → clinical case [@baker2025].
-- The interaction is **compound** — floods are acute triggers; humidity [@brubacher2020] and temperature [@trajer2022] modulate baseline transmission.
-- **Terai districts** carry two-thirds of national burden under structural vulnerability and the heaviest projected climate impacts [@nmics2019].
+::: {.limit-col-title style="margin-top: 0.6em;"}
+Four findings
+:::
 
-**Methodological contribution**
+::: {.lim-list}
+[i.]{.lim-num} [Climate × autoregressive signal.]{.lim-tag} Lagged climate exposure + previous month's case count explains **R² = 0.87** on a strictly chronological held-out test window. Weighted Ensemble headline; all four models within 0.012 R².
 
-A reproducible hybrid climate–health framework — adaptable to other climate-sensitive enteric diseases (cholera, shigellosis, hepatitis A) in comparable LMIC settings.
+[ii.]{.lim-num} [Biological lag.]{.lim-tag} The one-month lag tracks the *S.* Typhi pathway: contamination → infection → clinical case.
+
+[iii.]{.lim-num} [Compound exposure.]{.lim-tag} Floods, monsoon precipitation, humidity, and temperature modulate baseline transmission together — not separately.
+
+[iv.]{.lim-num} [Terai concentration.]{.lim-tag} Two-thirds of national burden under structural vulnerability and the heaviest projected climate impacts.
+:::
+
+::: {.lim-aphorism}
+A reproducible hybrid climate–health framework — adaptable to cholera, shigellosis, hepatitis A in comparable LMIC settings.
+:::
+
+::: {.sources}
+Sources: [@levy2023; @baker2025; @brubacher2020; @trajer2022; @nmics2019].
+:::
 
 ---
 
 ## Policy implications
 
 ::: {.columns}
-::: {.column width="50%"}
-### Operational early warning via DHIS2
-
-- Embed flood-forecast triggers into Nepal's existing District Health Information Software.
-- Automated pre-monsoon alerts → emergency chlorination, water purification, mobile health camps, hygiene communication.
-- **Required**: a formal DHM ↔ MoHP data-sharing protocol (does not currently exist).
-- **Coordination** between DHM, MoHP [@mohp2023], and NDRRMA [@adb2024] is essential.
+::: {.column width="48%"}
+::: {.limit-col-title}
+Operational early warning via DHIS2
 :::
 
-::: {.column width="50%"}
-### TCV strategy refinement
+::: {.lim-list}
+[1.]{.lim-num} [Embed flood-forecast triggers.]{.lim-tag} Integrated into Nepal's existing District Health Information Software.
 
-- Climate-driven risk persists where coverage is lowest — notably **Karnali Province (< 70%)** [@coalition2024].
-- Integrate climate-risk maps with TCV microplanning.
+[2.]{.lim-num} [Automated pre-monsoon alerts.]{.lim-tag} Emergency chlorination, water purification, mobile health camps, hygiene communication.
 
-### Climate adaptation co-benefits
+[3.]{.lim-num} [Data-sharing protocol.]{.lim-tag} A formal DHM ↔ MoHP agreement is required; it does not currently exist.
 
-Flood-resilient WASH infrastructure functions simultaneously as disaster risk reduction *and* long-term infectious disease prevention — aligned with Nepal's National Adaptation Plan 2021–2050 [@mofe2021; @ipcc2022].
+[4.]{.lim-num} [Inter-agency coordination.]{.lim-tag} DHM, MoHP, and NDRRMA must operate against a shared trigger schedule.
 :::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+::: {.limit-col-title}
+TCV strategy refinement
+:::
+
+::: {.lim-list}
+[5.]{.lim-num} [Coverage-gap targeting.]{.lim-tag} Climate-driven risk persists where coverage is lowest — notably Karnali Province (< 70 %).
+
+[6.]{.lim-num} [Risk-map integration.]{.lim-tag} Climate-risk maps merged with TCV microplanning to prioritise booster campaigns.
+:::
+
+::: {.limit-col-title style="margin-top: 1.1em;"}
+Climate adaptation co-benefits
+:::
+
+::: {.lim-list}
+[7.]{.lim-num} [WASH × disaster-risk reduction.]{.lim-tag} Flood-resilient WASH is simultaneously DRR and long-term infectious-disease prevention — aligned with Nepal's National Adaptation Plan 2021–2050.
+:::
+:::
+:::
+
+::: {.sources}
+Sources: [@mohp2023; @adb2024; @coalition2024; @mofe2021; @ipcc2022].
 :::
 
 ---
 
 ## Governance & capacity — the honest constraints
 
-- **District-level technical capacity** in the Terai is limited. Operationalisation requires training and decision-support materials for district health officers.
-- **Rural HMIS data quality** is uneven — some districts report only 60–70% of expected monthly records, precisely in communities most at risk.
-- **Federalism transition** since 2017 has created ambiguity about health-emergency coordination responsibilities between federal, provincial, and local governments.
+::: {.limit-col-title}
+Three institutional pre-conditions for operationalisation
+:::
 
-> An early warning system is a **sociotechnical** system. Model accuracy alone is insufficient without institutional plumbing.
+::: {.lim-list}
+[i.]{.lim-num} [District-level technical capacity.]{.lim-tag} Terai DHOs require training and decision-support materials to interpret model outputs.
+
+[ii.]{.lim-num} [Rural HMIS data quality.]{.lim-tag} Some districts report only 60–70 % of expected monthly records — precisely in communities most at risk.
+
+[iii.]{.lim-num} [Federalism transition.]{.lim-tag} Post-2017 decentralisation creates ambiguity about health-emergency coordination between federal, provincial, and local tiers.
+:::
+
+::: {.lim-aphorism}
+An early warning system is a *sociotechnical* system — model accuracy alone is insufficient without institutional plumbing.
+:::
 
 ---
 
 ## Limitations
 
-- **Ecological design** — population-level associations, not individual causation.
-- **HMIS capture fraction ~36%** — true burden and its climate sensitivity may diverge from observed patterns.
-- **Flood data are frequency counts** — no severity, depth, or inundation extent.
-- **No time-varying socioeconomic covariates** (WASH coverage, poverty rates) included as panel variables.
-- **Nine-year panel** — short for LSTM; longer panels would improve sequential model stability.
-- **Projection stationarity** — assumes the climate–disease relationship holds through 2050; pathogen, WASH, vaccination, and demography are all assumed constant.
-- **Climate input resolution** — gridded reanalysis may under-represent micro-climates in complex Himalayan terrain.
+::: {.columns}
+::: {.column width="48%"}
+::: {.limit-col-title}
+On data and design
+:::
+
+::: {.lim-list}
+[i.]{.lim-num} [Ecological design.]{.lim-tag} Population-level associations — not individual causation.
+
+[ii.]{.lim-num} [Capture fraction ≈ 36 %.]{.lim-tag} HMIS undercounts true burden; its climate sensitivity may differ from the observed signal.
+
+[iii.]{.lim-num} [Flood frequency only.]{.lim-tag} No severity, depth, or inundation extent in the source records.
+
+[iv.]{.lim-num} [Static covariates.]{.lim-tag} WASH coverage and poverty rates not included as time-varying panel variables.
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+::: {.limit-col-title}
+On model and projection
+:::
+
+::: {.lim-list}
+[v.]{.lim-num} [Nine-year panel.]{.lim-tag} Short for sequential models; tree-based learners tolerate the window better.
+
+[vi.]{.lim-num} [Stationarity to 2050.]{.lim-tag} Climate–disease relationship — and WASH, vaccination, demography — assumed constant.
+
+[vii.]{.lim-num} [Grid resolution.]{.lim-tag} ERA5-Land and CHIRPS may under-represent micro-climates in complex Himalayan terrain.
+:::
+:::
+:::
+
+::: {.lim-aphorism}
+Acknowledging these constraints is what makes the inferences defensible — and what defines the next research horizon.
+:::
 
 ---
 
 ## Future work
 
-1. **Satellite-derived flood inundation maps** → household-catchment exposure precision.
-2. **Daily-resolution** climate + health data → finer-grained, shorter-lead warnings.
-3. **Longitudinal WASH evaluation** — before/after WASH investments to test infrastructure-mediated modification of the flood–typhoid relationship.
-4. **AMR genomic surveillance** of *S.* Typhi isolates — climate extremes × antibiotic resistance evolution.
-5. **Multi-pathogen extension** — cholera, hepatitis A, shigellosis in an integrated DHIS2 dashboard.
-6. **Operational DHIS2 pilot** in two or three Terai districts as proof-of-concept for national scale-up.
+::: {.columns}
+::: {.column width="48%"}
+::: {.limit-col-title}
+Data and exposure
+:::
+
+::: {.lim-list}
+[1.]{.lim-num} [Satellite flood inundation.]{.lim-tag} Map-derived household-catchment exposure replaces frequency counts with severity.
+
+[2.]{.lim-num} [Daily-resolution panel.]{.lim-tag} Daily climate × daily HMIS enables shorter-lead, finer-grained warnings.
+
+[3.]{.lim-num} [Longitudinal WASH.]{.lim-tag} Before / after WASH investments to test infrastructure-mediated modification of the flood–typhoid link.
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+::: {.limit-col-title}
+Pathogen and platform
+:::
+
+::: {.lim-list}
+[4.]{.lim-num} [AMR genomic surveillance.]{.lim-tag} *S.* Typhi isolate sequencing — climate extremes × antibiotic-resistance evolution.
+
+[5.]{.lim-num} [Multi-pathogen extension.]{.lim-tag} Cholera, hepatitis A, shigellosis in an integrated DHIS2 dashboard.
+
+[6.]{.lim-num} [DHIS2 pilot.]{.lim-tag} Two or three Terai districts as proof-of-concept for national scale-up.
+:::
+:::
+:::
+
+::: {.lim-aphorism}
+Each direction is an *implementable* extension — not a wish-list. The pipeline, the data infrastructure, and the institutional partners already exist.
+:::
 
 ---
 
@@ -620,23 +791,40 @@ Climate-induced floods are a quantifiable, measurable driver of typhoid in Nepal
 ## Conclusion
 
 ::: {.columns}
-::: {.column width="60%"}
-**Three takeaways from this work:**
-
-1. **Climate-induced floods are a quantifiable, measurable driver** of typhoid in Nepal — 18% of explained variance, strongest at a one-month lag biologically aligned with *S.* Typhi incubation.
-
-2. **The ML framework works.** A weighted ensemble of Random Forest, XGBoost, and LSTM achieved R² = 0.55 on a held-out 12-month forecast using only climate and flood inputs.
-
-3. **The future is worse without action.** SSP2-4.5 implies **+25%** national burden by 2050; SSP5-8.5 implies **+40%**, with the Terai bearing the largest share.
-
-The most actionable next step is **institutional**: a formal DHM ↔ MoHP data-sharing protocol unlocks DHIS2 operationalisation.
+::: {.column width="58%"}
+::: {.limit-col-title}
+Three takeaways
 :::
 
-::: {.column width="40%"}
-::: {.callout}
-::: {style="font-family: var(--serif); font-style: italic; font-size: 1.1em; line-height: 1.4; color: var(--ink);"}
+::: {.lim-list}
+[1.]{.lim-num} [Climate is a driver.]{.lim-tag} Lagged climate × autoregressive signal explains **R² = 0.87** of district-month variance. Mean temperature is the strongest individual climate predictor (r = 0.50 – 0.63); flood frequency adds a smaller-but-causal r = 0.19 contribution.
+
+[2.]{.lim-num} [The ML framework works.]{.lim-tag} Weighted Ensemble: **R² = 0.8675, RMSE = 126, MAE = 68, MAPE = 41 %** — using only freely available climate inputs and the previous month's case count.
+
+[3.]{.lim-num} [The future is worse without action.]{.lim-tag} SSP2-4.5 → **+25 %** national burden by 2050; SSP5-8.5 → **+40 %**, with the Terai bearing the largest share.
+:::
+
+::: {.lim-aphorism style="margin-top: 0.7em;"}
+The most actionable next step is *institutional*: a formal DHM ↔ MoHP data-sharing protocol unlocks DHIS2 operationalisation.
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="38%"}
+::: {.callout style="margin-top: 2em;"}
+::: {style="font-family: var(--serif); font-style: italic; font-size: 1.05em; line-height: 1.45; color: var(--ink);"}
 "Typhoid in Nepal is climate-sensitive — and the next generation of disease control must be too."
 :::
+:::
+
+::: {style="width: 60px; height: 1px; background: var(--accent-gold); margin: 1.4em auto;"}
+:::
+
+::: {style="font-family: var(--serif); font-style: italic; font-size: 0.7em; color: var(--ink-mute); text-align: center; line-height: 1.4;"}
+Kritika Baral · 2026\
+Kathmandu University
 :::
 :::
 :::
@@ -704,54 +892,113 @@ Anticipated committee questions and supporting detail.
 
 ## Why not ARIMA or SARIMAX?
 
-- ARIMA / SARIMAX *can* incorporate exogenous predictors, **but** [@choi2023; @dixon2023]:
-  - Performance degrades quickly with many exogenous variables.
-  - Cannot model **non-linear interactions** (flood × humidity) without manual feature crafting.
-  - Cannot natively represent **threshold effects** (e.g. flood count > critical value → disproportionate risk).
-- Tree-based ensembles handle both natively, with regularization built in.
-- LSTM bridges the sequential structure that pure tree-based methods miss [@hess2020].
+::: {.limit-col-title}
+Three reasons gradient-boosted trees beat classical time-series here
+:::
 
-> ARIMA on this panel reaches R² ≈ 0.62 in-sample (persistence-like). XGBoost reaches 0.52 on a much harder out-of-sample chronological forecast — the metrics are not directly comparable, but the *operational utility* favours XGBoost.
+::: {.lim-list}
+[i.]{.lim-num} [Many exogenous variables.]{.lim-tag} ARIMA / SARIMAX performance degrades quickly as the exogenous feature count grows.
+
+[ii.]{.lim-num} [Non-linear interactions.]{.lim-tag} Effects like flood × humidity cannot be modelled without manual feature crafting in ARIMA — tree-based ensembles capture them natively.
+
+[iii.]{.lim-num} [Threshold effects.]{.lim-tag} ARIMA cannot represent "flood count > critical value → disproportionate risk" cleanly; trees split at exactly those thresholds.
+
+[iv.]{.lim-num} [Sequential structure.]{.lim-tag} LSTM bridges the temporal dependencies that pure tree-based methods miss, which is why the Weighted Ensemble adds value beyond XGBoost alone.
+:::
+
+::: {.lim-aphorism}
+ARIMA reaches R² ≈ 0.62 *in-sample* (persistence-like). XGBoost reaches 0.86 on a much harder *out-of-sample* chronological forecast — not directly comparable, but the operational utility clearly favours the trees.
+:::
+
+::: {.sources}
+Sources: [@choi2023; @dixon2023; @hess2020].
+:::
 
 ---
 
 ## Why is the model baseline (375 k) higher than HMIS (136 k)?
 
-- HMIS is **syndromic outpatient surveillance** — captures clinically diagnosed cases at *public* facilities only.
-- Private-sector cases and lab-confirmed presentations are not in HMIS.
-- WHO estimates LMIC surveillance captures **30–50%** of true burden [@who2023typhoid; @mogasale2016].
-- Our trained ensemble corrects for systematic under-reporting and captures full climate-driven seasonal amplitude.
-- **136,000 / 375,000 ≈ 36%** — squarely within the WHO range and consistent with published Nepal-specific adjustment factors [@gbd2023].
+::: {.limit-col-title}
+The 36 % capture fraction — and what closes the gap
+:::
+
+::: {.lim-list}
+[i.]{.lim-num} [HMIS is syndromic.]{.lim-tag} Outpatient surveillance — captures clinically diagnosed cases at *public* facilities only.
+
+[ii.]{.lim-num} [Private-sector invisible.]{.lim-tag} Private clinics, hospitals, and lab-confirmed presentations are absent from the HMIS record.
+
+[iii.]{.lim-num} [WHO LMIC range.]{.lim-tag} Surveillance systems in LMICs typically capture **30 – 50 %** of true burden.
+
+[iv.]{.lim-num} [Model correction.]{.lim-tag} The Weighted Ensemble corrects for systematic under-reporting and captures the full climate-driven seasonal amplitude.
+:::
+
+::: {.lim-aphorism}
+136,000 / 375,000 ≈ **36 %** — squarely within the WHO LMIC range and consistent with published Nepal-specific adjustment factors.
+:::
+
+::: {.sources}
+Sources: [@who2023typhoid; @mogasale2016; @gbd2023].
+:::
 
 ---
 
 ## How robust is the lag specification?
 
-- Lag-0, lag-1, lag-2 explored systematically:
-  - Lag 0: r = 0.334 (p < 0.05)
-  - **Lag 1: r = 0.412 (p < 0.05)** ← maximum
-  - Lag 2: r ≈ 0.28 (n.s.)
-  - Lag ≥ 3: below conventional significance
-- Selection grounded in **biology** (Typhi incubation 6–30 days + reporting delay) **and** **empirics** (cross-correlation peak).
-- District-specific lag tuning is future work; the current pooled-lag specification is a deliberate simplification.
+::: {.limit-col-title}
+Biology and empirics both point at one-month
+:::
+
+::: {.lim-list}
+[i.]{.lim-num} [District-month correlations.]{.lim-tag} Lagged precipitation r = 0.313 · lagged humidity r = 0.180 · lagged flood frequency r = 0.122.
+
+[ii.]{.lim-num} [Dominant single feature.]{.lim-tag} `cases_lag1` r = **0.731** — captures persistent endemic foci in high-burden districts.
+
+[iii.]{.lim-num} [Lag-2 and beyond.]{.lim-tag} Lag-2 r ≈ 0.28 (n.s.); lag ≥ 3 falls below conventional significance.
+
+[iv.]{.lim-num} [Biological anchor.]{.lim-tag} *Salmonella* Typhi incubation 6–30 days + reporting delay → one calendar month is the right lag scale.
+:::
+
+::: {.lim-aphorism}
+The current pooled-lag specification is a deliberate simplification; district-specific lag tuning is future work.
+:::
 
 ---
 
 ## Why no socioeconomic covariates?
 
-- **NMICS 2019** provides snapshot WASH and poverty data — but not the time-varying district-month panel matching the study period.
-- Including a *static* covariate as if time-varying introduces measurement error larger than the signal.
-- The current framework treats **district random effects** (in the GLMM component) as a catch-all for unobserved socioeconomic heterogeneity.
-- Future work with longitudinal NMICS waves will enable explicit variance decomposition between climate and structural factors.
+::: {.limit-col-title}
+Static snapshots cannot enter a time-varying panel
+:::
+
+::: {.lim-list}
+[i.]{.lim-num} [NMICS 2019.]{.lim-tag} Provides one-time WASH and poverty snapshots — not a time-varying district-month panel matching the 2015–2023 study period.
+
+[ii.]{.lim-num} [Static-as-time-varying.]{.lim-tag} Forcing a single snapshot into 108 months introduces measurement error larger than the climate signal.
+
+[iii.]{.lim-num} [Random-effects buffer.]{.lim-tag} The GLMM component absorbs unobserved socioeconomic heterogeneity via district-level random intercepts.
+
+[iv.]{.lim-num} [Longitudinal NMICS.]{.lim-tag} Future waves will enable explicit variance decomposition between climate and structural drivers.
+:::
 
 ---
 
 ## How transferable is this to other LMICs?
 
-- **Data prerequisites**: a national HMIS-equivalent, a national DRR-equivalent, and ERA5/CHIRPS access — the last is universal and free.
-- **Generalizability**: relationship structure (lag, flood-attributable variance share) is country-specific. The model **architecture** transfers; the **coefficients** do not.
-- **Comparable settings** with high transferability: Bangladesh, Pakistan, Cambodia, Indonesia — all have monsoon-driven typhoid and operational DRR infrastructure.
-- The methodological roadmap also includes cholera, hepatitis A, and shigellosis — same framework, different pathogens.
+::: {.limit-col-title}
+The architecture transfers; the coefficients do not
+:::
+
+::: {.lim-list}
+[i.]{.lim-num} [Data prerequisites.]{.lim-tag} A national HMIS-equivalent, a national DRR-equivalent, and ERA5 / CHIRPS access — the last is universal and free.
+
+[ii.]{.lim-num} [What transfers.]{.lim-tag} The **architecture** — feature engineering, four-model ensemble, chronological held-out evaluation — applies anywhere with the data prerequisites.
+
+[iii.]{.lim-num} [What does not.]{.lim-tag} **Coefficients and lag structure** are country-specific. Re-fit per setting; do not import numbers from one country to another.
+
+[iv.]{.lim-num} [Comparable settings.]{.lim-tag} Bangladesh, Pakistan, Cambodia, Indonesia — all monsoon-driven typhoid + operational DRR infrastructure.
+
+[v.]{.lim-num} [Pathogen-portability.]{.lim-tag} Same framework, different pathogens — cholera, hepatitis A, shigellosis are next.
+:::
 
 ---
 

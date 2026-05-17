@@ -8,24 +8,23 @@ Load the three raw source datasets exactly as the production pipeline
 does, harmonise them into a single monthly district-level panel, and
 engineer the lag + rolling features used by every downstream model.
 
-By the end of this page you should have a `df` DataFrame with the
-features listed in [Method](../paper/03-methodology.qmd) and a deterministic
-train/test split keyed on date.
+By the end of this page you should have a `df` DataFrame matching the
+feature schema in [Methodology](../paper/03-methodology.qmd) and a
+deterministic train/test split keyed on date.
 
 ## Source datasets
 
-Three CSVs live in `data/` alongside this site (small enough to commit):
+Four CSVs live in `data/` at the repo root and are committed because
+they are small (< 400 KB each) and aggregated (no PII):
 
-| File | Rows | Description |
-|---|---|---|
-| `data/typhoid_data_1.csv` | ~7,500 | district-month case counts (2015–2023) |
-| `data/typhoid_data_2.csv` | small | aggregated secondary source |
-| `data/climate_data.csv` | ~7,500 | ERA5-Land + CHIRPS climate variables |
-| `data/flood_data.csv` | hundreds | historical flood event records |
+| File | Description |
+|---|---|
+| `data/typhoid_data_1.csv` | District-month case counts, primary export (BS calendar) |
+| `data/typhoid_data_2.csv` | Aggregated secondary source for trailing months |
+| `data/climate_data.csv`   | ERA5-Land + CHIRPS climate variables, district-month |
+| `data/flood_data.csv`     | DRR-portal flood event records (daily, aggregated to monthly) |
 
-For the full upstream pipeline (`loader.py`, `processor.py`,
-`engineer.py` etc.) point at the production project directory:
-`/Users/labaik/Desktop/Invoices/k/alldocumentsrelatedtoresearch/`.
+The full preprocessing pipeline lives at [`code/`](https://github.com/baralsamrat/baralsamrat.github.io/tree/main/code) in the same repo (see [`code/README.md`](https://github.com/baralsamrat/baralsamrat.github.io/blob/main/code/README.md)).
 
 ## Load + peek
 
@@ -58,11 +57,47 @@ print(f"rows: {len(flood):,}   cols: {flood.shape[1]}")
 flood.head()
 ```
 
+## Full pipeline — load → preprocess → merge → feature-engineer
+
+The four lines below reproduce the full pipeline using the in-repo
+[`code/src/`](https://github.com/baralsamrat/baralsamrat.github.io/tree/main/code/src)
+modules. They are the *same* `DataLoader`, `DataProcessor`, and
+`FeatureEngineer` that `code/main.py` and `code/paper_main.py` call.
+
+```{python}
+#| label: pipeline
+#| code-fold: show
+
+import sys, os
+sys.path.insert(0, os.path.abspath("../code"))
+
+from src.loader    import DataLoader
+from src.processor import DataProcessor
+from src.engineer  import FeatureEngineer, FEATURE_COLS, TARGET_COL, TARGET_RAW
+
+raw    = DataLoader().load_all()
+proc   = DataProcessor()
+merged = proc.merge_datasets(
+    proc.process_typhoid(raw["typhoid"]),
+    proc.process_climate(raw["climate"]),
+    proc.process_flood(raw["flood"]),
+)
+
+df     = FeatureEngineer().create_features(merged)
+print(f"Merged panel  : {merged.shape[0]:,} rows × {merged.shape[1]} columns")
+print(f"After lag-drop: {df.shape[0]:,} rows × {df.shape[1]} columns")
+print(f"Date range    : {df['date_ad'].min()} → {df['date_ad'].max()}")
+print(f"Districts     : {df['district'].nunique()}")
+print(f"Features      : {FEATURE_COLS}")
+df.head()
+```
+
 ## Pre-computed descriptive statistics
 
-For reference, the descriptive statistics that appear in
-[Methodology](../paper/03-methodology.qmd) were computed after the full
-merge + feature engineering pipeline:
+For quick reference, the descriptive statistics that appear in
+[Methodology](../paper/03-methodology.qmd) — computed once after the
+merge + feature engineering pipeline above — live in
+[`tables/descriptive_statistics.csv`](../tables/descriptive_statistics.csv):
 
 ```{python}
 #| label: tbl-desc
@@ -74,22 +109,17 @@ desc = pd.read_csv("../tables/descriptive_statistics.csv", index_col=0)
 desc.round(2)
 ```
 
-## Feature engineering note
+## Feature engineering reference
 
-The `engineer.py` module in the production project constructs:
+The [`code/src/engineer.py`](https://github.com/baralsamrat/baralsamrat.github.io/blob/main/code/src/engineer.py) module constructs:
 
-- One-month lags: `precip_lag1`, `temp_mean_lag1`, `humidity_lag1`,
-  `flood_lag1`, `cases_lag1`
-- Three-month rolling means: `precip_roll3`, `temp_roll3`
-- Cyclical month encodings: `month_sin`, `month_cos`
-- Monsoon indicator: `monsoon` (1 if month ∈ {6,7,8,9})
-- Log-transformed target: `log_cases = log(1 + cases)`
-
-To regenerate the engineered panel from this site, copy the production
-modules into a `src/` directory at the site root and call
-`FeatureEngineer().create_features(merged)`. See
-`main.py` in the upstream project for the exact orchestration.
+- **One-month lags**: `precip_lag1`, `temp_mean_lag1`, `humidity_lag1`, `flood_lag1`, `cases_lag1`
+- **Three-month rolling means** (computed on shift-1 to prevent leakage): `precip_roll3`, `temp_roll3`
+- **Cyclical month encodings**: `month_sin`, `month_cos` — places December and January adjacent on a unit circle
+- **Monsoon indicator**: `monsoon` (1 if month ∈ {6, 7, 8, 9})
+- **Log-transformed target**: `log_cases = log(1 + cases)` to stabilise variance over the heavy right tail typical of communicable-disease surveillance
 
 ::: {.callout-note}
-Continue to **[Train](train.qmd)** to fit the three predictive models.
+Continue to **[Train](train.qmd)** to fit the three predictive models on
+the engineered panel built here.
 :::

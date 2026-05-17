@@ -1,6 +1,13 @@
-# Quarto build output
+# =============================================================================
+#  .gitignore — Typhoid Prediction in Nepal (research site)
+#  Purpose: keep the published site safe, small, and reproducible.
+# =============================================================================
+
+# --- Quarto build output -----------------------------------------------------
 _site/
 .quarto/
+/.quarto/
+**/*.quarto_ipynb
 
 # Cached executed-code outputs. Keep this if you want CI to skip
 # re-executing unchanged cells; ignore it if you'd rather always rebuild.
@@ -8,31 +15,144 @@ _freeze/
 
 # Pickled / cached artifacts produced by replication notebooks
 _artifacts/
+output/
 
-# Python
+# --- Secrets and credentials (do NOT commit, ever) ---------------------------
+# Environment files
+.env
+.env.*
+!.env.example
+.envrc
+.direnv/
+
+# Key material
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.jks
+id_rsa
+id_rsa.*
+id_ecdsa
+id_ecdsa.*
+id_ed25519
+id_ed25519.*
+*.ppk
+
+# Generic credential / secret files
+*credentials*
+*secret*
+*secrets*
+!**/refs.bib
+!**/about*
+!**/styles*
+.netrc
+.npmrc
+.pypirc
+.aws/
+.ssh/
+gcloud-credentials.json
+service-account*.json
+firebase-adminsdk*.json
+
+# Cookie / session jars sometimes left in repos
+*.cookies
+cookies.txt
+
+# Local DB dumps / SQLite (in case any notebook produces one)
+*.sqlite
+*.sqlite3
+*.db
+
+# --- Trained models / large artifacts (regenerable) --------------------------
+*.pkl
+*.joblib
+*.h5
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.tflite
+
+# --- Python ------------------------------------------------------------------
 .venv/
+venv/
+env/
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .Python
 *.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-# Jupyter
+# --- Jupyter -----------------------------------------------------------------
 .ipynb_checkpoints/
 
-# OS junk
-.DS_Store
-Thumbs.db
+# --- Node (only if you ever add JS tooling) ---------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
 
-# Editor
+# --- OS junk -----------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+Icon
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- Editor / IDE ------------------------------------------------------------
 .vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
 .idea/
 *.swp
+*.swo
+*~
+*.iml
+.history/
+.project
+.classpath
+.settings/
 
-# Local environment overrides
-.env
-.env.local
+# --- Local logs --------------------------------------------------------------
+*.log
+logs/
 
-/.quarto/
-**/*.quarto_ipynb
+# --- Source-of-truth folders kept locally only (not published) --------------
+# These contain the upstream thesis (.docx), the production zip exports, and
+# the in-place pipeline copy. The repo distills their content into qmd pages
+# and a clean `code/` folder; the originals are intentionally not committed.
+kritika baral *
+kritika baral *.zip
+research_paper.zip
+research_paper/
+
+# Quarto's stray .quarto_ipynb sidecars
+*.quarto_ipynb_*
+
+# Bulk reference / archive uploads
+alldocumentsrelatedtoresearch*
+*.docx
+!**/refs.bib
+
+# Misc heavy files we never want shipped
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+

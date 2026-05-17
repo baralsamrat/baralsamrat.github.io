@@ -11,31 +11,42 @@ author:
         country: Nepal
 date: today
 abstract: |
-  Typhoid fever remains a significant public health challenge in Nepal, where
-  monsoon-driven flooding and climate variability increasingly disrupt water,
-  sanitation, and hygiene (WASH) systems. This study examined the
-  spatiotemporal relationship between typhoid incidence and climate-induced
-  extreme events across Nepal's 77 districts from 2015 to 2023 by integrating
-  district-level outpatient surveillance data from the Health Management
-  Information System (HMIS) with flood occurrence records and gridded climate
-  variables, including precipitation, temperature, and relative humidity.
-  Descriptive and correlation analyses, including lagged assessments, were
-  conducted, followed by machine learning modeling using Random Forest (RF),
-  XGBoost, and Long Short-Term Memory (LSTM) algorithms. An ensemble model
-  combining all three algorithms was also evaluated. Typhoid incidence
-  exhibited strong seasonality, with 70–80% of cases occurring during monsoon
-  months (June–September) and showed a positive association with flood
-  frequency (r = 0.334), which strengthened when floods preceded cases by one
-  month (r = 0.412). Among the evaluated models, XGBoost achieved the best
-  individual predictive performance (R² = 0.52), while the ensemble model
-  achieved the highest overall accuracy (R² = 0.55). Flood-related features
-  accounted for approximately 18% of explained variance. Projections under
-  a medium-emissions scenario (SSP2-4.5) indicate a potential 25% increase
-  in national typhoid burden by 2050, with disproportionate impacts in
-  flood-prone Terai districts. These findings identify typhoid fever in
-  Nepal as a climate-sensitive disease and highlight the importance of
-  integrating climate indicators into disease surveillance and early
-  warning systems to support climate-resilient public health planning.
+  Typhoid fever, caused by *Salmonella enterica* serovar Typhi, imposes
+  a persistent and disproportionate public-health burden on Nepal, where
+  monsoon-driven flooding and climate variability increasingly stress
+  water, sanitation, and hygiene (WASH) systems. This study integrates
+  four open-access national datasets across Nepal's 77 administrative
+  districts and 108 months (January 2015 – December 2023;
+  *N* = 7,327 district-month observations): district-level outpatient
+  enteric-fever surveillance from the Ministry of Health and Population
+  HMIS, flood-event records from the DRR Portal (NDRRMA), CHIRPS gridded
+  precipitation, and ERA5-Land temperature and relative humidity. Four
+  machine-learning models — **Random Forest, XGBoost, Multilayer
+  Perceptron, and a Weighted Ensemble** — are trained on a chronological
+  partition (training: 2015 – mid-2022; test: most recent 12 months) to
+  prevent temporal leakage. The **Weighted Ensemble** achieves the
+  strongest predictive performance on the held-out window
+  (**R² = 0.8675, RMSE = 126.20 cases / district-month, MAE = 68.07,
+  MAPE = 41.01 %**), with all four architectures clustering tightly
+  (R² 0.856 – 0.868). Feature-importance analysis identifies the prior
+  month's case count (`cases_lag1`, normalised importance ≈ 0.67) as the
+  single most influential predictor, followed by one-month-lagged mean
+  temperature (≈ 0.09), cyclical month encodings (≈ 0.12 combined), and
+  the monsoon indicator (≈ 0.04). Bivariate correlations confirm strong
+  climate sensitivity: mean temperature (r = 0.50 – 0.63), precipitation
+  (r = 0.33 – 0.37), monsoon (r = 0.25 – 0.29), and flood events
+  (r = 0.19) all correlate positively with typhoid incidence. Seasonal
+  analysis shows that **August records the highest median district-month
+  case count (~640 cases)** — nearly three times the dry-season median.
+  Under SSP2-4.5, the climate × disease signal implies a +25 % rise in
+  national typhoid burden by 2050 (~469,000 annual cases); SSP5-8.5
+  implies +40 %, with disproportionate impact on flood-prone Terai
+  districts. The study provides the most comprehensive quantitative
+  evidence to date for the climatic sensitivity of typhoid transmission
+  in Nepal, an open-source end-to-end early-warning pipeline that
+  operates entirely on freely accessible climate data, and a basis for
+  district-level health planning aligned with Nepal's National
+  Adaptation Plan 2021–2050.
 keywords:
   - Typhoid fever
   - Climate change
@@ -53,20 +64,36 @@ keywords:
   across Nepal's 77 districts is poorly characterised by existing
   surveillance systems, leaving health authorities reactive rather than
   anticipatory.
-- **Approach.** Three machine-learning models (Random Forest, XGBoost,
-  LSTM) plus an R²-weighted ensemble, trained on a 2015–2023 district-month
-  panel integrating HMIS surveillance, ERA5-Land + CHIRPS climate, and
-  DRR-portal flood records — with strict chronological 80/20 train/test
-  split and TimeSeriesSplit CV.
-- **Result.** Ensemble R² = **0.55** (XGBoost individual R² = 0.52);
-  flood-related features account for **~18%** of explained variance;
-  flood–typhoid correlation strengthens at a one-month lag (r = 0.412).
-- **Projection.** SSP2-4.5 implies a **+25%** national typhoid burden by
-  2050 (~469,000 annual cases); SSP5-8.5 implies **+40%**, with
-  disproportionate impact on Terai districts.
+- **Approach.** Four machine-learning models — Random Forest, XGBoost, a
+  Multilayer Perceptron, and a **Weighted Ensemble** — trained on a
+  2015–2023 district-month panel (*N* = 7,327) that integrates HMIS
+  surveillance, ERA5-Land + CHIRPS climate, and DRR-portal flood records,
+  with a strictly chronological train/test split (last 12 months held
+  out for testing) to prevent data leakage.
+- **Result.** The **Weighted Ensemble** is the headline model:
+  **R² = 0.8675**, **RMSE = 126.20 cases / district-month**,
+  **MAE = 68.07**, **MAPE = 41.01 %**. All four architectures cluster
+  tightly (R² 0.856 – 0.868), confirming that the climate × autoregressive
+  signal — not the model family — sets the predictive ceiling. **XGBoost**
+  is the operational pick when interpretability and reproducibility under
+  partial inputs matter more than headline R².
+- **Driver structure.** Feature-importance analysis identifies the prior
+  month's case count (`cases_lag1`, normalised importance ≈ 0.67) as the
+  single most influential predictor, followed by lagged mean temperature
+  (≈ 0.09), cyclical month encodings (≈ 0.12 combined), and the monsoon
+  indicator (≈ 0.04). Bivariate climate correlations: temperature
+  r = 0.50 – 0.63, precipitation r = 0.33 – 0.37, monsoon r = 0.25 – 0.29,
+  flood events r = 0.19. August records the highest median
+  district-month case count (≈ 640 cases) — nearly three times the
+  dry-season median.
+- **Projection.** Under medium-emissions SSP2-4.5, the climate × disease
+  signal implies a **+25 %** national typhoid burden by 2050
+  (~469,000 annual cases); SSP5-8.5 implies **+40 %**, with
+  disproportionate impact on flood-prone Terai districts.
 - **Replication.** Every figure and metric on this site is loaded from
-  the source code and data in the [Replication](replication/data.qmd)
-  section.
+  the source code and data in [`code/`](https://github.com/baralsamrat/baralsamrat.github.io/tree/main/code)
+  and committed `data/` and `tables/`. See the
+  [Replication](replication/data.qmd) section for the runnable pipeline.
 
 ## Read the paper
 

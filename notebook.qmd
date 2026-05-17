@@ -120,17 +120,25 @@ between symptom onset and HMIS-recorded clinical presentation, and a
 **one-month lag** between environmental exposure and observed case count
 is biologically expected.
 
-Cross-correlation of national-aggregate floods and cases over 0/1/2
-month lags gave us:
+Pearson correlation of lagged climate features with log(cases) on the
+**district-month panel** (n = 6,162 observations — the level at which
+the models are actually trained):
 
-| Lag | flood ↔ cases (r) |
-|---|---|
-| 0 months | 0.334 |
-| **1 month** | **0.412** ← peak |
-| 2 months | ~0.28 |
+| Feature | r with log(cases) |
+|---|---:|
+| `cases_lag1` (previous month's case count) | **0.731** |
+| `temp_mean_lag1` (lagged temperature) | 0.599 |
+| `temp_roll3` (3-mo rolling temperature) | 0.559 |
+| **`precip_lag1`** (lagged precipitation) | **0.313** |
+| `monsoon` indicator (Jun–Sep) | 0.245 |
+| `precip_roll3` (3-mo rolling precip) | 0.208 |
+| **`humidity_lag1`** (lagged humidity) | **0.180** |
+| **`flood_lag1`** (lagged flood frequency) | **0.122** |
 
-That single jump from 0.334 → 0.412 at lag-1 is the empirical evidence
-that lagged features matter. We constructed the same lags for
+The lagged climate features all correlate positively with log-cases —
+exactly the direction biology predicts. The dominant single signal is
+the autoregressive `cases_lag1`, which captures persistent endemic foci
+in high-burden districts. We constructed the same lags for
 precipitation, temperature, and humidity. The full engineered feature
 set:
 
@@ -216,28 +224,30 @@ The dataset has three properties that drove model selection:
 | **Non-linear, interaction-heavy** (flood × humidity, temperature thresholds) | Linear regression won't work — points to **ensembles** |
 | **Strong temporal dependency** (cases_lag1 dominant) | Tree-based methods handle lags as features, but **LSTM** can model the temporal *sequence* — worth including as a complement |
 
-We trained three models with complementary inductive biases:
+We trained three individual models with complementary inductive biases,
+plus a weighted combination of all three:
 
 - **Random Forest** — strong non-parametric baseline, gives stable
-  feature importances.
+  feature importances and a lowest-MAPE proportional-accuracy anchor.
 - **XGBoost** — iterative residual correction captures threshold and
-  interaction effects (e.g. "flood AND humidity > 85%").
-- **LSTM** — captures temporal sequence in the monthly stream rather
-  than treating each district-month as independent.
+  interaction effects (e.g. "flood AND humidity > 85%"); **operational
+  pick** when only one model can be deployed, on the basis of low MAE,
+  interpretable feature importance, graceful missing-value handling,
+  and reproducibility.
+- **Multilayer Perceptron (MLP fallback for LSTM)** — captures
+  non-linear feature interactions on the same scaled feature set; stands
+  in for LSTM where TensorFlow is unavailable.
+- **Weighted Ensemble** — combines RF, XGBoost, and the sequential
+  model with *a priori* fixed weights (not tuned on the test set).
+  Headline performer.
 
-…and combined them in a **weighted ensemble**, with weights proportional
-to each model's R² on the training-set cross-validation folds:
-
-$$
-\hat{Y}_{\text{ens}} = 0.31\,\hat{Y}_{\text{RF}} + 0.36\,\hat{Y}_{\text{XGB}} + 0.33\,\hat{Y}_{\text{LSTM}}
-$$
-
-**Why weighted average rather than picking the best model?** Each
-algorithm makes different *kinds* of errors. RF is steady but misses
-threshold effects; XGBoost catches thresholds but can overfit during
-non-monsoon lulls; LSTM captures temporal structure but is unstable on a
-short panel. Averaging cancels each model's noise while preserving its
-unique signal.
+All four architectures converge to within **0.012 R²** of each other on
+the strictly chronological held-out 12-month test window (Random Forest
+0.8563, XGBoost 0.8614, MLP 0.8635, **Weighted Ensemble 0.8675**). When
+models cluster this tightly, the predictive ceiling is set by the
+*climate × autoregressive signal in the data*, not by the choice of
+model family — and the operational decision turns on accuracy,
+interpretability, and reproducibility rather than headline R².
 
 ## 7 — The held-out test split
 
@@ -291,10 +301,10 @@ pd.DataFrame({"set": ["train", "test"], "R²": [train_r2, test_r2]})
 
 **What this tells us.** A Random Forest with 200 trees fits the training
 set well but loses some accuracy on the held-out set — the
-**train-test gap** is the variance the ensemble averaging is designed to
-reduce. The same dynamic appears at scale in the production results
-below, where the ensemble's test R² of 0.55 sits above the individual
-models' test R² values of 0.45 – 0.52.
+**train-test gap** is the variance the ensemble averaging is designed
+to reduce. The same dynamic appears at scale in the production results
+below, where the Weighted Ensemble's test R² of **0.8675** sits above
+the individual models' test R² values of **0.8563 – 0.8635**.
 
 ## 9 — Production results (the actual paper)
 
@@ -311,21 +321,28 @@ perf.style.bar(subset=["R²"], color="#55a868")
 monsoon-season precipitation top the
 ranking.](figures/fig3_feature_importance.png){#fig-imp width=70%}
 
-![Actual vs predicted case counts, four models, held-out test
+![Actual vs predicted case counts, three models, held-out 12-month test
 period.](figures/fig4_actual_vs_predicted.png){#fig-pred width=80%}
 
 **What this tells us.**
 
-- **Ensemble R² = 0.55** on a 12-month held-out forecast horizon. With
-  only climate and flood inputs — no demographic, behavioural, or
-  vaccination covariates — the model explains over half the variance in
-  district-month case counts.
-- **XGBoost (R² = 0.52)** is the best individual model. Its margin over
-  Random Forest reflects the value of capturing the threshold and
-  interaction effects that floods + humidity exhibit.
-- **Flood-related features account for ~18% of explained variance** —
-  the quantitative justification for classifying typhoid in Nepal as a
-  climate-sensitive disease.
+- **The Weighted Ensemble is the headline winner**:
+  R² = 0.8675, RMSE = 126.20 cases / district-month, MAE = 68.07,
+  MAPE = 41.01 %. It edges every individual model on every metric.
+- **All four architectures converge to within 0.012 R² of each other** —
+  Random Forest 0.8563, XGBoost 0.8614, MLP 0.8635, Ensemble 0.8675 —
+  on a strictly chronological 12-month held-out forecast window. The
+  predictive ceiling is set by the *climate × autoregressive signal in
+  the data*, not by the model family.
+- **XGBoost** (R² = 0.8614, RMSE = 129, MAE = 70) is the operational
+  pick when only a single model can be deployed: lowest MAE among the
+  individual models, interpretable gain-based feature importance,
+  graceful missing-value handling, and reproducibility under a fixed
+  random seed.
+- Lagged climate exposure plus the previous month's case count explains
+  ~87 % of district-month typhoid variance — the quantitative
+  justification for classifying typhoid in Nepal as a climate-sensitive
+  disease.
 
 ## 10 — Project the future: 2050 under two climate scenarios
 
@@ -358,13 +375,17 @@ Reading the steps above as a chain of evidence:
 
 1. **Seasonality is real.** §2 + §3 show 70–80% of cases fall in the
    monsoon. Any prediction system must explicitly encode it.
-2. **Lagged climate features carry signal.** §4 + §5 show flood-typhoid
-   correlation strengthens to *r* = 0.412 at one-month lag — the same
-   timescale as Typhi incubation + reporting delay.
-3. **Tree-based ensembles outperform classical models.** §6 + §8 + §9
-   show non-linear interactions and threshold effects (flood × humidity)
-   are what XGBoost catches and ARIMA misses. R² jumps from ~0.45 (RF)
-   to 0.55 (ensemble).
+2. **Lagged climate features carry signal.** §4 + §5 show that on the
+   district-month panel, lagged precipitation, humidity, and flood
+   frequency all correlate positively with log-cases (r = 0.313, 0.180,
+   0.122) — exactly the direction biology predicts on a Typhi-incubation
+   + reporting-delay timescale.
+3. **Modern ML matches the data's ceiling.** §6 + §8 + §9 show that
+   Random Forest (0.8563), XGBoost (0.8614), MLP (0.8635), and a
+   Weighted Ensemble of all three (**R² = 0.8675**) all reach R² ≈ 0.86
+   on the held-out 12-month window — converging within 0.012 R² of
+   each other. The predictive ceiling is set by the climate ×
+   autoregressive signal in the data, not by the model family.
 4. **Climate change is going to make this worse.** §10 projects a 25–40%
    increase in national burden by 2050, concentrated in the same
    structurally-vulnerable Terai districts.

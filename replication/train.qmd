@@ -4,82 +4,145 @@ title: "Replication — Train"
 
 ## Goal
 
-Reproduce the four predictive models: Random Forest, XGBoost, MLP
-(LSTM fallback), and the Weighted Ensemble. Hyperparameters and the
-training pipeline mirror the production `models.py` module.
+Reproduce the three predictive models — **Random Forest**, **XGBoost**,
+and the **Multi-Layer Perceptron** (fallback for LSTM) — on the
+engineered feature panel built on the [Data](data.qmd) page.
+**XGBoost is selected as the operational model** (see
+[Eval](eval.qmd) for the rationale).
 
 ## Reference pipeline
 
-The canonical training script lives in the production project at
-`/Users/labaik/Desktop/Invoices/k/alldocumentsrelatedtoresearch/main.py`.
-It chains the modular components:
+The canonical training pipeline lives in this repo at
+[`code/`](https://github.com/baralsamrat/baralsamrat.github.io/tree/main/code):
 
 ```text
-src/
-├── loader.py      load CSVs from data/
-├── processor.py   normalise districts, BS→AD calendar, merge
-├── engineer.py    lag features, rolling means, log transform
-├── models.py      RF + XGB + MLP/LSTM + weighted ensemble
-├── evaluator.py   RMSE / MAE / R² / MAPE
-├── visualizer.py  the 5 publication figures
-└── reporter.py    text-format analysis report
+code/
+├── README.md          quick-start + reproducibility checklist
+├── requirements.txt   pinned dependencies (pandas 2.2.3, xgboost 2.1.3, …)
+├── main.py            full pipeline (RF + XGB + LSTM/MLP + ensemble)
+├── paper_main.py      paper pipeline (3 models, 4 publication figures)
+└── src/
+    ├── loader.py      load CSVs from <repo>/data/ (env-var overridable)
+    ├── processor.py   district normalisation + BS→AD calendar conversion
+    ├── engineer.py    lag features, rolling means, log-transform target
+    ├── models.py      RF / XGBoost / MLP / LSTM training + persistence
+    ├── evaluator.py   RMSE / MAE / R² / MAPE
+    ├── visualizer.py  figure rendering
+    └── reporter.py    text-format analysis report
 ```
 
-To re-run end-to-end:
+To re-run end-to-end from the repo root:
 
 ```bash
-cd /Users/labaik/Desktop/Invoices/k/alldocumentsrelatedtoresearch
-pip install -r requirements.txt
-python main.py
+pip install -r code/requirements.txt
+python code/paper_main.py     # 3 models + paper figures, ~2 min on CPU
+# or, for the full ensemble pipeline:
+python code/main.py
 ```
 
-This regenerates everything: trained `.pkl` artifacts, the 5 figure
-PNGs in `output/figures/`, the metrics CSVs in `output/tables/`, and
-the text-format analysis report.
+Both scripts are deterministic given the random seed (42, hard-coded in
+[`code/src/models.py`](https://github.com/baralsamrat/baralsamrat.github.io/blob/main/code/src/models.py))
+and land within rounding of the headline numbers rendered on this site.
 
-## Trained models
+## Live training — quick smoke test
 
-Three trained models are persisted in the production project:
-
-| File | Size | Description |
-|---|---|---|
-| `rf_model.pkl` | 16 MB | Random Forest (500 trees) |
-| `xgb_model.pkl` | 506 KB | XGBoost (300 estimators, depth 6) |
-| `mlp_model.pkl` | 289 KB | MLP sequential fallback |
-| `scaler_X.pkl` | 1 KB | feature standardisation |
-| `scaler_y.pkl` | 0.5 KB | target standardisation |
-
-These are **not committed to the site repo** — they're large and
-regenerable from source. Point downstream code at the upstream project
-directory or re-train in place using the snippet below.
-
-## Minimal in-site training example
-
-The cell below trains Random Forest and XGBoost on the descriptive
-features panel as a smoke test, so this page is independently runnable:
+The cell below trains Random Forest and XGBoost on the engineered panel
+inline, then prints both models' R² on the held-out final 12 months.
+**This is the same code path the production scripts use** — the
+production scripts just additionally persist artifacts.
 
 ```{python}
-#| label: train-smoke
+#| label: train-live
 #| code-fold: show
 
-import warnings
+import sys, os, warnings
 warnings.filterwarnings("ignore")
+sys.path.insert(0, os.path.abspath("../code"))
 
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
 
-# Load the typhoid CSV and engineer a tiny feature panel inline. This is
-# NOT the full pipeline — for that, run main.py in the upstream project.
-df = pd.read_csv("../data/typhoid_data_1.csv")
-print(f"rows: {len(df):,}, columns: {list(df.columns)[:8]}...")
+from src.loader    import DataLoader
+from src.processor import DataProcessor
+from src.engineer  import FeatureEngineer, FEATURE_COLS, TARGET_COL, TARGET_RAW
+from src.models    import TyphoidModels
+from src.evaluator import Evaluator
+
+# 1. Reproduce the engineered panel (same pipeline as the Data page).
+raw    = DataLoader().load_all()
+proc   = DataProcessor()
+merged = proc.merge_datasets(
+    proc.process_typhoid(raw["typhoid"]),
+    proc.process_climate(raw["climate"]),
+    proc.process_flood(raw["flood"]),
+)
+df = FeatureEngineer().create_features(merged).sort_values("date_dt").reset_index(drop=True)
+
+# 2. Strictly chronological train/test split — last 12 months held out.
+unique_dates = df["date_dt"].sort_values().unique()
+split_date   = unique_dates[len(unique_dates) - 12]
+train, test  = df[df["date_dt"] < split_date], df[df["date_dt"] >= split_date]
+
+X_train, y_train = train[FEATURE_COLS], train[TARGET_COL]
+X_test,  y_test  = test[FEATURE_COLS],  test[TARGET_COL]
+y_test_raw       = test[TARGET_RAW].values
+
+print(f"Train: {len(train):>5} rows   ({train['date_ad'].min()} → {train['date_ad'].max()})")
+print(f"Test : {len(test):>5} rows   ({test['date_ad'].min()} → {test['date_ad'].max()})")
+
+# 3. Train RF + XGB. (MLP omitted in the smoke test to keep build fast;
+#    main.py runs all three plus ensemble.)
+models = TyphoidModels()
+models.train_rf(X_train, y_train)
+val_idx = int(len(X_train) * 0.9)
+models.train_xgb(
+    X_train.iloc[:val_idx], y_train.iloc[:val_idx],
+    X_train.iloc[val_idx:], y_train.iloc[val_idx:],
+)
+
+# 4. Evaluate on the held-out 12 months.
+ev = Evaluator()
+results = [
+    ev.evaluate(y_test_raw, models.predict_rf(X_test),  "Random Forest"),
+    ev.evaluate(y_test_raw, models.predict_xgb(X_test), "XGBoost"),
+]
+pd.DataFrame(results)
 ```
 
+The two rows above should land within ±0.005 R² of the headline numbers
+in the [performance metrics table](../tables/performance_metrics.csv).
+
+## Hyperparameter choices
+
+All hyperparameter choices are pinned in [`code/src/models.py`](https://github.com/baralsamrat/baralsamrat.github.io/blob/main/code/src/models.py):
+
+| Model | Key settings |
+|---|---|
+| Random Forest | `n_estimators=300, max_depth=10, min_samples_leaf=5, random_state=42, n_jobs=-1` |
+| XGBoost | `n_estimators=300, learning_rate=0.05, max_depth=4, subsample=0.8, colsample_bytree=0.8, reg_alpha=0.1, reg_lambda=1.0, random_state=42` |
+| MLP fallback | `hidden_layer_sizes=(128, 64, 32), activation="relu", solver="adam", learning_rate_init=0.001, max_iter=500, early_stopping=True, random_state=42` |
+| LSTM (TF, if available) | Two stacked layers (64 → 32), dropout 0.2, Adam @ 1e-3, MSE loss, 50 epochs, batch 32, `n_steps=3` |
+
+## Trained model artifacts
+
+Running the full pipeline persists artifacts to `code/output/models/`:
+
+| File | Size | Description |
+|---|---:|---|
+| `rf_model.pkl` | ~16 MB | Random Forest (300 trees, depth 10) |
+| `xgb_model.pkl` | ~500 KB | XGBoost (300 estimators, depth 4, L1=0.1, L2=1.0) |
+| `mlp_model.pkl` | ~290 KB | MLP fallback (128 → 64 → 32, Adam, early stopping) |
+| `scaler_X.pkl` | ~1 KB | feature standardisation |
+| `scaler_y.pkl` | ~0.5 KB | target standardisation |
+
+These are **not committed** — they are large, regenerable from source,
+and `*.pkl` / `*.h5` are blocked in `.gitignore`. Re-train in place using
+either the smoke-test cell above or the production scripts.
+
 ::: {.callout-warning}
-**Pickled models are not portable across scikit-learn versions.**
-The production pickles were trained with the versions pinned in the
-upstream project's `requirements.txt`. Re-pickle when upgrading.
+**Pickled models are not portable across scikit-learn / XGBoost versions.**
+The numbers on this site were generated with the versions pinned in
+[`code/requirements.txt`](https://github.com/baralsamrat/baralsamrat.github.io/blob/main/code/requirements.txt). Re-pickle when upgrading.
 :::
 
 ::: {.callout-note}

@@ -4,9 +4,10 @@ title: "Replication — Eval"
 
 ## Goal
 
-Show the test-set performance of the four trained models on the held-out
-final 12 months. Numbers below are loaded from the metrics CSV produced
-by `evaluator.py` — they're the same numbers reported in the
+Show the test-set performance of the four trained models on the
+held-out final 12 months of district-month data. Numbers below are
+loaded from the metrics CSV produced by `evaluator.py` — they are the
+same numbers reported in the
 [Results](../paper/04-results.qmd) chapter.
 
 ## Performance table
@@ -19,10 +20,10 @@ by `evaluator.py` — they're the same numbers reported in the
 import pandas as pd
 metrics = pd.read_csv("../tables/performance_metrics.csv")
 metrics.style.format({
-    "RMSE": "{:.2f}",
-    "MAE": "{:.2f}",
-    "R2": "{:.4f}",
-    "MAPE (%)": "{:.2f}",
+    "RMSE (cases)": "{:.2f}",
+    "MAE (cases)":  "{:.2f}",
+    "R²":           "{:.4f}",
+    "MAPE (%)":     "{:.2f}",
 })
 ```
 
@@ -30,7 +31,7 @@ metrics.style.format({
 
 ```{python}
 #| label: tbl-corr
-#| tbl-cap: "Pearson correlation of each engineered feature with log(1 + cases)."
+#| tbl-cap: "Pearson correlation of each engineered feature with log(1 + cases), district-month panel."
 #| echo: false
 
 import pandas as pd
@@ -40,33 +41,47 @@ corr.style.format({"Pearson_r_with_log_cases": "{:.3f}"})
 
 ## Interpretation
 
-- The **Weighted Ensemble** is the headline model (R² = 0.8675, lowest
-  RMSE). Its advantage over individual models comes from variance
-  reduction across structurally distinct algorithms.
-- **XGBoost** outperforms Random Forest on RMSE and MAE but has a
-  higher MAPE — meaning it produces tighter absolute errors but is
-  more proportionally biased on the smaller case-count districts.
-- **MLP** (fallback for unavailable TF/LSTM) is competitive, achieving
-  the lowest single-model RMSE but at higher absolute-error variance
-  than the tree-based methods.
+- **The Weighted Ensemble is the headline winner** — R² = 0.8675,
+  RMSE = 126.20, MAE = 68.07, MAPE = 41.01 %. It edges every individual
+  model on every metric, validating the use of structurally distinct
+  learners whose errors are partially uncorrelated.
+- **All four architectures converge to within 0.012 R² of each other**
+  (Random Forest 0.8563, XGBoost 0.8614, MLP 0.8635, Ensemble 0.8675).
+  This is not noise: it indicates the predictive ceiling is set by the
+  *climate × autoregressive signal in the data*, not by the choice of
+  model family.
+- **XGBoost** is the operational pick when only a single model can be
+  deployed — lowest MAE among the individual models (69.50), interpretable
+  gain-based feature importance, graceful handling of missing values,
+  and reproducible under a fixed random seed.
+- **Random Forest** has the lowest MAPE among individuals (41.5 %),
+  meaning marginally better proportional accuracy on low-incidence
+  districts. It remains the conservative baseline.
+- **MLP** edges out the tree-based individual models on overall R²
+  (0.8635) but at the cost of higher absolute-error variance and
+  stricter input-scaling requirements.
 
 ## Where the trained pickles live
 
-Loaded as needed by the production pipeline:
+The pipeline persists trained models to `code/output/models/` next to
+the source code (see [Train](train.qmd)). The file layout is:
 
 ```text
-/Users/labaik/Desktop/Invoices/k/alldocumentsrelatedtoresearch/
+code/output/models/
 ├── rf_model.pkl
 ├── xgb_model.pkl
-├── mlp_model.pkl
+├── mlp_model.pkl     (or lstm_model.h5 if TensorFlow is installed)
 ├── scaler_X.pkl
 └── scaler_y.pkl
 ```
 
+The directory is gitignored by default — model artifacts are
+regenerable from source and shouldn't be committed.
+
 To regenerate from scratch, see [Train](train.qmd).
 
 ::: {.callout-tip}
-The figures supporting this evaluation — actual-vs-predicted scatter,
-feature importance ranking, seasonal boxplot — are on the
+The figures supporting this evaluation — model comparison, correlation
+heatmap, ecological-zone distribution, national trend — are on the
 [Figures](../figures.qmd) page.
 :::
